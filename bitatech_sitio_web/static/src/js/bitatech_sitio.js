@@ -193,16 +193,36 @@ whenReady(() => {
     const navMenu = document.querySelector('.bitatech-nav');
 
     if (botonMenu && navMenu) {
+        var scrollPosicion = 0;
+
+        function abrirMenuMovil() {
+            scrollPosicion = window.pageYOffset;
+            botonMenu.classList.add('activo');
+            navMenu.classList.add('bitatech-nav-abierto');
+            document.body.classList.add('bitatech-menu-abierto');
+            document.body.style.top = '-' + scrollPosicion + 'px';
+        }
+
+        function cerrarMenuMovil() {
+            botonMenu.classList.remove('activo');
+            navMenu.classList.remove('bitatech-nav-abierto');
+            document.body.classList.remove('bitatech-menu-abierto');
+            document.body.style.top = '';
+            window.scrollTo(0, scrollPosicion);
+        }
+
         botonMenu.addEventListener('click', function () {
-            this.classList.toggle('activo');
-            navMenu.classList.toggle('bitatech-nav-abierto');
+            if (navMenu.classList.contains('bitatech-nav-abierto')) {
+                cerrarMenuMovil();
+            } else {
+                abrirMenuMovil();
+            }
         });
 
         // Cerrar menu al hacer clic en un enlace
         navMenu.querySelectorAll('.bitatech-nav-enlace').forEach(function (enlace) {
             enlace.addEventListener('click', function () {
-                botonMenu.classList.remove('activo');
-                navMenu.classList.remove('bitatech-nav-abierto');
+                cerrarMenuMovil();
             });
         });
     }
