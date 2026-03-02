@@ -91,7 +91,6 @@ class SolicitudContactoBitatech(models.Model):
         string='Estado',
         default='nuevo',
         tracking=True,
-        group_expand='_group_expand_estados',
     )
     oportunidad_crm_id = fields.Many2one(
         comodel_name='crm.lead',
@@ -112,13 +111,6 @@ class SolicitudContactoBitatech(models.Model):
             if registro.nombre_empresa:
                 partes.append('(%s)' % registro.nombre_empresa)
             registro.display_name = ' '.join(partes) or 'Nueva Solicitud'
-
-    # ------------------------------------------------------------------
-    # Metodo de grupo expand para kanban
-    # ------------------------------------------------------------------
-    @api.model
-    def _group_expand_estados(self, states, domain):
-        return [clave for clave, _etiqueta in OPCIONES_ESTADO]
 
     # ------------------------------------------------------------------
     # Metodo publico de creacion desde formulario

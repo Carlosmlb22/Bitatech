@@ -1,57 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- ============================================================ -->
-    <!-- Vistas Backend: Solicitudes de Contacto                      -->
-    <!-- ============================================================ -->
-
     <!-- ===== VISTA KANBAN ===== -->
     <record id="vista_kanban_solicitud_contacto" model="ir.ui.view">
         <field name="name">bitatech.solicitud.contacto.kanban</field>
         <field name="model">bitatech.solicitud.contacto</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="estado" class="o_kanban_small_column">
-                <field name="nombre_completo"/>
-                <field name="correo"/>
-                <field name="telefono"/>
-                <field name="nombre_empresa"/>
-                <field name="servicio_interes"/>
-                <field name="estado"/>
-                <field name="create_date"/>
+            <kanban default_group_by="estado">
                 <templates>
                     <t t-name="card">
-                        <div class="oe_kanban_content">
-                            <div class="o_kanban_record_top mb-0">
-                                <div class="o_kanban_record_headings">
-                                    <strong class="o_kanban_record_title">
-                                        <field name="nombre_completo"/>
-                                    </strong>
-                                </div>
-                            </div>
-                            <div t-if="record.nombre_empresa.raw_value" class="text-muted small">
-                                <i class="fa fa-building me-1"/>
-                                <field name="nombre_empresa"/>
-                            </div>
-                            <div class="text-muted small">
-                                <i class="fa fa-envelope me-1"/>
-                                <field name="correo"/>
-                            </div>
-                            <div t-if="record.telefono.raw_value" class="text-muted small">
-                                <i class="fa fa-phone me-1"/>
-                                <field name="telefono"/>
-                            </div>
-                            <div class="mt-1">
-                                <field name="servicio_interes" widget="badge"
-                                       decoration-info="servicio_interes == 'erp'"
-                                       decoration-warning="servicio_interes == 'automatizacion'"
-                                       decoration-success="servicio_interes == 'chat'"
-                                       decoration-primary="servicio_interes == 'optimizacion'"
-                                       decoration-danger="servicio_interes == 'desarrollo'"/>
-                            </div>
-                            <div class="text-muted small mt-1">
-                                <i class="fa fa-calendar me-1"/>
-                                <field name="create_date" widget="date"/>
-                            </div>
+                        <strong>
+                            <field name="nombre_completo"/>
+                        </strong>
+                        <div t-if="record.nombre_empresa.value" class="text-muted small">
+                            <field name="nombre_empresa"/>
+                        </div>
+                        <div class="text-muted small">
+                            <field name="correo"/>
+                        </div>
+                        <div t-if="record.telefono.value" class="text-muted small">
+                            <field name="telefono"/>
+                        </div>
+                        <div class="mt-1">
+                            <field name="servicio_interes" widget="badge"/>
+                        </div>
+                        <div class="text-muted small mt-1">
+                            <field name="create_date" widget="date"/>
                         </div>
                     </t>
                 </templates>
@@ -66,7 +40,6 @@
         <field name="arch" type="xml">
             <list decoration-info="estado == 'nuevo'"
                   decoration-warning="estado == 'contactado'"
-                  decoration-primary="estado in ('diagnostico', 'propuesta')"
                   decoration-success="estado == 'ganado'"
                   decoration-muted="estado == 'cerrado'">
                 <field name="create_date" string="Fecha" widget="date"/>
@@ -77,12 +50,7 @@
                 <field name="servicio_interes"/>
                 <field name="cantidad_empleados" optional="hide"/>
                 <field name="origen" optional="hide"/>
-                <field name="estado" widget="badge"
-                       decoration-info="estado == 'nuevo'"
-                       decoration-warning="estado == 'contactado'"
-                       decoration-primary="estado in ('diagnostico', 'propuesta')"
-                       decoration-success="estado == 'ganado'"
-                       decoration-muted="estado == 'cerrado'"/>
+                <field name="estado" widget="badge"/>
                 <field name="oportunidad_crm_id" optional="show"/>
             </list>
         </field>
@@ -120,12 +88,14 @@
                     <notebook>
                         <page string="Mensaje" name="pagina_mensaje">
                             <group>
-                                <field name="mensaje" nolabel="1" placeholder="Mensaje del cliente..."/>
+                                <field name="mensaje" nolabel="1"
+                                       placeholder="Mensaje del cliente..."/>
                             </group>
                         </page>
                         <page string="Notas Internas" name="pagina_notas">
                             <group>
-                                <field name="notas_internas" nolabel="1" placeholder="Notas internas del equipo..."/>
+                                <field name="notas_internas" nolabel="1"
+                                       placeholder="Notas internas del equipo..."/>
                             </group>
                         </page>
                     </notebook>
@@ -140,11 +110,10 @@
         <field name="name">bitatech.solicitud.contacto.search</field>
         <field name="model">bitatech.solicitud.contacto</field>
         <field name="arch" type="xml">
-            <search>
+            <search string="Buscar Solicitudes">
                 <field name="nombre_completo"/>
                 <field name="correo"/>
                 <field name="nombre_empresa"/>
-                <field name="telefono"/>
                 <filter name="filtro_nuevos" string="Nuevos"
                         domain="[('estado', '=', 'nuevo')]"/>
                 <filter name="filtro_contactados" string="Contactados"
@@ -159,16 +128,12 @@
                 <filter name="filtro_sitio_web" string="Desde Sitio Web"
                         domain="[('origen', '=', 'sitio_web')]"/>
                 <separator/>
-                <group string="Agrupar por">
-                    <filter name="agrupar_estado" string="Estado"
-                            context="{'group_by': 'estado'}"/>
-                    <filter name="agrupar_servicio" string="Servicio"
-                            context="{'group_by': 'servicio_interes'}"/>
-                    <filter name="agrupar_origen" string="Origen"
-                            context="{'group_by': 'origen'}"/>
-                    <filter name="agrupar_fecha" string="Fecha"
-                            context="{'group_by': 'create_date:month'}"/>
-                </group>
+                <filter name="agrupar_estado" string="Estado"
+                        context="{'group_by': 'estado'}"/>
+                <filter name="agrupar_servicio" string="Servicio"
+                        context="{'group_by': 'servicio_interes'}"/>
+                <filter name="agrupar_origen" string="Origen"
+                        context="{'group_by': 'origen'}"/>
             </search>
         </field>
     </record>
@@ -179,7 +144,7 @@
         <field name="res_model">bitatech.solicitud.contacto</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="search_view_id" ref="vista_busqueda_solicitud_contacto"/>
-        <field name="context">{'default_origen': 'sitio_web', 'search_default_filtro_nuevos': 1}</field>
+        <field name="context">{'search_default_filtro_nuevos': 1}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No hay solicitudes de contacto todavia
