@@ -1467,15 +1467,25 @@
 
 /* ----------------------------------------------------------------
    20. ANIMACIONES SCROLL
+   ----------------------------------------------------------------
+   Elementos son visibles por defecto. Solo se animan cuando JS
+   marca el body con .bitatech-js-listo (evita contenido invisible
+   si JS no carga o DOMContentLoaded ya paso).
    ---------------------------------------------------------------- */
 .bitatech-animar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cuando JS confirma que esta listo, los elementos empiezan ocultos */
+.bitatech-js-listo .bitatech-animar {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bitatech-animar.bitatech-visible {
+.bitatech-js-listo .bitatech-animar.bitatech-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1707,8 +1717,29 @@
 .bitatech-mt-48 { margin-top: 48px; }
 .bitatech-mb-48 { margin-bottom: 48px; }
 
-/* Ocultar en editor web para no interferir */
-.bitatech-envoltorio .o_header_standard,
-.bitatech-envoltorio .o_footer {
+/* ----------------------------------------------------------------
+   Ocultar header y footer nativos de Odoo cuando Bitatech esta activo.
+   En Odoo 19, el header (#top) y footer (.o_footer) son hermanos de
+   #wrap dentro de #wrapwrap, NO hijos de nuestro envoltorio.
+   Usamos selectores que apuntan al contexto donde Bitatech esta presente.
+   ---------------------------------------------------------------- */
+
+/* Cuando nuestro envoltorio existe en la pagina, ocultar el header nativo */
+#wrapwrap:has(.bitatech-envoltorio) > header,
+#wrapwrap:has(.bitatech-envoltorio) header#top,
+#wrapwrap:has(.bitatech-envoltorio) > .o_header_standard,
+#wrapwrap:has(.bitatech-envoltorio) nav.navbar,
+#wrapwrap:has(.bitatech-envoltorio) > footer,
+#wrapwrap:has(.bitatech-envoltorio) .o_footer {
+    display: none !important;
+}
+
+/* Fallback para navegadores sin :has() -- JS anadira esta clase al body */
+body.bitatech-pagina-activa #wrapwrap > header,
+body.bitatech-pagina-activa header#top,
+body.bitatech-pagina-activa #wrapwrap > .o_header_standard,
+body.bitatech-pagina-activa #wrapwrap nav.navbar,
+body.bitatech-pagina-activa #wrapwrap > footer,
+body.bitatech-pagina-activa .o_footer {
     display: none !important;
 }

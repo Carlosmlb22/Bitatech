@@ -10,9 +10,23 @@
  * - Scroll suave para anclas
  * - Proteccion contra doble envio
  * - Menu movil toggle
+ * - Ocultamiento de header/footer nativo de Odoo
  */
 
-document.addEventListener('DOMContentLoaded', function () {
+import { whenReady } from "@odoo/owl";
+
+whenReady(() => {
+    // Verificar que estamos en una pagina Bitatech
+    const envoltorio = document.querySelector('.bitatech-envoltorio');
+    if (!envoltorio) {
+        return;
+    }
+
+    // Marcar body para que CSS pueda ocultar header/footer nativo de Odoo
+    document.body.classList.add('bitatech-pagina-activa');
+
+    // Marcar que JS esta listo para habilitar animaciones
+    document.body.classList.add('bitatech-js-listo');
 
     // ================================================================
     // 1. ANIMACIONES DE SCROLL CON INTERSECTION OBSERVER
@@ -198,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // ================================================================
     const header = document.querySelector('.bitatech-header');
     if (header) {
-        let ultimoScroll = 0;
         window.addEventListener('scroll', function () {
             const scrollActual = window.pageYOffset;
             if (scrollActual > 100) {
@@ -206,8 +219,24 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 header.style.boxShadow = 'none';
             }
-            ultimoScroll = scrollActual;
         }, { passive: true });
     }
+
+    // ================================================================
+    // 6. OCULTAR HEADER/FOOTER NATIVO DE ODOO (JS fallback)
+    // ================================================================
+    // Intentar ocultar directamente por si los selectores CSS :has() no funcionan
+    const selectoresOdoo = [
+        '#wrapwrap > header',
+        'header#top',
+        '#wrapwrap > footer',
+        '.o_footer',
+    ];
+    selectoresOdoo.forEach(function (selector) {
+        const el = document.querySelector(selector);
+        if (el) {
+            el.style.display = 'none';
+        }
+    });
 
 });

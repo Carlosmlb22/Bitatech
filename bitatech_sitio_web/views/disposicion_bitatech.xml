@@ -30,7 +30,7 @@
 
                 <!-- ===== CONTENIDO PRINCIPAL ===== -->
                 <main class="bitatech-contenido-principal">
-                    <t t-raw="0"/>
+                    <t t-out="0"/>
                 </main>
 
                 <!-- ===== FOOTER BITATECH ===== -->
@@ -96,7 +96,7 @@
                         <!-- Linea divisora y copyright -->
                         <div class="bitatech-footer-inferior">
                             <p class="bitatech-copyright">
-                                &amp;copy; <t t-esc="datetime.datetime.now().year"/> Bitatech.
+                                &amp;copy; 2026 Bitatech.
                                 Todos los derechos reservados.
                             </p>
                         </div>
