@@ -1,6 +1,6 @@
 {
     'name': 'Bitatech - Sitio Web',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Website',
     'summary': 'Landing profesional y formulario de diagnostico BSI para Bitatech',
     'description': """

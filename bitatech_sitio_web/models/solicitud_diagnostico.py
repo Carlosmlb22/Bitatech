@@ -94,12 +94,10 @@ class SolicitudDiagnostico(models.Model):
     # ------------------------------------------------------------------
     # Metodos
     # ------------------------------------------------------------------
-    def name_get(self):
-        resultado = []
+    @api.depends('nombre', 'empresa')
+    def _compute_display_name(self):
         for registro in self:
-            nombre = f"[{registro.empresa}] {registro.nombre}"
-            resultado.append((registro.id, nombre))
-        return resultado
+            registro.display_name = f"[{registro.empresa}] {registro.nombre}"
 
     @api.model_create_multi
     def create(self, vals_list):
