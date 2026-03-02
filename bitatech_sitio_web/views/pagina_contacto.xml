@@ -5,14 +5,6 @@
     <!-- Pagina de Contacto - Bitatech                                -->
     <!-- URL: /bitatech/contacto                                      -->
     <!-- ============================================================ -->
-    <record id="pagina_contacto_bitatech" model="website.page">
-        <field name="name">Bitatech - Contacto</field>
-        <field name="url">/bitatech/contacto</field>
-        <field name="is_published" eval="True"/>
-        <field name="website_id" ref="website.default_website"/>
-        <field name="view_id" ref="vista_pagina_contacto_bitatech"/>
-    </record>
-
     <record id="vista_pagina_contacto_bitatech" model="ir.ui.view">
         <field name="name">Bitatech - Pagina Contacto</field>
         <field name="type">qweb</field>
@@ -204,6 +196,13 @@
 
             </t>
         </field>
+    </record>
+
+    <record id="pagina_contacto_bitatech" model="website.page">
+        <field name="name">Bitatech - Contacto</field>
+        <field name="url">/bitatech/contacto</field>
+        <field name="is_published" eval="True"/>
+        <field name="view_id" ref="vista_pagina_contacto_bitatech"/>
     </record>
 
 </odoo>

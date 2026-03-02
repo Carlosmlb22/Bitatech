@@ -5,14 +5,6 @@
     <!-- Pagina Nosotros - Bitatech                                   -->
     <!-- URL: /bitatech/nosotros                                      -->
     <!-- ============================================================ -->
-    <record id="pagina_nosotros_bitatech" model="website.page">
-        <field name="name">Bitatech - Nosotros</field>
-        <field name="url">/bitatech/nosotros</field>
-        <field name="is_published" eval="True"/>
-        <field name="website_id" ref="website.default_website"/>
-        <field name="view_id" ref="vista_pagina_nosotros_bitatech"/>
-    </record>
-
     <record id="vista_pagina_nosotros_bitatech" model="ir.ui.view">
         <field name="name">Bitatech - Pagina Nosotros</field>
         <field name="type">qweb</field>
@@ -230,6 +222,13 @@
 
             </t>
         </field>
+    </record>
+
+    <record id="pagina_nosotros_bitatech" model="website.page">
+        <field name="name">Bitatech - Nosotros</field>
+        <field name="url">/bitatech/nosotros</field>
+        <field name="is_published" eval="True"/>
+        <field name="view_id" ref="vista_pagina_nosotros_bitatech"/>
     </record>
 
 </odoo>

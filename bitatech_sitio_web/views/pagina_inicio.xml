@@ -5,14 +5,7 @@
     <!-- Pagina de Inicio - Bitatech                                  -->
     <!-- URL: /bitatech                                               -->
     <!-- ============================================================ -->
-    <record id="pagina_inicio_bitatech" model="website.page">
-        <field name="name">Bitatech - Inicio</field>
-        <field name="url">/bitatech</field>
-        <field name="is_published" eval="True"/>
-        <field name="website_id" ref="website.default_website"/>
-        <field name="view_id" ref="vista_pagina_inicio_bitatech"/>
-    </record>
-
+    <!-- Vista QWeb primero, luego la pagina que la referencia -->
     <record id="vista_pagina_inicio_bitatech" model="ir.ui.view">
         <field name="name">Bitatech - Pagina Inicio</field>
         <field name="type">qweb</field>
@@ -225,6 +218,14 @@
 
             </t>
         </field>
+    </record>
+
+    <!-- Pagina web (URL routing) - sin website_id para compatibilidad multi-website -->
+    <record id="pagina_inicio_bitatech" model="website.page">
+        <field name="name">Bitatech - Inicio</field>
+        <field name="url">/bitatech</field>
+        <field name="is_published" eval="True"/>
+        <field name="view_id" ref="vista_pagina_inicio_bitatech"/>
     </record>
 
 </odoo>

@@ -5,14 +5,6 @@
     <!-- Pagina de Servicios - Bitatech                               -->
     <!-- URL: /bitatech/servicios                                     -->
     <!-- ============================================================ -->
-    <record id="pagina_servicios_bitatech" model="website.page">
-        <field name="name">Bitatech - Servicios</field>
-        <field name="url">/bitatech/servicios</field>
-        <field name="is_published" eval="True"/>
-        <field name="website_id" ref="website.default_website"/>
-        <field name="view_id" ref="vista_pagina_servicios_bitatech"/>
-    </record>
-
     <record id="vista_pagina_servicios_bitatech" model="ir.ui.view">
         <field name="name">Bitatech - Pagina Servicios</field>
         <field name="type">qweb</field>
@@ -229,6 +221,13 @@
 
             </t>
         </field>
+    </record>
+
+    <record id="pagina_servicios_bitatech" model="website.page">
+        <field name="name">Bitatech - Servicios</field>
+        <field name="url">/bitatech/servicios</field>
+        <field name="is_published" eval="True"/>
+        <field name="view_id" ref="vista_pagina_servicios_bitatech"/>
     </record>
 
 </odoo>
