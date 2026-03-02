@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- LANDING PAGE PRINCIPAL                                        -->
+    <!-- ============================================================ -->
+    <template id="pagina_landing_bitatech" name="Bitatech - Landing">
+        <t t-call="website.layout">
+            <t t-set="title">Bitatech - Sistemas Empresariales Inteligentes</t>
+            <t t-set="head">
+                <meta name="description" content="Bitatech disena sistemas empresariales inteligentes que eliminan el caos operativo. Metodo BSI para empresas en Panama."/>
+                <meta name="keywords" content="sistemas empresariales, ERP Panama, automatizacion, consultoria empresarial Panama, Bitatech"/>
+                <meta property="og:title" content="Bitatech - Sistemas Empresariales Inteligentes"/>
+                <meta property="og:description" content="Eliminamos el caos operativo de tu empresa. Metodo BSI para empresas que quieren crecer sin depender del dueno."/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://bitatech.ai"/>
+            </t>
+
+            <div id="bitatech_landing" class="bitatech-landing">
+
+                <!-- ============================== -->
+                <!-- SECCION 1: HERO                -->
+                <!-- ============================== -->
+                <section id="seccion_hero" class="bitatech-hero">
+                    <div class="container">
+                        <div class="row align-items-center min-vh-80">
+                            <div class="col-lg-7">
+                                <p class="bitatech-hero__etiqueta">BITATECH</p>
+                                <h1 class="bitatech-hero__titulo">
+                                    Sistemas Empresariales<br/>
+                                    <span class="bitatech-texto-acento">Inteligentes</span>
+                                </h1>
+                                <p class="bitatech-hero__subtitulo">
+                                    Disenamos la arquitectura operativa que tu empresa necesita
+                                    para crecer sin depender de ti.
+                                </p>
+                                <p class="bitatech-hero__descripcion">
+                                    Estructura. Automatizacion. Metricas reales.
+                                    Todo integrado en un solo sistema que trabaja para ti.
+                                </p>
+                                <a href="#seccion_formulario" class="bitatech-btn bitatech-btn--primario">
+                                    Agendar Diagnostico BSI&#8482;
+                                </a>
+                                <a href="#seccion_metodo" class="bitatech-btn bitatech-btn--secundario">
+                                    Conocer el Metodo
+                                </a>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-block">
+                                <div class="bitatech-hero__grafico">
+                                    <div class="bitatech-hero__circulo">
+                                        <span class="bitatech-hero__circulo-texto">BSI&#8482;</span>
+                                        <span class="bitatech-hero__circulo-sub">Metodo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- SECCION 2: PROBLEMAS           -->
+                <!-- ============================== -->
+                <section id="seccion_problemas" class="bitatech-seccion bitatech-seccion--oscura">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <p class="bitatech-seccion__etiqueta">EL PROBLEMA</p>
+                            <h2 class="bitatech-seccion__titulo">
+                                Tu empresa crece, pero la operacion <span class="bitatech-texto-acento">te consume</span>
+                            </h2>
+                            <p class="bitatech-seccion__subtitulo">
+                                Si te identificas con alguno de estos escenarios, tu empresa necesita un sistema inteligente.
+                            </p>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema">
+                                    <div class="bitatech-tarjeta-problema__icono">01</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Dependencia del dueno</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        Nada funciona si no estas presente. Cada decision, cada aprobacion,
+                                        cada problema termina en tu escritorio.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema">
+                                    <div class="bitatech-tarjeta-problema__icono">02</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Caos operativo</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        Los pedidos se pierden, los plazos no se cumplen,
+                                        la informacion esta dispersa entre chats y hojas de calculo.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema">
+                                    <div class="bitatech-tarjeta-problema__icono">03</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Sin metricas claras</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        No sabes cuanto vendiste realmente el mes pasado, cuales productos
+                                        son mas rentables o donde se pierde dinero.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema">
+                                    <div class="bitatech-tarjeta-problema__icono">04</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Procesos manuales</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        Cotizaciones a mano, inventario en Excel, facturacion manual.
+                                        Tu equipo pierde horas en tareas que deberian ser automaticas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema">
+                                    <div class="bitatech-tarjeta-problema__icono">05</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Herramientas desconectadas</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        Usas cinco herramientas distintas que no se comunican entre si.
+                                        La informacion nunca cuadra.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="bitatech-tarjeta-problema bitatech-tarjeta-problema--cta">
+                                    <div class="bitatech-tarjeta-problema__icono">?</div>
+                                    <h3 class="bitatech-tarjeta-problema__titulo">Suena familiar?</h3>
+                                    <p class="bitatech-tarjeta-problema__texto">
+                                        No necesitas mas herramientas.<br/>
+                                        Necesitas un <strong>sistema inteligente</strong>.
+                                    </p>
+                                    <a href="#seccion_formulario" class="bitatech-btn bitatech-btn--primario bitatech-btn--sm mt-3">
+                                        Solicitar Diagnostico
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- SECCION 3: METODO BSI          -->
+                <!-- ============================== -->
+                <section id="seccion_metodo" class="bitatech-seccion bitatech-seccion--clara">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <p class="bitatech-seccion__etiqueta">NUESTRO METODO</p>
+                            <h2 class="bitatech-seccion__titulo">
+                                Metodo BSI&#8482; <span class="bitatech-texto-acento">en 5 fases</span>
+                            </h2>
+                            <p class="bitatech-seccion__subtitulo">
+                                Business Systems Intelligence. Un marco probado para transformar
+                                operaciones caóticas en sistemas empresariales que funcionan solos.
+                            </p>
+                        </div>
+                        <div class="bitatech-metodo-timeline">
+                            <div class="row">
+                                <div class="col-lg-4 mb-4">
+                                    <div class="bitatech-metodo-paso">
+                                        <div class="bitatech-metodo-paso__numero">01</div>
+                                        <h3 class="bitatech-metodo-paso__titulo">Diagnostico Estrategico</h3>
+                                        <p class="bitatech-metodo-paso__texto">
+                                            Analizamos tu operacion actual: flujos, cuellos de botella,
+                                            herramientas, equipo y puntos de fuga. Sin supuestos.
+                                        </p>
+                                        <ul class="bitatech-metodo-paso__lista">
+                                            <li>Mapa de procesos actuales</li>
+                                            <li>Identificacion de ineficiencias</li>
+                                            <li>Evaluacion de herramientas existentes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="bitatech-metodo-paso">
+                                        <div class="bitatech-metodo-paso__numero">02</div>
+                                        <h3 class="bitatech-metodo-paso__titulo">Arquitectura Operativa</h3>
+                                        <p class="bitatech-metodo-paso__texto">
+                                            Disenamos el blueprint de tu sistema: que se automatiza,
+                                            que se integra, que se elimina. Todo documentado.
+                                        </p>
+                                        <ul class="bitatech-metodo-paso__lista">
+                                            <li>Diseño de flujos optimizados</li>
+                                            <li>Definicion de roles y permisos</li>
+                                            <li>Seleccion de modulos y configuracion</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="bitatech-metodo-paso">
+                                        <div class="bitatech-metodo-paso__numero">03</div>
+                                        <h3 class="bitatech-metodo-paso__titulo">Construccion y Automatizacion</h3>
+                                        <p class="bitatech-metodo-paso__texto">
+                                            Implementamos el sistema completo: configuracion, migracion
+                                            de datos, automatizaciones y capacitacion del equipo.
+                                        </p>
+                                        <ul class="bitatech-metodo-paso__lista">
+                                            <li>Implementacion por fases</li>
+                                            <li>Migracion de datos existentes</li>
+                                            <li>Capacitacion practica del equipo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 mb-4">
+                                    <div class="bitatech-metodo-paso">
+                                        <div class="bitatech-metodo-paso__numero">04</div>
+                                        <h3 class="bitatech-metodo-paso__titulo">Inteligencia Operativa</h3>
+                                        <p class="bitatech-metodo-paso__texto">
+                                            Activamos dashboards y reportes que te dan visibilidad
+                                            ejecutiva real sobre ventas, operacion y finanzas.
+                                        </p>
+                                        <ul class="bitatech-metodo-paso__lista">
+                                            <li>Dashboards ejecutivos</li>
+                                            <li>KPIs automatizados</li>
+                                            <li>Alertas inteligentes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="bitatech-metodo-paso">
+                                        <div class="bitatech-metodo-paso__numero">05</div>
+                                        <h3 class="bitatech-metodo-paso__titulo">Optimizacion Continua</h3>
+                                        <p class="bitatech-metodo-paso__texto">
+                                            Acompanamiento mensual para ajustar, mejorar y escalar
+                                            tu sistema conforme crece tu empresa.
+                                        </p>
+                                        <ul class="bitatech-metodo-paso__lista">
+                                            <li>Revision mensual de metricas</li>
+                                            <li>Ajustes y mejoras continuas</li>
+                                            <li>Soporte prioritario</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- SECCION 4: PLANES Y PRECIOS    -->
+                <!-- ============================== -->
+                <section id="seccion_planes" class="bitatech-seccion bitatech-seccion--oscura">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <p class="bitatech-seccion__etiqueta">PLANES</p>
+                            <h2 class="bitatech-seccion__titulo">
+                                Inversion en <span class="bitatech-texto-acento">estructura real</span>
+                            </h2>
+                            <p class="bitatech-seccion__subtitulo">
+                                No vendemos software. Disenamos e implementamos el sistema
+                                que tu empresa necesita para operar sin caos.
+                            </p>
+                        </div>
+                        <div class="row g-4 justify-content-center">
+                            <!-- Plan 1 -->
+                            <div class="col-lg-4">
+                                <div class="bitatech-tarjeta-plan">
+                                    <div class="bitatech-tarjeta-plan__encabezado">
+                                        <p class="bitatech-tarjeta-plan__etiqueta">FASE 1</p>
+                                        <h3 class="bitatech-tarjeta-plan__nombre">Orden Operativo</h3>
+                                        <div class="bitatech-tarjeta-plan__precio">
+                                            <span class="bitatech-tarjeta-plan__moneda">USD</span>
+                                            <span class="bitatech-tarjeta-plan__monto">4,500</span>
+                                            <span class="bitatech-tarjeta-plan__rango">- 7,500</span>
+                                        </div>
+                                        <p class="bitatech-tarjeta-plan__tipo">Proyecto unico</p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__cuerpo">
+                                        <ul class="bitatech-tarjeta-plan__lista">
+                                            <li>Diagnostico estrategico completo</li>
+                                            <li>Arquitectura operativa documentada</li>
+                                            <li>Implementacion de modulos base</li>
+                                            <li>Configuracion de ventas e inventario</li>
+                                            <li>Migracion de datos esenciales</li>
+                                            <li>Capacitacion del equipo (hasta 10 usuarios)</li>
+                                            <li>30 dias de soporte post-implementacion</li>
+                                        </ul>
+                                        <p class="bitatech-tarjeta-plan__ideal">
+                                            <strong>Ideal para:</strong> Empresas con 5-15 personas que
+                                            necesitan salir del Excel y tener control basico.
+                                        </p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__pie">
+                                        <a href="#seccion_formulario" class="bitatech-btn bitatech-btn--plan">
+                                            Solicitar Diagnostico
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 2 -->
+                            <div class="col-lg-4">
+                                <div class="bitatech-tarjeta-plan bitatech-tarjeta-plan--destacado">
+                                    <div class="bitatech-tarjeta-plan__badge">Mas solicitado</div>
+                                    <div class="bitatech-tarjeta-plan__encabezado">
+                                        <p class="bitatech-tarjeta-plan__etiqueta">FASE 1 + 2</p>
+                                        <h3 class="bitatech-tarjeta-plan__nombre">Automatizacion Inteligente</h3>
+                                        <div class="bitatech-tarjeta-plan__precio">
+                                            <span class="bitatech-tarjeta-plan__moneda">USD</span>
+                                            <span class="bitatech-tarjeta-plan__monto">7,500</span>
+                                            <span class="bitatech-tarjeta-plan__rango">- 15,000</span>
+                                        </div>
+                                        <p class="bitatech-tarjeta-plan__tipo">Proyecto unico</p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__cuerpo">
+                                        <ul class="bitatech-tarjeta-plan__lista">
+                                            <li>Todo lo del plan Orden Operativo</li>
+                                            <li>Automatizaciones avanzadas de procesos</li>
+                                            <li>Integracion completa entre areas</li>
+                                            <li>Flujos de aprobacion configurados</li>
+                                            <li>Dashboards ejecutivos personalizados</li>
+                                            <li>Reportes automatizados de KPIs</li>
+                                            <li>Capacitacion avanzada del equipo</li>
+                                            <li>60 dias de soporte post-implementacion</li>
+                                        </ul>
+                                        <p class="bitatech-tarjeta-plan__ideal">
+                                            <strong>Ideal para:</strong> Empresas con 10-50 personas que
+                                            quieren eliminar tareas manuales y tener metricas reales.
+                                        </p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__pie">
+                                        <a href="#seccion_formulario" class="bitatech-btn bitatech-btn--primario">
+                                            Solicitar Diagnostico
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 3 -->
+                            <div class="col-lg-4">
+                                <div class="bitatech-tarjeta-plan">
+                                    <div class="bitatech-tarjeta-plan__encabezado">
+                                        <p class="bitatech-tarjeta-plan__etiqueta">CONTINUO</p>
+                                        <h3 class="bitatech-tarjeta-plan__nombre">Control Ejecutivo</h3>
+                                        <div class="bitatech-tarjeta-plan__precio">
+                                            <span class="bitatech-tarjeta-plan__moneda">USD</span>
+                                            <span class="bitatech-tarjeta-plan__monto">1,000</span>
+                                            <span class="bitatech-tarjeta-plan__rango">/mes</span>
+                                        </div>
+                                        <p class="bitatech-tarjeta-plan__tipo">Minimo 3 meses</p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__cuerpo">
+                                        <ul class="bitatech-tarjeta-plan__lista">
+                                            <li>Revision mensual de metricas clave</li>
+                                            <li>Ajustes y optimizaciones del sistema</li>
+                                            <li>Nuevas automatizaciones segun necesidad</li>
+                                            <li>Soporte prioritario</li>
+                                            <li>Capacitacion continua del equipo</li>
+                                            <li>Reportes ejecutivos mensuales</li>
+                                        </ul>
+                                        <div class="bitatech-tarjeta-plan__nota">
+                                            <p><strong>Limites del mensual:</strong></p>
+                                            <ul>
+                                                <li>Hasta 20 horas de trabajo al mes</li>
+                                                <li>No incluye desarrollos nuevos mayores</li>
+                                                <li>No incluye migraciones de datos</li>
+                                                <li>Horas no acumulables entre meses</li>
+                                            </ul>
+                                        </div>
+                                        <p class="bitatech-tarjeta-plan__ideal">
+                                            <strong>Requiere:</strong> Haber completado al menos
+                                            el plan Orden Operativo.
+                                        </p>
+                                    </div>
+                                    <div class="bitatech-tarjeta-plan__pie">
+                                        <a href="#seccion_formulario" class="bitatech-btn bitatech-btn--plan">
+                                            Consultar Disponibilidad
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- SECCION 5: FILTRO CLIENTE IDEAL -->
+                <!-- ============================== -->
+                <section id="seccion_filtro" class="bitatech-seccion bitatech-seccion--clara">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <p class="bitatech-seccion__etiqueta">CLIENTE IDEAL</p>
+                                <h2 class="bitatech-seccion__titulo">
+                                    Trabajamos con empresas que <span class="bitatech-texto-acento">van en serio</span>
+                                </h2>
+                                <p class="bitatech-seccion__subtitulo text-start">
+                                    No somos para todos. Elegimos trabajar con empresas que estan
+                                    listas para invertir en estructura real.
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="bitatech-filtro-tarjeta bitatech-filtro-tarjeta--si">
+                                            <h4 class="bitatech-filtro-tarjeta__titulo">Es para ti si:</h4>
+                                            <ul class="bitatech-filtro-tarjeta__lista">
+                                                <li>Tienes un equipo de 5+ personas</li>
+                                                <li>Facturas mas de USD 50K/mes</li>
+                                                <li>Tienes operacion real (ventas + procesos)</li>
+                                                <li>Estas dispuesto a invertir en estructura</li>
+                                                <li>Quieres dejar de ser el cuello de botella</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="bitatech-filtro-tarjeta bitatech-filtro-tarjeta--no">
+                                            <h4 class="bitatech-filtro-tarjeta__titulo">No es para ti si:</h4>
+                                            <ul class="bitatech-filtro-tarjeta__lista">
+                                                <li>Buscas solo un software barato</li>
+                                                <li>Tu empresa es unipersonal</li>
+                                                <li>No tienes presupuesto para invertir</li>
+                                                <li>Solo quieres una pagina web</li>
+                                                <li>No estas listo para cambiar procesos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- SECCION 6: FORMULARIO          -->
+                <!-- ============================== -->
+                <section id="seccion_formulario" class="bitatech-seccion bitatech-seccion--formulario">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="text-center mb-5">
+                                    <p class="bitatech-seccion__etiqueta">PRIMER PASO</p>
+                                    <h2 class="bitatech-seccion__titulo">
+                                        Diagnostico BSI&#8482; <span class="bitatech-texto-acento">gratuito</span>
+                                    </h2>
+                                    <p class="bitatech-seccion__subtitulo">
+                                        Completa el formulario y agendaremos una sesion de diagnostico
+                                        para evaluar si podemos ayudarte.
+                                    </p>
+                                </div>
+
+                                <t t-if="error">
+                                    <div class="alert alert-danger bitatech-alerta" role="alert">
+                                        <t t-esc="error"/>
+                                    </div>
+                                </t>
+
+                                <form action="/bitatech/diagnostico/enviar" method="post"
+                                      class="bitatech-formulario" id="formulario_diagnostico">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_nombre" class="bitatech-campo__label">
+                                                    Nombre completo <span class="bitatech-campo__requerido">*</span>
+                                                </label>
+                                                <input type="text" id="campo_nombre" name="nombre"
+                                                       class="bitatech-campo__input" required="required"
+                                                       placeholder="Tu nombre completo"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_empresa" class="bitatech-campo__label">
+                                                    Empresa <span class="bitatech-campo__requerido">*</span>
+                                                </label>
+                                                <input type="text" id="campo_empresa" name="empresa"
+                                                       class="bitatech-campo__input" required="required"
+                                                       placeholder="Nombre de tu empresa"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_correo" class="bitatech-campo__label">
+                                                    Correo electronico <span class="bitatech-campo__requerido">*</span>
+                                                </label>
+                                                <input type="email" id="campo_correo" name="correo"
+                                                       class="bitatech-campo__input" required="required"
+                                                       placeholder="correo@tuempresa.com"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_telefono" class="bitatech-campo__label">
+                                                    Telefono
+                                                </label>
+                                                <input type="tel" id="campo_telefono" name="telefono"
+                                                       class="bitatech-campo__input"
+                                                       placeholder="+507 6000-0000"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_tamano" class="bitatech-campo__label">
+                                                    Tamano del equipo
+                                                </label>
+                                                <select id="campo_tamano" name="tamano_equipo"
+                                                        class="bitatech-campo__select">
+                                                    <option value="">Selecciona...</option>
+                                                    <option value="1-5">1 a 5 personas</option>
+                                                    <option value="6-15">6 a 15 personas</option>
+                                                    <option value="16-30">16 a 30 personas</option>
+                                                    <option value="31-50">31 a 50 personas</option>
+                                                    <option value="50+">Mas de 50 personas</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_facturacion" class="bitatech-campo__label">
+                                                    Facturacion aproximada
+                                                </label>
+                                                <select id="campo_facturacion" name="facturacion_aproximada"
+                                                        class="bitatech-campo__select">
+                                                    <option value="">Selecciona...</option>
+                                                    <option value="menos_50k">Menos de USD 50,000/mes</option>
+                                                    <option value="50k_150k">USD 50,000 - 150,000/mes</option>
+                                                    <option value="150k_500k">USD 150,000 - 500,000/mes</option>
+                                                    <option value="500k_1m">USD 500,000 - 1,000,000/mes</option>
+                                                    <option value="mas_1m">Mas de USD 1,000,000/mes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_dolor" class="bitatech-campo__label">
+                                                    Principal dolor operativo
+                                                </label>
+                                                <select id="campo_dolor" name="principal_dolor"
+                                                        class="bitatech-campo__select">
+                                                    <option value="">Selecciona el que mas te identifica...</option>
+                                                    <option value="dependencia_dueno">Todo depende de mi como dueno</option>
+                                                    <option value="caos_operativo">Caos operativo y procesos manuales</option>
+                                                    <option value="sin_metricas">No tengo metricas claras de mi negocio</option>
+                                                    <option value="herramientas_desconectadas">Uso muchas herramientas sin integracion</option>
+                                                    <option value="escalar">Quiero escalar pero la operacion no lo permite</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="bitatech-campo">
+                                                <label for="campo_mensaje" class="bitatech-campo__label">
+                                                    Cuentanos mas sobre tu situacion
+                                                </label>
+                                                <textarea id="campo_mensaje" name="mensaje"
+                                                          class="bitatech-campo__textarea" rows="4"
+                                                          placeholder="Describe brevemente tu mayor reto operativo actual..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center mt-4">
+                                            <button type="submit" class="bitatech-btn bitatech-btn--primario bitatech-btn--lg">
+                                                Enviar Solicitud de Diagnostico BSI&#8482;
+                                            </button>
+                                            <p class="bitatech-formulario__nota mt-3">
+                                                Respuesta en menos de 24 horas habiles.
+                                                Sin compromiso. Sin spam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== -->
+                <!-- FOOTER                         -->
+                <!-- ============================== -->
+                <footer class="bitatech-footer">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="bitatech-footer__marca">
+                                    <h4 class="bitatech-footer__logo">BITATECH</h4>
+                                    <p class="bitatech-footer__tagline">Sistemas Empresariales Inteligentes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <p class="bitatech-footer__contacto">Panama | bitatech.ai</p>
+                                <p class="bitatech-footer__copy">
+                                    Bitatech <t t-esc="datetime.date.today().year"/>. Todos los derechos reservados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================ -->
+    <!-- PAGINA DE EXITO POST-ENVIO                                    -->
+    <!-- ============================================================ -->
+    <template id="pagina_diagnostico_exito" name="Diagnostico BSI - Enviado">
+        <t t-call="website.layout">
+            <t t-set="title">Solicitud Recibida - Bitatech</t>
+            <div class="bitatech-landing">
+                <section class="bitatech-seccion bitatech-seccion--exito">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 text-center">
+                                <div class="bitatech-exito">
+                                    <div class="bitatech-exito__icono">&#10003;</div>
+                                    <h1 class="bitatech-exito__titulo">Solicitud recibida</h1>
+                                    <p class="bitatech-exito__texto">
+                                        Hemos recibido tu solicitud de Diagnostico BSI.
+                                        Nuestro equipo la revisara y te contactaremos
+                                        en las proximas 24 horas habiles.
+                                    </p>
+                                    <a href="/bitatech" class="bitatech-btn bitatech-btn--secundario mt-4">
+                                        Volver al inicio
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+</odoo>

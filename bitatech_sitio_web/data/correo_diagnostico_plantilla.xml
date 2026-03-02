@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="correo_diagnostico_plantilla" model="mail.template">
+            <field name="name">Bitatech - Nueva Solicitud Diagnostico BSI</field>
+            <field name="model_id" ref="bitatech_sitio_web.model_bitatech_solicitud_diagnostico"/>
+            <field name="email_from">{{ (object.company_id.email or user.email) }}</field>
+            <field name="email_to">{{ (object.company_id.email or user.email) }}</field>
+            <field name="subject">Nueva Solicitud BSI: {{ object.empresa }}</field>
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Inter', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0f1923; color: #e0e0e0; padding: 32px; border-radius: 8px;">
+
+    <div style="text-align: center; margin-bottom: 24px; border-bottom: 2px solid #c8903e; padding-bottom: 16px;">
+        <h1 style="color: #c8903e; margin: 0; font-size: 22px;">BITATECH</h1>
+        <p style="color: #8899aa; margin: 4px 0 0; font-size: 12px; letter-spacing: 2px;">SISTEMAS EMPRESARIALES INTELIGENTES</p>
+    </div>
+
+    <h2 style="color: #ffffff; font-size: 18px; margin-bottom: 16px;">Nueva Solicitud de Diagnostico BSI</h2>
+
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; width: 40%; border-bottom: 1px solid #1a2a3a;">Nombre</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.nombre }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Empresa</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.empresa }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Correo</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.correo }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Telefono</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.telefono or 'No proporcionado' }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Equipo</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.tamano_equipo or 'No indicado' }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Facturacion</td>
+            <td style="padding: 8px 12px; color: #ffffff; border-bottom: 1px solid #1a2a3a;">{{ object.facturacion_aproximada or 'No indicada' }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px 12px; color: #8899aa; border-bottom: 1px solid #1a2a3a;">Dolor principal</td>
+            <td style="padding: 8px 12px; color: #c8903e; font-weight: bold; border-bottom: 1px solid #1a2a3a;">{{ object.principal_dolor or 'No indicado' }}</td>
+        </tr>
+    </table>
+
+    <div style="margin-top: 16px; padding: 12px; background: #1a2a3a; border-radius: 6px;" t-if="object.mensaje">
+        <p style="color: #8899aa; margin: 0 0 4px; font-size: 12px;">Mensaje:</p>
+        <p style="color: #ffffff; margin: 0;">{{ object.mensaje }}</p>
+    </div>
+
+    <div style="margin-top: 24px; text-align: center; padding-top: 16px; border-top: 1px solid #1a2a3a;">
+        <p style="color: #556677; font-size: 11px; margin: 0;">Bitatech - Sistemas Empresariales Inteligentes</p>
+    </div>
+
+</div>
+]]></field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- VISTA TREE: LISTA DE SOLICITUDES                              -->
+    <!-- ============================================================ -->
+    <record id="vista_lista_solicitud_diagnostico" model="ir.ui.view">
+        <field name="name">bitatech.solicitud.diagnostico.lista</field>
+        <field name="model">bitatech.solicitud.diagnostico</field>
+        <field name="arch" type="xml">
+            <list string="Solicitudes de Diagnostico BSI"
+                  decoration-info="estado == 'nuevo'"
+                  decoration-warning="estado == 'contactado'"
+                  decoration-success="estado == 'cerrado_ganado'"
+                  decoration-danger="estado == 'cerrado_perdido'">
+                <field name="create_date" string="Fecha"/>
+                <field name="nombre"/>
+                <field name="empresa"/>
+                <field name="correo"/>
+                <field name="telefono"/>
+                <field name="tamano_equipo"/>
+                <field name="principal_dolor"/>
+                <field name="estado" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTA FORM: DETALLE DE SOLICITUD                              -->
+    <!-- ============================================================ -->
+    <record id="vista_formulario_solicitud_diagnostico" model="ir.ui.view">
+        <field name="name">bitatech.solicitud.diagnostico.formulario</field>
+        <field name="model">bitatech.solicitud.diagnostico</field>
+        <field name="arch" type="xml">
+            <form string="Solicitud de Diagnostico BSI">
+                <header>
+                    <button name="accion_marcar_contactado" type="object"
+                            string="Marcar Contactado" class="btn-primary"
+                            invisible="estado != 'nuevo'"/>
+                    <button name="accion_marcar_diagnostico" type="object"
+                            string="Iniciar Diagnostico" class="btn-primary"
+                            invisible="estado != 'contactado'"/>
+                    <button name="accion_enviar_propuesta" type="object"
+                            string="Propuesta Enviada" class="btn-primary"
+                            invisible="estado != 'diagnostico'"/>
+                    <button name="accion_cerrar_ganado" type="object"
+                            string="Cerrar Ganado" class="btn-success"
+                            invisible="estado not in ('diagnostico', 'propuesta')"/>
+                    <button name="accion_cerrar_perdido" type="object"
+                            string="Cerrar Perdido" class="btn-danger"
+                            invisible="estado not in ('contactado', 'diagnostico', 'propuesta')"/>
+                    <field name="estado" widget="statusbar"
+                           statusbar_visible="nuevo,contactado,diagnostico,propuesta"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="nombre" placeholder="Nombre del contacto"/>
+                        </h1>
+                        <h2>
+                            <field name="empresa" placeholder="Empresa"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group string="Datos de contacto">
+                            <field name="correo" widget="email"/>
+                            <field name="telefono" widget="phone"/>
+                        </group>
+                        <group string="Perfil empresarial">
+                            <field name="tamano_equipo"/>
+                            <field name="facturacion_aproximada"/>
+                            <field name="principal_dolor"/>
+                        </group>
+                    </group>
+                    <group string="Mensaje">
+                        <field name="mensaje" nolabel="1" colspan="2"/>
+                    </group>
+                    <group string="Seguimiento interno">
+                        <field name="lead_id" readonly="1"/>
+                        <field name="notas_internas"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTA KANBAN                                                  -->
+    <!-- ============================================================ -->
+    <record id="vista_kanban_solicitud_diagnostico" model="ir.ui.view">
+        <field name="name">bitatech.solicitud.diagnostico.kanban</field>
+        <field name="model">bitatech.solicitud.diagnostico</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="estado" class="o_kanban_small_column">
+                <field name="nombre"/>
+                <field name="empresa"/>
+                <field name="correo"/>
+                <field name="principal_dolor"/>
+                <field name="estado"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_content">
+                            <strong><field name="empresa"/></strong>
+                            <div><field name="nombre"/></div>
+                            <div class="text-muted"><field name="correo"/></div>
+                            <div class="mt-1">
+                                <field name="principal_dolor" widget="badge"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- ACCION                                                        -->
+    <!-- ============================================================ -->
+    <record id="accion_solicitud_diagnostico" model="ir.actions.act_window">
+        <field name="name">Solicitudes BSI</field>
+        <field name="res_model">bitatech.solicitud.diagnostico</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Aun no hay solicitudes de diagnostico BSI
+            </p>
+            <p>
+                Las solicitudes aparecen aqui cuando un prospecto completa
+                el formulario en bitatech.ai
+            </p>
+        </field>
+    </record>
+
+</odoo>
