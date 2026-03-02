@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Pagina de Servicios - Bitatech                               -->
+    <!-- URL: /bitatech/servicios                                     -->
+    <!-- ============================================================ -->
+    <record id="pagina_servicios_bitatech" model="website.page">
+        <field name="name">Bitatech - Servicios</field>
+        <field name="url">/bitatech/servicios</field>
+        <field name="is_published" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="view_id" ref="vista_pagina_servicios_bitatech"/>
+    </record>
+
+    <record id="vista_pagina_servicios_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Pagina Servicios</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_servicios_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_servicios_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <!-- ===== ENCABEZADO SERVICIOS ===== -->
+                <section class="bitatech-pagina-encabezado">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Nuestros Servicios</span>
+                            <h1 class="bitatech-titulo-pagina">Cinco Lineas de Servicio Especializadas</h1>
+                            <p class="bitatech-desc-pagina">
+                                Cada linea de servicio resuelve un problema operativo concreto.
+                                No vendemos licencias ni horas de soporte generico.
+                                Diseñamos sistemas que funcionan.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIO 1: IMPLEMENTACION ERP ===== -->
+                <section class="bitatech-seccion bitatech-seccion-servicio" id="servicio-erp">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-servicio-detalle bitatech-animar">
+                            <div class="bitatech-servicio-encabezado">
+                                <div class="bitatech-servicio-icono bitatech-color-azul">
+                                    <i class="fa fa-building fa-2x"></i>
+                                </div>
+                                <div>
+                                    <span class="bitatech-servicio-numero">01</span>
+                                    <h2 class="bitatech-servicio-titulo">Implementacion ERP</h2>
+                                </div>
+                            </div>
+                            <p class="bitatech-servicio-desc">
+                                Implementamos, reestructuramos y migramos sistemas ERP
+                                con enfoque en operaciones reales. No se trata de instalar
+                                software: se trata de diseñar la estructura digital completa
+                                de tu empresa para que funcione sin fricciones.
+                            </p>
+                            <div class="bitatech-servicio-lista">
+                                <h4>Lo que incluye:</h4>
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Implementacion desde cero con diseño de flujos completos</li>
+                                    <li><i class="fa fa-check"></i> Reestructuracion de sistemas existentes</li>
+                                    <li><i class="fa fa-check"></i> Migraciones entre versiones o plataformas</li>
+                                    <li><i class="fa fa-check"></i> Separacion de departamentos con permisos y roles</li>
+                                    <li><i class="fa fa-check"></i> Diseño de flujos: ventas, proyectos, inventario, caja</li>
+                                    <li><i class="fa fa-check"></i> Control de entregas y recepciones con trazabilidad</li>
+                                    <li><i class="fa fa-check"></i> Cierres de caja con trazabilidad real</li>
+                                    <li><i class="fa fa-check"></i> Automatizacion de tareas operativas recurrentes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIO 2: AUTOMATIZACION AVANZADA ===== -->
+                <section class="bitatech-seccion bitatech-seccion-servicio bitatech-seccion-alt" id="servicio-automatizacion">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-servicio-detalle bitatech-animar">
+                            <div class="bitatech-servicio-encabezado">
+                                <div class="bitatech-servicio-icono bitatech-color-naranja">
+                                    <i class="fa fa-bolt fa-2x"></i>
+                                </div>
+                                <div>
+                                    <span class="bitatech-servicio-numero">02</span>
+                                    <h2 class="bitatech-servicio-titulo">Automatizacion Avanzada</h2>
+                                </div>
+                            </div>
+                            <p class="bitatech-servicio-desc">
+                                Conectamos la inteligencia operativa con la automatizacion.
+                                Bots conversacionales, wizards inteligentes, dashboards ejecutivos
+                                y alertas internas que trabajan por ti mientras tu equipo
+                                se enfoca en lo que importa.
+                            </p>
+                            <div class="bitatech-servicio-lista">
+                                <h4>Lo que incluye:</h4>
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Bots conversacionales integrados al ERP</li>
+                                    <li><i class="fa fa-check"></i> Automatizacion de cotizaciones y propuestas</li>
+                                    <li><i class="fa fa-check"></i> Wizards inteligentes para procesos complejos</li>
+                                    <li><i class="fa fa-check"></i> Automatizacion de proyectos desde ventas</li>
+                                    <li><i class="fa fa-check"></i> Alertas internas y notificaciones automaticas</li>
+                                    <li><i class="fa fa-check"></i> Control automatico de SLA</li>
+                                    <li><i class="fa fa-check"></i> Dashboards ejecutivos y SQL views personalizadas</li>
+                                    <li><i class="fa fa-check"></i> Integracion con Power BI y seguimiento de metricas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIO 3: SISTEMAS DE CHAT ===== -->
+                <section class="bitatech-seccion bitatech-seccion-servicio" id="servicio-chat">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-servicio-detalle bitatech-animar">
+                            <div class="bitatech-servicio-encabezado">
+                                <div class="bitatech-servicio-icono bitatech-color-verde">
+                                    <i class="fa fa-comments fa-2x"></i>
+                                </div>
+                                <div>
+                                    <span class="bitatech-servicio-numero">03</span>
+                                    <h2 class="bitatech-servicio-titulo">Sistemas de Chat y Conversion</h2>
+                                </div>
+                            </div>
+                            <p class="bitatech-servicio-desc">
+                                WhatsApp e Instagram convertidos en canales de venta
+                                estructurados. Flujos conversacionales, menus inteligentes,
+                                bots con estado y metricas de conversion reales
+                                integradas directamente al CRM.
+                            </p>
+                            <div class="bitatech-servicio-lista">
+                                <h4>Lo que incluye:</h4>
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Flujos conversacionales estructurados</li>
+                                    <li><i class="fa fa-check"></i> Menus inteligentes y enrutadores</li>
+                                    <li><i class="fa fa-check"></i> Bots con estado y memoria de contexto</li>
+                                    <li><i class="fa fa-check"></i> Sistemas hibridos: bot + atencion humana</li>
+                                    <li><i class="fa fa-check"></i> Metricas tipo PFV / CV1 / TRT</li>
+                                    <li><i class="fa fa-check"></i> Sistema anti-abandono de conversaciones</li>
+                                    <li><i class="fa fa-check"></i> Plantillas estructuradas de mensajes</li>
+                                    <li><i class="fa fa-check"></i> Integracion completa con CRM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIO 4: OPTIMIZACION OPERATIVA ===== -->
+                <section class="bitatech-seccion bitatech-seccion-servicio bitatech-seccion-alt" id="servicio-optimizacion">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-servicio-detalle bitatech-animar">
+                            <div class="bitatech-servicio-encabezado">
+                                <div class="bitatech-servicio-icono bitatech-color-morado">
+                                    <i class="fa fa-line-chart fa-2x"></i>
+                                </div>
+                                <div>
+                                    <span class="bitatech-servicio-numero">04</span>
+                                    <h2 class="bitatech-servicio-titulo">Optimizacion Operativa</h2>
+                                </div>
+                            </div>
+                            <p class="bitatech-servicio-desc">
+                                Auditamos tu operacion, identificamos cuellos de botella
+                                y rediseñamos procesos para que funcionen de forma autonoma.
+                                KPIs reales, roles claros y estructura organizacional digital
+                                que se sostiene sin el dueño.
+                            </p>
+                            <div class="bitatech-servicio-lista">
+                                <h4>Lo que incluye:</h4>
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Auditoria de procesos, inventario y ventas</li>
+                                    <li><i class="fa fa-check"></i> Estructura organizacional digital</li>
+                                    <li><i class="fa fa-check"></i> KPIs personalizados por departamento</li>
+                                    <li><i class="fa fa-check"></i> Reorganizacion de roles y permisos</li>
+                                    <li><i class="fa fa-check"></i> Automatizacion de tareas repetitivas</li>
+                                    <li><i class="fa fa-check"></i> Manuales de proceso operativo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIO 5: DESARROLLO A MEDIDA ===== -->
+                <section class="bitatech-seccion bitatech-seccion-servicio" id="servicio-desarrollo">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-servicio-detalle bitatech-animar">
+                            <div class="bitatech-servicio-encabezado">
+                                <div class="bitatech-servicio-icono bitatech-color-rojo">
+                                    <i class="fa fa-code fa-2x"></i>
+                                </div>
+                                <div>
+                                    <span class="bitatech-servicio-numero">05</span>
+                                    <h2 class="bitatech-servicio-titulo">Desarrollo a Medida</h2>
+                                </div>
+                            </div>
+                            <p class="bitatech-servicio-desc">
+                                Cuando el estandar no alcanza, construimos.
+                                Modulos personalizados, integraciones con sistemas externos,
+                                APIs, sincronizacion logistica y soluciones hibridas
+                                fisico-digitales diseñadas especificamente para tu operacion.
+                            </p>
+                            <div class="bitatech-servicio-lista">
+                                <h4>Lo que incluye:</h4>
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Modulos personalizados para tu operacion</li>
+                                    <li><i class="fa fa-check"></i> Automatizaciones complejas multi-proceso</li>
+                                    <li><i class="fa fa-check"></i> Integraciones externas y APIs</li>
+                                    <li><i class="fa fa-check"></i> Sincronizacion con sistemas logisticos</li>
+                                    <li><i class="fa fa-check"></i> Sistemas hibridos fisicos-digitales</li>
+                                    <li><i class="fa fa-check"></i> Reportes y vistas SQL personalizadas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== CTA SERVICIOS ===== -->
+                <section class="bitatech-seccion bitatech-cta-final">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>¿No sabes por donde empezar?</h2>
+                            <p>
+                                Solicita un diagnostico gratuito. Evaluamos tu operacion
+                                y te decimos exactamente que necesitas, sin compromiso.
+                            </p>
+                            <a href="/bitatech/diagnostico" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande">
+                                Solicitar Diagnostico Gratuito
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+</odoo>

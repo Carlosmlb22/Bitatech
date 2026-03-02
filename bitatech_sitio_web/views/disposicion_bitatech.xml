@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Disposicion global Bitatech: Header + Footer                 -->
+    <!-- Envuelve todas las paginas del sitio Bitatech                -->
+    <!-- ============================================================ -->
+    <template id="disposicion_bitatech" name="Disposicion Bitatech">
+        <t t-call="website.layout">
+            <div id="envoltorio_bitatech" class="bitatech-envoltorio">
+
+                <!-- ===== HEADER BITATECH ===== -->
+                <header class="bitatech-header">
+                    <div class="bitatech-header-interior">
+                        <a href="/bitatech" class="bitatech-logo">
+                            <span class="bitatech-logo-texto">BITATECH</span>
+                            <span class="bitatech-logo-subtexto">Sistemas Empresariales Inteligentes</span>
+                        </a>
+                        <nav class="bitatech-nav">
+                            <a href="/bitatech" class="bitatech-nav-enlace">Inicio</a>
+                            <a href="/bitatech/servicios" class="bitatech-nav-enlace">Servicios</a>
+                            <a href="/bitatech/nosotros" class="bitatech-nav-enlace">Nosotros</a>
+                            <a href="/bitatech/contacto" class="bitatech-nav-enlace bitatech-btn-nav">Contacto</a>
+                        </nav>
+                        <button class="bitatech-menu-movil" aria-label="Menu">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- ===== CONTENIDO PRINCIPAL ===== -->
+                <main class="bitatech-contenido-principal">
+                    <t t-raw="0"/>
+                </main>
+
+                <!-- ===== FOOTER BITATECH ===== -->
+                <footer class="bitatech-footer">
+                    <div class="bitatech-footer-interior">
+                        <div class="bitatech-footer-columnas">
+
+                            <!-- Columna 1: Marca -->
+                            <div class="bitatech-footer-col">
+                                <div class="bitatech-footer-logo">BITATECH</div>
+                                <p class="bitatech-footer-desc">
+                                    Sistemas Empresariales Inteligentes.
+                                    Arquitectura digital para empresas
+                                    que necesitan estructura, control y escalabilidad.
+                                </p>
+                            </div>
+
+                            <!-- Columna 2: Enlaces rapidos -->
+                            <div class="bitatech-footer-col">
+                                <h4 class="bitatech-footer-titulo">Enlaces</h4>
+                                <ul class="bitatech-footer-enlaces">
+                                    <li><a href="/bitatech">Inicio</a></li>
+                                    <li><a href="/bitatech/servicios">Servicios</a></li>
+                                    <li><a href="/bitatech/nosotros">Nosotros</a></li>
+                                    <li><a href="/bitatech/contacto">Contacto</a></li>
+                                    <li><a href="/bitatech/diagnostico">Diagnostico Gratuito</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 3: Servicios -->
+                            <div class="bitatech-footer-col">
+                                <h4 class="bitatech-footer-titulo">Servicios</h4>
+                                <ul class="bitatech-footer-enlaces">
+                                    <li><a href="/bitatech/servicios#servicio-erp">Implementacion ERP</a></li>
+                                    <li><a href="/bitatech/servicios#servicio-automatizacion">Automatizacion</a></li>
+                                    <li><a href="/bitatech/servicios#servicio-chat">Sistemas de Chat</a></li>
+                                    <li><a href="/bitatech/servicios#servicio-optimizacion">Optimizacion</a></li>
+                                    <li><a href="/bitatech/servicios#servicio-desarrollo">Desarrollo a Medida</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Columna 4: Contacto -->
+                            <div class="bitatech-footer-col">
+                                <h4 class="bitatech-footer-titulo">Contacto</h4>
+                                <ul class="bitatech-footer-enlaces bitatech-footer-contacto">
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        <a href="mailto:info@bitatech.co">info@bitatech.co</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        <span>+507 6000-0000</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Panama, Panama</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- Linea divisora y copyright -->
+                        <div class="bitatech-footer-inferior">
+                            <p class="bitatech-copyright">
+                                &amp;copy; <t t-esc="datetime.datetime.now().year"/> Bitatech.
+                                Todos los derechos reservados.
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

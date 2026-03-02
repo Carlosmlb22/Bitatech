@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Pagina de Agradecimiento - Bitatech                          -->
+    <!-- URL: /bitatech/gracias                                       -->
+    <!-- ============================================================ -->
+    <record id="pagina_gracias_bitatech" model="website.page">
+        <field name="name">Bitatech - Gracias</field>
+        <field name="url">/bitatech/gracias</field>
+        <field name="is_published" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="view_id" ref="vista_pagina_gracias_bitatech"/>
+    </record>
+
+    <record id="vista_pagina_gracias_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Pagina Gracias</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_gracias_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_gracias_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <section class="bitatech-seccion bitatech-gracias-seccion">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-gracias-contenido bitatech-animar">
+
+                            <div class="bitatech-gracias-icono">
+                                <i class="fa fa-check-circle fa-4x"></i>
+                            </div>
+
+                            <h1 class="bitatech-gracias-titulo">Solicitud Recibida</h1>
+
+                            <p class="bitatech-gracias-mensaje">
+                                Hemos recibido tu informacion correctamente.
+                                Nuestro equipo revisara tu solicitud y se pondra
+                                en contacto contigo en menos de 24 horas habiles.
+                            </p>
+
+                            <div class="bitatech-gracias-pasos">
+                                <h3>¿Que sigue?</h3>
+                                <div class="bitatech-gracias-pasos-lista">
+                                    <div class="bitatech-gracias-paso">
+                                        <div class="bitatech-gracias-paso-numero">1</div>
+                                        <div>
+                                            <strong>Revision de tu solicitud</strong>
+                                            <p>Nuestro equipo analiza la informacion que nos enviaste.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bitatech-gracias-paso">
+                                        <div class="bitatech-gracias-paso-numero">2</div>
+                                        <div>
+                                            <strong>Contacto inicial</strong>
+                                            <p>Te contactamos para agendar el diagnostico.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bitatech-gracias-paso">
+                                        <div class="bitatech-gracias-paso-numero">3</div>
+                                        <div>
+                                            <strong>Diagnostico gratuito</strong>
+                                            <p>Llamada de 30 minutos para entender tu operacion.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-gracias-acciones">
+                                <a href="/bitatech" class="bitatech-btn bitatech-btn-primario">
+                                    Volver al Inicio
+                                </a>
+                                <a href="/bitatech/servicios" class="bitatech-btn bitatech-btn-secundario">
+                                    Ver Nuestros Servicios
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+</odoo>

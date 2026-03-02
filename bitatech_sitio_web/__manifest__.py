@@ -1,36 +1,43 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Bitatech - Sitio Web',
     'version': '19.0.1.0.0',
-    'category': 'Website',
-    'summary': 'Landing profesional y formulario de diagnostico BSI para Bitatech',
+    'summary': 'Sitio web corporativo de Bitatech - Sistemas Empresariales Inteligentes',
     'description': """
-        Modulo web completo para Bitatech - Sistemas Empresariales Inteligentes.
-        Incluye landing page, formulario de diagnostico BSI, snippets reutilizables
-        y gestion de solicitudes.
+        Modulo completo del sitio web de Bitatech.
+        Incluye landing pages, formulario de contacto, integracion con CRM
+        y panel de administracion de solicitudes.
     """,
+    'category': 'Website',
     'author': 'Bitatech',
-    'website': 'https://bitatech.ai',
+    'website': 'https://www.bitatech.co',
     'license': 'LGPL-3',
     'depends': [
         'website',
+        'crm',
         'mail',
     ],
     'data': [
         'security/ir.model.access.csv',
-        'data/correo_diagnostico_plantilla.xml',
-        'views/solicitud_diagnostico_vistas.xml',
-        'views/menu_bitatech.xml',
-        'views/pagina_landing.xml',
-        'snippets/sello_bitatech.xml',
-        'snippets/llamado_diagnostico.xml',
+        'data/correo_contacto_plantilla.xml',
+        'data/menus_sitio_web.xml',
+        'views/disposicion_bitatech.xml',
+        'views/pagina_inicio.xml',
+        'views/pagina_servicios.xml',
+        'views/pagina_nosotros.xml',
+        'views/pagina_contacto.xml',
+        'views/pagina_landing_campana.xml',
+        'views/pagina_gracias.xml',
+        'views/solicitud_contacto_vistas.xml',
+        'views/menu_backend.xml',
     ],
     'assets': {
         'web.assets_frontend': [
             'bitatech_sitio_web/static/src/css/bitatech_estilos.css',
-            'bitatech_sitio_web/static/src/js/bitatech_formulario.js',
+            'bitatech_sitio_web/static/src/js/bitatech_sitio.js',
         ],
     },
     'installable': True,
-    'application': False,
+    'application': True,
     'auto_install': False,
 }

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Landing de Campaña - Diagnostico BSI                         -->
+    <!-- URL: /bitatech/diagnostico                                   -->
+    <!-- ============================================================ -->
+    <record id="pagina_landing_campana_bitatech" model="website.page">
+        <field name="name">Bitatech - Diagnostico Gratuito</field>
+        <field name="url">/bitatech/diagnostico</field>
+        <field name="is_published" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="view_id" ref="vista_pagina_landing_campana_bitatech"/>
+    </record>
+
+    <record id="vista_pagina_landing_campana_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Landing Diagnostico</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_landing_campana_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_landing_campana_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <!-- ===== HERO CON FORMULARIO ===== -->
+                <section class="bitatech-hero bitatech-hero-landing">
+                    <div class="bitatech-hero-interior">
+                        <div class="bitatech-hero-contenido bitatech-animar">
+                            <span class="bitatech-hero-etiqueta">Diagnostico Gratuito</span>
+                            <h1 class="bitatech-hero-titulo">
+                                ¿Tu empresa depende<br/>
+                                <span class="bitatech-acento">de ti para todo?</span>
+                            </h1>
+                            <p class="bitatech-hero-subtitulo">
+                                Si eres el cuello de botella de tu propia operacion,
+                                es momento de construir estructura.
+                                Solicita un diagnostico gratuito y descubre
+                                que tan lejos estas de una operacion autonoma.
+                            </p>
+                            <ul class="bitatech-hero-beneficios">
+                                <li><i class="fa fa-check-circle"></i> Sin costo, sin compromiso</li>
+                                <li><i class="fa fa-check-circle"></i> Llamada de 30 minutos</li>
+                                <li><i class="fa fa-check-circle"></i> Recomendaciones concretas</li>
+                            </ul>
+                        </div>
+
+                        <!-- Formulario en el hero -->
+                        <div class="bitatech-hero-formulario bitatech-animar" data-delay="200">
+                            <div class="bitatech-landing-formulario-caja">
+                                <h3 class="bitatech-landing-form-titulo">Solicita tu diagnostico</h3>
+                                <form action="/bitatech/contacto/enviar" method="POST"
+                                      class="bitatech-formulario" id="formulario_landing_bitatech">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <input type="hidden" name="servicio_interes" value="otro"/>
+
+                                    <div class="bitatech-campo-grupo">
+                                        <input type="text" name="nombre_completo"
+                                               class="bitatech-campo-input" required="required"
+                                               placeholder="Nombre completo *"/>
+                                    </div>
+                                    <div class="bitatech-campo-grupo">
+                                        <input type="email" name="correo"
+                                               class="bitatech-campo-input" required="required"
+                                               placeholder="Correo electronico *"/>
+                                    </div>
+                                    <div class="bitatech-campo-grupo">
+                                        <input type="tel" name="telefono"
+                                               class="bitatech-campo-input"
+                                               placeholder="Telefono / WhatsApp"/>
+                                    </div>
+                                    <div class="bitatech-campo-grupo">
+                                        <input type="text" name="nombre_empresa"
+                                               class="bitatech-campo-input"
+                                               placeholder="Nombre de tu empresa"/>
+                                    </div>
+                                    <div class="bitatech-campo-grupo">
+                                        <select name="cantidad_empleados" class="bitatech-campo-select">
+                                            <option value="">Cantidad de empleados</option>
+                                            <option value="1-5">1 a 5</option>
+                                            <option value="6-15">6 a 15</option>
+                                            <option value="16-50">16 a 50</option>
+                                            <option value="51-200">51 a 200</option>
+                                            <option value="200+">Mas de 200</option>
+                                        </select>
+                                    </div>
+                                    <div class="bitatech-campo-grupo">
+                                        <textarea name="mensaje" class="bitatech-campo-textarea" rows="3"
+                                                  placeholder="¿Cual es tu mayor dolor operativo ahora mismo?"></textarea>
+                                    </div>
+                                    <button type="submit" class="bitatech-btn bitatech-btn-primario bitatech-btn-formulario bitatech-btn-completo">
+                                        Solicitar Diagnostico Gratuito
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== PROBLEMAS COMUNES ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura" id="problemas-comunes">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">¿Te suena familiar?</span>
+                            <h2 class="bitatech-titulo-seccion">Problemas que Resolvemos</h2>
+                        </div>
+                        <div class="bitatech-problemas-grid">
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="0">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-fire"></i>
+                                </div>
+                                <h4>"Apago incendios todo el dia"</h4>
+                                <p>Tu equipo depende de ti para resolver cualquier
+                                   situacion porque no hay procesos definidos.</p>
+                            </div>
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="100">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-question-circle"></i>
+                                </div>
+                                <h4>"No se cuanto vendimos realmente"</h4>
+                                <p>Los numeros estan en Excel, en WhatsApp,
+                                   en la cabeza de alguien. No hay una fuente
+                                   de verdad unica.</p>
+                            </div>
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="200">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-chain-broken"></i>
+                                </div>
+                                <h4>"Cada departamento es una isla"</h4>
+                                <p>Ventas no sabe lo que hace operaciones.
+                                   Inventario no cuadra con caja.
+                                   No hay flujo conectado.</p>
+                            </div>
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="300">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <h4>"Pierdo clientes por lentitud"</h4>
+                                <p>Las cotizaciones tardan dias. Los seguimientos
+                                   se pierden. No hay sistema que controle
+                                   los tiempos de respuesta.</p>
+                            </div>
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="400">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <h4>"Mi equipo no usa el sistema"</h4>
+                                <p>Compraste un sistema que nadie usa porque
+                                   fue mal implementado o no refleja
+                                   la operacion real.</p>
+                            </div>
+
+                            <div class="bitatech-problema bitatech-animar" data-delay="500">
+                                <div class="bitatech-problema-icono">
+                                    <i class="fa fa-expand"></i>
+                                </div>
+                                <h4>"No puedo crecer asi"</h4>
+                                <p>Sabes que necesitas estructura para escalar
+                                   pero no sabes por donde empezar
+                                   ni a quien contratar.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== METODO BSI ===== -->
+                <section class="bitatech-seccion bitatech-seccion-gradiente" id="metodo-bsi">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Metodo BSI&#8482;</span>
+                            <h2 class="bitatech-titulo-seccion">Como Trabajamos</h2>
+                            <p class="bitatech-desc-seccion">
+                                Tres fases claras. Sin improvisacion. Con entregables concretos.
+                            </p>
+                        </div>
+                        <div class="bitatech-metodo-pasos">
+
+                            <div class="bitatech-metodo-paso bitatech-animar" data-delay="0">
+                                <div class="bitatech-metodo-paso-numero">1</div>
+                                <div class="bitatech-metodo-paso-contenido">
+                                    <h3>Diagnostico</h3>
+                                    <p>
+                                        Analizamos tu operacion actual: procesos, sistemas,
+                                        flujos, roles y metricas. Identificamos brechas,
+                                        cuellos de botella y oportunidades de mejora.
+                                    </p>
+                                    <span class="bitatech-metodo-paso-tiempo">1-2 semanas</span>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-metodo-paso bitatech-animar" data-delay="150">
+                                <div class="bitatech-metodo-paso-numero">2</div>
+                                <div class="bitatech-metodo-paso-contenido">
+                                    <h3>Arquitectura</h3>
+                                    <p>
+                                        Diseñamos la estructura digital completa:
+                                        flujos de trabajo, automatizaciones, roles,
+                                        permisos, KPIs y plan de implementacion.
+                                    </p>
+                                    <span class="bitatech-metodo-paso-tiempo">2-4 semanas</span>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-metodo-paso bitatech-animar" data-delay="300">
+                                <div class="bitatech-metodo-paso-numero">3</div>
+                                <div class="bitatech-metodo-paso-contenido">
+                                    <h3>Implementacion</h3>
+                                    <p>
+                                        Ejecutamos el plan con entregables semanales,
+                                        validacion continua y capacitacion al equipo.
+                                        Tu operacion migra sin parar.
+                                    </p>
+                                    <span class="bitatech-metodo-paso-tiempo">4-8 semanas</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== CTA FINAL ===== -->
+                <section class="bitatech-seccion bitatech-cta-final">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>El primer paso es un diagnostico</h2>
+                            <p>
+                                30 minutos. Sin costo. Sin compromiso.
+                                Te decimos exactamente donde esta el problema
+                                y como resolverlo.
+                            </p>
+                            <a href="#" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande"
+                               onclick="document.getElementById('formulario_landing_bitatech').scrollIntoView({behavior:'smooth'}); return false;">
+                                Completar el Formulario Arriba
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+</odoo>

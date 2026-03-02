@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Pagina de Inicio - Bitatech                                  -->
+    <!-- URL: /bitatech                                               -->
+    <!-- ============================================================ -->
+    <record id="pagina_inicio_bitatech" model="website.page">
+        <field name="name">Bitatech - Inicio</field>
+        <field name="url">/bitatech</field>
+        <field name="is_published" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="view_id" ref="vista_pagina_inicio_bitatech"/>
+    </record>
+
+    <record id="vista_pagina_inicio_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Pagina Inicio</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_inicio_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_inicio_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <!-- ===== HERO ===== -->
+                <section class="bitatech-hero">
+                    <div class="bitatech-hero-interior">
+                        <div class="bitatech-hero-contenido bitatech-animar">
+                            <span class="bitatech-hero-etiqueta">Metodo BSI&#8482;</span>
+                            <h1 class="bitatech-hero-titulo">
+                                Sistemas Empresariales<br/>
+                                <span class="bitatech-acento">Inteligentes</span>
+                            </h1>
+                            <p class="bitatech-hero-subtitulo">
+                                Diseñamos la arquitectura digital que tu empresa necesita
+                                para operar con estructura, eliminar el caos operativo
+                                y crecer sin depender del dueño.
+                            </p>
+                            <div class="bitatech-hero-acciones">
+                                <a href="/bitatech/diagnostico" class="bitatech-btn bitatech-btn-primario">
+                                    Solicitar Diagnostico Gratuito
+                                </a>
+                                <a href="/bitatech/servicios" class="bitatech-btn bitatech-btn-secundario">
+                                    Ver Servicios
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bitatech-hero-visual bitatech-animar">
+                            <div class="bitatech-hero-grafico">
+                                <div class="bitatech-hero-circulo bitatech-hero-circulo-1"></div>
+                                <div class="bitatech-hero-circulo bitatech-hero-circulo-2"></div>
+                                <div class="bitatech-hero-circulo bitatech-hero-circulo-3"></div>
+                                <div class="bitatech-hero-icono-central">
+                                    <i class="fa fa-cogs fa-3x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SERVICIOS RESUMEN ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura" id="servicios-resumen">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Lo que hacemos</span>
+                            <h2 class="bitatech-titulo-seccion">Cinco Lineas de Servicio</h2>
+                            <p class="bitatech-desc-seccion">
+                                Cada linea resuelve un problema operativo concreto.
+                                Sin teoria. Sin humo. Resultados medibles.
+                            </p>
+                        </div>
+                        <div class="bitatech-tarjetas-servicios">
+
+                            <!-- Servicio 1: ERP -->
+                            <div class="bitatech-tarjeta-servicio bitatech-animar" data-delay="0">
+                                <div class="bitatech-tarjeta-icono bitatech-color-azul">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <h3 class="bitatech-tarjeta-titulo">Implementacion ERP</h3>
+                                <p class="bitatech-tarjeta-desc">
+                                    Implementacion desde cero, reestructuracion,
+                                    migraciones y diseño de flujos operativos
+                                    con trazabilidad real.
+                                </p>
+                                <a href="/bitatech/servicios#servicio-erp" class="bitatech-tarjeta-enlace">
+                                    Conocer mas <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Servicio 2: Automatizacion -->
+                            <div class="bitatech-tarjeta-servicio bitatech-animar" data-delay="100">
+                                <div class="bitatech-tarjeta-icono bitatech-color-naranja">
+                                    <i class="fa fa-bolt"></i>
+                                </div>
+                                <h3 class="bitatech-tarjeta-titulo">Automatizacion Avanzada</h3>
+                                <p class="bitatech-tarjeta-desc">
+                                    Bots, wizards inteligentes, dashboards ejecutivos,
+                                    alertas internas y automatizacion de tareas
+                                    conectados al ERP.
+                                </p>
+                                <a href="/bitatech/servicios#servicio-automatizacion" class="bitatech-tarjeta-enlace">
+                                    Conocer mas <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Servicio 3: Chat -->
+                            <div class="bitatech-tarjeta-servicio bitatech-animar" data-delay="200">
+                                <div class="bitatech-tarjeta-icono bitatech-color-verde">
+                                    <i class="fa fa-comments"></i>
+                                </div>
+                                <h3 class="bitatech-tarjeta-titulo">Sistemas de Chat</h3>
+                                <p class="bitatech-tarjeta-desc">
+                                    Flujos conversacionales, bots con estado,
+                                    sistemas hibridos bot + humano,
+                                    metricas de conversion y anti-abandono.
+                                </p>
+                                <a href="/bitatech/servicios#servicio-chat" class="bitatech-tarjeta-enlace">
+                                    Conocer mas <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Servicio 4: Optimizacion -->
+                            <div class="bitatech-tarjeta-servicio bitatech-animar" data-delay="300">
+                                <div class="bitatech-tarjeta-icono bitatech-color-morado">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <h3 class="bitatech-tarjeta-titulo">Optimizacion Operativa</h3>
+                                <p class="bitatech-tarjeta-desc">
+                                    Auditoria de procesos, KPIs personalizados,
+                                    reorganizacion de roles y
+                                    automatizacion de tareas repetitivas.
+                                </p>
+                                <a href="/bitatech/servicios#servicio-optimizacion" class="bitatech-tarjeta-enlace">
+                                    Conocer mas <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Servicio 5: Desarrollo -->
+                            <div class="bitatech-tarjeta-servicio bitatech-animar" data-delay="400">
+                                <div class="bitatech-tarjeta-icono bitatech-color-rojo">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h3 class="bitatech-tarjeta-titulo">Desarrollo a Medida</h3>
+                                <p class="bitatech-tarjeta-desc">
+                                    Modulos personalizados, integraciones API,
+                                    sincronizacion logistica y
+                                    sistemas hibridos fisicos-digitales.
+                                </p>
+                                <a href="/bitatech/servicios#servicio-desarrollo" class="bitatech-tarjeta-enlace">
+                                    Conocer mas <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== POR QUE BITATECH ===== -->
+                <section class="bitatech-seccion bitatech-seccion-gradiente" id="por-que-bitatech">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Diferenciadores</span>
+                            <h2 class="bitatech-titulo-seccion">¿Por que Bitatech?</h2>
+                        </div>
+                        <div class="bitatech-diferenciadores">
+
+                            <div class="bitatech-diferenciador bitatech-animar" data-delay="0">
+                                <div class="bitatech-diferenciador-numero">01</div>
+                                <h3>Arquitectura, no improvisacion</h3>
+                                <p>
+                                    No instalamos software y nos vamos. Diseñamos
+                                    la estructura digital completa de tu empresa
+                                    con el Metodo BSI&#8482;.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-diferenciador bitatech-animar" data-delay="100">
+                                <div class="bitatech-diferenciador-numero">02</div>
+                                <h3>Resultados medibles</h3>
+                                <p>
+                                    Cada proyecto tiene KPIs claros desde el dia uno.
+                                    Sabes exactamente que vas a obtener
+                                    y como se va a medir.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-diferenciador bitatech-animar" data-delay="200">
+                                <div class="bitatech-diferenciador-numero">03</div>
+                                <h3>Experiencia operativa real</h3>
+                                <p>
+                                    Hemos diseñado sistemas para empresas
+                                    con operaciones complejas: ventas, inventario,
+                                    logistica, caja y proyectos integrados.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-diferenciador bitatech-animar" data-delay="300">
+                                <div class="bitatech-diferenciador-numero">04</div>
+                                <h3>Tu empresa deja de depender de ti</h3>
+                                <p>
+                                    El objetivo final es que la operacion
+                                    funcione con estructura, no con el dueño
+                                    resolviendo todo manualmente.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== CTA FINAL ===== -->
+                <section class="bitatech-seccion bitatech-cta-final">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>¿Listo para estructurar tu empresa?</h2>
+                            <p>
+                                Solicita un diagnostico gratuito y descubre
+                                que tan lejos esta tu operacion de funcionar
+                                sin depender de ti.
+                            </p>
+                            <a href="/bitatech/diagnostico" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande">
+                                Solicitar Diagnostico Gratuito
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Pagina Nosotros - Bitatech                                   -->
+    <!-- URL: /bitatech/nosotros                                      -->
+    <!-- ============================================================ -->
+    <record id="pagina_nosotros_bitatech" model="website.page">
+        <field name="name">Bitatech - Nosotros</field>
+        <field name="url">/bitatech/nosotros</field>
+        <field name="is_published" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="view_id" ref="vista_pagina_nosotros_bitatech"/>
+    </record>
+
+    <record id="vista_pagina_nosotros_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Pagina Nosotros</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_nosotros_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_nosotros_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <!-- ===== ENCABEZADO NOSOTROS ===== -->
+                <section class="bitatech-pagina-encabezado">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Sobre Nosotros</span>
+                            <h1 class="bitatech-titulo-pagina">Sistemas que funcionan. Empresas que escalan.</h1>
+                            <p class="bitatech-desc-pagina">
+                                Bitatech nace de una premisa simple: las empresas no necesitan
+                                mas software. Necesitan estructura digital que funcione.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== MISION Y VISION ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-dos-columnas">
+
+                            <div class="bitatech-columna bitatech-animar" data-delay="0">
+                                <div class="bitatech-caja-destacada">
+                                    <div class="bitatech-caja-icono bitatech-color-azul">
+                                        <i class="fa fa-crosshairs fa-2x"></i>
+                                    </div>
+                                    <h3>Mision</h3>
+                                    <p>
+                                        Diseñar e implementar sistemas empresariales inteligentes
+                                        que eliminen el caos operativo, establezcan estructura medible
+                                        y permitan que las empresas crezcan sin depender
+                                        exclusivamente de sus fundadores.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-columna bitatech-animar" data-delay="150">
+                                <div class="bitatech-caja-destacada">
+                                    <div class="bitatech-caja-icono bitatech-color-naranja">
+                                        <i class="fa fa-eye fa-2x"></i>
+                                    </div>
+                                    <h3>Vision</h3>
+                                    <p>
+                                        Ser la firma de referencia en arquitectura de sistemas
+                                        empresariales inteligentes en America Latina. Reconocida
+                                        por resultados concretos, no por promesas de PowerPoint.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== VALORES ===== -->
+                <section class="bitatech-seccion bitatech-seccion-gradiente">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Principios</span>
+                            <h2 class="bitatech-titulo-seccion">Cuatro Valores que Definen Nuestro Trabajo</h2>
+                        </div>
+                        <div class="bitatech-valores-grid">
+
+                            <div class="bitatech-valor bitatech-animar" data-delay="0">
+                                <div class="bitatech-valor-numero">01</div>
+                                <h3>Estructura sobre improvisacion</h3>
+                                <p>
+                                    Cada sistema que diseñamos tiene arquitectura definida,
+                                    flujos documentados y metricas de validacion.
+                                    No dejamos nada al azar.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-valor bitatech-animar" data-delay="100">
+                                <div class="bitatech-valor-numero">02</div>
+                                <h3>Resultados medibles</h3>
+                                <p>
+                                    No hablamos de "mejoras". Definimos KPIs
+                                    desde el inicio y los medimos al final.
+                                    Si no se puede medir, no sirve.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-valor bitatech-animar" data-delay="200">
+                                <div class="bitatech-valor-numero">03</div>
+                                <h3>Honestidad operativa</h3>
+                                <p>
+                                    Si algo no es viable, lo decimos.
+                                    Si un proyecto necesita mas tiempo, lo comunicamos.
+                                    Sin sorpresas, sin letra pequeña.
+                                </p>
+                            </div>
+
+                            <div class="bitatech-valor bitatech-animar" data-delay="300">
+                                <div class="bitatech-valor-numero">04</div>
+                                <h3>Independencia operativa</h3>
+                                <p>
+                                    El exito de un proyecto es que tu empresa
+                                    funcione sin nosotros. Diseñamos para
+                                    la autonomia, no para la dependencia.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== COMPARACION ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura" id="comparacion">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Comparativa</span>
+                            <h2 class="bitatech-titulo-seccion">Otros vs Bitatech</h2>
+                            <p class="bitatech-desc-seccion">
+                                La diferencia entre contratar un proveedor generico
+                                y un equipo de arquitectura empresarial.
+                            </p>
+                        </div>
+                        <div class="bitatech-tabla-comparacion bitatech-animar">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Aspecto</th>
+                                        <th class="bitatech-col-otros">Otros proveedores</th>
+                                        <th class="bitatech-col-bitatech">Bitatech</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Enfoque</td>
+                                        <td class="bitatech-col-otros">Instalan software</td>
+                                        <td class="bitatech-col-bitatech">Diseñan arquitectura empresarial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Metodologia</td>
+                                        <td class="bitatech-col-otros">Plantillas genericas</td>
+                                        <td class="bitatech-col-bitatech">Metodo BSI&#8482; personalizado</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resultado</td>
+                                        <td class="bitatech-col-otros">Sistema subutilizado</td>
+                                        <td class="bitatech-col-bitatech">Operacion autonoma con metricas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Metricas</td>
+                                        <td class="bitatech-col-otros">Reportes estandar</td>
+                                        <td class="bitatech-col-bitatech">KPIs personalizados por area</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soporte</td>
+                                        <td class="bitatech-col-otros">Tickets y esperas</td>
+                                        <td class="bitatech-col-bitatech">Acompañamiento estructurado</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dependencia</td>
+                                        <td class="bitatech-col-otros">Necesitas al proveedor siempre</td>
+                                        <td class="bitatech-col-bitatech">Tu equipo opera de forma autonoma</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Automatizacion</td>
+                                        <td class="bitatech-col-otros">Basica o inexistente</td>
+                                        <td class="bitatech-col-bitatech">Bots, wizards, alertas, dashboards</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== FILOSOFIA ===== -->
+                <section class="bitatech-seccion bitatech-seccion-gradiente">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-filosofia bitatech-animar">
+                            <div class="bitatech-filosofia-contenido">
+                                <span class="bitatech-etiqueta-seccion">Filosofia</span>
+                                <h2>No vendemos software. Diseñamos sistemas.</h2>
+                                <p>
+                                    Un sistema empresarial inteligente no es un programa
+                                    que instalas y usas. Es una estructura digital
+                                    que conecta ventas, operaciones, inventario, proyectos
+                                    y finanzas en un flujo coherente y medible.
+                                </p>
+                                <p>
+                                    Nuestro trabajo es diseñar esa estructura para que
+                                    tu empresa funcione con proceso, no con heroismo.
+                                    Para que los numeros hablen, los equipos sepan
+                                    que hacer y tu puedas tomar decisiones
+                                    basadas en datos reales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== CTA ===== -->
+                <section class="bitatech-seccion bitatech-cta-final">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>¿Quieres saber como aplicamos esto a tu empresa?</h2>
+                            <p>
+                                Solicita un diagnostico gratuito y te mostramos
+                                exactamente que necesita tu operacion.
+                            </p>
+                            <a href="/bitatech/diagnostico" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande">
+                                Solicitar Diagnostico Gratuito
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+</odoo>

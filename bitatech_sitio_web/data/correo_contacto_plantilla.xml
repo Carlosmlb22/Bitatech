@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="correo_nueva_solicitud_contacto" model="mail.template">
+            <field name="name">Bitatech - Nueva Solicitud de Contacto</field>
+            <field name="model_id" ref="model_bitatech_solicitud_contacto"/>
+            <field name="email_from">{{ (object.company_id.email or user.email) }}</field>
+            <field name="email_to">{{ (object.company_id.email or user.email) }}</field>
+            <field name="subject">Nueva solicitud de contacto: {{ object.nombre_completo }}</field>
+            <field name="body_html" type="html">
+<div style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;">
+    <table width="600" cellpadding="0" cellspacing="0" style="margin: 20px auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+        <tr>
+            <td style="background-color: #0a0a0a; padding: 24px 32px; text-align: center;">
+                <h1 style="color: #d4a843; margin: 0; font-size: 22px; letter-spacing: 1px;">BITATECH</h1>
+                <p style="color: #cccccc; margin: 4px 0 0; font-size: 12px;">Sistemas Empresariales Inteligentes</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #1a1a1a; padding: 32px;">
+                <h2 style="color: #d4a843; margin: 0 0 20px; font-size: 18px;">Nueva Solicitud de Contacto</h2>
+                <table width="100%" cellpadding="8" cellspacing="0" style="color: #e0e0e0; font-size: 14px;">
+                    <tr>
+                        <td style="color: #999; width: 160px; vertical-align: top;">Nombre:</td>
+                        <td style="color: #fff;">{{ object.nombre_completo }}</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #999; vertical-align: top;">Correo:</td>
+                        <td><a href="mailto:{{ object.correo }}" style="color: #d4a843;">{{ object.correo }}</a></td>
+                    </tr>
+                    <tr t-if="object.telefono">
+                        <td style="color: #999; vertical-align: top;">Telefono:</td>
+                        <td style="color: #fff;">{{ object.telefono }}</td>
+                    </tr>
+                    <tr t-if="object.nombre_empresa">
+                        <td style="color: #999; vertical-align: top;">Empresa:</td>
+                        <td style="color: #fff;">{{ object.nombre_empresa }}</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #999; vertical-align: top;">Servicio:</td>
+                        <td style="color: #fff;">{{ object.servicio_interes }}</td>
+                    </tr>
+                    <tr t-if="object.cantidad_empleados">
+                        <td style="color: #999; vertical-align: top;">Empleados:</td>
+                        <td style="color: #fff;">{{ object.cantidad_empleados }}</td>
+                    </tr>
+                    <tr t-if="object.mensaje">
+                        <td style="color: #999; vertical-align: top;">Mensaje:</td>
+                        <td style="color: #fff;">{{ object.mensaje }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #111; padding: 16px 32px; text-align: center;">
+                <p style="color: #666; margin: 0; font-size: 11px;">Bitatech - Sistemas Empresariales Inteligentes</p>
+            </td>
+        </tr>
+    </table>
+</div>
+            </field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

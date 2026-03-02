@@ -1,63 +1,81 @@
 # Bitatech - Sitio Web
 
-Modulo Odoo 18 para la landing page oficial de Bitatech.
+Modulo del sitio web corporativo de Bitatech para Odoo 19.
 
 ## Requisitos
 
-- Odoo 18 Community o Enterprise
-- Modulo `website` instalado
-- Modulo `mail` instalado
-- (Opcional) Modulo `crm` para creacion automatica de leads
+- Odoo 19.0 (odoo.sh o servidor propio)
+- Modulos base: `website`, `crm`, `mail`
 
 ## Instalacion
 
-1. Copiar la carpeta `bitatech_sitio_web` al directorio de addons de Odoo
-2. Reiniciar el servicio de Odoo
-3. Ir a Aplicaciones > Actualizar lista de aplicaciones
-4. Buscar "Bitatech" e instalar
+### En odoo.sh
 
-## Configuracion
+1. Subir la carpeta `bitatech_sitio_web` al repositorio vinculado.
+2. Ir a Aplicaciones > Actualizar lista de aplicaciones.
+3. Buscar "Bitatech" e instalar "Bitatech - Sitio Web".
 
-- La landing esta disponible en `/bitatech`
-- Las solicitudes se gestionan desde el menu Bitatech > Solicitudes BSI
-- Si CRM esta instalado, cada solicitud crea un lead automaticamente
-- La plantilla de correo se puede editar desde Ajustes > Tecnico > Plantillas de correo
+### En servidor propio
+
+1. Copiar la carpeta `bitatech_sitio_web` al directorio de addons.
+2. Agregar la ruta al parametro `--addons-path` en la configuracion de Odoo.
+3. Reiniciar el servicio de Odoo.
+4. Ir a Aplicaciones > Actualizar lista de aplicaciones.
+5. Buscar "Bitatech" e instalar.
 
 ## Estructura
 
 ```
 bitatech_sitio_web/
-  __manifest__.py
-  __init__.py
-  controllers/
     __init__.py
-    controlador_principal.py
-  models/
-    __init__.py
-    solicitud_diagnostico.py
-  views/
-    pagina_landing.xml
-    solicitud_diagnostico_vistas.xml
-    menu_bitatech.xml
-  snippets/
-    sello_bitatech.xml
-    llamado_diagnostico.xml
-  data/
-    correo_diagnostico_plantilla.xml
-  security/
-    ir.model.access.csv
-  static/
-    src/
-      css/bitatech_estilos.css
-      js/bitatech_formulario.js
-      img/
-    description/
-      icon.png
+    __manifest__.py
+    controllers/
+        __init__.py
+        controlador_contacto.py
+    models/
+        __init__.py
+        solicitud_contacto.py
+    security/
+        ir.model.access.csv
+    data/
+        correo_contacto_plantilla.xml
+        menus_sitio_web.xml
+    views/
+        disposicion_bitatech.xml
+        pagina_inicio.xml
+        pagina_servicios.xml
+        pagina_nosotros.xml
+        pagina_contacto.xml
+        pagina_landing_campana.xml
+        pagina_gracias.xml
+        solicitud_contacto_vistas.xml
+        menu_backend.xml
+    static/
+        src/
+            css/
+                bitatech_estilos.css
+            js/
+                bitatech_sitio.js
 ```
 
-## Notas
+## Paginas
 
-- El texto visible NO menciona Odoo en ningun lugar
-- El naming tecnico esta en espanol
-- Los snippets son reutilizables desde el editor web
-- El formulario incluye proteccion CSRF y validacion client-side
+| URL | Descripcion |
+|-----|-------------|
+| `/bitatech` | Pagina de inicio |
+| `/bitatech/servicios` | Detalle de los 5 servicios |
+| `/bitatech/nosotros` | Mision, vision, valores, comparativa |
+| `/bitatech/contacto` | Formulario de contacto completo |
+| `/bitatech/diagnostico` | Landing de campana (Google Ads) |
+| `/bitatech/gracias` | Pagina post-envio |
+
+## Backend
+
+- Menu: Bitatech > Solicitudes de Contacto
+- Vistas: Kanban (agrupado por estado), Lista, Formulario
+- Integracion automatica con CRM (crea oportunidad)
+- Notificacion por correo al recibir solicitud
+
+## Version
+
+19.0.1.0.0

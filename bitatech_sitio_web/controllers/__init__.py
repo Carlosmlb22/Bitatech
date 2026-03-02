@@ -1,1 +1,2 @@
-from . import controlador_principal
+# -*- coding: utf-8 -*-
+from . import controlador_contacto

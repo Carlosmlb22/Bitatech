@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Menu Backend: Bitatech                                       -->
+    <!-- ============================================================ -->
+
+    <!-- Menu raiz -->
+    <menuitem id="menu_bitatech_raiz"
+              name="Bitatech"
+              sequence="90"
+              web_icon="bitatech_sitio_web,static/description/icon.png"/>
+
+    <!-- Submenu: Solicitudes -->
+    <menuitem id="menu_bitatech_solicitudes"
+              name="Solicitudes de Contacto"
+              parent="menu_bitatech_raiz"
+              action="accion_solicitud_contacto"
+              sequence="10"/>
+
+</odoo>

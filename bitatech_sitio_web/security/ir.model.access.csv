@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acceso_solicitud_diagnostico_usuario,bitatech.solicitud.diagnostico.usuario,model_bitatech_solicitud_diagnostico,base.group_user,1,1,1,0
-acceso_solicitud_diagnostico_admin,bitatech.solicitud.diagnostico.admin,model_bitatech_solicitud_diagnostico,base.group_system,1,1,1,1
-acceso_solicitud_diagnostico_publico,bitatech.solicitud.diagnostico.publico,model_bitatech_solicitud_diagnostico,base.group_public,0,0,1,0
+acceso_solicitud_contacto_publico,bitatech.solicitud.contacto.publico,model_bitatech_solicitud_contacto,,0,0,1,0
+acceso_solicitud_contacto_usuario,bitatech.solicitud.contacto.usuario,model_bitatech_solicitud_contacto,base.group_user,1,1,1,0
+acceso_solicitud_contacto_admin,bitatech.solicitud.contacto.admin,model_bitatech_solicitud_contacto,base.group_system,1,1,1,1

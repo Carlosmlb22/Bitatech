@@ -1,1 +1,2 @@
-from . import solicitud_diagnostico
+# -*- coding: utf-8 -*-
+from . import solicitud_contacto

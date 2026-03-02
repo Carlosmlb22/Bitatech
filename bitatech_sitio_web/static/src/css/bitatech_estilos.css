@@ -1,820 +1,1661 @@
-/* ============================================================
-   BITATECH - Estilos Landing Page
-   Paleta: Oscuro (#0f1923) + Acento dorado (#c8903e) + Blanco
-   Tipografia: Inter / system-ui
-   ============================================================ */
+/* ================================================================
+   BITATECH - Estilos Globales del Sitio Web
+   Sistemas Empresariales Inteligentes
+   Paleta: Dark (#0a0a0a / #1a1a1a) + Gold/Orange (#d4a843)
+   ================================================================ */
 
-/* ----------------------------------------------------------
-   VARIABLES
-   ---------------------------------------------------------- */
+/* ----------------------------------------------------------------
+   1. VARIABLES CSS
+   ---------------------------------------------------------------- */
 :root {
-    --bt-negro: #0a0f14;
-    --bt-oscuro: #0f1923;
-    --bt-oscuro-2: #162231;
-    --bt-oscuro-3: #1a2a3a;
-    --bt-gris-oscuro: #2a3a4a;
-    --bt-gris: #556677;
-    --bt-gris-claro: #8899aa;
-    --bt-texto: #c8d0d8;
-    --bt-blanco: #eef1f4;
-    --bt-blanco-puro: #ffffff;
-    --bt-acento: #c8903e;
-    --bt-acento-hover: #daa050;
-    --bt-acento-oscuro: #a07030;
-    --bt-verde: #3a9e6e;
-    --bt-rojo: #c0392b;
-    --bt-sombra: 0 4px 24px rgba(0, 0, 0, 0.3);
-    --bt-sombra-suave: 0 2px 12px rgba(0, 0, 0, 0.15);
-    --bt-radio: 8px;
-    --bt-radio-lg: 12px;
-    --bt-transicion: all 0.3s ease;
+    --bt-negro: #0a0a0a;
+    --bt-negro-suave: #111111;
+    --bt-gris-oscuro: #1a1a1a;
+    --bt-gris-medio: #2a2a2a;
+    --bt-gris-claro: #3a3a3a;
+    --bt-gris-texto: #999999;
+    --bt-gris-borde: #333333;
+    --bt-blanco: #ffffff;
+    --bt-blanco-suave: #f0f0f0;
+    --bt-acento: #d4a843;
+    --bt-acento-hover: #e0b854;
+    --bt-acento-oscuro: #b8922f;
+    --bt-azul: #4a90d9;
+    --bt-naranja: #e8913a;
+    --bt-verde: #4caf50;
+    --bt-morado: #9b59b6;
+    --bt-rojo: #e74c3c;
     --bt-fuente: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bt-fuente-titulo: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bt-ancho-max: 1200px;
+    --bt-radio: 8px;
+    --bt-radio-grande: 16px;
+    --bt-sombra: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --bt-sombra-hover: 0 8px 40px rgba(0, 0, 0, 0.4);
+    --bt-transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ----------------------------------------------------------
-   BASE
-   ---------------------------------------------------------- */
-.bitatech-landing {
+/* ----------------------------------------------------------------
+   2. RESET Y BASE
+   ---------------------------------------------------------------- */
+.bitatech-envoltorio {
     font-family: var(--bt-fuente);
-    color: var(--bt-texto);
+    color: var(--bt-blanco-suave);
+    background-color: var(--bt-negro);
     line-height: 1.7;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.bitatech-landing * {
+.bitatech-envoltorio *,
+.bitatech-envoltorio *::before,
+.bitatech-envoltorio *::after {
     box-sizing: border-box;
 }
 
-.min-vh-80 {
-    min-height: 80vh;
+.bitatech-envoltorio img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* ----------------------------------------------------------
-   TEXTO ACENTO
-   ---------------------------------------------------------- */
-.bitatech-texto-acento {
+.bitatech-envoltorio a {
     color: var(--bt-acento);
-}
-
-/* ----------------------------------------------------------
-   BOTONES
-   ---------------------------------------------------------- */
-.bitatech-btn {
-    display: inline-block;
-    padding: 14px 32px;
-    font-family: var(--bt-fuente);
-    font-size: 15px;
-    font-weight: 600;
     text-decoration: none;
-    border-radius: var(--bt-radio);
     transition: var(--bt-transicion);
-    cursor: pointer;
-    border: none;
-    letter-spacing: 0.3px;
 }
 
-.bitatech-btn--primario {
-    background: var(--bt-acento);
-    color: var(--bt-blanco-puro);
+.bitatech-envoltorio a:hover {
+    color: var(--bt-acento-hover);
 }
 
-.bitatech-btn--primario:hover {
-    background: var(--bt-acento-hover);
-    color: var(--bt-blanco-puro);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(200, 144, 62, 0.35);
+/* ----------------------------------------------------------------
+   3. HEADER
+   ---------------------------------------------------------------- */
+.bitatech-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--bt-gris-borde);
+    padding: 0 24px;
+}
+
+.bitatech-header-interior {
+    max-width: var(--bt-ancho-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.bitatech-logo {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
 }
 
-.bitatech-btn--secundario {
-    background: transparent;
-    color: var(--bt-blanco);
-    border: 1px solid var(--bt-gris-oscuro);
+.bitatech-logo:hover {
+    text-decoration: none;
 }
 
-.bitatech-btn--secundario:hover {
-    border-color: var(--bt-acento);
+.bitatech-logo-texto {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--bt-acento);
+    line-height: 1.2;
+}
+
+.bitatech-logo-subtexto {
+    font-size: 10px;
+    color: var(--bt-gris-texto);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.bitatech-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.bitatech-nav-enlace {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--bt-blanco-suave);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 4px 0;
+}
+
+.bitatech-nav-enlace::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--bt-acento);
+    transition: width 0.3s ease;
+}
+
+.bitatech-nav-enlace:hover::after {
+    width: 100%;
+}
+
+.bitatech-nav-enlace:hover {
     color: var(--bt-acento);
     text-decoration: none;
 }
 
-.bitatech-btn--plan {
-    background: var(--bt-oscuro-3);
-    color: var(--bt-blanco);
-    width: 100%;
-    text-align: center;
+.bitatech-btn-nav {
+    background-color: var(--bt-acento);
+    color: var(--bt-negro) !important;
+    padding: 10px 24px;
+    border-radius: var(--bt-radio);
+    font-weight: 600;
 }
 
-.bitatech-btn--plan:hover {
-    background: var(--bt-acento);
-    color: var(--bt-blanco-puro);
+.bitatech-btn-nav::after {
+    display: none;
+}
+
+.bitatech-btn-nav:hover {
+    background-color: var(--bt-acento-hover);
+    color: var(--bt-negro) !important;
     text-decoration: none;
 }
 
-.bitatech-btn--sm {
-    padding: 10px 24px;
-    font-size: 13px;
+/* Menu movil */
+.bitatech-menu-movil {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
 }
 
-.bitatech-btn--lg {
-    padding: 18px 48px;
-    font-size: 16px;
+.bitatech-menu-movil span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--bt-blanco);
+    transition: var(--bt-transicion);
 }
 
-/* ----------------------------------------------------------
-   HERO
-   ---------------------------------------------------------- */
+.bitatech-menu-movil.activo span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bitatech-menu-movil.activo span:nth-child(2) {
+    opacity: 0;
+}
+
+.bitatech-menu-movil.activo span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ----------------------------------------------------------------
+   4. CONTENIDO PRINCIPAL
+   ---------------------------------------------------------------- */
+.bitatech-contenido-principal {
+    padding-top: 72px;
+}
+
+/* ----------------------------------------------------------------
+   5. SECCIONES
+   ---------------------------------------------------------------- */
+.bitatech-seccion {
+    padding: 96px 24px;
+}
+
+.bitatech-seccion-interior {
+    max-width: var(--bt-ancho-max);
+    margin: 0 auto;
+}
+
+.bitatech-seccion-oscura {
+    background-color: var(--bt-gris-oscuro);
+}
+
+.bitatech-seccion-gradiente {
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+}
+
+.bitatech-seccion-alt {
+    background-color: var(--bt-negro-suave);
+}
+
+.bitatech-seccion-encabezado {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.bitatech-etiqueta-seccion {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+    padding: 6px 16px;
+    border: 1px solid var(--bt-acento);
+    border-radius: 20px;
+}
+
+.bitatech-titulo-seccion {
+    font-family: var(--bt-fuente-titulo);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.bitatech-desc-seccion {
+    font-size: 18px;
+    color: var(--bt-gris-texto);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------
+   6. HERO
+   ---------------------------------------------------------------- */
 .bitatech-hero {
-    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-oscuro) 50%, var(--bt-oscuro-2) 100%);
-    padding: 60px 0 80px;
+    padding: 120px 24px 96px;
+    background: linear-gradient(135deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
     position: relative;
+    overflow: hidden;
 }
 
 .bitatech-hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(200, 144, 62, 0.06) 0%, transparent 60%);
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.06) 0%, transparent 70%);
     pointer-events: none;
 }
 
-.bitatech-hero__etiqueta {
+.bitatech-hero-interior {
+    max-width: var(--bt-ancho-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.bitatech-hero-etiqueta {
+    display: inline-block;
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 4px;
-    color: var(--bt-acento);
-    margin-bottom: 16px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 20px;
+    padding: 8px 20px;
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 20px;
+    background: rgba(212, 168, 67, 0.05);
 }
 
-.bitatech-hero__titulo {
-    font-size: clamp(36px, 5vw, 60px);
+.bitatech-hero-titulo {
+    font-family: var(--bt-fuente-titulo);
+    font-size: 52px;
     font-weight: 800;
-    color: var(--bt-blanco-puro);
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.bitatech-hero__subtitulo {
-    font-size: 20px;
     color: var(--bt-blanco);
-    max-width: 540px;
-    margin-bottom: 16px;
-    line-height: 1.5;
+    line-height: 1.15;
+    margin: 0 0 24px;
 }
 
-.bitatech-hero__descripcion {
+.bitatech-acento {
+    color: var(--bt-acento);
+}
+
+.bitatech-hero-subtitulo {
+    font-size: 18px;
+    color: var(--bt-gris-texto);
+    line-height: 1.7;
+    margin: 0 0 36px;
+    max-width: 520px;
+}
+
+.bitatech-hero-acciones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bitatech-hero-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+}
+
+.bitatech-hero-beneficios li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--bt-blanco-suave);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.bitatech-hero-beneficios li i {
+    color: var(--bt-acento);
     font-size: 16px;
-    color: var(--bt-gris-claro);
-    max-width: 480px;
-    margin-bottom: 32px;
 }
 
-.bitatech-hero .bitatech-btn {
-    margin-right: 12px;
-    margin-bottom: 12px;
-}
-
-/* Hero grafico */
-.bitatech-hero__grafico {
+/* Hero visual / grafico */
+.bitatech-hero-visual {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100%;
-    min-height: 300px;
+    align-items: center;
 }
 
-.bitatech-hero__circulo {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 2px solid var(--bt-acento);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.bitatech-hero-grafico {
     position: relative;
-    background: rgba(200, 144, 62, 0.05);
-    box-shadow: 0 0 60px rgba(200, 144, 62, 0.1);
+    width: 360px;
+    height: 360px;
 }
 
-.bitatech-hero__circulo::before {
-    content: '';
+.bitatech-hero-circulo {
     position: absolute;
-    width: 280px;
-    height: 280px;
     border-radius: 50%;
-    border: 1px solid rgba(200, 144, 62, 0.15);
-    animation: bitatech-pulso 3s ease-in-out infinite;
+    border: 1px solid rgba(212, 168, 67, 0.15);
 }
 
-.bitatech-hero__circulo::after {
-    content: '';
+.bitatech-hero-circulo-1 {
+    width: 360px;
+    height: 360px;
+    top: 0;
+    left: 0;
+    animation: bitatech-pulso 6s ease-in-out infinite;
+}
+
+.bitatech-hero-circulo-2 {
+    width: 260px;
+    height: 260px;
+    top: 50px;
+    left: 50px;
+    border-color: rgba(212, 168, 67, 0.25);
+    animation: bitatech-pulso 6s ease-in-out 1s infinite;
+}
+
+.bitatech-hero-circulo-3 {
+    width: 160px;
+    height: 160px;
+    top: 100px;
+    left: 100px;
+    border-color: rgba(212, 168, 67, 0.35);
+    animation: bitatech-pulso 6s ease-in-out 2s infinite;
+}
+
+.bitatech-hero-icono-central {
     position: absolute;
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    border: 1px solid rgba(200, 144, 62, 0.08);
-    animation: bitatech-pulso 3s ease-in-out infinite 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bt-acento);
+    opacity: 0.8;
 }
 
 @keyframes bitatech-pulso {
     0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.7; }
 }
 
-.bitatech-hero__circulo-texto {
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--bt-acento);
-    letter-spacing: 3px;
+/* Hero landing (diagnostico) */
+.bitatech-hero-landing {
+    padding-top: 140px;
+    padding-bottom: 80px;
 }
 
-.bitatech-hero__circulo-sub {
-    font-size: 13px;
-    color: var(--bt-gris-claro);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-top: 4px;
+.bitatech-hero-landing .bitatech-hero-interior {
+    align-items: flex-start;
 }
 
-/* ----------------------------------------------------------
-   SECCIONES GENERALES
-   ---------------------------------------------------------- */
-.bitatech-seccion {
-    padding: 80px 0;
-    position: relative;
+.bitatech-hero-formulario {
+    width: 100%;
 }
 
-.bitatech-seccion--oscura {
-    background: var(--bt-oscuro);
-}
-
-.bitatech-seccion--clara {
-    background: var(--bt-oscuro-2);
-}
-
-.bitatech-seccion--formulario {
-    background: linear-gradient(180deg, var(--bt-oscuro) 0%, var(--bt-negro) 100%);
-}
-
-.bitatech-seccion--exito {
-    background: var(--bt-oscuro);
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-}
-
-.bitatech-seccion__etiqueta {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--bt-acento);
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.bitatech-seccion__titulo {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
-    color: var(--bt-blanco-puro);
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.bitatech-seccion__subtitulo {
-    font-size: 17px;
-    color: var(--bt-gris-claro);
-    max-width: 640px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-}
-
-/* ----------------------------------------------------------
-   TARJETAS DE PROBLEMAS
-   ---------------------------------------------------------- */
-.bitatech-tarjeta-problema {
-    background: var(--bt-oscuro-2);
-    border: 1px solid var(--bt-oscuro-3);
-    border-radius: var(--bt-radio-lg);
-    padding: 32px 28px;
-    height: 100%;
-    transition: var(--bt-transicion);
-}
-
-.bitatech-tarjeta-problema:hover {
-    border-color: var(--bt-gris-oscuro);
-    transform: translateY(-4px);
+.bitatech-landing-formulario-caja {
+    background-color: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 40px 32px;
     box-shadow: var(--bt-sombra);
 }
 
-.bitatech-tarjeta-problema--cta {
-    background: linear-gradient(135deg, var(--bt-oscuro-2), rgba(200, 144, 62, 0.08));
-    border-color: var(--bt-acento-oscuro);
-}
-
-.bitatech-tarjeta-problema__icono {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--bt-acento);
-    margin-bottom: 16px;
-    font-family: var(--bt-fuente);
-}
-
-.bitatech-tarjeta-problema__titulo {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--bt-blanco-puro);
-    margin-bottom: 12px;
-}
-
-.bitatech-tarjeta-problema__texto {
-    font-size: 15px;
-    color: var(--bt-gris-claro);
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-/* ----------------------------------------------------------
-   METODO BSI - PASOS
-   ---------------------------------------------------------- */
-.bitatech-metodo-paso {
-    background: var(--bt-oscuro);
-    border: 1px solid var(--bt-oscuro-3);
-    border-radius: var(--bt-radio-lg);
-    padding: 32px 28px;
-    height: 100%;
-    transition: var(--bt-transicion);
-    position: relative;
-}
-
-.bitatech-metodo-paso:hover {
-    border-color: var(--bt-acento);
-    box-shadow: 0 0 30px rgba(200, 144, 62, 0.08);
-}
-
-.bitatech-metodo-paso__numero {
-    font-size: 42px;
-    font-weight: 900;
-    color: rgba(200, 144, 62, 0.15);
-    position: absolute;
-    top: 16px;
-    right: 24px;
-    line-height: 1;
-}
-
-.bitatech-metodo-paso__titulo {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--bt-blanco-puro);
-    margin-bottom: 12px;
-}
-
-.bitatech-metodo-paso__texto {
-    font-size: 15px;
-    color: var(--bt-gris-claro);
-    line-height: 1.6;
-    margin-bottom: 16px;
-}
-
-.bitatech-metodo-paso__lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.bitatech-metodo-paso__lista li {
-    font-size: 14px;
-    color: var(--bt-texto);
-    padding: 6px 0 6px 20px;
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.bitatech-metodo-paso__lista li:last-child {
-    border-bottom: none;
-}
-
-.bitatech-metodo-paso__lista li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background: var(--bt-acento);
-    border-radius: 50%;
-}
-
-/* ----------------------------------------------------------
-   PLANES / PRECIOS
-   ---------------------------------------------------------- */
-.bitatech-tarjeta-plan {
-    background: var(--bt-oscuro-2);
-    border: 1px solid var(--bt-oscuro-3);
-    border-radius: var(--bt-radio-lg);
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: var(--bt-transicion);
-    position: relative;
-}
-
-.bitatech-tarjeta-plan:hover {
-    border-color: var(--bt-gris-oscuro);
-    transform: translateY(-4px);
-    box-shadow: var(--bt-sombra);
-}
-
-.bitatech-tarjeta-plan--destacado {
-    border-color: var(--bt-acento);
-    box-shadow: 0 0 40px rgba(200, 144, 62, 0.1);
-}
-
-.bitatech-tarjeta-plan--destacado:hover {
-    border-color: var(--bt-acento-hover);
-}
-
-.bitatech-tarjeta-plan__badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--bt-acento);
-    color: var(--bt-blanco-puro);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 6px 16px;
-    border-radius: 0 var(--bt-radio-lg) 0 var(--bt-radio);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.bitatech-tarjeta-plan__encabezado {
-    padding: 32px 28px 24px;
-    text-align: center;
-    border-bottom: 1px solid var(--bt-oscuro-3);
-}
-
-.bitatech-tarjeta-plan__etiqueta {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--bt-acento);
-    margin-bottom: 8px;
-}
-
-.bitatech-tarjeta-plan__nombre {
+.bitatech-landing-form-titulo {
     font-size: 22px;
     font-weight: 700;
-    color: var(--bt-blanco-puro);
-    margin-bottom: 16px;
+    color: var(--bt-blanco);
+    margin: 0 0 24px;
+    text-align: center;
 }
 
-.bitatech-tarjeta-plan__precio {
-    margin-bottom: 8px;
+/* ----------------------------------------------------------------
+   7. BOTONES
+   ---------------------------------------------------------------- */
+.bitatech-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: var(--bt-radio);
+    cursor: pointer;
+    transition: var(--bt-transicion);
+    text-decoration: none;
+    line-height: 1.4;
 }
 
-.bitatech-tarjeta-plan__moneda {
+.bitatech-btn:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.bitatech-btn-primario {
+    background-color: var(--bt-acento);
+    color: var(--bt-negro);
+}
+
+.bitatech-btn-primario:hover {
+    background-color: var(--bt-acento-hover);
+    color: var(--bt-negro);
+    box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+}
+
+.bitatech-btn-secundario {
+    background-color: transparent;
+    color: var(--bt-blanco-suave);
+    border: 1px solid var(--bt-gris-borde);
+}
+
+.bitatech-btn-secundario:hover {
+    border-color: var(--bt-acento);
+    color: var(--bt-acento);
+}
+
+.bitatech-btn-grande {
+    padding: 18px 40px;
+    font-size: 16px;
+}
+
+.bitatech-btn-formulario {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.bitatech-btn-completo {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------------
+   8. TARJETAS DE SERVICIOS
+   ---------------------------------------------------------------- */
+.bitatech-tarjetas-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.bitatech-tarjeta-servicio {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 36px 28px;
+    transition: var(--bt-transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.bitatech-tarjeta-servicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--bt-acento);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bitatech-tarjeta-servicio:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--bt-sombra-hover);
+    border-color: var(--bt-gris-claro);
+}
+
+.bitatech-tarjeta-servicio:hover::before {
+    opacity: 1;
+}
+
+.bitatech-tarjeta-icono {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.bitatech-color-azul {
+    background-color: rgba(74, 144, 217, 0.15);
+    color: var(--bt-azul);
+}
+
+.bitatech-color-naranja {
+    background-color: rgba(232, 145, 58, 0.15);
+    color: var(--bt-naranja);
+}
+
+.bitatech-color-verde {
+    background-color: rgba(76, 175, 80, 0.15);
+    color: var(--bt-verde);
+}
+
+.bitatech-color-morado {
+    background-color: rgba(155, 89, 182, 0.15);
+    color: var(--bt-morado);
+}
+
+.bitatech-color-rojo {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: var(--bt-rojo);
+}
+
+.bitatech-tarjeta-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 12px;
+}
+
+.bitatech-tarjeta-desc {
     font-size: 14px;
-    color: var(--bt-gris-claro);
-    vertical-align: super;
-}
-
-.bitatech-tarjeta-plan__monto {
-    font-size: 40px;
-    font-weight: 800;
-    color: var(--bt-blanco-puro);
-}
-
-.bitatech-tarjeta-plan__rango {
-    font-size: 18px;
-    color: var(--bt-gris-claro);
-}
-
-.bitatech-tarjeta-plan__tipo {
-    font-size: 13px;
-    color: var(--bt-gris);
-    margin: 0;
-}
-
-.bitatech-tarjeta-plan__cuerpo {
-    padding: 24px 28px;
-    flex-grow: 1;
-}
-
-.bitatech-tarjeta-plan__lista {
-    list-style: none;
-    padding: 0;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
     margin: 0 0 20px;
 }
 
-.bitatech-tarjeta-plan__lista li {
+.bitatech-tarjeta-enlace {
     font-size: 14px;
-    color: var(--bt-texto);
-    padding: 8px 0 8px 24px;
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-weight: 600;
+    color: var(--bt-acento);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.bitatech-tarjeta-plan__lista li::before {
-    content: '\2713';
-    position: absolute;
-    left: 0;
-    color: var(--bt-verde);
-    font-weight: bold;
+.bitatech-tarjeta-enlace:hover {
+    gap: 10px;
 }
 
-.bitatech-tarjeta-plan__nota {
-    background: var(--bt-oscuro);
-    border-radius: var(--bt-radio);
-    padding: 16px;
-    margin-bottom: 16px;
+/* ----------------------------------------------------------------
+   9. DIFERENCIADORES
+   ---------------------------------------------------------------- */
+.bitatech-diferenciadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
 }
 
-.bitatech-tarjeta-plan__nota p {
-    font-size: 13px;
+.bitatech-diferenciador {
+    padding: 32px;
+    background-color: rgba(26, 26, 26, 0.5);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    transition: var(--bt-transicion);
+}
+
+.bitatech-diferenciador:hover {
+    border-color: rgba(212, 168, 67, 0.3);
+    transform: translateY(-2px);
+}
+
+.bitatech-diferenciador-numero {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    opacity: 0.4;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.bitatech-diferenciador h3 {
+    font-size: 18px;
+    font-weight: 700;
     color: var(--bt-blanco);
-    margin-bottom: 8px;
+    margin: 0 0 12px;
 }
 
-.bitatech-tarjeta-plan__nota ul {
+.bitatech-diferenciador p {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------------
+   10. CTA FINAL
+   ---------------------------------------------------------------- */
+.bitatech-cta-final {
+    background: linear-gradient(135deg, var(--bt-gris-oscuro) 0%, var(--bt-negro) 100%);
+    text-align: center;
+}
+
+.bitatech-cta-contenido {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.bitatech-cta-contenido h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0 0 16px;
+}
+
+.bitatech-cta-contenido p {
+    font-size: 18px;
+    color: var(--bt-gris-texto);
+    margin: 0 0 32px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------
+   11. PAGINA ENCABEZADO (subpaginas)
+   ---------------------------------------------------------------- */
+.bitatech-pagina-encabezado {
+    padding: 120px 24px 64px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+    text-align: center;
+}
+
+.bitatech-titulo-pagina {
+    font-family: var(--bt-fuente-titulo);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.bitatech-desc-pagina {
+    font-size: 18px;
+    color: var(--bt-gris-texto);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ----------------------------------------------------------------
+   12. SERVICIO DETALLE (pagina servicios)
+   ---------------------------------------------------------------- */
+.bitatech-seccion-servicio {
+    padding: 80px 24px;
+}
+
+.bitatech-servicio-detalle {
+    max-width: 800px;
+}
+
+.bitatech-servicio-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.bitatech-servicio-icono {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bitatech-servicio-numero {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bt-acento);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.bitatech-servicio-titulo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.bitatech-servicio-desc {
+    font-size: 16px;
+    color: var(--bt-gris-texto);
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.bitatech-servicio-lista h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-acento);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+}
+
+.bitatech-servicio-lista ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
-.bitatech-tarjeta-plan__nota ul li {
-    font-size: 13px;
-    color: var(--bt-gris-claro);
-    padding: 3px 0 3px 16px;
-    position: relative;
-}
-
-.bitatech-tarjeta-plan__nota ul li::before {
-    content: '\2014';
-    position: absolute;
-    left: 0;
-    color: var(--bt-gris);
-}
-
-.bitatech-tarjeta-plan__ideal {
-    font-size: 13px;
-    color: var(--bt-gris-claro);
-    margin: 0;
+.bitatech-servicio-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--bt-blanco-suave);
     line-height: 1.5;
 }
 
-.bitatech-tarjeta-plan__ideal strong {
-    color: var(--bt-blanco);
+.bitatech-servicio-lista li i {
+    color: var(--bt-acento);
+    margin-top: 4px;
+    flex-shrink: 0;
 }
 
-.bitatech-tarjeta-plan__pie {
-    padding: 0 28px 28px;
+/* ----------------------------------------------------------------
+   13. NOSOTROS - Columnas, valores, tabla
+   ---------------------------------------------------------------- */
+.bitatech-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
 
-/* ----------------------------------------------------------
-   FILTRO CLIENTE IDEAL
-   ---------------------------------------------------------- */
-.bitatech-filtro-tarjeta {
-    background: var(--bt-oscuro);
-    border-radius: var(--bt-radio-lg);
-    padding: 28px 24px;
+.bitatech-caja-destacada {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 40px 32px;
     height: 100%;
-    border: 1px solid var(--bt-oscuro-3);
 }
 
-.bitatech-filtro-tarjeta__titulo {
-    font-size: 16px;
+.bitatech-caja-icono {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bitatech-caja-destacada h3 {
+    font-size: 22px;
     font-weight: 700;
-    margin-bottom: 16px;
+    color: var(--bt-blanco);
+    margin: 0 0 12px;
 }
 
-.bitatech-filtro-tarjeta--si .bitatech-filtro-tarjeta__titulo {
-    color: var(--bt-verde);
-}
-
-.bitatech-filtro-tarjeta--no .bitatech-filtro-tarjeta__titulo {
-    color: var(--bt-rojo);
-}
-
-.bitatech-filtro-tarjeta__lista {
-    list-style: none;
-    padding: 0;
+.bitatech-caja-destacada p {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    line-height: 1.7;
     margin: 0;
 }
 
-.bitatech-filtro-tarjeta__lista li {
+/* Valores grid */
+.bitatech-valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.bitatech-valor {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 32px;
+    transition: var(--bt-transicion);
+}
+
+.bitatech-valor:hover {
+    border-color: rgba(212, 168, 67, 0.3);
+}
+
+.bitatech-valor-numero {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.bitatech-valor h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 10px;
+}
+
+.bitatech-valor p {
     font-size: 14px;
-    color: var(--bt-texto);
-    padding: 6px 0 6px 20px;
-    position: relative;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+    margin: 0;
 }
 
-.bitatech-filtro-tarjeta--si .bitatech-filtro-tarjeta__lista li::before {
-    content: '\2713';
-    position: absolute;
-    left: 0;
-    color: var(--bt-verde);
-    font-weight: bold;
+/* Tabla comparacion */
+.bitatech-tabla-comparacion {
+    overflow-x: auto;
 }
 
-.bitatech-filtro-tarjeta--no .bitatech-filtro-tarjeta__lista li::before {
-    content: '\2717';
-    position: absolute;
-    left: 0;
-    color: var(--bt-rojo);
+.bitatech-tabla-comparacion table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bt-gris-medio);
+    border-radius: var(--bt-radio-grande);
+    overflow: hidden;
 }
 
-/* ----------------------------------------------------------
-   FORMULARIO
-   ---------------------------------------------------------- */
-.bitatech-formulario {
-    background: var(--bt-oscuro-2);
-    border: 1px solid var(--bt-oscuro-3);
-    border-radius: var(--bt-radio-lg);
-    padding: 40px 36px;
+.bitatech-tabla-comparacion thead th {
+    padding: 20px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
 }
 
-.bitatech-campo__label {
-    font-size: 13px;
+.bitatech-tabla-comparacion thead th:first-child {
+    background-color: var(--bt-gris-medio);
+    color: var(--bt-blanco);
+}
+
+.bitatech-col-otros {
+    background-color: rgba(231, 76, 60, 0.05);
+    color: var(--bt-gris-texto) !important;
+}
+
+.bitatech-col-bitatech {
+    background-color: rgba(212, 168, 67, 0.05);
+    color: var(--bt-acento) !important;
+}
+
+.bitatech-tabla-comparacion tbody td {
+    padding: 16px 24px;
+    font-size: 14px;
+    border-top: 1px solid var(--bt-gris-borde);
+}
+
+.bitatech-tabla-comparacion tbody td:first-child {
     font-weight: 600;
     color: var(--bt-blanco);
-    margin-bottom: 6px;
-    display: block;
 }
 
-.bitatech-campo__requerido {
+/* Filosofia */
+.bitatech-filosofia {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bitatech-filosofia h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0 0 20px;
+}
+
+.bitatech-filosofia p {
+    font-size: 16px;
+    color: var(--bt-gris-texto);
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+
+/* ----------------------------------------------------------------
+   14. FORMULARIOS
+   ---------------------------------------------------------------- */
+.bitatech-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bitatech-formulario-titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 24px;
+}
+
+.bitatech-campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.bitatech-campo-fila {
+    display: flex;
+    gap: 16px;
+}
+
+.bitatech-campo-etiqueta {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bt-blanco-suave);
+    letter-spacing: 0.3px;
+}
+
+.bitatech-requerido {
     color: var(--bt-acento);
 }
 
-.bitatech-campo__input,
-.bitatech-campo__select,
-.bitatech-campo__textarea {
+.bitatech-campo-input,
+.bitatech-campo-select,
+.bitatech-campo-textarea {
     width: 100%;
-    padding: 12px 16px;
+    padding: 14px 16px;
+    font-size: 14px;
     font-family: var(--bt-fuente);
-    font-size: 15px;
-    color: var(--bt-blanco-puro);
-    background: var(--bt-oscuro);
-    border: 1px solid var(--bt-oscuro-3);
+    color: var(--bt-blanco);
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
     border-radius: var(--bt-radio);
     transition: var(--bt-transicion);
     outline: none;
 }
 
-.bitatech-campo__input:focus,
-.bitatech-campo__select:focus,
-.bitatech-campo__textarea:focus {
+.bitatech-campo-input::placeholder,
+.bitatech-campo-textarea::placeholder {
+    color: var(--bt-gris-texto);
+}
+
+.bitatech-campo-input:focus,
+.bitatech-campo-select:focus,
+.bitatech-campo-textarea:focus {
     border-color: var(--bt-acento);
-    box-shadow: 0 0 0 3px rgba(200, 144, 62, 0.15);
+    box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.1);
 }
 
-.bitatech-campo__input::placeholder,
-.bitatech-campo__textarea::placeholder {
-    color: var(--bt-gris);
-}
-
-.bitatech-campo__select {
+.bitatech-campo-select {
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238899aa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 16px center;
     padding-right: 40px;
 }
 
-.bitatech-campo__select option {
-    background: var(--bt-oscuro);
+.bitatech-campo-select option {
+    background-color: var(--bt-gris-oscuro);
     color: var(--bt-blanco);
 }
 
-.bitatech-formulario__nota {
+.bitatech-campo-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.bitatech-campo-error {
+    border-color: var(--bt-rojo) !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+.bitatech-campo-error-mensaje {
+    font-size: 12px;
+    color: var(--bt-rojo);
+    margin-top: 2px;
+}
+
+/* ----------------------------------------------------------------
+   15. CONTACTO GRID
+   ---------------------------------------------------------------- */
+.bitatech-contacto-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.bitatech-contacto-formulario {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 40px 32px;
+}
+
+.bitatech-contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.bitatech-info-bloque {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 32px;
+}
+
+.bitatech-info-bloque h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 20px;
+}
+
+.bitatech-info-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bitatech-info-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.bitatech-info-lista li i {
+    color: var(--bt-acento);
+    font-size: 16px;
+    margin-top: 4px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.bitatech-info-lista li strong {
+    display: block;
     font-size: 13px;
-    color: var(--bt-gris);
+    color: var(--bt-gris-texto);
+    margin-bottom: 2px;
 }
 
-.bitatech-alerta {
-    background: rgba(192, 57, 43, 0.15);
-    border: 1px solid var(--bt-rojo);
-    color: var(--bt-blanco);
-    border-radius: var(--bt-radio);
-    padding: 12px 20px;
+.bitatech-info-lista li span,
+.bitatech-info-lista li a {
     font-size: 14px;
+    color: var(--bt-blanco-suave);
 }
 
-/* ----------------------------------------------------------
-   PAGINA DE EXITO
-   ---------------------------------------------------------- */
-.bitatech-exito {
-    padding: 60px 40px;
-    background: var(--bt-oscuro-2);
-    border: 1px solid var(--bt-oscuro-3);
-    border-radius: var(--bt-radio-lg);
+/* Pasos mini (sidebar contacto) */
+.bitatech-pasos-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.bitatech-exito__icono {
-    width: 80px;
-    height: 80px;
+.bitatech-paso-mini {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.bitatech-paso-mini-numero {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: rgba(58, 158, 110, 0.15);
-    border: 2px solid var(--bt-verde);
-    display: inline-flex;
+    background-color: var(--bt-acento);
+    color: var(--bt-negro);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
-    color: var(--bt-verde);
-    margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
-.bitatech-exito__titulo {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--bt-blanco-puro);
+.bitatech-paso-mini strong {
+    display: block;
+    font-size: 14px;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+}
+
+.bitatech-paso-mini p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ----------------------------------------------------------------
+   16. PROBLEMAS GRID (landing)
+   ---------------------------------------------------------------- */
+.bitatech-problemas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.bitatech-problema {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 32px;
+    transition: var(--bt-transicion);
+}
+
+.bitatech-problema:hover {
+    border-color: rgba(212, 168, 67, 0.2);
+    transform: translateY(-2px);
+}
+
+.bitatech-problema-icono {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--bt-rojo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     margin-bottom: 16px;
 }
 
-.bitatech-exito__texto {
+.bitatech-problema h4 {
     font-size: 16px;
-    color: var(--bt-gris-claro);
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 8px;
+}
+
+.bitatech-problema p {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------------
+   17. METODO BSI PASOS (landing)
+   ---------------------------------------------------------------- */
+.bitatech-metodo-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bitatech-metodo-paso {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 32px;
+    transition: var(--bt-transicion);
+}
+
+.bitatech-metodo-paso:hover {
+    border-color: rgba(212, 168, 67, 0.3);
+}
+
+.bitatech-metodo-paso-numero {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bt-acento) 0%, var(--bt-acento-oscuro) 100%);
+    color: var(--bt-negro);
+    font-size: 22px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bitatech-metodo-paso-contenido h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 8px;
+}
+
+.bitatech-metodo-paso-contenido p {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.bitatech-metodo-paso-tiempo {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bt-acento);
+    padding: 4px 12px;
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 12px;
+}
+
+/* ----------------------------------------------------------------
+   18. PAGINA GRACIAS
+   ---------------------------------------------------------------- */
+.bitatech-gracias-seccion {
+    padding: 140px 24px 96px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+}
+
+.bitatech-gracias-contenido {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bitatech-gracias-icono {
+    color: var(--bt-acento);
+    margin-bottom: 24px;
+}
+
+.bitatech-gracias-titulo {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin: 0 0 16px;
+}
+
+.bitatech-gracias-mensaje {
+    font-size: 17px;
+    color: var(--bt-gris-texto);
     line-height: 1.7;
+    margin: 0 0 40px;
 }
 
-/* ----------------------------------------------------------
-   FOOTER
-   ---------------------------------------------------------- */
+.bitatech-gracias-pasos {
+    background-color: var(--bt-gris-medio);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    padding: 32px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.bitatech-gracias-pasos h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.bitatech-gracias-pasos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bitatech-gracias-paso {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.bitatech-gracias-paso-numero {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bt-acento);
+    color: var(--bt-negro);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bitatech-gracias-paso strong {
+    display: block;
+    font-size: 14px;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+}
+
+.bitatech-gracias-paso p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+}
+
+.bitatech-gracias-acciones {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------------------------------------------
+   19. FOOTER
+   ---------------------------------------------------------------- */
 .bitatech-footer {
-    background: var(--bt-negro);
-    padding: 40px 0;
-    border-top: 1px solid var(--bt-oscuro-3);
+    background-color: var(--bt-negro-suave);
+    border-top: 1px solid var(--bt-gris-borde);
+    padding: 64px 24px 32px;
 }
 
-.bitatech-footer__logo {
+.bitatech-footer-interior {
+    max-width: var(--bt-ancho-max);
+    margin: 0 auto;
+}
+
+.bitatech-footer-columnas {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.bitatech-footer-logo {
     font-size: 20px;
     font-weight: 800;
+    letter-spacing: 3px;
     color: var(--bt-acento);
-    margin-bottom: 4px;
-    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
-.bitatech-footer__tagline {
-    font-size: 13px;
-    color: var(--bt-gris);
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-.bitatech-footer__contacto {
+.bitatech-footer-desc {
     font-size: 14px;
-    color: var(--bt-gris-claro);
-    margin-bottom: 4px;
-}
-
-.bitatech-footer__copy {
-    font-size: 12px;
-    color: var(--bt-gris);
+    color: var(--bt-gris-texto);
+    line-height: 1.7;
     margin: 0;
 }
 
-/* ----------------------------------------------------------
-   RESPONSIVE
-   ---------------------------------------------------------- */
-@media (max-width: 991px) {
-    .bitatech-hero {
-        padding: 40px 0 60px;
+.bitatech-footer-titulo {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+}
+
+.bitatech-footer-enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bitatech-footer-enlaces a {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+}
+
+.bitatech-footer-enlaces a:hover {
+    color: var(--bt-acento);
+}
+
+.bitatech-footer-contacto li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bitatech-footer-contacto li i {
+    color: var(--bt-acento);
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.bitatech-footer-contacto span {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+}
+
+.bitatech-footer-inferior {
+    border-top: 1px solid var(--bt-gris-borde);
+    padding-top: 24px;
+    text-align: center;
+}
+
+.bitatech-copyright {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+}
+
+/* ----------------------------------------------------------------
+   20. ANIMACIONES SCROLL
+   ---------------------------------------------------------------- */
+.bitatech-animar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bitatech-animar.bitatech-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ----------------------------------------------------------------
+   21. RESPONSIVE - Tablet (max-width: 1024px)
+   ---------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .bitatech-hero-interior {
+        grid-template-columns: 1fr;
+        gap: 48px;
     }
 
-    .bitatech-seccion {
-        padding: 60px 0;
+    .bitatech-hero-titulo {
+        font-size: 40px;
     }
 
-    .bitatech-hero__titulo {
-        font-size: 36px;
+    .bitatech-hero-visual {
+        display: none;
     }
 
-    .bitatech-seccion__titulo {
-        font-size: 28px;
+    .bitatech-titulo-pagina {
+        font-size: 34px;
     }
 
-    .bitatech-formulario {
-        padding: 28px 20px;
+    .bitatech-titulo-seccion {
+        font-size: 30px;
+    }
+
+    .bitatech-contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .bitatech-dos-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-footer-columnas {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .bitatech-servicio-lista ul {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-hero-landing .bitatech-hero-interior {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 767px) {
+/* ----------------------------------------------------------------
+   22. RESPONSIVE - Movil (max-width: 768px)
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .bitatech-nav {
+        display: none;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        z-index: 999;
+    }
+
+    .bitatech-nav.bitatech-nav-abierto {
+        display: flex;
+    }
+
+    .bitatech-nav-enlace {
+        font-size: 18px;
+    }
+
+    .bitatech-menu-movil {
+        display: flex;
+    }
+
     .bitatech-hero {
-        padding: 32px 0 48px;
+        padding: 100px 16px 64px;
+    }
+
+    .bitatech-hero-titulo {
+        font-size: 32px;
+    }
+
+    .bitatech-hero-subtitulo {
+        font-size: 16px;
+    }
+
+    .bitatech-hero-acciones {
+        flex-direction: column;
+    }
+
+    .bitatech-hero-acciones .bitatech-btn {
+        width: 100%;
         text-align: center;
     }
 
-    .bitatech-hero__subtitulo,
-    .bitatech-hero__descripcion {
-        max-width: 100%;
+    .bitatech-seccion {
+        padding: 64px 16px;
+    }
+
+    .bitatech-pagina-encabezado {
+        padding: 100px 16px 48px;
+    }
+
+    .bitatech-titulo-pagina {
+        font-size: 28px;
+    }
+
+    .bitatech-titulo-seccion {
+        font-size: 26px;
+    }
+
+    .bitatech-tarjetas-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-diferenciadores {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-problemas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bitatech-campo-fila {
+        flex-direction: column;
+    }
+
+    .bitatech-footer-columnas {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .bitatech-cta-contenido h2 {
+        font-size: 26px;
+    }
+
+    .bitatech-contacto-formulario {
+        padding: 24px 20px;
+    }
+
+    .bitatech-landing-formulario-caja {
+        padding: 28px 20px;
+    }
+
+    .bitatech-gracias-seccion {
+        padding: 100px 16px 64px;
+    }
+
+    .bitatech-gracias-titulo {
+        font-size: 28px;
+    }
+}
+
+/* ----------------------------------------------------------------
+   23. RESPONSIVE - Movil pequeno (max-width: 480px)
+   ---------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .bitatech-hero-titulo {
+        font-size: 26px;
+    }
+
+    .bitatech-titulo-pagina {
+        font-size: 24px;
+    }
+
+    .bitatech-titulo-seccion {
+        font-size: 22px;
     }
 
     .bitatech-btn {
@@ -822,47 +1663,52 @@
         font-size: 14px;
     }
 
-    .bitatech-btn--lg {
-        padding: 14px 32px;
-        width: 100%;
+    .bitatech-btn-grande {
+        padding: 14px 28px;
+        font-size: 15px;
     }
 
-    .bitatech-tarjeta-plan__monto {
-        font-size: 32px;
-    }
-
-    .bitatech-seccion__subtitulo {
-        text-align: center !important;
-    }
-
-    .bitatech-footer {
+    .bitatech-metodo-paso {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .bitatech-footer .text-md-end {
-        text-align: center !important;
-        margin-top: 16px;
+    .bitatech-servicio-encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bitatech-servicio-titulo {
+        font-size: 24px;
+    }
+
+    .bitatech-tabla-comparacion {
+        font-size: 13px;
+    }
+
+    .bitatech-tabla-comparacion thead th,
+    .bitatech-tabla-comparacion tbody td {
+        padding: 12px 10px;
     }
 }
 
-/* ----------------------------------------------------------
-   ANIMACIONES SCROLL (clase activada via JS)
-   ---------------------------------------------------------- */
-.bitatech-animar {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+/* ----------------------------------------------------------------
+   24. UTILIDADES
+   ---------------------------------------------------------------- */
+.bitatech-text-center {
+    text-align: center;
 }
 
-.bitatech-animar--visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.bitatech-mt-0 { margin-top: 0; }
+.bitatech-mb-0 { margin-bottom: 0; }
+.bitatech-mt-24 { margin-top: 24px; }
+.bitatech-mb-24 { margin-bottom: 24px; }
+.bitatech-mt-48 { margin-top: 48px; }
+.bitatech-mb-48 { margin-bottom: 48px; }
 
-/* ----------------------------------------------------------
-   OCULTAR ELEMENTOS ODOO EN LANDING
-   ---------------------------------------------------------- */
-.bitatech-landing .o_footer,
-.bitatech-landing #footer {
+/* Ocultar en editor web para no interferir */
+.bitatech-envoltorio .o_header_standard,
+.bitatech-envoltorio .o_footer {
     display: none !important;
 }
