@@ -159,7 +159,7 @@
                 <filter name="filtro_sitio_web" string="Desde Sitio Web"
                         domain="[('origen', '=', 'sitio_web')]"/>
                 <separator/>
-                <group expand="0" string="Agrupar por">
+                <group string="Agrupar por">
                     <filter name="agrupar_estado" string="Estado"
                             context="{'group_by': 'estado'}"/>
                     <filter name="agrupar_servicio" string="Servicio"

@@ -44,7 +44,6 @@ class SolicitudContactoBitatech(models.Model):
     _description = 'Solicitud de Contacto Bitatech'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = 'create_date desc'
-    _rec_name = 'display_name'
 
     # --- Datos del formulario ---
     nombre_completo = fields.Char(
@@ -101,11 +100,6 @@ class SolicitudContactoBitatech(models.Model):
     )
     notas_internas = fields.Text(
         string='Notas Internas',
-    )
-    display_name = fields.Char(
-        string='Nombre',
-        compute='_compute_display_name',
-        store=True,
     )
 
     # ------------------------------------------------------------------
