@@ -152,7 +152,18 @@ class SolicitudContactoBitatech(models.Model):
                 raise_if_not_found=False,
             )
             if plantilla:
-                plantilla.sudo().send_mail(solicitud.id, force_send=True)
+                plantilla.sudo().send_mail(
+                    solicitud.id,
+                    force_send=True,
+                    email_values={
+                        'email_from': 'info@bitatech.ai',
+                        'email_to': 'info@bitatech.ai',
+                    },
+                )
+                _logger.info(
+                    'Correo de notificacion enviado para solicitud %s',
+                    solicitud.id,
+                )
         except Exception:
             _logger.exception(
                 'No se pudo enviar correo de notificacion para solicitud %s',
