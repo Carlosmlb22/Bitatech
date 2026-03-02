@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================ -->
+    <!-- Pagina de Planes y Precios - Bitatech                        -->
+    <!-- URL: /bitatech/planes                                        -->
+    <!-- ============================================================ -->
+    <record id="vista_pagina_planes_bitatech" model="ir.ui.view">
+        <field name="name">Bitatech - Pagina Planes</field>
+        <field name="type">qweb</field>
+        <field name="key">bitatech_sitio_web.vista_pagina_planes_bitatech</field>
+        <field name="arch" type="xml">
+            <t t-name="bitatech_sitio_web.vista_pagina_planes_bitatech" t-call="bitatech_sitio_web.disposicion_bitatech">
+
+                <!-- ===== ENCABEZADO PLANES ===== -->
+                <section class="bitatech-pagina-encabezado">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">Planes y Precios</span>
+                            <h1 class="bitatech-titulo-pagina">Planes y Precios</h1>
+                            <p class="bitatech-desc-pagina">
+                                Soluciones escalables para cada etapa de tu empresa
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== TARJETAS DE PRECIOS ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura" id="planes-precios">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-planes-grilla">
+
+                            <!-- Plan 1: Orden Operativo -->
+                            <div class="bitatech-plan-tarjeta bitatech-animar" data-delay="0">
+                                <div class="bitatech-plan-encabezado">
+                                    <div class="bitatech-plan-icono">
+                                        <i class="fa fa-building fa-2x"></i>
+                                    </div>
+                                    <h3 class="bitatech-plan-nombre">Orden Operativo</h3>
+                                    <div class="bitatech-plan-precio">
+                                        <span class="bitatech-plan-moneda">USD</span>
+                                        <span class="bitatech-plan-monto">4,500 &#8211; 7,500</span>
+                                    </div>
+                                    <span class="bitatech-plan-tipo">Implementacion unica</span>
+                                    <p class="bitatech-plan-desc">
+                                        Para empresas que necesitan estructura desde cero
+                                    </p>
+                                </div>
+                                <div class="bitatech-plan-cuerpo">
+                                    <ul class="bitatech-plan-caracteristicas">
+                                        <li><i class="fa fa-check"></i> Diagnostico estrategico inicial</li>
+                                        <li><i class="fa fa-check"></i> Implementacion ERP completa</li>
+                                        <li><i class="fa fa-check"></i> Diseño de flujos operativos</li>
+                                        <li><i class="fa fa-check"></i> Separacion de departamentos</li>
+                                        <li><i class="fa fa-check"></i> Capacitacion del equipo</li>
+                                        <li><i class="fa fa-check"></i> Soporte post-implementacion (30 dias)</li>
+                                    </ul>
+                                </div>
+                                <div class="bitatech-plan-pie">
+                                    <a href="/bitatech/contacto" class="bitatech-btn bitatech-btn-secundario bitatech-btn-bloque">
+                                        Solicitar Diagnostico
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Plan 2: Automatizacion Inteligente (Destacado) -->
+                            <div class="bitatech-plan-tarjeta bitatech-plan-destacado bitatech-animar" data-delay="100">
+                                <div class="bitatech-plan-insignia">Mas solicitado</div>
+                                <div class="bitatech-plan-encabezado">
+                                    <div class="bitatech-plan-icono">
+                                        <i class="fa fa-bolt fa-2x"></i>
+                                    </div>
+                                    <h3 class="bitatech-plan-nombre">Automatizacion Inteligente</h3>
+                                    <div class="bitatech-plan-precio">
+                                        <span class="bitatech-plan-moneda">USD</span>
+                                        <span class="bitatech-plan-monto">7,500 &#8211; 15,000</span>
+                                    </div>
+                                    <span class="bitatech-plan-tipo">Implementacion unica</span>
+                                    <p class="bitatech-plan-desc">
+                                        Para empresas que quieren eliminar tareas manuales y escalar
+                                    </p>
+                                </div>
+                                <div class="bitatech-plan-cuerpo">
+                                    <ul class="bitatech-plan-caracteristicas">
+                                        <li class="bitatech-plan-incluye-anterior"><i class="fa fa-arrow-up"></i> Todo lo de Orden Operativo</li>
+                                        <li><i class="fa fa-check"></i> Automatizacion de procesos clave</li>
+                                        <li><i class="fa fa-check"></i> Bots conversacionales (WhatsApp/Instagram)</li>
+                                        <li><i class="fa fa-check"></i> Dashboards ejecutivos</li>
+                                        <li><i class="fa fa-check"></i> Alertas y control de SLA</li>
+                                        <li><i class="fa fa-check"></i> Integracion con herramientas externas</li>
+                                        <li><i class="fa fa-check"></i> Wizards inteligentes</li>
+                                        <li><i class="fa fa-check"></i> Soporte post-implementacion (60 dias)</li>
+                                    </ul>
+                                </div>
+                                <div class="bitatech-plan-pie">
+                                    <a href="/bitatech/contacto" class="bitatech-btn bitatech-btn-primario bitatech-btn-bloque">
+                                        Solicitar Diagnostico
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Plan 3: Control Ejecutivo -->
+                            <div class="bitatech-plan-tarjeta bitatech-animar" data-delay="200">
+                                <div class="bitatech-plan-encabezado">
+                                    <div class="bitatech-plan-icono">
+                                        <i class="fa fa-line-chart fa-2x"></i>
+                                    </div>
+                                    <h3 class="bitatech-plan-nombre">Control Ejecutivo</h3>
+                                    <div class="bitatech-plan-precio">
+                                        <span class="bitatech-plan-moneda">USD</span>
+                                        <span class="bitatech-plan-monto">1,000<span class="bitatech-plan-periodo">/mes</span></span>
+                                    </div>
+                                    <span class="bitatech-plan-tipo">Minimo 3 meses</span>
+                                    <p class="bitatech-plan-desc">
+                                        Para empresas que necesitan optimizacion continua y soporte dedicado
+                                    </p>
+                                </div>
+                                <div class="bitatech-plan-cuerpo">
+                                    <ul class="bitatech-plan-caracteristicas">
+                                        <li><i class="fa fa-check"></i> Auditoria operativa mensual</li>
+                                        <li><i class="fa fa-check"></i> KPIs personalizados</li>
+                                        <li><i class="fa fa-check"></i> Optimizacion continua de procesos</li>
+                                        <li><i class="fa fa-check"></i> Soporte prioritario</li>
+                                        <li><i class="fa fa-check"></i> Reportes ejecutivos mensuales</li>
+                                        <li><i class="fa fa-check"></i> Ajustes y mejoras incluidas</li>
+                                    </ul>
+                                    <p class="bitatech-plan-nota">
+                                        <i class="fa fa-info-circle"></i>
+                                        Incluye hasta 40 horas mensuales. Horas adicionales se facturan por separado.
+                                    </p>
+                                </div>
+                                <div class="bitatech-plan-pie">
+                                    <a href="/bitatech/contacto" class="bitatech-btn bitatech-btn-secundario bitatech-btn-bloque">
+                                        Agendar Reunion
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== NO SABES CUAL ELEGIR ===== -->
+                <section class="bitatech-seccion bitatech-seccion-gradiente" id="planes-ayuda">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>&#191;No sabes cual elegir?</h2>
+                            <p>
+                                Cada empresa es diferente. Agenda un diagnostico gratuito BSI&#8482;
+                                donde evaluamos tu operacion actual, identificamos los puntos criticos
+                                y te recomendamos el plan que realmente necesitas. Sin compromiso.
+                            </p>
+                            <a href="/bitatech/contacto" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande">
+                                Agendar Diagnostico Gratuito BSI&#8482;
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== PREGUNTAS FRECUENTES ===== -->
+                <section class="bitatech-seccion bitatech-seccion-oscura" id="planes-faq">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-seccion-encabezado bitatech-animar">
+                            <span class="bitatech-etiqueta-seccion">FAQ</span>
+                            <h2 class="bitatech-titulo-seccion">Preguntas Frecuentes</h2>
+                        </div>
+                        <div class="bitatech-faq-lista">
+
+                            <div class="bitatech-faq-item bitatech-animar" data-delay="0">
+                                <div class="bitatech-faq-pregunta">
+                                    <h4>&#191;Que incluye el diagnostico?</h4>
+                                    <i class="fa fa-chevron-down bitatech-faq-icono"></i>
+                                </div>
+                                <div class="bitatech-faq-respuesta">
+                                    <p>
+                                        Una sesion estrategica donde analizamos tu operacion actual,
+                                        identificamos cuellos de botella y diseñamos una hoja de ruta
+                                        personalizada.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-faq-item bitatech-animar" data-delay="100">
+                                <div class="bitatech-faq-pregunta">
+                                    <h4>&#191;Puedo combinar planes?</h4>
+                                    <i class="fa fa-chevron-down bitatech-faq-icono"></i>
+                                </div>
+                                <div class="bitatech-faq-respuesta">
+                                    <p>
+                                        Si. Muchos clientes inician con Orden Operativo o Automatizacion
+                                        Inteligente y luego pasan a Control Ejecutivo para mantener
+                                        la mejora continua.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-faq-item bitatech-animar" data-delay="200">
+                                <div class="bitatech-faq-pregunta">
+                                    <h4>&#191;Trabajan solo con una plataforma?</h4>
+                                    <i class="fa fa-chevron-down bitatech-faq-icono"></i>
+                                </div>
+                                <div class="bitatech-faq-respuesta">
+                                    <p>
+                                        Nos especializamos en ecosistemas empresariales integrados.
+                                        Trabajamos con plataformas ERP lider, pero integramos con
+                                        WhatsApp, Power BI y otras herramientas segun la necesidad.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bitatech-faq-item bitatech-animar" data-delay="300">
+                                <div class="bitatech-faq-pregunta">
+                                    <h4>&#191;Atienden fuera de Panama?</h4>
+                                    <i class="fa fa-chevron-down bitatech-faq-icono"></i>
+                                </div>
+                                <div class="bitatech-faq-respuesta">
+                                    <p>
+                                        Si. Trabajamos con empresas en toda Latinoamerica de forma remota,
+                                        con opcion presencial en Panama.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== CTA FINAL ===== -->
+                <section class="bitatech-seccion bitatech-cta-final">
+                    <div class="bitatech-seccion-interior">
+                        <div class="bitatech-cta-contenido bitatech-animar">
+                            <h2>&#191;Listo para estructurar tu empresa?</h2>
+                            <p>
+                                Solicita un diagnostico gratuito y descubre
+                                que tan lejos esta tu operacion de funcionar
+                                sin depender de ti.
+                            </p>
+                            <a href="/bitatech/diagnostico" class="bitatech-btn bitatech-btn-primario bitatech-btn-grande">
+                                Solicitar Diagnostico Gratuito
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </field>
+    </record>
+
+    <record id="pagina_planes_bitatech" model="website.page">
+        <field name="name">Bitatech - Planes y Precios</field>
+        <field name="url">/bitatech/planes</field>
+        <field name="is_published" eval="True"/>
+        <field name="view_id" ref="vista_pagina_planes_bitatech"/>
+    </record>
+
+</odoo>

@@ -19,6 +19,7 @@
                         <nav class="bitatech-nav">
                             <a href="/bitatech" class="bitatech-nav-enlace">Inicio</a>
                             <a href="/bitatech/servicios" class="bitatech-nav-enlace">Servicios</a>
+                            <a href="/bitatech/planes" class="bitatech-nav-enlace">Planes</a>
                             <a href="/bitatech/nosotros" class="bitatech-nav-enlace">Nosotros</a>
                             <a href="/bitatech/contacto" class="bitatech-nav-enlace bitatech-btn-nav">Contacto</a>
                         </nav>
@@ -54,6 +55,7 @@
                                 <ul class="bitatech-footer-enlaces">
                                     <li><a href="/bitatech">Inicio</a></li>
                                     <li><a href="/bitatech/servicios">Servicios</a></li>
+                                    <li><a href="/bitatech/planes">Planes</a></li>
                                     <li><a href="/bitatech/nosotros">Nosotros</a></li>
                                     <li><a href="/bitatech/contacto">Contacto</a></li>
                                     <li><a href="/bitatech/diagnostico">Diagnostico Gratuito</a></li>

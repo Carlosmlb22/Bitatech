@@ -223,7 +223,28 @@ whenReady(() => {
     }
 
     // ================================================================
-    // 6. OCULTAR HEADER/FOOTER NATIVO DE ODOO (JS fallback)
+    // 6. FAQ ACCORDION (PAGINA DE PLANES)
+    // ================================================================
+    const faqItems = document.querySelectorAll('.bitatech-faq-item');
+    faqItems.forEach(function (item) {
+        const pregunta = item.querySelector('.bitatech-faq-pregunta');
+        if (pregunta) {
+            pregunta.addEventListener('click', function () {
+                const yaActivo = item.classList.contains('activo');
+                // Cerrar todos los demas
+                faqItems.forEach(function (otro) {
+                    otro.classList.remove('activo');
+                });
+                // Toggle el actual
+                if (!yaActivo) {
+                    item.classList.add('activo');
+                }
+            });
+        }
+    });
+
+    // ================================================================
+    // 7. OCULTAR HEADER/FOOTER NATIVO DE ODOO (JS fallback)
     // ================================================================
     // Intentar ocultar directamente por si los selectores CSS :has() no funcionan
     const selectoresOdoo = [

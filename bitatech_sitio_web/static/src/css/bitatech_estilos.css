@@ -1743,3 +1743,346 @@ body.bitatech-pagina-activa #wrapwrap > footer,
 body.bitatech-pagina-activa .o_footer {
     display: none !important;
 }
+
+/* ----------------------------------------------------------------
+   25. PLANES Y PRECIOS
+   ---------------------------------------------------------------- */
+
+/* Grilla de tarjetas de planes */
+.bitatech-planes-grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: stretch;
+    max-width: var(--bt-ancho-max);
+    margin: 0 auto;
+}
+
+/* Tarjeta individual de plan */
+.bitatech-plan-tarjeta {
+    background-color: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: var(--bt-radio-grande);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: var(--bt-transicion);
+}
+
+.bitatech-plan-tarjeta:hover {
+    border-color: var(--bt-gris-claro);
+    box-shadow: var(--bt-sombra-hover);
+    transform: translateY(-4px);
+}
+
+/* Plan destacado */
+.bitatech-plan-destacado {
+    border-color: var(--bt-acento);
+    background-color: var(--bt-gris-medio);
+    transform: scale(1.04);
+    z-index: 2;
+}
+
+.bitatech-plan-destacado:hover {
+    border-color: var(--bt-acento-hover);
+    transform: scale(1.04) translateY(-4px);
+}
+
+/* Insignia "Mas solicitado" */
+.bitatech-plan-insignia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bt-acento);
+    color: var(--bt-negro);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 0;
+}
+
+.bitatech-plan-destacado .bitatech-plan-encabezado {
+    padding-top: 56px;
+}
+
+/* Encabezado del plan */
+.bitatech-plan-encabezado {
+    padding: 40px 32px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--bt-gris-borde);
+}
+
+.bitatech-plan-icono {
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+}
+
+.bitatech-plan-nombre {
+    font-family: var(--bt-fuente-titulo);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 16px;
+}
+
+.bitatech-plan-precio {
+    margin-bottom: 8px;
+}
+
+.bitatech-plan-moneda {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.bitatech-plan-monto {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1.2;
+}
+
+.bitatech-plan-periodo {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bt-gris-texto);
+}
+
+.bitatech-plan-tipo {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.bitatech-plan-desc {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Cuerpo del plan - lista de caracteristicas */
+.bitatech-plan-cuerpo {
+    padding: 32px;
+    flex: 1;
+}
+
+.bitatech-plan-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bitatech-plan-caracteristicas li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--bt-blanco-suave);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    line-height: 1.5;
+}
+
+.bitatech-plan-caracteristicas li:last-child {
+    border-bottom: none;
+}
+
+.bitatech-plan-caracteristicas li i {
+    color: var(--bt-verde);
+    font-size: 12px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.bitatech-plan-incluye-anterior {
+    color: var(--bt-acento) !important;
+    font-weight: 600;
+}
+
+.bitatech-plan-incluye-anterior i {
+    color: var(--bt-acento) !important;
+}
+
+/* Nota informativa bajo la lista */
+.bitatech-plan-nota {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background-color: rgba(212, 168, 67, 0.08);
+    border-left: 3px solid var(--bt-acento);
+    border-radius: 0 var(--bt-radio) var(--bt-radio) 0;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    line-height: 1.6;
+}
+
+.bitatech-plan-nota i {
+    color: var(--bt-acento);
+    margin-right: 8px;
+}
+
+/* Pie del plan - boton */
+.bitatech-plan-pie {
+    padding: 0 32px 32px;
+}
+
+.bitatech-btn-bloque {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* ----------------------------------------------------------------
+   26. PREGUNTAS FRECUENTES (FAQ)
+   ---------------------------------------------------------------- */
+.bitatech-faq-lista {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bitatech-faq-item {
+    border-bottom: 1px solid var(--bt-gris-borde);
+}
+
+.bitatech-faq-item:last-child {
+    border-bottom: none;
+}
+
+.bitatech-faq-pregunta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    cursor: pointer;
+    transition: var(--bt-transicion);
+}
+
+.bitatech-faq-pregunta:hover {
+    color: var(--bt-acento);
+}
+
+.bitatech-faq-pregunta h4 {
+    font-family: var(--bt-fuente-titulo);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin: 0;
+    flex: 1;
+    padding-right: 16px;
+    transition: color 0.3s ease;
+}
+
+.bitatech-faq-pregunta:hover h4 {
+    color: var(--bt-acento);
+}
+
+.bitatech-faq-icono {
+    color: var(--bt-acento);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.bitatech-faq-item.activo .bitatech-faq-icono {
+    transform: rotate(180deg);
+}
+
+.bitatech-faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.bitatech-faq-item.activo .bitatech-faq-respuesta {
+    max-height: 300px;
+}
+
+.bitatech-faq-respuesta p {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    line-height: 1.7;
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE: PLANES Y PRECIOS
+   ---------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .bitatech-planes-grilla {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .bitatech-plan-encabezado {
+        padding: 32px 24px 20px;
+    }
+
+    .bitatech-plan-cuerpo {
+        padding: 24px;
+    }
+
+    .bitatech-plan-pie {
+        padding: 0 24px 24px;
+    }
+
+    .bitatech-plan-monto {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bitatech-planes-grilla {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 480px;
+    }
+
+    .bitatech-plan-destacado {
+        transform: none;
+    }
+
+    .bitatech-plan-destacado:hover {
+        transform: translateY(-4px);
+    }
+
+    .bitatech-faq-pregunta h4 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bitatech-plan-encabezado {
+        padding: 28px 20px 16px;
+    }
+
+    .bitatech-plan-cuerpo {
+        padding: 20px;
+    }
+
+    .bitatech-plan-pie {
+        padding: 0 20px 20px;
+    }
+
+    .bitatech-plan-nombre {
+        font-size: 20px;
+    }
+
+    .bitatech-plan-monto {
+        font-size: 26px;
+    }
+}

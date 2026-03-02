@@ -24,6 +24,7 @@
         'views/disposicion_bitatech.xml',
         'views/pagina_inicio.xml',
         'views/pagina_servicios.xml',
+        'views/pagina_planes.xml',
         'views/pagina_nosotros.xml',
         'views/pagina_contacto.xml',
         'views/pagina_landing_campana.xml',
