@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial — SIP x Bitatech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bt-negro: #0a0a0a;
+    --bt-negro-suave: #111111;
+    --bt-gris-oscuro: #1a1a1a;
+    --bt-gris-medio: #2a2a2a;
+    --bt-gris-claro: #3a3a3a;
+    --bt-gris-texto: #999999;
+    --bt-gris-borde: #333333;
+    --bt-blanco: #ffffff;
+    --bt-blanco-suave: #f0f0f0;
+    --bt-acento: #d4a843;
+    --bt-acento-hover: #e0b854;
+    --bt-acento-oscuro: #b8922f;
+    --bt-azul: #4a90d9;
+    --bt-naranja: #e8913a;
+    --bt-verde: #4caf50;
+    --bt-morado: #9b59b6;
+    --bt-rojo: #e74c3c;
+  }
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bt-negro);
+    color: var(--bt-blanco-suave);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid var(--bt-acento);
+    border-radius: 50px;
+    color: var(--bt-acento);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  .cover h1 span { color: var(--bt-acento); }
+
+  .cover .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--bt-gris-texto);
+    margin-bottom: 60px;
+    max-width: 550px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cover-meta strong { color: var(--bt-blanco-suave); font-weight: 600; }
+
+  .cover-logos {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cover-logos .logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--bt-blanco);
+    letter-spacing: 1px;
+  }
+
+  .cover-logos .logo-text span { color: var(--bt-acento); }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--bt-gris-borde);
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin: 32px 0 12px 0;
+  }
+
+  .section p {
+    margin-bottom: 16px;
+    color: var(--bt-blanco-suave);
+  }
+
+  .muted { color: var(--bt-gris-texto); }
+
+  /* ── STAT CARDS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .stat-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .stat-card .number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-card .label {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+  }
+
+  /* ── PAIN CARDS ── */
+  .pain-list { margin: 24px 0; }
+
+  .pain-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .pain-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .pain-icon.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .pain-icon.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .pain-icon.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  .pain-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+  }
+
+  .pain-content p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+  }
+
+  .severity-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-left: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .severity-badge.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .severity-badge.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .severity-badge.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  /* ── PHASE CARDS ── */
+  .phase-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .phase-card.phase-1::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .phase-card.phase-2::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .phase-card.phase-3::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+
+  .phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .phase-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .phase-1 .phase-number { color: var(--bt-acento); }
+  .phase-2 .phase-number { color: var(--bt-azul); }
+  .phase-3 .phase-number { color: var(--bt-verde); }
+
+  .phase-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+  }
+
+  .phase-price {
+    text-align: right;
+  }
+
+  .phase-price .amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .phase-price .period {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .phase-desc {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 28px;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .phase-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .phase-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+  }
+
+  .phase-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .phase-col ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .phase-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  .check-list li::before { background: var(--bt-verde); }
+  .cross-list li::before { background: var(--bt-rojo); opacity: 0.5; }
+  .cross-list li { color: var(--bt-gris-texto); }
+
+  .phase-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bt-gris-borde);
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .phase-meta {
+    font-size: 13px;
+  }
+
+  .phase-meta .meta-label {
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+  }
+
+  .phase-meta .meta-value {
+    color: var(--bt-blanco);
+    font-weight: 600;
+  }
+
+  /* ── SOLVES TAG ── */
+  .solves-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .solves-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--bt-acento);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+  }
+
+  .solves-tag.blue {
+    background: rgba(74, 144, 217, 0.1);
+    color: var(--bt-azul);
+    border-color: rgba(74, 144, 217, 0.2);
+  }
+
+  .solves-tag.green {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--bt-verde);
+    border-color: rgba(76, 175, 80, 0.2);
+  }
+
+  /* ── COST TABLE ── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .cost-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+  }
+
+  .cost-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+  }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+
+  .cost-table .total-row td {
+    font-weight: 700;
+    color: var(--bt-acento);
+    border-top: 2px solid var(--bt-gris-borde);
+    padding-top: 16px;
+    font-size: 16px;
+  }
+
+  .cost-table .highlight { color: var(--bt-acento); font-weight: 600; }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--bt-gris-borde);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--bt-acento);
+    background: var(--bt-negro);
+  }
+
+  .timeline-item.active::before {
+    background: var(--bt-acento);
+  }
+
+  .timeline-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+  }
+
+  .timeline-item p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+  }
+
+  .timeline-item .time-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 50px;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--bt-acento);
+    margin-top: 6px;
+  }
+
+  /* ── INFO BOXES ── */
+  .info-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .info-box.accent { border-left: 3px solid var(--bt-acento); }
+  .info-box.blue { border-left: 3px solid var(--bt-azul); }
+  .info-box.green { border-left: 3px solid var(--bt-verde); }
+
+  .info-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+  }
+
+  /* ── GUARANTEE / CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+    color: var(--bt-gris-texto);
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--bt-acento);
+    color: var(--bt-negro);
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .cta-contact {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cta-contact a {
+    color: var(--bt-acento);
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    border-top: 1px solid var(--bt-gris-borde);
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .compare-table th {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--bt-gris-borde);
+    background: var(--bt-gris-oscuro);
+  }
+
+  .compare-table th:first-child { border-radius: 8px 0 0 0; }
+  .compare-table th:last-child { border-radius: 0 8px 0 0; }
+
+  .compare-table td {
+    padding: 12px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    vertical-align: top;
+  }
+
+  .compare-table td:first-child {
+    color: var(--bt-blanco-suave);
+    font-weight: 500;
+  }
+
+  .compare-table .col-before {
+    color: var(--bt-rojo);
+    opacity: 0.8;
+  }
+
+  .compare-table .col-after {
+    color: var(--bt-verde);
+  }
+
+  /* ── PROCESS STEPS ── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .process-step {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .process-step .step-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    margin-bottom: 8px;
+  }
+
+  .process-step h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 6px;
+  }
+
+  .process-step p {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+  }
+
+  /* ── SUMMARY BOX ── */
+  .summary-box {
+    background: linear-gradient(135deg, var(--bt-gris-oscuro), var(--bt-gris-medio));
+    border: 1px solid var(--bt-acento);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .summary-box h3 {
+    color: var(--bt-acento);
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .summary-item .s-label {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .summary-item .s-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .summary-item .s-value span { color: var(--bt-acento); }
+
+  .summary-item .s-detail {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin-top: 4px;
+  }
+
+  /* ── PRINT STYLES (dark theme preserved) ── */
+  @media print {
+    body { font-size: 11pt; }
+    .cover { min-height: auto; padding: 80px 40px; page-break-after: always; }
+    .phase-card { page-break-inside: avoid; }
+    .section { padding: 40px 20px; }
+    .section h2 { font-size: 22pt; }
+    a { text-decoration: none; }
+  }
+
+  @media (max-width: 768px) {
+    .cover h1 { font-size: 32px; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .phase-columns { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .summary-grid { grid-template-columns: 1fr; }
+    .cover-meta { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- COVER -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-badge">Propuesta Comercial</div>
+  <h1>Sistema Empresarial <span>Inteligente</span> para el SIP</h1>
+  <p class="subtitle">Transformar 80 anos de operacion en papel en una plataforma digital que le devuelva el control a la Junta Directiva.</p>
+  <div class="cover-meta">
+    <div><strong>Preparado para</strong><br>Sindicato de Industriales de Panama</div>
+    <div><strong>Preparado por</strong><br>Bitatech</div>
+    <div><strong>Fecha</strong><br>15 de marzo de 2026</div>
+    <div><strong>Validez</strong><br>30 dias</div>
+  </div>
+  <div class="cover-logos">
+    <span class="logo-text">bita<span>tech</span></span>
+    <span class="muted" style="font-size: 18px;">&#215;</span>
+    <span class="logo-text" style="font-size:18px; letter-spacing:0;">SIP</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: RESUMEN EJECUTIVO -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">01 &mdash; Resumen ejecutivo</span>
+  <h2>El SIP necesita tomar decisiones con datos, no con supuestos.</h2>
+  <p>
+    El Sindicato de Industriales de Panama tiene 80 anos de historia, 190 empresas afiliadas y una operacion que depende casi en su totalidad de hojas de Excel, correo electronico y papel. La Junta Directiva se reune dos veces al mes sin informacion consolidada. Los reportes mensuales se arman manualmente y consumen horas que podrian dedicarse a gestionar.
+  </p>
+  <p>
+    Esta propuesta presenta un plan de implementacion por fases utilizando <strong>Odoo</strong>, una plataforma ERP de clase mundial, configurada y personalizada para resolver los problemas especificos del SIP. Cada fase es independiente, funcional por si sola, y resuelve dolores concretos desde el primer dia.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">190</div>
+      <div class="label">Empresas afiliadas</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">~60</div>
+      <div class="label">Capacitaciones / ano</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">0</div>
+      <div class="label">Sistemas integrados hoy</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: LO QUE ENCONTRAMOS -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">02 &mdash; Diagnostico</span>
+  <h2>Lo que encontramos en la operacion del SIP</h2>
+  <p>Despues de analizar sus estatutos, el cuestionario de diagnostico y la reunion presencial del 13 de marzo, estos son los problemas que mas impactan su operacion diaria:</p>
+
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon critical">1</div>
+      <div class="pain-content">
+        <h4>Decisiones sin datos</h4>
+        <p>La Junta Directiva se reune 2 veces al mes y no tiene acceso a informacion consolidada. Las aprobaciones de membresias son lentas. Los reportes mensuales se arman a mano en Excel y consumen demasiado tiempo.</p>
+      </div>
+      <span class="severity-badge critical">Critico</span>
+    </div>
+
+    <div class="pain-item">
+      <div class="pain-icon critical">2</div>
+      <div class="pain-content">
+        <h4>190 membresias gestionadas en Excel</h4>
+        <p>Admisiones, cuotas, morosidad, estados de cuenta, renovaciones &mdash; todo manual. El flujo de aprobacion es lento y tedioso. No hay forma rapida de saber cuantos miembros estan morosos o suspendidos.</p>
+      </div>
+      <span class="severity-badge critical">Critico</span>
+    </div>
+
+    <div class="pain-item">
+      <div class="pain-icon high">3</div>
+      <div class="pain-content">
+        <h4>Eventos y capacitaciones a ciegas</h4>
+        <p>Se realizan 60+ capacitaciones al ano y 2 eventos grandes, pero no saben cuanto cuesta cada uno ni cuanto genera. Los patrocinios se gestionan por correo sin seguimiento.</p>
+      </div>
+      <span class="severity-badge high">Alto</span>
+    </div>
+
+    <div class="pain-item">
+      <div class="pain-icon high">4</div>
+      <div class="pain-content">
+        <h4>Contabilidad aislada</h4>
+        <p>QuickBooks maneja la contabilidad pero no se conecta con nada. No se factura (todo se registra como donacion). Los recibos y estados de cuenta se generan de forma separada.</p>
+      </div>
+      <span class="severity-badge high">Alto</span>
+    </div>
+
+    <div class="pain-item">
+      <div class="pain-icon medium">5</div>
+      <div class="pain-content">
+        <h4>Informacion fragmentada</h4>
+        <p>Cada area (contabilidad, eventos, comunicacion) maneja su informacion en silos separados. Las actas de Junta quedan en correos. El informe semestral de la Directora se construye manualmente.</p>
+      </div>
+      <span class="severity-badge medium">Medio</span>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: ANTES VS DESPUES -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">03 &mdash; Vision</span>
+  <h2>De donde estan hoy a donde pueden llegar</h2>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Area</th>
+        <th style="width: 35%;">Hoy</th>
+        <th style="width: 35%;">Con Odoo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Membresias</td>
+        <td class="col-before">Excel manual. Sin visibilidad de morosidad. Aprobaciones lentas.</td>
+        <td class="col-after">190 miembros con estados automaticos, alertas de morosidad y flujo de aprobacion digital.</td>
+      </tr>
+      <tr>
+        <td>Reportes para Junta</td>
+        <td class="col-before">Armados a mano en Excel cada mes. Horas de trabajo.</td>
+        <td class="col-after">Dashboard en tiempo real. La Junta entra y ve el estado del SIP al instante.</td>
+      </tr>
+      <tr>
+        <td>Contabilidad</td>
+        <td class="col-before">QuickBooks aislado. Recibos de donacion manuales.</td>
+        <td class="col-after">Contabilidad integrada. Recibos automaticos al registrar donaciones.</td>
+      </tr>
+      <tr>
+        <td>Eventos</td>
+        <td class="col-before">Cobro en POS fisico en fila. Sin saber rentabilidad.</td>
+        <td class="col-after">Registro de asistentes, costos e ingresos por evento. Rentabilidad clara.</td>
+      </tr>
+      <tr>
+        <td>Patrocinios</td>
+        <td class="col-before">Correo y papel. Sin seguimiento.</td>
+        <td class="col-after">Pipeline de patrocinadores con estados, montos y seguimiento por evento.</td>
+      </tr>
+      <tr>
+        <td>Comunicacion</td>
+        <td class="col-before">Gmail manual a cada miembro.</td>
+        <td class="col-after">Email masivo segmentado. Convocatorias automaticas a Asambleas.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 4: FASES -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">04 &mdash; Fases de implementacion</span>
+  <h2>Tres fases, cada una funcional por si sola</h2>
+  <p>Cada fase resuelve problemas concretos y se entrega lista para usar. No es necesario contratar las tres juntas. Puede comenzar con la Fase 1 y avanzar cuando lo considere oportuno.</p>
+
+  <!-- ── FASE 1 ── -->
+  <div class="phase-card phase-1">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 1</div>
+        <div class="phase-title">Orden Operativo</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$7,500</div>
+        <div class="period">pago unico</div>
+      </div>
+    </div>
+    <p class="phase-desc">El SIP deja de operar en Excel y papel. La Junta Directiva obtiene visibilidad inmediata sobre membresias, finanzas y eventos. Se reemplaza QuickBooks con un sistema integrado.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag">Resuelve: Decisiones sin datos</span>
+      <span class="solves-tag">Resuelve: Membresias en Excel</span>
+      <span class="solves-tag">Resuelve: Contabilidad aislada</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Que incluye</h4>
+        <ul class="check-list">
+          <li>Diagnostico estrategico inicial</li>
+          <li>Modulo de Contactos &mdash; base central de 190 empresas afiliadas</li>
+          <li>Modulo de Membresias personalizado &mdash; flujo de estados (solicitud, activo, moroso, suspendido, baja), categorias por tipo de industria, cuotas configurables</li>
+          <li>Flujo de aprobacion digital para admisiones con niveles de permiso</li>
+          <li>Contabilidad &mdash; reemplazo de QuickBooks, configurada para recibos de donacion (sin facturacion)</li>
+          <li>Modulo de Eventos &mdash; registro de capacitaciones, inscritos, costos e ingresos por evento</li>
+          <li>CRM &mdash; pipeline de nuevos miembros y patrocinadores</li>
+          <li>Dashboard ejecutivo basico &mdash; membresias, morosidad, ingresos vs gastos</li>
+          <li>Capacitacion al equipo operativo</li>
+          <li>Soporte post-implementacion (30 dias)</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>Que no incluye</h4>
+        <ul class="cross-list">
+          <li>Sitio web o portal de eventos online</li>
+          <li>Pasarela de pagos online</li>
+          <li>Email marketing masivo</li>
+          <li>Alertas automaticas de morosidad</li>
+          <li>Dashboards avanzados por comision</li>
+          <li>Gestion digital de actas y documentos</li>
+          <li>Migracion de datos historicos de QuickBooks (cotizable aparte)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado: </span>
+        <span class="meta-value">6 &ndash; 8 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Entregable: </span>
+        <span class="meta-value">Sistema funcional + equipo capacitado</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Usuarios: </span>
+        <span class="meta-value">Hasta 8 usuarios</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FASE 2 ── -->
+  <div class="phase-card phase-2">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 2</div>
+        <div class="phase-title">Automatizacion Inteligente</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$8,500</div>
+        <div class="period">pago unico</div>
+      </div>
+    </div>
+    <p class="phase-desc">El sistema empieza a trabajar solo. Alertas automaticas cuando un miembro se atrasa, comunicaciones masivas sin Gmail, y un portal web donde los miembros se inscriben a eventos directamente.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag blue">Resuelve: Eventos a ciegas</span>
+      <span class="solves-tag blue">Resuelve: Informacion fragmentada</span>
+      <span class="solves-tag blue">Resuelve: Comunicacion manual</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Que incluye</h4>
+        <ul class="check-list">
+          <li>Dashboards avanzados &mdash; panel para Junta Directiva con ejecucion presupuestal, membresias por categoria, calendario de asambleas</li>
+          <li>Email Marketing &mdash; convocatorias a Asambleas, invitaciones a eventos, comunicaciones segmentadas a miembros</li>
+          <li>Sitio Web integrado &mdash; registro online a eventos y capacitaciones (reemplaza landing pages y formularios Excel)</li>
+          <li>Alertas automaticas &mdash; morosidad, vencimiento de cuotas, recordatorios de Asamblea, suspension automatica a los 6 meses segun estatutos</li>
+          <li>Modulo de Proyectos &mdash; seguimiento de comisiones de trabajo con informes a Junta</li>
+          <li>Reportes automatizados &mdash; informe mensual generado por el sistema</li>
+          <li>Capacitacion avanzada</li>
+          <li>Soporte post-implementacion (60 dias)</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>Que no incluye</h4>
+        <ul class="cross-list">
+          <li>Pasarela de pagos online (cobro con tarjeta en web)</li>
+          <li>Gestion digital de actas formales</li>
+          <li>Flujos de aprobacion avanzados (Directora &rarr; Junta &rarr; Asamblea)</li>
+          <li>Encuestas de satisfaccion post-evento</li>
+          <li>Generacion automatica de informe anual del Presidente</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado: </span>
+        <span class="meta-value">4 &ndash; 6 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Requisito: </span>
+        <span class="meta-value">Fase 1 completada</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Entregable: </span>
+        <span class="meta-value">Automatizacion activa + sitio web</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FASE 3 ── -->
+  <div class="phase-card phase-3">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 3</div>
+        <div class="phase-title">Control Ejecutivo + Crecimiento</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$1,000<span style="font-size:18px; font-weight:400;">/mes</span></div>
+        <div class="period">minimo 3 meses</div>
+      </div>
+    </div>
+    <p class="phase-desc">Optimizacion continua, funcionalidades avanzadas y acompanamiento dedicado. Esta fase lleva al SIP al nivel de gobierno digital completo, incluyendo cobros online y generacion automatica de informes ejecutivos.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag green">Cobros online para eventos</span>
+      <span class="solves-tag green">Gobierno corporativo digital</span>
+      <span class="solves-tag green">Reportes ejecutivos automaticos</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Que incluye</h4>
+        <ul class="check-list">
+          <li>Pasarela de pagos online &mdash; cobro de cuotas e inscripciones desde la web (requiere convenio bancario)</li>
+          <li>Gestion de Documentos &mdash; actas de Junta, Asamblea y Comisiones digitalizadas</li>
+          <li>Encuestas &mdash; satisfaccion post-evento y post-capacitacion</li>
+          <li>Flujos de aprobacion avanzados &mdash; Directora &rarr; Junta &rarr; Asamblea segun montos y estatutos</li>
+          <li>Reportes de gobierno &mdash; informe semestral de la Directora e informe anual del Presidente generados automaticamente</li>
+          <li>Auditoria operativa mensual</li>
+          <li>Optimizacion continua de procesos</li>
+          <li>Soporte prioritario</li>
+          <li>Hasta 40 horas mensuales de trabajo incluidas</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>Notas</h4>
+        <ul class="cross-list" style="opacity: 1;">
+          <li style="color: var(--bt-gris-texto);">La pasarela de pagos requiere convenio del SIP con el banco (Bitatech configura la integracion tecnica)</li>
+          <li style="color: var(--bt-gris-texto);">Horas adicionales a las 40 incluidas se facturan a $50/hora</li>
+          <li style="color: var(--bt-gris-texto);">Fase ideal para implementar despues de 2-3 meses usando Fases 1 y 2, cuando el equipo ya domine el sistema</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Duracion: </span>
+        <span class="meta-value">Minimo 3 meses</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Requisito: </span>
+        <span class="meta-value">Fases 1 y 2 completadas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Entregable: </span>
+        <span class="meta-value">Gobierno digital completo</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 5: RESUMEN DE INVERSION -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">05 &mdash; Inversion</span>
+  <h2>Resumen de inversion</h2>
+
+  <h3>Implementacion Bitatech</h3>
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>Que resuelve</th>
+        <th>Inversion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fase 1</strong> &mdash; Orden Operativo</td>
+        <td>Membresias, contabilidad, eventos, dashboard basico</td>
+        <td class="highlight">$7,500</td>
+      </tr>
+      <tr>
+        <td><strong>Fase 2</strong> &mdash; Automatizacion</td>
+        <td>Alertas, email marketing, sitio web, dashboards avanzados</td>
+        <td class="highlight">$8,500</td>
+      </tr>
+      <tr>
+        <td><strong>Fase 3</strong> &mdash; Control Ejecutivo</td>
+        <td>Pagos online, documentos, gobierno corporativo</td>
+        <td class="highlight">$1,000/mes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box accent">
+    <h4>Nota sobre las fases</h4>
+    <p>Cada fase es independiente y funcional por si sola. No es obligatorio contratar las tres. Recomendamos iniciar con la Fase 1, que resuelve los dolores mas criticos (membresias, contabilidad y visibilidad para la Junta), y avanzar a las siguientes fases segun los resultados obtenidos y el presupuesto disponible.</p>
+  </div>
+
+  <h3>Costo de plataforma Odoo (pago mensual al proveedor)</h3>
+  <p class="muted" style="font-size: 13px; margin-bottom: 16px;">Odoo es la plataforma sobre la que se construye el sistema. Este costo es independiente de la implementacion de Bitatech y se paga directamente a Odoo. Es el equivalente a la "renta" del software.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Pago mensual</th>
+        <th>Pago anual (con descuento)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Licencia Odoo Standard<br><span class="muted" style="font-size:12px;">~$24.90/usuario/mes (plan anual) o ~$31.10/mes (mensual)</span></td>
+        <td>~$249/mes<br><span class="muted" style="font-size:12px;">8 usuarios x $31.10</span></td>
+        <td>~$199/mes<br><span class="muted" style="font-size:12px;">8 usuarios x $24.90</span></td>
+      </tr>
+      <tr class="total-row">
+        <td>Total anual estimado</td>
+        <td></td>
+        <td>~$2,390/ano</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box blue">
+    <h4>Sobre el hosting en Odoo.sh</h4>
+    <p>Los precios de licencia son referenciales y pueden variar segun el plan seleccionado y las condiciones vigentes de Odoo al momento de la contratacion. Bitatech asesora en la seleccion del plan adecuado. El SIP contrata la licencia directamente con Odoo. El numero de usuarios puede ajustarse segun necesidad.</p>
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box">
+    <h3>Inversion para arrancar (solo Fase 1)</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="s-label">Implementacion</div>
+        <div class="s-value"><span>$7,500</span></div>
+        <div class="s-detail">pago unico</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Plataforma Odoo</div>
+        <div class="s-value">~<span>$199</span>/mes</div>
+        <div class="s-detail">plan anual, 8 usuarios</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Resultado</div>
+        <div class="s-value" style="font-size: 16px; line-height: 1.4; padding-top: 4px;">Sistema funcional en <span>8 semanas</span></div>
+        <div class="s-detail">membresias + contabilidad + eventos</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 6: PROCESO -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">06 &mdash; Como trabajamos</span>
+  <h2>Proceso de implementacion</h2>
+  <p>No instalamos software y nos vamos. Disenamos el sistema alrededor de como opera el SIP, capacitamos al equipo, y acompanamos hasta que funcione de forma autonoma.</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h4>Aprobacion y contrato</h4>
+      <p>Firma de contrato con alcance, entregables y cronograma definidos.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h4>Configuracion</h4>
+      <p>Levantamiento detallado de datos: categorias, cuotas, miembros. Configuracion del sistema.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h4>Desarrollo</h4>
+      <p>Personalizacion del modulo de membresias, dashboards y flujos de aprobacion.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h4>Entrega y soporte</h4>
+      <p>Capacitacion al equipo, carga de datos, salida en vivo y soporte post-implementacion.</p>
+    </div>
+  </div>
+
+  <h3>Cronograma estimado &mdash; Fase 1</h3>
+  <div class="timeline">
+    <div class="timeline-item active">
+      <h4>Semanas 1&ndash;2: Levantamiento y configuracion</h4>
+      <p>Recopilacion de categorias de membresia, montos de cuota, lista de miembros, plan de cuentas contable. Configuracion base de Odoo.</p>
+      <span class="time-badge">2 semanas</span>
+    </div>
+    <div class="timeline-item">
+      <h4>Semanas 3&ndash;5: Desarrollo y personalizacion</h4>
+      <p>Modulo de membresias a medida, flujo de aprobacion digital, configuracion contable (recibos de donacion), modulo de eventos.</p>
+      <span class="time-badge">3 semanas</span>
+    </div>
+    <div class="timeline-item">
+      <h4>Semanas 6&ndash;7: Pruebas y capacitacion</h4>
+      <p>Pruebas con datos reales, ajustes, capacitacion al equipo operativo (Indira y equipo de contabilidad, eventos, comunicacion).</p>
+      <span class="time-badge">2 semanas</span>
+    </div>
+    <div class="timeline-item">
+      <h4>Semana 8: Salida en vivo</h4>
+      <p>Carga de datos reales, puesta en produccion, acompanamiento durante la primera semana operativa.</p>
+      <span class="time-badge">1 semana</span>
+    </div>
+    <div class="timeline-item">
+      <h4>Semanas 9&ndash;12: Soporte post-implementacion</h4>
+      <p>30 dias de soporte incluido. Resolucion de dudas, ajustes menores y estabilizacion.</p>
+      <span class="time-badge">4 semanas</span>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 7: CONDICIONES -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">07 &mdash; Condiciones</span>
+  <h2>Condiciones generales</h2>
+
+  <div class="info-box accent">
+    <h4>Forma de pago</h4>
+    <p><strong>Fase 1 y 2:</strong> 50% al firmar contrato + 50% al momento de la entrega y salida en vivo del sistema.<br>
+    <strong>Fase 3:</strong> Facturacion mensual al inicio de cada mes de servicio.<br>
+    <strong>Todos los montos estan expresados en dolares americanos (USD).</strong></p>
+  </div>
+
+  <div class="info-box">
+    <h4>Que necesitamos del SIP para arrancar</h4>
+    <p>
+      &bull; Lista completa de empresas afiliadas con su categoria y estado actual<br>
+      &bull; Tabla de categorias de membresia con montos de cuota mensual<br>
+      &bull; Plan de cuentas contable actual (de QuickBooks)<br>
+      &bull; Persona designada como punto de contacto operativo durante la implementacion<br>
+      &bull; Acceso o contratacion de licencia Odoo.sh
+    </p>
+  </div>
+
+  <div class="info-box">
+    <h4>Contrato</h4>
+    <p>Al aprobar esta propuesta, se firma un contrato formal que detalla: alcance exacto, entregables por fase, cronograma, responsabilidades de ambas partes, condiciones de pago y clausula de confidencialidad. Ningun trabajo inicia sin contrato firmado.</p>
+  </div>
+
+  <div class="info-box">
+    <h4>Validez de la propuesta</h4>
+    <p>Esta propuesta es valida por 30 dias a partir de la fecha de emision (15 de marzo de 2026). Pasado este periodo, los precios y condiciones pueden estar sujetos a revision.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- SECTION 8: SOBRE BITATECH -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-label">08 &mdash; Quienes somos</span>
+  <h2>Sobre Bitatech</h2>
+  <p>
+    Bitatech es una firma de sistemas empresariales inteligentes con sede en Panama. Nos especializamos en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo, con mas de 12 millones de usuarios.
+  </p>
+  <p>
+    Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) no se limita a instalar software. Disenamos la arquitectura digital completa que una organizacion necesita para operar con estructura, eliminar el caos operativo y tomar decisiones basadas en datos reales.
+  </p>
+  <p>
+    No vendemos funcionalidades. Resolvemos problemas.
+  </p>
+
+  <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">Odoo</div>
+      <div class="label">Plataforma principal</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">BSI&trade;</div>
+      <div class="label">Metodologia propia</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">Panama</div>
+      <div class="label">Sede local</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">100%</div>
+      <div class="label">Enfocados en resultado</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- CTA -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="cta-section">
+  <h2>El siguiente paso</h2>
+  <p>Coordinar una reunion con la Directora Ejecutiva para presentar esta propuesta y resolver preguntas antes de la aprobacion de la Junta.</p>
+  <a class="cta-button" href="https://wa.me/50768985121?text=Hola%20Bitatech%2C%20queremos%20coordinar%20la%20reunion%20para%20la%20propuesta%20del%20SIP" target="_blank">Coordinar reunion</a>
+  <div class="cta-contact">
+    <strong>info@bitatech.ai</strong> &nbsp;|&nbsp; <a href="https://wa.me/50768985121">+507 6898-5121</a> &nbsp;|&nbsp; www.bitatech.ai
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="footer">
+  <p>&copy; 2026 Bitatech &mdash; Sistemas Empresariales Inteligentes</p>
+  <p style="margin-top: 6px;">Este documento es confidencial y fue preparado exclusivamente para el Sindicato de Industriales de Panama.</p>
+</div>
+
+</body>
+</html>
