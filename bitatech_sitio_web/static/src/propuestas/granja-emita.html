@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial — Granja Emita x Bitatech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bt-negro: #0a0a0a;
+    --bt-negro-suave: #111111;
+    --bt-gris-oscuro: #1a1a1a;
+    --bt-gris-medio: #2a2a2a;
+    --bt-gris-claro: #3a3a3a;
+    --bt-gris-texto: #999999;
+    --bt-gris-borde: #333333;
+    --bt-blanco: #ffffff;
+    --bt-blanco-suave: #f0f0f0;
+    --bt-acento: #d4a843;
+    --bt-acento-hover: #e0b854;
+    --bt-acento-oscuro: #b8922f;
+    --bt-azul: #4a90d9;
+    --bt-naranja: #e8913a;
+    --bt-verde: #4caf50;
+    --bt-morado: #9b59b6;
+    --bt-rojo: #e74c3c;
+  }
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bt-negro);
+    color: var(--bt-blanco-suave);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid var(--bt-acento);
+    border-radius: 50px;
+    color: var(--bt-acento);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 780px;
+    position: relative;
+  }
+
+  .cover h1 span { color: var(--bt-acento); }
+
+  .cover .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--bt-gris-texto);
+    margin-bottom: 60px;
+    max-width: 620px;
+    position: relative;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .cover-meta strong { color: var(--bt-blanco-suave); font-weight: 600; }
+
+  .cover-logos {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    position: relative;
+  }
+
+  .cover-logos .logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--bt-blanco);
+    letter-spacing: 1px;
+  }
+
+  .cover-logos .logo-text span { color: var(--bt-acento); }
+
+  .cover-logos .sep {
+    width: 1px;
+    height: 26px;
+    background: var(--bt-gris-borde);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--bt-gris-borde);
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin: 32px 0 12px 0;
+  }
+
+  .section p {
+    margin-bottom: 16px;
+    color: var(--bt-blanco-suave);
+  }
+
+  .muted { color: var(--bt-gris-texto); }
+  .accent-text { color: var(--bt-acento); font-weight: 600; }
+
+  /* ── STAT CARDS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .stat-card .number {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-card .label {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+  }
+
+  /* ── INFO BOXES ── */
+  .info-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 20px 0;
+  }
+
+  .info-box.accent { border-left: 3px solid var(--bt-acento); }
+  .info-box.blue { border-left: 3px solid var(--bt-azul); }
+  .info-box.green { border-left: 3px solid var(--bt-verde); }
+  .info-box.orange { border-left: 3px solid var(--bt-naranja); }
+
+  .info-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+
+  .data-table td {
+    padding: 14px 18px;
+    font-size: 13.5px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td:first-child { color: var(--bt-acento); font-weight: 600; }
+  .data-table td.plain-first:first-child { color: var(--bt-blanco-suave); font-weight: 500; }
+
+  /* ── MODULE GRID (cards) ── */
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+  }
+
+  .module-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 14px;
+    padding: 26px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .module-card.color-gold::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .module-card.color-blue::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .module-card.color-green::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+  .module-card.color-purple::before { background: linear-gradient(90deg, var(--bt-morado), #b07cc6); }
+  .module-card.color-orange::before { background: linear-gradient(90deg, var(--bt-naranja), #f0a85a); }
+  .module-card.color-red::before { background: linear-gradient(90deg, #e74c3c, #f07066); }
+
+  .module-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 6px 0;
+    padding-right: 80px;
+  }
+
+  .module-card .phase-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .module-card .phase-badge.fase-1 {
+    color: var(--bt-acento);
+    border-color: var(--bt-acento);
+    background: rgba(212, 168, 67, 0.08);
+  }
+  .module-card .phase-badge.fase-2 {
+    color: var(--bt-azul);
+    border-color: var(--bt-azul);
+    background: rgba(74, 144, 217, 0.08);
+  }
+  .module-card .phase-badge.fase-ambas {
+    color: var(--bt-verde);
+    border-color: var(--bt-verde);
+    background: rgba(76, 175, 80, 0.08);
+  }
+
+  .module-card .module-tagline {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 14px;
+  }
+
+  .module-card ul { list-style: none; padding: 0; margin: 0; }
+
+  .module-card ul li {
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-card ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--bt-acento);
+    margin-top: 7px;
+  }
+
+  .module-card.color-blue ul li::before { background: var(--bt-azul); }
+  .module-card.color-green ul li::before { background: var(--bt-verde); }
+  .module-card.color-purple ul li::before { background: var(--bt-morado); }
+  .module-card.color-orange ul li::before { background: var(--bt-naranja); }
+  .module-card.color-red ul li::before { background: #e74c3c; }
+
+  /* ── PAIN LIST ── */
+  .pain-list { margin: 24px 0; }
+
+  .pain-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 22px;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .pain-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .pain-icon.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .pain-icon.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .pain-icon.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  .pain-content { flex: 1; }
+  .pain-content h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+  }
+
+  .pain-content p { font-size: 13px; color: var(--bt-gris-texto); margin: 0; }
+
+  /* ── PHASE CARDS ── */
+  .phase-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .phase-card.phase-1::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .phase-card.phase-2::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .phase-card.phase-3::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+
+  .phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .phase-number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .phase-1 .phase-number { color: var(--bt-acento); }
+  .phase-2 .phase-number { color: var(--bt-azul); }
+  .phase-3 .phase-number { color: var(--bt-verde); }
+
+  .phase-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    line-height: 1.25;
+  }
+
+  .phase-tagline {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .phase-price { text-align: right; }
+
+  .phase-price .amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.1;
+  }
+
+  .phase-1 .phase-price .amount { color: var(--bt-acento); }
+  .phase-2 .phase-price .amount { color: var(--bt-azul); }
+  .phase-3 .phase-price .amount { color: var(--bt-verde); }
+
+  .phase-price .period {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .payment-line {
+    font-size: 12.5px;
+    color: var(--bt-gris-texto);
+    margin-top: 6px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  .phase-desc {
+    font-size: 14.5px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .module-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+
+  .module-list li {
+    padding: 6px 0;
+    font-size: 13.5px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--bt-acento);
+    margin-top: 8px;
+  }
+
+  .phase-2 .module-list li::before { background: var(--bt-azul); }
+  .phase-3 .module-list li::before { background: var(--bt-verde); }
+
+  .phase-footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bt-gris-borde);
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .phase-meta { font-size: 13px; }
+
+  .phase-meta .meta-label {
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .phase-meta .meta-value {
+    color: var(--bt-blanco);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .solves-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 20px 0;
+  }
+
+  .solves-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--bt-acento);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+  }
+
+  .solves-tag.blue {
+    background: rgba(74, 144, 217, 0.1);
+    color: var(--bt-azul);
+    border-color: rgba(74, 144, 217, 0.2);
+  }
+
+  .solves-tag.green {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--bt-verde);
+    border-color: rgba(76, 175, 80, 0.2);
+  }
+
+  /* ── COST TABLE ── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .cost-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+
+  .cost-table td {
+    padding: 14px 18px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+    vertical-align: top;
+  }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+  .cost-table .highlight { color: var(--bt-acento); font-weight: 700; }
+
+  .cost-table .total-row td {
+    font-weight: 700;
+    color: var(--bt-acento);
+    border-top: 2px solid var(--bt-gris-borde);
+    padding-top: 16px;
+    font-size: 15px;
+  }
+
+  /* ── SUPUESTOS ── */
+  .supuestos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .supuesto-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-left: 3px solid var(--bt-azul);
+    border-radius: 10px;
+    padding: 22px 26px;
+  }
+
+  .supuesto-card .supuesto-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-azul);
+    margin-bottom: 6px;
+  }
+
+  .supuesto-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .supuesto-card p {
+    font-size: 13.5px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── SUMMARY BOX ── */
+  .summary-box {
+    background: linear-gradient(135deg, var(--bt-gris-oscuro), var(--bt-gris-medio));
+    border: 1px solid var(--bt-acento);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .summary-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-acento);
+    margin-bottom: 24px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .summary-item .s-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .summary-item .s-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .summary-item .s-value span { color: var(--bt-acento); }
+
+  .summary-item .s-detail {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin-top: 6px;
+  }
+
+  /* ── WHY BITATECH ── */
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+  }
+
+  .reason-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+
+  .reason-card .reason-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .reason-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .reason-card p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ── PROCESS STEPS ── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .process-step {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .process-step .step-num {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.12);
+    border: 1px solid var(--bt-acento);
+    color: var(--bt-acento);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .process-step h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 6px;
+  }
+
+  .process-step p {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ── RESPONSABILIDAD COLUMNS ── */
+  .resp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+
+  .resp-col {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 28px;
+  }
+
+  .resp-col.bitatech { border-left: 3px solid var(--bt-acento); }
+  .resp-col.cliente { border-left: 3px solid var(--bt-azul); }
+
+  .resp-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    margin-bottom: 14px;
+  }
+
+  .resp-col.bitatech h4 { color: var(--bt-acento); }
+  .resp-col.cliente h4 { color: var(--bt-azul); }
+
+  .resp-col ul { list-style: none; padding: 0; margin: 0; }
+
+  .resp-col ul li {
+    padding: 7px 0;
+    font-size: 13.5px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.55;
+  }
+
+  .resp-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  .resp-col.bitatech ul li::before { background: var(--bt-acento); }
+  .resp-col.cliente ul li::before { background: var(--bt-azul); }
+
+  /* ── CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+
+  .cta-contact {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cta-contact a {
+    color: var(--bt-acento);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    border-top: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro);
+  }
+
+  .footer .brand {
+    font-weight: 700;
+    color: var(--bt-blanco);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .footer .brand span { color: var(--bt-acento); }
+
+  .footer .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer a { color: var(--bt-gris-texto); text-decoration: none; }
+  .footer a:hover { color: var(--bt-acento); }
+
+  .footer .disclaimer {
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--bt-gris-claro);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+  }
+
+  @media print {
+    .cover { page-break-after: always; }
+    .phase-card { page-break-inside: avoid; }
+    .module-card { page-break-inside: avoid; }
+    .info-box { page-break-inside: avoid; }
+    .summary-box { page-break-inside: avoid; }
+    .cta-section { display: none; }
+    body { font-size: 13px; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 780px) {
+    .cover h1 { font-size: 34px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .module-grid { grid-template-columns: 1fr; }
+    .module-list { grid-template-columns: 1fr; }
+    .reasons-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .resp-grid { grid-template-columns: 1fr; }
+    .summary-grid { grid-template-columns: 1fr; }
+    .phase-card { padding: 28px 22px; }
+    .section { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ──────────── COVER ──────────── -->
+<section class="cover">
+  <span class="cover-badge">Propuesta Comercial</span>
+  <h1>Implementacion ERP <span>Odoo</span> para Granja Emita Panama SA</h1>
+  <p class="subtitle">Un solo sistema para producir, trazar, despachar y facturar &mdash; integrado de punta a punta.</p>
+  <div class="cover-meta">
+    <div><strong>Cliente:</strong> Granja Emita Panama SA</div>
+    <div><strong>Fecha:</strong> 13 de abril de 2026</div>
+    <div><strong>Valida hasta:</strong> 13 de mayo de 2026</div>
+  </div>
+  <div class="cover-logos">
+    <div class="logo-text">BITA<span>TECH</span></div>
+    <div class="sep"></div>
+    <div>Sistemas Empresariales Inteligentes</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 01 — SU OPERACION HOY ══════════ -->
+<section class="section">
+  <span class="section-label">01 &mdash; Su operacion hoy</span>
+  <h2>Lo que entendemos de Granja Emita</h2>
+  <p>Sra. Diaz, esta es la foto de la operacion de Granja Emita basada en la informacion que usted compartio el 13 de abril. Sobre esta foto se construye el resto de la propuesta.</p>
+
+  <h3>Crecimiento y escala</h3>
+  <p>Granja Emita comenzo en 2017 con 5,400 aves y hoy opera con 248,000 gallinas ponedoras, produce mas de 100 millones de huevos al ano y despacha 600 cajas diarias a supermercados y distribucion directa en Panama. En menos de diez anos la operacion crecio 46 veces.</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">248K</div>
+      <div class="label">Gallinas ponedoras</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">100M+</div>
+      <div class="label">Huevos al ano</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">600</div>
+      <div class="label">Cajas despachadas / dia</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">46x</div>
+      <div class="label">Crecimiento desde 2017</div>
+    </div>
+  </div>
+
+  <h3>Operacion actual</h3>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">400</div>
+      <div class="label">Colaboradores</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">50</div>
+      <div class="label">Usuarios del sistema hoy</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">1</div>
+      <div class="label">Ubicacion (La Chorrera)</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">6</div>
+      <div class="label">Areas funcionales</div>
+    </div>
+  </div>
+  <p class="muted" style="font-size: 13.5px;">Las seis areas funcionales son produccion, clasificacion y empaque, logistica y distribucion, ventas y comercial, administracion y finanzas, y compras e importaciones.</p>
+
+  <h3>Sistemas hoy</h3>
+  <p>Hoy la empresa opera con Excel, hojas de calculo, reportes manuales y WhatsApp. La gestion de inventarios, produccion, control de merma, pedidos, cuentas por cobrar y reportes operativos se hace de forma manual. Con 50 usuarios, seis areas funcionales, trazabilidad por fecha de produccion (FEFO), 67 embarques de importacion documentados y facturacion electronica DGI, ese modelo ya no escala.</p>
+
+  <h3>Desafios declarados por la Sra. Diaz</h3>
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon critical">1</div>
+      <div class="pain-content">
+        <h4>Dispersion de informacion</h4>
+        <p>Cada area mantiene sus propios registros en Excel y WhatsApp. La informacion existe pero no esta consolidada ni es confiable en tiempo real.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon critical">2</div>
+      <div class="pain-content">
+        <h4>Falta de trazabilidad FEFO</h4>
+        <p>No hay control sistematico de lote por fecha de produccion. El producto mas viejo no siempre sale primero, lo que se traduce en merma y devoluciones.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">3</div>
+      <div class="pain-content">
+        <h4>Pedidos manuales</h4>
+        <p>Los pedidos entran por WhatsApp, llamada y contacto directo, y se transcriben a Excel. Reproceso, errores y falta de visibilidad del estado real del pedido.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">4</div>
+      <div class="pain-content">
+        <h4>Visibilidad logistica</h4>
+        <p>No hay forma de saber en tiempo real que se despacho, que esta en ruta y que falta entregar. Las novedades se reportan por mensajes sueltos.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">5</div>
+      <div class="pain-content">
+        <h4>Devoluciones con perdida de valor</h4>
+        <p>Las devoluciones no estan vinculadas al lote original ni generan nota de credito automatica. Se pierde dinero y no se analizan las causas.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">6</div>
+      <div class="pain-content">
+        <h4>Gobernanza de datos</h4>
+        <p>No hay base de datos unica ni historico estructurado. Los reportes ejecutivos dependen de quien arme el Excel del mes y no son comparables entre periodos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box green">
+    <h4>Una observacion para la direccion: optimizacion de personal post-implementacion</h4>
+    <p>Hoy 50 personas tocan datos del negocio porque la operacion corre sobre Excel y WhatsApp &mdash; cada area duplica registros, reconcilia manualmente y produce reportes a mano. Tras implementar Odoo, estimamos que entre <strong>25 y 35 usuarios</strong> seran suficientes para operar el sistema completo. La diferencia es <strong>capacidad real liberada</strong> del trabajo administrativo repetitivo, que la direccion puede reasignar a produccion, calidad, expansion comercial o aplicar como considere segun la estrategia de la empresa. En una operacion que crece a este ritmo y apunta a nuevos mercados, esa capacidad disponible vale tanto como el sistema mismo.</p>
+  </div>
+
+  <h3>Supuestos declarados</h3>
+  <p class="muted" style="font-size: 13.5px;">La propuesta se construyo con la informacion entregada el 13 de abril. Los siguientes supuestos aplican y deben ser confirmados.</p>
+
+  <div class="supuestos-grid">
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 01</div>
+      <h4>Trazabilidad FEFO a nivel de lote diario</h4>
+      <p>La propuesta cotiza control de inventario por <strong>lote de produccion diaria</strong> (fecha de postura/produccion), sin identificacion fisica por caja individual. Si Granja Emita requiere trazabilidad hasta caja despachada con etiquetado fisico, escaneres o integracion con la linea de empaque, se presenta una cotizacion ajustada en segunda iteracion.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 02</div>
+      <h4>Facturacion electronica DGI con PAC autorizado</h4>
+      <p>La propuesta incluye la <strong>seleccion e integracion con un Proveedor Autorizado de Certificacion (PAC) en Panama</strong>. Si Granja Emita ya tiene PAC definido, se integra directamente con el suyo sin costo adicional de seleccion.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 03</div>
+      <h4>Como van a entrar los pedidos al sistema</h4>
+      <p>Sus clientes pueden seguir pidiendo como hoy: por WhatsApp, por llamada o hablando directo con el equipo comercial. Lo que cambia es que el comercial deja de anotar el pedido en una libreta, Excel o WhatsApp y pasa a registrarlo directamente en Odoo. A partir de ese registro, todo el flujo (preparacion, despacho, factura y cobro) ocurre dentro del sistema sin reescribir datos en ningun lado. Esto es lo que entra en la <strong>Fase 2</strong>.</p>
+      <p style="margin-top: 12px;">Como <strong>add-on opcional</strong>, Granja Emita puede activar un <strong>portal web B2B</strong>: una plataforma propia donde los supermercados y distribuidores ingresan sus pedidos directamente, sin tener que llamar ni escribir a nadie. Eso libera tiempo del equipo comercial y elimina errores de transcripcion.</p>
+      <p style="margin-top: 12px;">Otro add-on opcional muy demandado es la <strong>bandeja unificada de WhatsApp empresarial</strong>: un panel donde el equipo comercial recibe, distribuye y responde todos los mensajes de WhatsApp de los clientes desde un solo lugar, con etiquetas, asignacion por agente y registro automatico en Odoo. Cada conversacion queda vinculada al cliente y al pedido correspondiente, sin que nada se pierda en chats personales.</p>
+      <p style="margin-top: 12px;">Lo mas potente de la bandeja unificada: <strong>desde la misma conversacion de WhatsApp el equipo puede generar cotizaciones, confirmar pedidos, convertir un mensaje en una oportunidad de venta, registrar el cliente nuevo o adjuntar el pago</strong>, sin salir del chat ni abrir Odoo en otra pestana. El cliente recibe la cotizacion o factura por WhatsApp en segundos, todo queda registrado en el sistema y el comercial no tiene que copiar nada a mano.</p>
+      <p style="margin-top: 12px;"><strong>Importante:</strong> el portal B2B y la bandeja unificada de WhatsApp <strong>no estan incluidos en el precio base de las dos fases</strong>. Se cotizan por separado como modulos opcionales en la seccion de inversion. Esto evita inflar el precio con capacidades que no fueron solicitadas en el cuestionario.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 02 — MODULOS ══════════ -->
+<section class="section">
+  <span class="section-label">02 &mdash; Modulos para su operacion</span>
+  <h2>Capacidades integradas para operacion agroindustrial avicola</h2>
+  <p>Cada modulo resuelve un area especifica de Granja Emita. Al estar todos en Odoo, se comunican entre si en tiempo real: una recoleccion en galpon actualiza inventario, un pedido descarga stock, una factura emite documento DGI y una devolucion vincula automaticamente el lote original &mdash; sin copiar datos ni cambiar de sistema.</p>
+
+  <div class="module-grid">
+
+    <div class="module-card color-gold">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Inventario y trazabilidad por lote (FEFO)</h3>
+      <p class="module-tagline">Control de stock con lote por fecha de produccion</p>
+      <ul>
+        <li>Lotes generados por fecha de postura / produccion diaria</li>
+        <li>Alertas automaticas de proximidad de vencimiento</li>
+        <li>Movimientos en tiempo real granja &rarr; empaque &rarr; almacen &rarr; cliente</li>
+        <li>Politica FEFO aplicada al despacho</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-orange">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Produccion por galpon</h3>
+      <p class="module-tagline">Recoleccion, merma y rendimiento por unidad productiva</p>
+      <ul>
+        <li>Registro diario de recoleccion por galpon</li>
+        <li>Control de merma y aves bajas</li>
+        <li>Rendimiento y costo por lote</li>
+        <li>Historico comparable entre galpones y periodos</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Clasificacion y empaque</h3>
+      <p class="module-tagline">Trazabilidad de transferencias entre ubicaciones</p>
+      <ul>
+        <li>Ubicaciones diferenciadas: clasificacion, empaque, almacen</li>
+        <li>Transferencias internas con confirmacion</li>
+        <li>Vinculacion del producto empacado al lote de origen</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-purple">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Compras e importaciones</h3>
+      <p class="module-tagline">Proveedores locales e internacionales con seguimiento de embarques</p>
+      <ul>
+        <li>Ordenes de compra a proveedores locales y de Mexico, Brasil, Costa Rica y El Salvador</li>
+        <li>Seguimiento de los 67 embarques documentados y los que vendran</li>
+        <li>Costos de importacion (flete, seguro, aranceles) prorrateados al producto</li>
+        <li>Visibilidad del estado de cada orden</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-green">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>Ventas y cuentas por cobrar</h3>
+      <p class="module-tagline">Captura centralizada de pedidos manteniendo los canales actuales</p>
+      <ul>
+        <li>WhatsApp, llamadas y contacto comercial siguen siendo canales de entrada</li>
+        <li>El equipo comercial captura el pedido dentro del sistema</li>
+        <li>Flujo de aprobacion, seguimiento de despacho y cobranza</li>
+        <li>Estado de credito y saldo por cliente en tiempo real</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-red">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>Facturacion electronica DGI</h3>
+      <p class="module-tagline">Emision conforme a normativa Panama, integrada al ciclo de venta</p>
+      <ul>
+        <li>Emision de facturas electronicas conforme a DGI</li>
+        <li>Integracion con PAC autorizado en Panama</li>
+        <li>Notas de credito y debito automatizadas</li>
+        <li>Trazabilidad fiscal completa</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>Logistica y despacho</h3>
+      <p class="module-tagline">Ordenes de entrega, rutas y devoluciones vinculadas al lote</p>
+      <ul>
+        <li>Ordenes de entrega vinculadas al pedido y al lote</li>
+        <li>Control de rutas y estado de despacho</li>
+        <li>Registro de devolucion vinculado al lote original</li>
+        <li>Nota de credito automatica al confirmar la devolucion</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-gold">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>Contabilidad operativa basica</h3>
+      <p class="module-tagline">Asientos automaticos del ciclo operativo</p>
+      <ul>
+        <li>Plan de cuentas configurado para Granja Emita</li>
+        <li>Asientos automaticos generados por ventas, compras e inventario</li>
+        <li>Cierre del ciclo entre facturacion DGI y libro mayor</li>
+        <li>Reportes contables basicos del periodo</li>
+      </ul>
+      <p style="font-size: 11px; font-style: italic; opacity: 0.7; margin-top: 8px;">Incluye lo necesario para que el ciclo operativo cierre contablemente. Contabilidad fiscal completa (cierres mensuales asistidos, conciliacion bancaria avanzada, NIIF, multi-moneda, declaraciones automatizadas) se ofrece como add-on opcional.</p>
+    </div>
+
+    <div class="module-card color-orange">
+      <span class="phase-badge fase-ambas">Fase 1 + 2</span>
+      <h3>Reportes y tableros operativos</h3>
+      <p class="module-tagline">Reemplazo de los reportes operativos manuales actuales</p>
+      <ul>
+        <li>Tableros por area: produccion por galpon, inventario, ventas, compras, despacho</li>
+        <li>Indicadores operativos en tiempo real: rotacion, tasa de devoluciones, dias de cobro</li>
+        <li>Reportes exportables sin depender de Excel</li>
+        <li>Vista por usuario segun area y rol</li>
+      </ul>
+      <p style="font-size: 11px; font-style: italic; opacity: 0.7; margin-top: 8px;">Cubre los reportes operativos que hoy se hacen a mano en cada area de la empresa.</p>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 03 — FASES ══════════ -->
+<section class="section">
+  <span class="section-label">03 &mdash; Implementacion por fases</span>
+  <h2>Dos fases para resolver los desafios sin abrumar al equipo</h2>
+  <p>Implementar todos los modulos al mismo tiempo genera caos en cualquier operacion. Las dos fases permiten que cada area domine su bloque antes de avanzar al siguiente, y que cada fase entregue valor inmediato sobre los desafios declarados. Cada fase se contrata por separado: al cerrar la Fase 1, Granja Emita decide si avanza a la Fase 2.</p>
+
+  <!-- ── FASE 1 ── -->
+  <div class="phase-card phase-1">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 1 &mdash; Planta y abastecimiento</div>
+        <div class="phase-title">Control de planta y abastecimiento</div>
+        <div class="phase-tagline">"Controlamos lo que producimos y lo que compramos"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 15,000</div>
+        <span class="period">Pago unico de Fase 1</span>
+        <div class="payment-line">50% al firmar (USD 7,500) &middot; 50% al entregar Fase 1 (USD 7,500)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Configuramos el nucleo productivo y la cadena de abastecimiento. Granja Emita sigue vendiendo y facturando con sus metodos actuales mientras Bitatech configura. Al cierre de la fase, Granja Emita tiene control real sobre la cadena granja &rarr; clasificacion &rarr; empaque &rarr; almacen y sobre las compras locales e importadas.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag">Trazabilidad FEFO</span>
+      <span class="solves-tag">Control de planta</span>
+      <span class="solves-tag">Compras e importaciones</span>
+      <span class="solves-tag">Gobernanza operativa</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Modulos incluidos</h4>
+    <ul class="module-list">
+      <li>Inventario y trazabilidad por lote (FEFO)</li>
+      <li>Produccion por galpon (recoleccion, merma, rendimiento)</li>
+      <li>Clasificacion y empaque</li>
+      <li>Compras e importaciones (locales e internacionales)</li>
+      <li>Reportes y tableros operativos basicos de planta (reemplazo de los reportes manuales actuales del area productiva)</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">5 a 6 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Independencia funcional</span>
+        <span class="meta-value">Granja Emita sigue operando sus ventas en paralelo</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Resuelve desafios</span>
+        <span class="meta-value">2, 6 (parcial 1)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FASE 2 ── -->
+  <div class="phase-card phase-2">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 2 &mdash; Ciclo comercial y financiero</div>
+        <div class="phase-title">Ciclo comercial y financiero</div>
+        <div class="phase-tagline">"Controlamos lo que vendemos, despachamos,<br>cobramos y facturamos"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 14,000</div>
+        <span class="period">Pago unico de Fase 2</span>
+        <div class="payment-line">50% al firmar (USD 7,000) &middot; 50% al entregar Fase 2 (USD 7,000)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Con la Fase 1 estabilizada, conectamos el ciclo comercial completo: pedidos, despacho, devoluciones, facturacion DGI y contabilidad. Las facturas descargan stock automaticamente y las devoluciones se vinculan al lote original. Al cierre de la fase, todo el ciclo operativo de Granja Emita vive dentro de Odoo.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag blue">Ventas y CxC</span>
+      <span class="solves-tag blue">Facturacion DGI + PAC</span>
+      <span class="solves-tag blue">Logistica y despacho</span>
+      <span class="solves-tag blue">Devoluciones controladas</span>
+      <span class="solves-tag blue">Contabilidad operativa basica</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Modulos incluidos</h4>
+    <ul class="module-list">
+      <li>Ventas y cuentas por cobrar con captura centralizada</li>
+      <li>Facturacion electronica DGI (integracion PAC)</li>
+      <li>Logistica y despacho con devoluciones vinculadas a lote</li>
+      <li>Contabilidad operativa basica: asientos automaticos generados por ventas, compras y facturacion DGI (no incluye contabilidad fiscal completa &mdash; ver add-ons)</li>
+      <li>Reportes y tableros operativos del area comercial y financiera</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">4 a 5 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Dependencia</span>
+        <span class="meta-value">Requiere Fase 1 instalada</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Resuelve desafios</span>
+        <span class="meta-value">1, 3, 4, 5, 6 (completo)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Cada fase se contrata por separado</h4>
+    <p>No es necesario comprometerse con las dos fases desde el inicio. Cada fase tiene su propio contrato, alcance y precio. Al finalizar la Fase 1, Bitatech y Granja Emita evaluan resultados y deciden juntos si avanzar a la Fase 2. Esto le da a la direccion control total sobre la inversion y permite ver resultados antes de comprometer mas.</p>
+  </div>
+
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 04 — INVERSION ══════════ -->
+<section class="section">
+  <span class="section-label">04 &mdash; Inversion</span>
+  <h2>Resumen de inversion por fase</h2>
+
+  <h3>Implementacion Bitatech</h3>
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>Inversion</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Fase 1: Control de planta y abastecimiento</strong><br>
+          <span class="muted" style="font-size: 12px;">Inventario + FEFO, produccion por galpon, clasificacion y empaque, compras e importaciones, reportes operativos basicos de planta</span>
+        </td>
+        <td class="highlight">USD 15,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato (USD 7,500)<br>50% al entregar Fase 1 (USD 7,500)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 2: Ciclo comercial y financiero</strong><br>
+          <span class="muted" style="font-size: 12px;">Ventas + CxC, facturacion DGI con PAC, logistica con devoluciones, contabilidad operativa basica, reportes operativos comerciales y financieros</span>
+        </td>
+        <td class="highlight">USD 14,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato (USD 7,000)<br>50% al entregar Fase 2 (USD 7,000)</span>
+        </td>
+      </tr>
+      <tr class="total-row">
+        <td>Total implementacion (2 fases)</td>
+        <td>USD 29,000</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementacion no incluyen ITBMS (7%). El impuesto se aplica al momento de facturar segun la normativa de la DGI de Panama.</p>
+
+  <h3 style="margin-top: 40px;">Modulos opcionales (add-ons)</h3>
+  <p>Los siguientes modulos no estan incluidos en el precio de las dos fases base porque <strong>no fueron solicitados en el cuestionario</strong>. Se cotizan por separado segun el alcance que Granja Emita decida activar, en cualquier momento durante o despues de la implementacion. Estan disenados para escalar la operacion una vez que el sistema base este corriendo.</p>
+
+  <table class="cost-table" style="margin-top: 16px;">
+    <thead>
+      <tr>
+        <th>Modulo opcional</th>
+        <th>Inversion</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>RRHH y nomina (~400 colaboradores)</strong><br>
+          <span class="muted" style="font-size: 12px;">Registro de personal, control de asistencia, estructuras por area y centro de costo. Nomina si Granja Emita decide migrarla a Odoo. Rango segun si se incluye solo registro/asistencia o ademas el ciclo completo de nomina.</span>
+        </td>
+        <td class="highlight">USD 4,500 &ndash; 6,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Contabilidad fiscal completa</strong><br>
+          <span class="muted" style="font-size: 12px;">Cierres mensuales asistidos, conciliacion bancaria avanzada, NIIF, multi-moneda, declaraciones fiscales automatizadas, centros de costo avanzados. La Fase 2 ya incluye contabilidad operativa basica (asientos automaticos del ciclo); este add-on es la capa fiscal completa para el cierre formal de libros.</span>
+        </td>
+        <td class="highlight">USD 3,000 &ndash; 5,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Portal B2B para clientes</strong><br>
+          <span class="muted" style="font-size: 12px;">Plataforma web propia donde supermercados y distribuidores ingresan sus pedidos directamente, consultan catalogo, ven historial y dan seguimiento a despachos. Libera tiempo del equipo comercial y elimina errores de transcripcion.</span>
+        </td>
+        <td class="highlight">USD 4,500 &ndash; 7,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar<br>Rango segun alcance final de funcionalidades</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Bandeja unificada de WhatsApp empresarial</strong><br>
+          <span class="muted" style="font-size: 12px;">Modulos especializados para recepcion, distribucion, etiquetado y embudo de conversaciones de WhatsApp. Desde la misma conversacion el equipo puede generar cotizaciones, confirmar pedidos, convertir mensajes en oportunidades, registrar clientes nuevos y adjuntar pagos sin salir del chat.</span>
+        </td>
+        <td class="highlight">USD 1,200</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Pago unico &mdash; licencia perpetua de los modulos</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Conector WhatsApp (META)</strong><br>
+          <span class="muted" style="font-size: 12px;">Servicio de conexion entre META y Odoo para recibir y enviar mensajes desde la bandeja unificada. Plan base cubre 5,400 mensajes de salida por mes (mensajes de entrada ilimitados). Escalable segun volumen real.</span>
+        </td>
+        <td class="highlight">Desde USD 54 / mes</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Pago mensual recurrente &mdash; escalable segun volumen</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Integraciones a medida</strong><br>
+          <span class="muted" style="font-size: 12px;">Conexion con sistemas externos especificos (bancos, plataformas logisticas, ERP de clientes, dispositivos de planta, balanzas, etc.) que surjan a medida que la operacion evolucione.</span>
+        </td>
+        <td class="highlight">A cotizar</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Se cotiza por separado segun alcance especifico y horas estimadas</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de los modulos opcionales no incluyen ITBMS (7%).</p>
+
+  <h3 style="margin-top: 40px;">Plataforma Odoo &mdash; Pago directo a Odoo</h3>
+  <p>Ademas de la implementacion, Granja Emita debe contratar la licencia de Odoo Enterprise. Este costo es independiente de Bitatech y se paga directamente a Odoo. Bitatech asesora en la seleccion del plan, contratacion y configuracion.</p>
+
+  <div class="info-box blue">
+    <h4>Por que el numero de usuarios importa para este costo</h4>
+    <p>El costo de Odoo se factura <strong>por usuario activo</strong>. Hoy declararon 50 usuarios porque toda esa gente tiene que tocar datos para que la operacion funcione. Tras implementar el sistema, ese numero baja de forma natural a un rango realista de <strong>25 a 35 usuarios</strong>. Esto representa un ahorro recurrente importante en licenciamiento que se mantiene ano tras ano.</p>
+  </div>
+
+  <p class="muted" style="font-size: 13px; margin-top: 24px; margin-bottom: 12px;">Referencia: Odoo Enterprise Plan Standard &mdash; ~USD 25 por usuario por mes (precio referencial sujeto a condiciones vigentes de Odoo al momento de la contratacion).</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Escenario</th>
+        <th>Usuarios</th>
+        <th>Costo mensual</th>
+        <th>Costo anual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Operacion actual proyectada</strong><br><span class="muted" style="font-size: 12px;">Si se mantienen los 50 usuarios declarados hoy</span></td>
+        <td>50</td>
+        <td>USD 1,250 / mes</td>
+        <td>USD 15,000 / ano</td>
+      </tr>
+      <tr>
+        <td><strong>Operacion optimizada (estimada)</strong><br><span class="muted" style="font-size: 12px;">Tras la entrega del sistema, escenario realista de uso</span></td>
+        <td>25 &ndash; 35</td>
+        <td>USD 625 &ndash; 875 / mes</td>
+        <td>USD 7,500 &ndash; 10,500 / ano</td>
+      </tr>
+      <tr class="total-row">
+        <td>Ahorro recurrente estimado en licenciamiento</td>
+        <td>&mdash;</td>
+        <td>USD 375 &ndash; 625 / mes</td>
+        <td>USD 4,500 &ndash; 7,500 / ano</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box accent">
+    <h4>Lectura rapida</h4>
+    <p>El ahorro anual en licencias de Odoo bajo el escenario optimizado es equivalente a una porcion significativa del soporte continuo o a casi el 20% de la inversion en Fase 1. Esto se suma al impacto operativo de tener al personal redeployado en actividades de mayor valor.</p>
+  </div>
+
+  <h3 style="margin-top: 40px;">Soporte continuo opcional</h3>
+
+  <div class="phase-card phase-1" style="margin-top: 16px;">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Plan Ejecutivo</div>
+        <div class="phase-title">Soporte y optimizacion continua</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 1,800<span style="font-size: 18px; color: var(--bt-gris-texto); font-weight: 500;">/mes</span></div>
+        <span class="period">Minimo 3 meses</span>
+        <div class="payment-line">Pago mensual al inicio de cada mes</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Una vez en produccion, Granja Emita puede contratar el plan de soporte y optimizacion continua de Bitatech para mantener Odoo afinado a medida que la operacion evoluciona.</p>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Incluye</h4>
+    <ul class="module-list">
+      <li>Auditoria operativa mensual del uso del sistema</li>
+      <li>KPIs personalizados y reportes ejecutivos mensuales</li>
+      <li>Optimizacion continua de procesos</li>
+      <li>Soporte prioritario por canal directo</li>
+      <li>Ajustes y mejoras menores incluidas</li>
+      <li>Hasta 40 horas mensuales de trabajo dedicado</li>
+    </ul>
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box">
+    <h3>Para arrancar la Fase 1</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="s-label">Anticipo de Fase 1</div>
+        <div class="s-value"><span>USD 7,500</span></div>
+        <div class="s-detail">50% al firmar contrato</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Fase 1 lista en</div>
+        <div class="s-value"><span>5 &ndash; 6 semanas</span></div>
+        <div class="s-detail">Desde el sesion de arranque post firma</div>
+      </div>
+    </div>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversion inicial Granja Emita arranca el proyecto y comienza la configuracion del nucleo productivo.</p>
+    <p style="margin-top: 12px; font-size: 12px; font-style: italic; opacity: 0.7; text-align: center;">Precio no incluye ITBMS (7%).</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 05 — COMO TRABAJAMOS ══════════ -->
+<section class="section">
+  <span class="section-label">05 &mdash; Como trabajamos</span>
+  <h2>Proceso de implementacion por fase</h2>
+  <p>Cada fase sigue el mismo proceso. Bitatech no instala software y se va: disena los flujos alrededor de como opera Granja Emita, configura, capacita y acompana hasta que cada area domina su parte del sistema.</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <h4>Sesion de arranque</h4>
+      <p>Firma de contrato y reunion de arranque para alinear cronograma, alcance y responsables por area.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <h4>Mapeo</h4>
+      <p>Sesiones con personal clave para mapear flujos reales de cada area y validar supuestos.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <h4>Configuracion</h4>
+      <p>Bitatech configura modulos, datos maestros, ubicaciones, flujos de aprobacion y reportes.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <h4>Carga de datos</h4>
+      <p>Granja Emita entrega plantillas con datos reales. Bitatech importa y verifica integridad.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <h4>Capacitacion</h4>
+      <p>Sesiones por area con manuales de usuario. Cada equipo opera el sistema antes de la entrega.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">6</div>
+      <h4>Entrega asistida</h4>
+      <p>Salida en vivo con soporte intensivo presencial / remoto durante las primeras semanas de operacion.</p>
+    </div>
+  </div>
+
+  <div class="info-box green">
+    <h4>Soporte intensivo despues de la entrega</h4>
+    <p>Bitatech acompana 30 dias despues de la entrega de Fase 1 y otros 30 dias despues de la entrega de Fase 2, acumulando hasta 60 dias de soporte intensivo al cierre del proyecto. El objetivo es que cada area opere de forma autonoma al final de cada fase.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 06 — CARGA DE DATOS ══════════ -->
+<section class="section">
+  <span class="section-label">06 &mdash; Carga de datos y migracion</span>
+  <h2>Que incluye Bitatech y que es responsabilidad de Granja Emita</h2>
+  <p>Para que el sistema arranque con informacion real desde el dia uno, hay responsabilidades claras de cada parte:</p>
+
+  <div class="resp-grid">
+    <div class="resp-col bitatech">
+      <h4>Bitatech entrega</h4>
+      <ul>
+        <li>Configuracion completa de modulos por fase</li>
+        <li>Diseno de flujos operativos por area</li>
+        <li>Estructura de datos y catalogos</li>
+        <li>Capacitacion por area con sesiones dedicadas</li>
+        <li>Manuales de usuario por modulo</li>
+        <li>Soporte intensivo despues de la entrega (30 dias post Fase 1, 60 dias acumulado al cierre de Fase 2)</li>
+        <li>Seleccion e integracion con PAC para facturacion DGI</li>
+        <li>Verificacion de integridad de los datos cargados</li>
+      </ul>
+    </div>
+    <div class="resp-col cliente">
+      <h4>Granja Emita aporta</h4>
+      <ul>
+        <li>Datos maestros: catalogo de productos (huevos por tipo y calibre), clientes y proveedores</li>
+        <li>Plantillas de inventario inicial por bodega y galpon</li>
+        <li>Datos historicos de produccion (si se decide cargar historial)</li>
+        <li>Acceso a personal clave de cada area para sesiones de mapeo y capacitacion</li>
+        <li>Decisiones de configuracion: politicas de credito, plazos de cobro, jerarquias de aprobacion</li>
+        <li>Si ya tienen PAC contratado: credenciales y datos de integracion</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Bitatech facilita la carga</h4>
+    <p>Entregamos plantillas listas para que el equipo de Granja Emita las llene con los datos reales. Nadie conoce la operacion mejor que ustedes. Bitatech configura la estructura, importa la informacion y verifica que todo este correcto antes de la entrega.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 07 — QUIENES SOMOS ══════════ -->
+<section class="section">
+  <span class="section-label">07 &mdash; Quienes somos</span>
+  <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
+  <p>Bitatech es una firma con sede en Panama especializada en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo. No instalamos software y nos vamos &mdash; disenamos la arquitectura digital completa que su empresa necesita para operar con estructura, eliminar el caos operativo y crecer con control.</p>
+  <p>Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnostico de su operacion real, define flujos personalizados, y entrega un sistema que su equipo domina desde el primer dia. <strong>Desarrollamos codigo dentro de Odoo</strong> para adaptar el sistema a los procesos exactos de Granja Emita.</p>
+
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <h4>Especializacion en Odoo</h4>
+      <p>Somos implementadores especializados en Odoo. No trabajamos con multiples plataformas ni repartimos atencion entre sistemas. Odoo es nuestra plataforma.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <h4>Experiencia en produccion y distribucion</h4>
+      <p>El flujo granja &rarr; clasificacion &rarr; empaque &rarr; despacho &rarr; cobranza tiene particularidades que un consultor generico no domina. Bitatech tiene experiencia en flujos con trazabilidad por lote, gestion de merma, rutas y facturacion DGI en Panama.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <h4>No instalamos y nos vamos</h4>
+      <p>El objetivo es que el equipo de Granja Emita opere de forma autonoma al final de cada fase. La capacitacion, los manuales y el soporte post-arranque estan disenados para eso.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <h4>KPIs desde el dia uno</h4>
+      <p>Al terminar, Granja Emita tendra dashboards con indicadores reales: produccion por galpon, rotacion de inventario, tasa de devoluciones, dias de cobro, costo por caja. Datos reales, no de muestra.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 40px;">Resultado directo sobre los seis desafios declarados</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Desafio declarado</th>
+        <th>Como lo resuelve Odoo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Dispersion de informacion</td><td>Un solo sistema para todas las areas &mdash; dato ingresado una vez, visible en toda la organizacion.</td></tr>
+      <tr><td>Falta de trazabilidad FEFO</td><td>Lotes por fecha de produccion, alertas de vencimiento, movimiento trazado desde galpon hasta cliente.</td></tr>
+      <tr><td>Pedidos manuales</td><td>Flujo digital: pedido &rarr; aprobacion &rarr; preparacion &rarr; despacho &rarr; factura, todo en el sistema.</td></tr>
+      <tr><td>Visibilidad logistica</td><td>Ordenes de entrega, estado de despacho, registro de novedades en tiempo real.</td></tr>
+      <tr><td>Devoluciones con perdida de valor</td><td>Registro de devolucion vinculado al lote original, nota de credito automatica, analisis de causas.</td></tr>
+      <tr><td>Gobernanza de datos</td><td>Base de datos unica, historico de operaciones, reportes exportables sin depender de Excel.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 08 — SIGUIENTE PASO ══════════ -->
+<section class="section">
+  <span class="section-label">08 &mdash; Siguiente paso</span>
+  <h2>Listo para arrancar</h2>
+  <p>El proceso para iniciar es simple. Granja Emita puede arrancar solo con la Fase 1 o comprometerse al paquete completo de las dos fases.</p>
+
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon medium">1</div>
+      <div class="pain-content">
+        <h4>Confirmacion de fases</h4>
+        <p>Granja Emita confirma las fases a contratar. Puede arrancar solo con Fase 1 o comprometerse al paquete completo.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">2</div>
+      <div class="pain-content">
+        <h4>Firma de contrato y pago inicial</h4>
+        <p>Firma del contrato de Fase 1 y pago del 50% inicial (USD 7,500) &mdash; da inicio formal al proyecto.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">3</div>
+      <div class="pain-content">
+        <h4>Sesion de arranque</h4>
+        <p>Primera sesion de trabajo con el equipo de Granja Emita para mapear flujos y definir prioridades de configuracion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box blue" style="margin-top: 24px;">
+    <h4>&iquest;Quiere ver Odoo en accion antes de decidir?</h4>
+    <p>Si la Sra. Diaz o el equipo directivo de Granja Emita desean ver el sistema en funcionamiento antes de avanzar, con gusto coordinamos una <strong>demostracion en vivo de Odoo</strong>. Tambien podemos coordinar una <strong>reunion virtual o presencial</strong> en sus oficinas en La Chorrera o donde sea conveniente, para revisar la propuesta en detalle, resolver dudas tecnicas y entender en profundidad como cada modulo encaja con su operacion. Sin compromiso, sin costo.</p>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Contacto directo</h4>
+    <p><strong>Carlos M. Larrauri &middot; Bitatech</strong><br>
+    +507 6898-5121 &nbsp;&middot;&nbsp; info@bitatech.ai &nbsp;&middot;&nbsp; www.bitatech.ai</p>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="cta-section">
+  <h2>Sra. Diaz, quedamos atentos a sus comentarios.</h2>
+  <p>Para confirmar las fases, agendar una demostracion del sistema, coordinar una reunion virtual o presencial, o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
+  <div class="cta-contact">
+    <a href="tel:+50768985121">+507 6898-5121</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="brand">BITA<span>TECH</span></div>
+  <div>Sistemas Empresariales Inteligentes</div>
+  <div class="contact-row">
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a>
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
+    <a href="tel:+50768985121">+507 6898-5121</a>
+  </div>
+  <p class="disclaimer">Esta propuesta es confidencial y esta preparada exclusivamente para Granja Emita Panama SA. Valida hasta el 13 de mayo de 2026.</p>
+</footer>
+
+</body>
+</html>
