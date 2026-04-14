@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial — Bitatech x Grupo Unicasa</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bt-negro: #0a0a0a;
+    --bt-negro-suave: #111111;
+    --bt-gris-oscuro: #1a1a1a;
+    --bt-gris-medio: #2a2a2a;
+    --bt-gris-claro: #3a3a3a;
+    --bt-gris-texto: #999999;
+    --bt-gris-borde: #333333;
+    --bt-blanco: #ffffff;
+    --bt-blanco-suave: #f0f0f0;
+    --bt-acento: #d4a843;
+    --bt-acento-hover: #e0b854;
+    --bt-acento-oscuro: #b8922f;
+    --bt-azul: #4a90d9;
+    --bt-naranja: #e8913a;
+    --bt-verde: #4caf50;
+    --bt-morado: #9b59b6;
+    --bt-rojo: #e74c3c;
+    --bt-cyan: #26c6da;
+  }
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bt-negro);
+    color: var(--bt-blanco-suave);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid var(--bt-acento);
+    border-radius: 50px;
+    color: var(--bt-acento);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 750px;
+  }
+
+  .cover h1 span { color: var(--bt-acento); }
+
+  .cover .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--bt-gris-texto);
+    margin-bottom: 60px;
+    max-width: 600px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cover-meta strong { color: var(--bt-blanco-suave); font-weight: 600; }
+
+  .cover-logos {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cover-logos .logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--bt-blanco);
+    letter-spacing: 1px;
+  }
+
+  .cover-logos .logo-text span { color: var(--bt-acento); }
+
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--bt-gris-borde);
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin: 32px 0 12px 0;
+  }
+
+  .section p { margin-bottom: 16px; color: var(--bt-blanco-suave); }
+  .muted { color: var(--bt-gris-texto); }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .stat-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .stat-card .number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-card .label {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+  }
+
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .module-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 14px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .module-card.color-gold::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .module-card.color-blue::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .module-card.color-green::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+  .module-card.color-purple::before { background: linear-gradient(90deg, var(--bt-morado), #b07cc6); }
+  .module-card.color-orange::before { background: linear-gradient(90deg, var(--bt-naranja), #f0a85a); }
+  .module-card.color-red::before { background: linear-gradient(90deg, #e74c3c, #f07066); }
+  .module-card.color-cyan::before { background: linear-gradient(90deg, var(--bt-cyan), #4dd0e1); }
+
+  .module-icon { font-size: 28px; margin-bottom: 12px; }
+
+  .module-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 6px 0;
+  }
+
+  .module-card .module-tagline {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 16px;
+  }
+
+  .module-card ul { list-style: none; padding: 0; }
+
+  .module-card ul li {
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-card ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--bt-acento);
+    margin-top: 7px;
+  }
+
+  .module-card.color-blue ul li::before { background: var(--bt-azul); }
+  .module-card.color-green ul li::before { background: var(--bt-verde); }
+  .module-card.color-purple ul li::before { background: var(--bt-morado); }
+  .module-card.color-orange ul li::before { background: var(--bt-naranja); }
+  .module-card.color-red ul li::before { background: #e74c3c; }
+  .module-card.color-cyan ul li::before { background: var(--bt-cyan); }
+
+  .pain-list { margin: 24px 0; }
+
+  .pain-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .pain-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .pain-icon.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .pain-icon.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .pain-icon.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  .pain-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+  }
+
+  .pain-content p { font-size: 13px; color: var(--bt-gris-texto); margin: 0; }
+
+  .severity-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-left: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .severity-badge.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .severity-badge.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .severity-badge.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  .phase-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .phase-card.phase-1::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .phase-card.phase-2::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .phase-card.phase-3::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+
+  .phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .phase-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .phase-1 .phase-number { color: var(--bt-acento); }
+  .phase-2 .phase-number { color: var(--bt-azul); }
+  .phase-3 .phase-number { color: var(--bt-verde); }
+
+  .phase-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+  }
+
+  .phase-price { text-align: right; flex-shrink: 0; min-width: 200px; }
+
+  .phase-price .amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .phase-price .period {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .phase-price .payment-terms {
+    font-size: 12px;
+    color: var(--bt-acento);
+    margin-top: 4px;
+  }
+
+  .phase-price .tax-note {
+    font-size: 10px;
+    color: var(--bt-gris-texto);
+    margin-top: 2px;
+  }
+
+  .phase-desc {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 28px;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .phase-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .phase-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+  }
+
+  .phase-col ul { list-style: none; padding: 0; }
+
+  .phase-col ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .phase-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  .check-list li::before { background: var(--bt-verde); }
+  .cross-list li::before { background: var(--bt-rojo); opacity: 0.5; }
+  .cross-list li { color: var(--bt-gris-texto); }
+
+  .phase-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bt-gris-borde);
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .phase-meta { font-size: 13px; }
+  .phase-meta .meta-label { color: var(--bt-gris-texto); font-weight: 500; }
+  .phase-meta .meta-value { color: var(--bt-blanco); font-weight: 600; }
+
+  .solves-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .solves-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--bt-acento);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+  }
+
+  .solves-tag.blue {
+    background: rgba(74, 144, 217, 0.1);
+    color: var(--bt-azul);
+    border-color: rgba(74, 144, 217, 0.2);
+  }
+
+  .solves-tag.green {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--bt-verde);
+    border-color: rgba(76, 175, 80, 0.2);
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .cost-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+  }
+
+  .cost-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+  }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+
+  .cost-table .total-row td {
+    font-weight: 700;
+    color: var(--bt-acento);
+    border-top: 2px solid var(--bt-gris-borde);
+    padding-top: 16px;
+    font-size: 16px;
+  }
+
+  .cost-table .highlight { color: var(--bt-acento); font-weight: 600; }
+
+  .info-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-left: 3px solid var(--bt-gris-borde);
+  }
+
+  .info-box.accent { border-left-color: var(--bt-acento); }
+  .info-box.blue { border-left-color: var(--bt-azul); }
+  .info-box.green { border-left-color: var(--bt-verde); }
+  .info-box.orange { border-left-color: var(--bt-naranja); }
+
+  .info-box h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .info-box p {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .summary-box {
+    background: linear-gradient(135deg, var(--bt-gris-oscuro), var(--bt-gris-medio));
+    border: 1px solid var(--bt-acento);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .summary-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-acento);
+    margin-bottom: 24px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .summary-item .s-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .summary-item .s-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .summary-item .s-value span { color: var(--bt-acento); }
+
+  .summary-item .s-detail {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin-top: 4px;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .process-step {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .step-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    margin-bottom: 12px;
+  }
+
+  .process-step h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .process-step p {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .pipeline {
+    display: flex;
+    gap: 4px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .pipeline-step {
+    flex: 1;
+    min-width: 110px;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--bt-blanco-suave);
+    border-radius: 8px;
+  }
+
+  .pipeline-step.active {
+    border-color: var(--bt-acento);
+    background: rgba(212, 168, 67, 0.08);
+    color: var(--bt-acento);
+  }
+
+  .pipeline-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--bt-gris-texto);
+    font-size: 18px;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+    color: var(--bt-gris-texto);
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, var(--bt-acento), var(--bt-acento-hover));
+    color: var(--bt-negro);
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s;
+  }
+
+  .cta-button:hover { transform: scale(1.02); }
+
+  .cta-contact {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cta-contact a { color: var(--bt-acento); text-decoration: none; }
+
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    border-top: 1px solid var(--bt-gris-borde);
+  }
+
+  @media print {
+    .cover { page-break-after: always; }
+    .phase-card { page-break-inside: avoid; }
+    .module-card { page-break-inside: avoid; }
+    .info-box { page-break-inside: avoid; }
+    .summary-box { page-break-inside: avoid; }
+    .cta-section { display: none; }
+    body { font-size: 13px; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══ -->
+<div class="cover">
+  <div class="cover-badge">Propuesta Comercial</div>
+  <h1>Sistema integral de <span>ventas inmobiliarias</span> para Grupo Unicasa</h1>
+  <p class="subtitle">CRM, WhatsApp centralizado, portal de brokers, inventario de unidades y marketing &mdash; en una sola plataforma.</p>
+  <div class="cover-meta">
+    <div><strong>Preparado para</strong><br>Grupo Unicasa</div>
+    <div><strong>Preparado por</strong><br>Bitatech</div>
+    <div><strong>Fecha</strong><br>Abril 2026</div>
+  </div>
+  <div class="cover-logos">
+    <span class="logo-text">bita<span>tech</span></span>
+    <span class="muted" style="font-size: 18px;">&#215;</span>
+    <span style="font-size: 16px; color: var(--bt-blanco-suave); font-weight: 600;">Grupo Unicasa</span>
+  </div>
+</div>
+
+<!-- ══ 01 — SU OPERACION HOY ══ -->
+<div class="section">
+  <span class="section-label">01 &mdash; Su operacion hoy</span>
+  <h2>Lo que entendemos de Grupo Unicasa</h2>
+  <p>Basado en nuestra reunion y el cuestionario que completaron, esta es la foto de su operacion actual:</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">4</div>
+      <div class="label">Proyectos activos</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">2,501</div>
+      <div class="label">Unidades totales</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">100+</div>
+      <div class="label">Conversaciones / dia</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">25K</div>
+      <div class="label">Leads en base de datos</div>
+    </div>
+  </div>
+
+  <h3>Proyectos activos</h3>
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon medium">1</div>
+      <div class="pain-content">
+        <h4>Proyecto en ultima etapa de construccion</h4>
+        <p>336 unidades &mdash; 1 modelo de casa &mdash; 28 unidades disponibles</p>
+      </div>
+      <span class="severity-badge medium">Cierre</span>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">2</div>
+      <div class="pain-content">
+        <h4>Proyecto activo en construccion</h4>
+        <p>1,800 unidades &mdash; 4 modelos de casa</p>
+      </div>
+      <span class="severity-badge high">Activo</span>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon critical">3</div>
+      <div class="pain-content">
+        <h4>Proyecto en preventa</h4>
+        <p>167 unidades &mdash; 1 modelo de casa</p>
+      </div>
+      <span class="severity-badge critical">Preventa</span>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon critical">4</div>
+      <div class="pain-content">
+        <h4>Proyecto en preventa</h4>
+        <p>198 unidades &mdash; 11 modelos de apartamento</p>
+      </div>
+      <span class="severity-badge critical">Preventa</span>
+    </div>
+  </div>
+
+  <h3>Pipeline de ventas confirmado</h3>
+  <div class="pipeline">
+    <div class="pipeline-step active">Bot / Contacto inicial</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Vendedor asignado</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Envio de info y docs</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Cotizacion</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Aprobacion bancaria</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Firma contrato</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step active">Pago y reserva</div>
+  </div>
+
+  <h3>Equipo</h3>
+  <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="stat-card">
+      <div class="number">12</div>
+      <div class="label">Usuarios actuales<br><span style="font-size: 11px;">(15 en 6 meses)</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="number">5</div>
+      <div class="label">Vendedores internos<br><span style="font-size: 11px;">(6 en 6 meses)</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="number">2</div>
+      <div class="label">Brokers externos<br><span style="font-size: 11px;">(4 en 6 meses)</span></div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 02 — MODULOS ══ -->
+<div class="section">
+  <span class="section-label">02 &mdash; Modulos para su operacion</span>
+  <h2>Diez capacidades integradas para ventas inmobiliarias</h2>
+  <p>Cada modulo resuelve un area especifica de Grupo Unicasa. Al estar todos en Odoo, se comunican entre si en tiempo real: una conversacion de WhatsApp se convierte en lead, avanza por el pipeline, genera una cotizacion, reserva una unidad y actualiza el portal del broker &mdash; sin copiar datos ni cambiar de sistema.</p>
+
+  <div class="module-grid">
+
+    <div class="module-card color-gold">
+      <div class="module-icon">&#127919;</div>
+      <h3>CRM Inmobiliario</h3>
+      <p class="module-tagline">Pipeline completo desde el primer contacto hasta la reserva</p>
+      <ul>
+        <li>Pipeline visual con las 7 etapas de su proceso de venta</li>
+        <li>Asignacion automatica de leads a vendedores</li>
+        <li>Historial completo de cada prospecto (conversaciones, documentos, etapa)</li>
+        <li>Vinculacion de lead a proyecto y unidad especifica</li>
+        <li>Probabilidad de cierre y pronostico de ventas</li>
+        <li>Vista por vendedor, por proyecto y por etapa</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <div class="module-icon">&#128172;</div>
+      <h3>Chatroom &mdash; WhatsApp Centralizado</h3>
+      <p class="module-tagline">Todas las conversaciones en un solo lugar, con trazabilidad total</p>
+      <ul>
+        <li>Linea madre de META conectada al sistema mediante modulos especializados de WhatsApp</li>
+        <li>Distribucion automatica de conversaciones por proyecto detectado</li>
+        <li>Etiquetas y segmentacion de conversaciones</li>
+        <li>Embudo de conversaciones con metricas de conversion</li>
+        <li>Creacion de presupuestos directamente desde la conversacion</li>
+        <li>Envio de documentos, imagenes, enlaces y archivos por WhatsApp</li>
+        <li>Supervision total: la gerencia ve todas las conversaciones de todos los vendedores</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-green">
+      <div class="module-icon">&#129302;</div>
+      <h3>Bot + Seguimientos Automaticos</h3>
+      <p class="module-tagline">Respuestas inteligentes por horario y seguimiento sin intervencion humana</p>
+      <ul>
+        <li>Bot de respuesta automatica con contenido diferenciado por horario</li>
+        <li>Envia imagenes, texto, enlaces y documentos automaticamente</li>
+        <li>Responde preguntas frecuentes: precios, metraje, requisitos, ubicacion, bancos</li>
+        <li>Seguimiento automatico cuando el prospecto no responde</li>
+        <li>Seguimiento automatico al cambiar de etapa en el pipeline</li>
+        <li>Recordatorios de cita y notificaciones por WhatsApp y correo</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-orange">
+      <div class="module-icon">&#128221;</div>
+      <h3>Ventas, Contratos y Firma Electronica</h3>
+      <p class="module-tagline">De la cotizacion al contrato firmado, sin papel</p>
+      <ul>
+        <li>Cotizaciones profesionales generadas desde el sistema</li>
+        <li>Generacion automatica de contratos con datos del cliente y la unidad</li>
+        <li>Autorizacion APC, contratos de compraventa, adendas, planes de pago</li>
+        <li>Firma electronica integrada con Odoo Sign (incluido en la licencia, sin costo adicional)</li>
+        <li>El cliente firma desde su celular o computadora</li>
+        <li>Recibos y documentacion vinculada al expediente del cliente</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-red">
+      <div class="module-icon">&#127970;</div>
+      <h3>Inventario de Unidades</h3>
+      <p class="module-tagline">Estado de cada unidad en tiempo real, con vista visual</p>
+      <ul>
+        <li>Cada proyecto se organiza como categoria, cada unidad como producto individual</li>
+        <li>Estatus por unidad: disponible, reservada, vendida, entregada</li>
+        <li>Mapa o vista visual del proyecto con estado por lote/unidad</li>
+        <li>Datos por unidad: modelo, precio, metraje, plano, estado</li>
+        <li>Actualizacion en tiempo real conectada a ventas, portal web y portal de brokers</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-purple">
+      <div class="module-icon">&#128101;</div>
+      <h3>Portal de Brokers</h3>
+      <p class="module-tagline">Sus vendedores externos operan de forma autonoma</p>
+      <ul>
+        <li>Portal web privado con login propio por broker</li>
+        <li>Consulta de unidades disponibles en tiempo real</li>
+        <li>Reserva de unidades directamente desde el portal</li>
+        <li>Pago en linea integrado con pasarela de pago</li>
+        <li>Carga de documentos de sus clientes</li>
+        <li>Estado de clientes referidos y seguimiento de tramites</li>
+        <li>Comisiones calculadas automaticamente (% sobre venta)</li>
+        <li>Estados de cuenta: panel con ventas cerradas, comision generada, pagos recibidos y saldo pendiente por broker</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-green">
+      <div class="module-icon">&#128176;</div>
+      <h3>Contabilidad (base)</h3>
+      <p class="module-tagline">Pagos integrados desde el dia uno para escalar sin retrabajo</p>
+      <ul>
+        <li>Modulo de contabilidad activado desde Fase 2 como base de pagos</li>
+        <li>Pagos de clientes registrados como asientos contables reales</li>
+        <li>Pagos de comisiones a brokers integrados al sistema</li>
+        <li>Cuentas por cobrar y por pagar funcionando desde el inicio</li>
+        <li>Datos contables limpios y listos para cuando activen reportes completos</li>
+        <li>Configuracion completa del modulo (plan contable, reportes fiscales, conciliacion) disponible como fase futura</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-cyan">
+      <div class="module-icon">&#128227;</div>
+      <h3>Marketing por WhatsApp y Correo</h3>
+      <p class="module-tagline">Campanas masivas conectadas a su base de 25,000 leads</p>
+      <ul>
+        <li>Campanas de correo electronico masivo</li>
+        <li>Campanas de WhatsApp masivo</li>
+        <li>Segmentacion por proyecto, etapa, fecha de contacto, vendedor</li>
+        <li>Envios por evento (lanzamiento de proyecto) y mensuales</li>
+        <li>Metricas: apertura, clics, respuestas, conversiones</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-gold">
+      <div class="module-icon">&#128202;</div>
+      <h3>KPIs y Dashboards</h3>
+      <p class="module-tagline">Medicion del desempeno de cada vendedor y cada proyecto</p>
+      <ul>
+        <li>Dashboard ejecutivo con vision global de ventas por proyecto</li>
+        <li>KPIs por vendedor: leads asignados, contactados, avanzados, cerrados</li>
+        <li>Seguimiento de conversaciones: tiempo de respuesta, volumen, calidad</li>
+        <li>Conversion por etapa del pipeline</li>
+        <li>Comparativo entre vendedores y entre proyectos</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="info-box blue">
+    <h4>Sitio web con disponibilidad en tiempo real</h4>
+    <p>Ustedes confirmaron que necesitan un sitio web estilo ecommerce donde los clientes vean las unidades disponibles conectadas al inventario en tiempo real, y que tambien funcione como portal para brokers, con pasarela de pago integrada. Este sitio se incluye en la Fase 3. Antes de iniciar esa fase, coordinaremos una sesion para definir el diseno, estructura de paginas y funcionalidades exactas del sitio.</p>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Estructura de datos: proyectos y unidades</h4>
+    <p>Cada proyecto inmobiliario se configura como una <strong>categoria</strong> en el sistema, y cada unidad (casa o apartamento) como un <strong>producto individual</strong> dentro de esa categoria. Esto permite que las unidades funcionen nativamente con el inventario, el ecommerce, el portal de brokers y las ventas. Grupo Unicasa sera responsable de completar las plantillas de datos por proyecto (precios, modelos, lotes, planos), y Bitatech configura la estructura e importa la informacion.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 03 — FASES ══ -->
+<div class="section">
+  <span class="section-label">03 &mdash; Implementacion por fases</span>
+  <h2>Tres fases para tener todo funcionando sin abrumar al equipo</h2>
+  <p>Entendemos que necesitan todo, pero implementar 9 modulos al mismo tiempo genera caos. La implementacion por fases permite que el equipo domine cada bloque antes de avanzar al siguiente, y que cada fase entregue valor inmediato.</p>
+
+  <!-- FASE 1 -->
+  <div class="phase-card phase-1">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 1 &mdash; Prioridad</div>
+        <div class="phase-title">CRM + Chatroom + Bot + Seguimientos</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$14,000</div>
+        <div class="period">implementacion unica</div>
+        <div class="payment-terms">50% al firmar contrato &mdash; 50% al entregar</div>
+        <div class="tax-note">No incluye ITBMS</div>
+      </div>
+    </div>
+    <p class="phase-desc">
+      Su equipo tendra WhatsApp centralizado con trazabilidad total, CRM inmobiliario con pipeline completo, bot inteligente y seguimientos automaticos. Esta fase cubre su prioridad declarada y apunta a estar lista para junio 2026.
+    </p>
+
+    <div class="solves-tags">
+      <span class="solves-tag">CRM Inmobiliario</span>
+      <span class="solves-tag">Chatroom WhatsApp</span>
+      <span class="solves-tag">Bot por horarios</span>
+      <span class="solves-tag">Seguimientos automaticos</span>
+      <span class="solves-tag">KPIs de vendedores</span>
+      <span class="solves-tag">Migracion 25K leads</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Incluye</h4>
+        <ul class="check-list">
+          <li>CRM con pipeline de 7 etapas configurado para su proceso</li>
+          <li>Chatroom: modulos especializados de WhatsApp + distribucion por proyecto + etiquetas + embudo</li>
+          <li>Bot de respuesta automatica por horario (imagenes, texto, enlaces, docs)</li>
+          <li>Seguimientos automaticos por WhatsApp y correo</li>
+          <li>Presupuestos desde la conversacion de WhatsApp</li>
+          <li>Dashboard de KPIs por vendedor</li>
+          <li>Seguimiento y supervision de conversaciones</li>
+          <li>Migracion de 25,000 leads desde Global Info</li>
+          <li>Capacitacion completa del equipo</li>
+          <li>Soporte post-implementacion (30 dias)</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>No incluye (fases posteriores)</h4>
+        <ul class="cross-list">
+          <li>Generacion automatica de contratos</li>
+          <li>Firma electronica</li>
+          <li>Inventario visual de unidades</li>
+          <li>Portal de brokers</li>
+          <li>Sitio web ecommerce</li>
+          <li>Marketing masivo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Duracion estimada: </span>
+        <span class="meta-value">4 &ndash; 6 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Usuarios: </span>
+        <span class="meta-value">12 (vendedores + admin + gerencia)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="phase-card phase-2">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 2</div>
+        <div class="phase-title">Ventas + Contratos + Inventario<br>+ Contabilidad</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$10,000</div>
+        <div class="period">implementacion unica</div>
+        <div class="payment-terms">50% al firmar contrato &mdash; 50% al entregar</div>
+        <div class="tax-note">No incluye ITBMS</div>
+      </div>
+    </div>
+    <p class="phase-desc">
+      Con el CRM y Chatroom funcionando, ahora digitalizamos el cierre: cotizaciones profesionales, contratos generados automaticamente, firma electronica y un inventario de unidades con mapa visual. El vendedor lleva al prospecto desde la conversacion de WhatsApp hasta el contrato firmado sin salir del sistema.
+    </p>
+
+    <div class="solves-tags">
+      <span class="solves-tag blue">Ventas</span>
+      <span class="solves-tag blue">Contratos automaticos</span>
+      <span class="solves-tag blue">Firma electronica</span>
+      <span class="solves-tag blue">Inventario de unidades</span>
+      <span class="solves-tag blue">Mapa visual por lote</span>
+      <span class="solves-tag blue">Contabilidad base</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Incluye</h4>
+        <ul class="check-list">
+          <li>Modulo de ventas integrado al CRM</li>
+          <li>Generacion automatica de contratos con datos del cliente y unidad</li>
+          <li>Plantillas: cotizacion, APC, contrato CV, adendas, plan de pago, recibos</li>
+          <li>Firma electronica con Odoo Sign (incluido en licencia)</li>
+          <li>Contabilidad activada como base de pagos (cuentas por cobrar/pagar)</li>
+          <li>Inventario de unidades: disponible / reservada / vendida / entregada</li>
+          <li>Mapa o vista visual del proyecto con estatus por lote/unidad</li>
+          <li>Soporte para multiples modelos y precios por proyecto</li>
+          <li>Capacitacion del equipo</li>
+          <li>Soporte post-implementacion (30 dias)</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>No incluye (fase posterior)</h4>
+        <ul class="cross-list">
+          <li>Portal de brokers</li>
+          <li>Sitio web ecommerce</li>
+          <li>Pasarela de pago</li>
+          <li>Marketing masivo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Duracion estimada: </span>
+        <span class="meta-value">4 &ndash; 5 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Inicia: </span>
+        <span class="meta-value">Al completar Fase 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 3 -->
+  <div class="phase-card phase-3">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 3</div>
+        <div class="phase-title">Portal Brokers + Web + Marketing</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">$14,500</div>
+        <div class="period">implementacion unica</div>
+        <div class="payment-terms">50% al firmar contrato &mdash; 50% al entregar</div>
+        <div class="tax-note">No incluye ITBMS</div>
+      </div>
+    </div>
+    <p class="phase-desc">
+      La fase de escalamiento. Los brokers operan de forma autonoma desde su portal (consultar, reservar, pagar, subir documentos). El sitio web muestra unidades disponibles en tiempo real. Y el marketing llega a los 25,000 leads de su base de datos con campanas segmentadas por WhatsApp y correo.
+    </p>
+
+    <div class="solves-tags">
+      <span class="solves-tag green">Portal de brokers</span>
+      <span class="solves-tag green">Sitio web ecommerce</span>
+      <span class="solves-tag green">Pasarela de pago</span>
+      <span class="solves-tag green">Marketing WhatsApp + correo</span>
+    </div>
+
+    <div class="phase-columns">
+      <div class="phase-col">
+        <h4>Incluye</h4>
+        <ul class="check-list">
+          <li>Portal de brokers completo: consultar unidades, reservar, pagar</li>
+          <li>Carga de documentos de clientes por broker</li>
+          <li>Comisiones automaticas (% sobre venta) y estados de cuenta</li>
+          <li>Sitio web integrado con disponibilidad de unidades en tiempo real</li>
+          <li>Diseno estilo ecommerce: ver proyectos, modelos, precios, ubicacion</li>
+          <li>Solicitar informacion, agendar visita, chatear por WhatsApp desde la web</li>
+          <li>Pasarela de pago integrada al portal y al sitio web</li>
+          <li>Marketing masivo por correo y WhatsApp con segmentacion</li>
+          <li>Capacitacion del equipo</li>
+          <li>Soporte post-implementacion (30 dias)</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <h4>Depende de</h4>
+        <ul class="cross-list">
+          <li>Fase 1 y Fase 2 completadas</li>
+          <li>Sesion de diseno para definir estructura del sitio web</li>
+          <li>Definicion de proveedor de pasarela de pago</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Duracion estimada: </span>
+        <span class="meta-value">5 &ndash; 7 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Inicia: </span>
+        <span class="meta-value">Al completar Fase 2</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 04 — INVERSION ══ -->
+<div class="section">
+  <span class="section-label">04 &mdash; Inversion</span>
+  <h2>Resumen de inversion por fase</h2>
+
+  <h3>Implementacion Bitatech</h3>
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>Inversion</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Fase 1: CRM + Chatroom + Bot + Seguimientos + KPIs</strong><br>
+          <span class="muted" style="font-size: 12px;">Incluye migracion de 25K leads y configuracion completa &mdash; 12 usuarios</span>
+        </td>
+        <td class="highlight">$14,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato<br>50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 2: Ventas + Contratos + Firma + Inventario + Contabilidad</strong><br>
+          <span class="muted" style="font-size: 12px;">Contratos automaticos, firma electronica, mapa visual de unidades, contabilidad base para pagos</span>
+        </td>
+        <td class="highlight">$10,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato<br>50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 3: Portal Brokers + Sitio Web + Marketing</strong><br>
+          <span class="muted" style="font-size: 12px;">Portal completo, web ecommerce, pasarela de pago, marketing masivo</span>
+        </td>
+        <td class="highlight">$14,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato<br>50% al entregar</span>
+        </td>
+      </tr>
+      <tr class="total-row">
+        <td>Total implementacion (3 fases)</td>
+        <td>$38,500</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Costos adicionales</h3>
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Inversion</th>
+        <th>Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Modulos de Chatroom</strong><br>
+          <span class="muted" style="font-size: 12px;">Modulos especializados para recepcion, distribucion, etiquetado y embudo de conversaciones de WhatsApp &mdash; funcionalidad avanzada que Odoo no trae de fabrica</span>
+        </td>
+        <td class="highlight">$1,200</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Pago unico &mdash; licencia perpetua para Odoo version 19</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Conector WhatsApp</strong><br>
+          <span class="muted" style="font-size: 12px;">Servicio de conexion entre META y Odoo para recibir y enviar mensajes. Plan base: $54/mes para 5,400 mensajes de salida (mensajes de entrada ilimitados). A medida que aumente el volumen de mensajes, se incrementa el plan.</span>
+        </td>
+        <td class="highlight">Desde $54/mes</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Pago mensual recurrente &mdash; escalable segun volumen</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Pasarela de pago</strong><br>
+          <span class="muted" style="font-size: 12px;">Comision por transaccion del proveedor de pagos en linea &mdash; aplica en Fase 3</span>
+        </td>
+        <td class="highlight">Variable</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Depende del proveedor (ej. 2.9% + $0.30 por transaccion)</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Plataforma Odoo.sh &mdash; Pago directo a Odoo</h3>
+  <p class="muted" style="font-size: 13px; margin-bottom: 16px;">Odoo.sh es la plataforma de hosting que permite instalar modulos personalizados, desarrollo a medida y control total del sistema. Es independiente de la implementacion de Bitatech &mdash; su empresa contrata directamente con Odoo.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Inversion</th>
+        <th>Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Plataforma Odoo.sh<br>
+          <span class="muted" style="font-size: 12px;">Hosting + infraestructura para modulos personalizados</span>
+        </td>
+        <td>$150/mes</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Plan Professional &mdash; pago mensual a Odoo</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Licencia Odoo Enterprise &mdash; 15 usuarios<br>
+          <span class="muted" style="font-size: 12px;">Licencia por usuario requerida para Odoo.sh. Usuarios adicionales al mismo precio por usuario.</span>
+        </td>
+        <td>~$206/mes</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">~$165/usuario anual en plan anual, facturado anual</span>
+        </td>
+      </tr>
+      <tr class="total-row">
+        <td>Total plataforma + licencia (anual)</td>
+        <td></td>
+        <td>~$4,275 anual</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box">
+    <h3>Para arrancar la Fase 1</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="s-label">Anticipo de implementacion</div>
+        <div class="s-value"><span>$7,000</span></div>
+        <div class="s-detail">50% de Fase 1 al firmar contrato</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Modulos Chatroom</div>
+        <div class="s-value"><span>$1,200</span></div>
+        <div class="s-detail">Pago unico &mdash; licencia perpetua v19</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Fase 1 lista en</div>
+        <div class="s-value" style="font-size: 18px; line-height: 1.4; padding-top: 4px;"><span>4 &ndash; 6 semanas</span></div>
+        <div class="s-detail">Meta: junio 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Cada fase se contrata por separado</h4>
+    <p>No es necesario comprometerse con las 3 fases desde el inicio. Cada fase tiene su propio contrato, alcance y precio. Al finalizar cada fase, evaluamos resultados y decidimos juntos si avanzar a la siguiente. Esto les da control total sobre la inversion y les permite ver resultados antes de invertir mas.</p>
+  </div>
+
+  <div class="info-box green">
+    <h4>Optimizacion continua (opcional)</h4>
+    <p>Despues de cualquier fase, pueden contratar soporte continuo por <strong>$1,000/mes</strong> (minimo 3 meses, pago al inicio de cada mes). Incluye: auditoria operativa mensual, KPIs personalizados, ajustes y mejoras, soporte prioritario, hasta 40 horas mensuales.</p>
+  </div>
+
+  <div class="info-box blue">
+    <h4>Contabilidad: activada como base, configurable despues</h4>
+    <p>El modulo de contabilidad se activa desde la Fase 2 para que todos los pagos (de clientes y a brokers) queden registrados como asientos contables reales desde el dia uno. Esto asegura datos limpios y listos para escalar. La configuracion completa del modulo (plan contable personalizado, reportes fiscales, conciliacion bancaria, cierre de periodo) queda disponible como proyecto adicional cuando Grupo Unicasa decida usar contabilidad al 100%.</p>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Metodos de pago aceptados</h4>
+    <p>Bitatech acepta los siguientes metodos de pago:<br><br>
+    <strong>&#8226; Tarjeta de credito</strong><br>
+    <strong>&#8226; BAC Compraclic</strong> (enlace de pago)<br>
+    <strong>&#8226; ACH</strong> (transferencia bancaria)</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 05 — COMO TRABAJAMOS ══ -->
+<div class="section">
+  <span class="section-label">05 &mdash; Como trabajamos</span>
+  <h2>Proceso de implementacion por fase</h2>
+  <p>Cada fase sigue el mismo proceso de 4 pasos. No instalamos software y nos vamos &mdash; disenamos el sistema alrededor de como opera Grupo Unicasa, capacitamos al equipo, y acompanamos hasta que funcione de forma autonoma.</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h4>Contrato y kickoff</h4>
+      <p>Firma de contrato de la fase. Reunion de arranque para alinear expectativas, cronograma y responsables.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h4>Configuracion</h4>
+      <p>Levantamiento de datos, configuracion de modulos, migracion de informacion. Bitatech ejecuta.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h4>Desarrollo y pruebas</h4>
+      <p>Personalizaciones a medida, integraciones, pruebas con su equipo. Ajustes hasta que funcione perfecto.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h4>Entrega y soporte</h4>
+      <p>Capacitacion completa, salida en vivo, acompanamiento post-implementacion. Su equipo opera con autonomia.</p>
+    </div>
+  </div>
+
+  <div class="info-box green">
+    <h4>Desarrollo propio dentro de Odoo</h4>
+    <p>Bitatech no solo configura Odoo &mdash; desarrolla modulos y personalizaciones en Python directamente sobre la plataforma. Esto significa que si su operacion requiere un flujo especifico (como el mapa visual de unidades o la distribucion automatica de conversaciones por proyecto), podemos construirlo. El resultado es un sistema que se adapta a Grupo Unicasa, no al reves.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 06 — CARGA DE DATOS ══ -->
+<div class="section">
+  <span class="section-label">06 &mdash; Carga de datos y migracion</span>
+  <h2>Que incluye la implementacion y que es responsabilidad del cliente</h2>
+  <p>Para que el sistema arranque con informacion real desde el dia uno:</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Concepto</th>
+        <th style="width: 25%;">Responsable</th>
+        <th style="width: 25%;">Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pipeline de CRM (etapas, reglas de asignacion)</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 1</td>
+      </tr>
+      <tr>
+        <td>Configuracion de Chatroom (modulos, bot, horarios)</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 1</td>
+      </tr>
+      <tr>
+        <td>Migracion de 25,000 leads desde Global Info</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 1</td>
+      </tr>
+      <tr>
+        <td>Plantillas de contratos y documentos</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 2</td>
+      </tr>
+      <tr>
+        <td>Inventario de unidades (estructura y carga inicial)</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 2</td>
+      </tr>
+      <tr>
+        <td>Estructura del sitio web y diseno</td>
+        <td style="color: var(--bt-verde);"><strong>Bitatech</strong></td>
+        <td style="color: var(--bt-verde);">Incluido en Fase 3</td>
+      </tr>
+      <tr>
+        <td>Contenido del bot (textos, imagenes, documentos por horario)</td>
+        <td style="color: var(--bt-naranja);"><strong>Cliente</strong></td>
+        <td style="color: var(--bt-naranja);">Unicasa define y entrega</td>
+      </tr>
+      <tr>
+        <td>Plantillas base de contratos y adendas (modelos actuales)</td>
+        <td style="color: var(--bt-naranja);"><strong>Cliente</strong></td>
+        <td style="color: var(--bt-naranja);">Unicasa entrega sus modelos</td>
+      </tr>
+      <tr>
+        <td>Datos de unidades por proyecto (precios, modelos, lotes, planos)</td>
+        <td style="color: var(--bt-naranja);"><strong>Cliente</strong></td>
+        <td style="color: var(--bt-naranja);">Unicasa completa plantillas</td>
+      </tr>
+      <tr>
+        <td>Contenido del sitio web (fotos, textos, renders, informacion de proyectos)</td>
+        <td style="color: var(--bt-naranja);"><strong>Cliente</strong></td>
+        <td style="color: var(--bt-naranja);">Unicasa entrega material</td>
+      </tr>
+      <tr>
+        <td>Datos de brokers (contactos, esquemas de comision)</td>
+        <td style="color: var(--bt-naranja);"><strong>Cliente</strong></td>
+        <td style="color: var(--bt-naranja);">Unicasa completa plantillas</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box accent">
+    <h4>Bitatech facilita la carga</h4>
+    <p>Les entregamos plantillas listas para que su equipo las llene con los datos reales. Nadie conoce sus datos mejor que ustedes. Nosotros configuramos la estructura, importamos la informacion y verificamos que todo este correcto antes de salir en vivo.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 07 — QUIENES SOMOS ══ -->
+<div class="section">
+  <span class="section-label">07 &mdash; Quienes somos</span>
+  <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
+  <p>
+    Bitatech es una firma con sede en Panama especializada en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo, con mas de 12 millones de usuarios. No instalamos software y nos vamos &mdash; disenamos la arquitectura digital completa que su empresa necesita para operar con estructura, eliminar el caos operativo y crecer con control.
+  </p>
+  <p>
+    Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnostico de su operacion real, define flujos personalizados, y entrega un sistema que su equipo domina desde el primer dia. <strong>Desarrollamos codigo dentro de Odoo</strong> para adaptar el sistema a sus procesos exactos.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">Odoo</div>
+      <div class="label">Plataforma principal</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">BSI&trade;</div>
+      <div class="label">Metodologia propia</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">Panama</div>
+      <div class="label">Sede local</div>
+    </div>
+    <div class="stat-card">
+      <div class="number" style="font-size: 20px;">100%</div>
+      <div class="label">Enfocados en resultado</div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Por que Odoo para una inmobiliaria</h4>
+    <p>Odoo es la unica plataforma que permite gestionar CRM, WhatsApp, ventas, contratos, inventario, portal web y marketing en un solo sistema nativo, sin integraciones costosas entre plataformas separadas. Cada modulo comparte la misma base de datos &mdash; cuando un vendedor registra una reserva, el inventario se actualiza al instante, el broker lo ve en su portal, y la gerencia lo ve en el dashboard. Esto es exactamente lo que plataformas como HubSpot, Sinco o Zoho no pueden hacer de forma integrada.</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ 08 — SIGUIENTE PASO ══ -->
+<div class="section">
+  <span class="section-label">08 &mdash; Siguiente paso</span>
+  <h2>Listo para arrancar</h2>
+  <p>Ya tenemos toda la informacion que necesitamos para comenzar. El proceso para iniciar es simple:</p>
+
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon medium">1</div>
+      <div class="pain-content">
+        <h4>Revisen esta propuesta en equipo</h4>
+        <p>Tomen el tiempo que necesiten. Si hay preguntas, ajustes o dudas sobre alguna fase, las resolvemos por WhatsApp o correo.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">2</div>
+      <div class="pain-content">
+        <h4>Confirmen que quieren arrancar con la Fase 1</h4>
+        <p>Una vez alineados, preparamos el contrato de la Fase 1 y coordinamos la reunion de kickoff.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">3</div>
+      <div class="pain-content">
+        <h4>Arrancamos</h4>
+        <p>Con el contrato firmado y el anticipo, iniciamos la implementacion. Meta: tener CRM + Chatroom + Bot funcionando para junio 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Tiempo es factor</h4>
+    <p>Su meta es junio 2026. Para cumplirla, necesitamos arrancar la Fase 1 a mas tardar la ultima semana de abril. La implementacion toma 4&ndash;6 semanas, lo que nos pone en entrega entre finales de mayo y mediados de junio si comenzamos a tiempo.</p>
+  </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<div class="cta-section">
+  <h2>Coordine con nosotros para arrancar</h2>
+  <p>Escribanos por WhatsApp o correo para confirmar el inicio de la Fase 1 o resolver cualquier duda sobre la propuesta.</p>
+  <a class="cta-button" href="https://wa.me/50768985121?text=Hola%20Bitatech%2C%20somos%20de%20Grupo%20Unicasa%2C%20queremos%20coordinar%20el%20inicio%20de%20la%20Fase%201" target="_blank">Coordinar por WhatsApp</a>
+  <div class="cta-contact">
+    <strong>info@bitatech.ai</strong> &nbsp;|&nbsp; <a href="https://wa.me/50768985121">+507 6898-5121</a> &nbsp;|&nbsp; www.bitatech.ai
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  <p>&copy; 2026 Bitatech &mdash; Sistemas Empresariales Inteligentes</p>
+  <p style="margin-top: 6px;">Propuesta comercial preparada para Grupo Unicasa. Precios validos por 30 dias a partir de la fecha de emision.</p>
+</div>
+
+</body>
+</html>
