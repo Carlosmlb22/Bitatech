@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Propuesta Preliminar — Bitatech x Sistecomp</title>
+<title>Propuesta Comercial &mdash; Nevada SA x Bitatech</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -41,7 +41,7 @@
     font-size: 15px;
   }
 
-  /* ── COVER PAGE ── */
+  /* COVER */
   .cover {
     min-height: 100vh;
     display: flex;
@@ -54,18 +54,14 @@
     position: relative;
     overflow: hidden;
   }
-
   .cover::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.04) 0%, transparent 60%);
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.05) 0%, transparent 60%);
     pointer-events: none;
   }
-
   .cover-badge {
     display: inline-block;
     padding: 8px 24px;
@@ -77,36 +73,36 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    position: relative;
   }
-
   .cover h1 {
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 800;
     color: var(--bt-blanco);
     line-height: 1.15;
     margin-bottom: 16px;
-    max-width: 700px;
+    max-width: 820px;
+    position: relative;
   }
-
   .cover h1 span { color: var(--bt-acento); }
-
   .cover .subtitle {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 300;
     color: var(--bt-gris-texto);
     margin-bottom: 60px;
-    max-width: 550px;
+    max-width: 680px;
+    position: relative;
   }
-
   .cover-meta {
     display: flex;
     gap: 40px;
     font-size: 13px;
     color: var(--bt-gris-texto);
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
   }
-
   .cover-meta strong { color: var(--bt-blanco-suave); font-weight: 600; }
-
   .cover-logos {
     margin-top: 60px;
     display: flex;
@@ -114,31 +110,32 @@
     gap: 20px;
     font-size: 13px;
     color: var(--bt-gris-texto);
+    position: relative;
   }
-
   .cover-logos .logo-text {
     font-weight: 700;
     font-size: 22px;
     color: var(--bt-blanco);
     letter-spacing: 1px;
   }
-
   .cover-logos .logo-text span { color: var(--bt-acento); }
+  .cover-logos .sep {
+    width: 1px; height: 26px;
+    background: var(--bt-gris-borde);
+  }
 
-  /* ── SECTIONS ── */
+  /* SECTIONS */
   .section {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 80px 40px;
   }
-
   .section-divider {
     border: none;
     border-top: 1px solid var(--bt-gris-borde);
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 960px;
   }
-
   .section-label {
     display: inline-block;
     font-size: 11px;
@@ -148,7 +145,6 @@
     color: var(--bt-acento);
     margin-bottom: 16px;
   }
-
   .section h2 {
     font-size: 32px;
     font-weight: 700;
@@ -156,107 +152,166 @@
     margin-bottom: 24px;
     line-height: 1.3;
   }
-
   .section h3 {
     font-size: 20px;
     font-weight: 600;
     color: var(--bt-blanco);
     margin: 32px 0 12px 0;
   }
-
   .section p {
     margin-bottom: 16px;
     color: var(--bt-blanco-suave);
   }
-
   .muted { color: var(--bt-gris-texto); }
+  .accent-text { color: var(--bt-acento); font-weight: 600; }
 
-  /* ── STAT CARDS ── */
+  /* STAT CARDS */
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     margin: 32px 0;
   }
-
   .stat-card {
     background: var(--bt-gris-oscuro);
     border: 1px solid var(--bt-gris-borde);
     border-radius: 12px;
-    padding: 28px 24px;
+    padding: 24px 18px;
     text-align: center;
   }
-
   .stat-card .number {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 800;
     color: var(--bt-acento);
     line-height: 1;
     margin-bottom: 8px;
   }
-
   .stat-card .label {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--bt-gris-texto);
     font-weight: 500;
   }
 
-  /* ── MODULE CARDS ── */
+  /* INFO BOXES */
+  .info-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 20px 0;
+  }
+  .info-box.accent { border-left: 3px solid var(--bt-acento); }
+  .info-box.blue { border-left: 3px solid var(--bt-azul); }
+  .info-box.green { border-left: 3px solid var(--bt-verde); }
+  .info-box.orange { border-left: 3px solid var(--bt-naranja); }
+  .info-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+  .info-box p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* TABLES */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .data-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+  .data-table td {
+    padding: 14px 18px;
+    font-size: 13.5px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* MODULE GRID */
   .module-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 18px;
     margin: 32px 0;
   }
-
   .module-card {
     background: var(--bt-gris-oscuro);
     border: 1px solid var(--bt-gris-borde);
     border-radius: 14px;
-    padding: 28px 24px;
+    padding: 26px 24px;
     position: relative;
     overflow: hidden;
   }
-
   .module-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     height: 3px;
   }
-
   .module-card.color-gold::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
   .module-card.color-blue::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
   .module-card.color-green::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
   .module-card.color-purple::before { background: linear-gradient(90deg, var(--bt-morado), #b07cc6); }
   .module-card.color-orange::before { background: linear-gradient(90deg, var(--bt-naranja), #f0a85a); }
   .module-card.color-red::before { background: linear-gradient(90deg, #e74c3c, #f07066); }
-
-  .module-icon {
-    font-size: 28px;
-    margin-bottom: 12px;
-  }
-
   .module-card h3 {
     font-size: 17px;
     font-weight: 700;
     color: var(--bt-blanco);
     margin: 0 0 6px 0;
+    padding-right: 80px;
   }
-
+  .module-card .phase-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .module-card .phase-badge.fase-1 {
+    color: var(--bt-acento);
+    border-color: var(--bt-acento);
+    background: rgba(212, 168, 67, 0.08);
+  }
+  .module-card .phase-badge.fase-2 {
+    color: var(--bt-azul);
+    border-color: var(--bt-azul);
+    background: rgba(74, 144, 217, 0.08);
+  }
   .module-card .module-tagline {
     font-size: 13px;
     color: var(--bt-gris-texto);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
-
-  .module-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
+  .module-card ul { list-style: none; padding: 0; margin: 0; }
   .module-card ul li {
     padding: 5px 0;
     font-size: 13px;
@@ -265,84 +320,115 @@
     align-items: flex-start;
     gap: 10px;
   }
-
   .module-card ul li::before {
     content: '';
     flex-shrink: 0;
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--bt-acento);
     margin-top: 7px;
   }
-
   .module-card.color-blue ul li::before { background: var(--bt-azul); }
   .module-card.color-green ul li::before { background: var(--bt-verde); }
   .module-card.color-purple ul li::before { background: var(--bt-morado); }
   .module-card.color-orange ul li::before { background: var(--bt-naranja); }
   .module-card.color-red ul li::before { background: #e74c3c; }
 
-  /* ── PAIN CARDS ── */
-  .pain-list { margin: 24px 0; }
+  /* WMS TABLE */
+  .wms-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .wms-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+  .wms-table td {
+    padding: 14px 18px;
+    font-size: 13.5px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .wms-table tr:last-child td { border-bottom: none; }
+  .wms-table td:first-child {
+    color: var(--bt-blanco-suave);
+    font-weight: 600;
+  }
+  .wms-table .col-native { color: var(--bt-verde); }
+  .wms-table .col-dev { color: var(--bt-naranja); }
+  .wms-table .badge-native {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: rgba(76, 175, 80, 0.12);
+    color: var(--bt-verde);
+    border: 1px solid rgba(76, 175, 80, 0.25);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .wms-table .badge-dev {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: rgba(232, 145, 58, 0.12);
+    color: var(--bt-naranja);
+    border: 1px solid rgba(232, 145, 58, 0.25);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
+  /* PAIN LIST */
+  .pain-list { margin: 24px 0; }
   .pain-item {
     display: flex;
-    gap: 20px;
-    padding: 20px 24px;
+    gap: 18px;
+    padding: 18px 22px;
     background: var(--bt-gris-oscuro);
     border: 1px solid var(--bt-gris-borde);
     border-radius: 10px;
     margin-bottom: 12px;
     align-items: flex-start;
   }
-
   .pain-icon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
   }
-
   .pain-icon.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
   .pain-icon.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
   .pain-icon.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
-
+  .pain-content { flex: 1; }
   .pain-content h4 {
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 600;
     color: var(--bt-blanco);
     margin-bottom: 4px;
   }
+  .pain-content p { font-size: 13px; color: var(--bt-gris-texto); margin: 0; }
 
-  .pain-content p {
-    font-size: 13px;
-    color: var(--bt-gris-texto);
-    margin: 0;
-  }
-
-  .severity-badge {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 50px;
-    margin-left: auto;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  .severity-badge.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
-  .severity-badge.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
-  .severity-badge.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
-
-  /* ── PHASE CARDS ── */
+  /* PHASE CARDS */
   .phase-card {
     background: var(--bt-gris-oscuro);
     border: 1px solid var(--bt-gris-borde);
@@ -352,145 +438,125 @@
     position: relative;
     overflow: hidden;
   }
-
   .phase-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     height: 3px;
   }
-
   .phase-card.phase-1::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
   .phase-card.phase-2::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
-  .phase-card.phase-3::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
-
   .phase-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 16px;
   }
-
   .phase-number {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
-
   .phase-1 .phase-number { color: var(--bt-acento); }
   .phase-2 .phase-number { color: var(--bt-azul); }
-  .phase-3 .phase-number { color: var(--bt-verde); }
-
   .phase-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--bt-blanco);
+    line-height: 1.25;
   }
-
-  .phase-price {
-    text-align: right;
+  .phase-tagline {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    font-style: italic;
+    margin-top: 4px;
   }
-
+  .phase-price { text-align: right; }
   .phase-price .amount {
     font-size: 32px;
     font-weight: 800;
     color: var(--bt-blanco);
+    line-height: 1.1;
   }
-
+  .phase-1 .phase-price .amount { color: var(--bt-acento); }
+  .phase-2 .phase-price .amount { color: var(--bt-azul); }
   .phase-price .period {
-    font-size: 13px;
-    color: var(--bt-gris-texto);
-  }
-
-  .phase-desc {
-    font-size: 15px;
-    color: var(--bt-gris-texto);
-    margin-bottom: 28px;
-    line-height: 1.7;
-    max-width: 600px;
-  }
-
-  .phase-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-
-  .phase-col h4 {
     font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     color: var(--bt-gris-texto);
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--bt-gris-borde);
+    display: block;
+    margin-top: 4px;
   }
-
-  .phase-col ul {
+  .payment-line {
+    font-size: 12.5px;
+    color: var(--bt-gris-texto);
+    margin-top: 6px;
+    text-align: right;
+    font-style: italic;
+  }
+  .phase-desc {
+    font-size: 14.5px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  .module-list {
     list-style: none;
     padding: 0;
+    margin: 16px 0 24px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
   }
-
-  .phase-col ul li {
+  .module-list li {
     padding: 6px 0;
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--bt-blanco-suave);
     display: flex;
     align-items: flex-start;
     gap: 10px;
   }
-
-  .phase-col ul li::before {
+  .module-list li::before {
     content: '';
     flex-shrink: 0;
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
+    background: var(--bt-acento);
     margin-top: 8px;
   }
-
-  .check-list li::before { background: var(--bt-verde); }
-  .cross-list li::before { background: var(--bt-rojo); opacity: 0.5; }
-  .cross-list li { color: var(--bt-gris-texto); }
-
+  .phase-2 .module-list li::before { background: var(--bt-azul); }
   .phase-footer {
-    margin-top: 28px;
+    margin-top: 24px;
     padding-top: 20px;
     border-top: 1px solid var(--bt-gris-borde);
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
   }
-
-  .phase-meta {
-    font-size: 13px;
-  }
-
+  .phase-meta { font-size: 13px; }
   .phase-meta .meta-label {
     color: var(--bt-gris-texto);
     font-weight: 500;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
   }
-
   .phase-meta .meta-value {
     color: var(--bt-blanco);
     font-weight: 600;
+    font-size: 14px;
   }
-
-  /* ── SOLVES TAG ── */
   .solves-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 24px;
+    margin: 4px 0 20px 0;
   }
-
   .solves-tag {
     font-size: 11px;
     font-weight: 600;
@@ -500,32 +566,22 @@
     color: var(--bt-acento);
     border: 1px solid rgba(212, 168, 67, 0.2);
   }
-
   .solves-tag.blue {
     background: rgba(74, 144, 217, 0.1);
     color: var(--bt-azul);
     border-color: rgba(74, 144, 217, 0.2);
   }
 
-  .solves-tag.green {
-    background: rgba(76, 175, 80, 0.1);
-    color: var(--bt-verde);
-    border-color: rgba(76, 175, 80, 0.2);
-  }
-
-  .solves-tag.purple {
-    background: rgba(155, 89, 182, 0.1);
-    color: var(--bt-morado);
-    border-color: rgba(155, 89, 182, 0.2);
-  }
-
-  /* ── COST TABLE ── */
+  /* COST TABLE */
   .cost-table {
     width: 100%;
     border-collapse: collapse;
     margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
   }
-
   .cost-table th {
     text-align: left;
     font-size: 11px;
@@ -533,276 +589,63 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--bt-gris-texto);
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
   }
-
   .cost-table td {
-    padding: 14px 16px;
+    padding: 14px 18px;
     font-size: 14px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.5);
     color: var(--bt-blanco-suave);
+    vertical-align: top;
   }
-
   .cost-table tr:last-child td { border-bottom: none; }
-
+  .cost-table .highlight { color: var(--bt-acento); font-weight: 700; }
   .cost-table .total-row td {
     font-weight: 700;
     color: var(--bt-acento);
     border-top: 2px solid var(--bt-gris-borde);
     padding-top: 16px;
-    font-size: 16px;
-  }
-
-  .cost-table .highlight { color: var(--bt-acento); font-weight: 600; }
-
-  /* ── WMS TABLE ── */
-  .wms-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 24px 0;
-  }
-
-  .wms-table th {
-    text-align: left;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--bt-gris-texto);
-    padding: 14px 16px;
-    border-bottom: 2px solid var(--bt-gris-borde);
-    background: var(--bt-gris-oscuro);
-  }
-
-  .wms-table th:first-child { border-radius: 8px 0 0 0; }
-  .wms-table th:last-child { border-radius: 0 8px 0 0; }
-
-  .wms-table td {
-    padding: 14px 16px;
-    font-size: 14px;
-    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
-    vertical-align: top;
-  }
-
-  .wms-table td:first-child {
-    color: var(--bt-blanco-suave);
-    font-weight: 500;
-  }
-
-  .wms-table .col-native {
-    color: var(--bt-verde);
-  }
-
-  .wms-table .col-dev {
-    color: var(--bt-naranja);
-  }
-
-  .wms-table .badge-native {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 9px;
-    border-radius: 50px;
-    background: rgba(76, 175, 80, 0.12);
-    color: var(--bt-verde);
-    border: 1px solid rgba(76, 175, 80, 0.25);
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  .wms-table .badge-dev {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 9px;
-    border-radius: 50px;
-    background: rgba(232, 145, 58, 0.12);
-    color: var(--bt-naranja);
-    border: 1px solid rgba(232, 145, 58, 0.25);
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  /* ── TIMELINE ── */
-  .timeline {
-    position: relative;
-    margin: 40px 0;
-    padding-left: 40px;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--bt-gris-borde);
-  }
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 32px;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid var(--bt-acento);
-    background: var(--bt-negro);
-  }
-
-  .timeline-item.active::before {
-    background: var(--bt-acento);
-  }
-
-  .timeline-item h4 {
     font-size: 15px;
-    font-weight: 600;
-    color: var(--bt-blanco);
-    margin-bottom: 4px;
   }
 
-  .timeline-item p {
-    font-size: 13px;
-    color: var(--bt-gris-texto);
-    margin: 0;
-  }
-
-  .timeline-item .time-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 10px;
-    border-radius: 50px;
-    background: rgba(212, 168, 67, 0.1);
-    color: var(--bt-acento);
-    margin-top: 6px;
-  }
-
-  /* ── INFO BOXES ── */
-  .info-box {
-    background: var(--bt-gris-oscuro);
-    border: 1px solid var(--bt-gris-borde);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin: 24px 0;
-  }
-
-  .info-box.accent { border-left: 3px solid var(--bt-acento); }
-  .info-box.blue { border-left: 3px solid var(--bt-azul); }
-  .info-box.green { border-left: 3px solid var(--bt-verde); }
-  .info-box.orange { border-left: 3px solid var(--bt-naranja); }
-
-  .info-box h4 {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--bt-blanco);
-    margin-bottom: 8px;
-  }
-
-  .info-box p {
-    font-size: 13px;
-    color: var(--bt-gris-texto);
-    margin: 0;
-  }
-
-  /* ── GUARANTEE / CTA ── */
-  .cta-section {
-    text-align: center;
-    padding: 80px 40px;
-    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
-  }
-
-  .cta-section h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--bt-blanco);
-    margin-bottom: 16px;
-  }
-
-  .cta-section p {
-    font-size: 16px;
-    color: var(--bt-gris-texto);
-    max-width: 500px;
-    margin: 0 auto 32px;
-  }
-
-  .cta-button {
-    display: inline-block;
-    padding: 16px 40px;
-    background: var(--bt-acento);
-    color: var(--bt-negro);
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 8px;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-  }
-
-  .cta-contact {
-    margin-top: 24px;
-    font-size: 13px;
-    color: var(--bt-gris-texto);
-  }
-
-  .cta-contact a {
-    color: var(--bt-acento);
-    text-decoration: none;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 12px;
-    color: var(--bt-gris-texto);
-    border-top: 1px solid var(--bt-gris-borde);
-  }
-
-  /* ── PROCESS STEPS ── */
-  .process-grid {
+  /* SUPUESTOS */
+  .supuestos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
-    margin: 32px 0;
+    margin: 28px 0;
   }
-
-  .process-step {
+  .supuesto-card {
     background: var(--bt-gris-oscuro);
     border: 1px solid var(--bt-gris-borde);
-    border-radius: 12px;
-    padding: 24px 20px;
-    text-align: center;
+    border-left: 3px solid var(--bt-azul);
+    border-radius: 10px;
+    padding: 22px 26px;
   }
-
-  .process-step .step-num {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--bt-acento);
-    margin-bottom: 8px;
-  }
-
-  .process-step h4 {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--bt-blanco);
+  .supuesto-card .supuesto-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-azul);
     margin-bottom: 6px;
   }
-
-  .process-step p {
-    font-size: 12px;
+  .supuesto-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+  .supuesto-card p {
+    font-size: 13.5px;
     color: var(--bt-gris-texto);
     margin: 0;
+    line-height: 1.65;
   }
 
-  /* ── SUMMARY BOX ── */
+  /* SUMMARY BOX */
   .summary-box {
     background: linear-gradient(135deg, var(--bt-gris-oscuro), var(--bt-gris-medio));
     border: 1px solid var(--bt-acento);
@@ -810,319 +653,650 @@
     padding: 40px;
     margin: 40px 0;
   }
-
   .summary-box h3 {
+    font-size: 20px;
+    font-weight: 700;
     color: var(--bt-acento);
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
-
   .summary-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    text-align: center;
   }
-
   .summary-item .s-label {
     font-size: 12px;
+    font-weight: 600;
     color: var(--bt-gris-texto);
-    font-weight: 500;
-    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
   }
-
   .summary-item .s-value {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 800;
     color: var(--bt-blanco);
   }
-
   .summary-item .s-value span { color: var(--bt-acento); }
-
   .summary-item .s-detail {
     font-size: 12px;
     color: var(--bt-gris-texto);
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
-  /* ── PRINT STYLES (dark theme preserved) ── */
+  /* WHY BITATECH */
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+  }
+  .reason-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+  .reason-card .reason-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .reason-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+  .reason-card p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* PROCESS STEPS */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .process-step {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 20px;
+    text-align: center;
+    position: relative;
+  }
+  .process-step .step-num {
+    display: inline-block;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.12);
+    border: 1px solid var(--bt-acento);
+    color: var(--bt-acento);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+  .process-step h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 6px;
+  }
+  .process-step p {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* RESPONSABILIDAD */
+  .resp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .resp-col {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 28px;
+  }
+  .resp-col.bitatech { border-left: 3px solid var(--bt-acento); }
+  .resp-col.cliente { border-left: 3px solid var(--bt-azul); }
+  .resp-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    margin-bottom: 14px;
+  }
+  .resp-col.bitatech h4 { color: var(--bt-acento); }
+  .resp-col.cliente h4 { color: var(--bt-azul); }
+  .resp-col ul { list-style: none; padding: 0; margin: 0; }
+  .resp-col ul li {
+    padding: 7px 0;
+    font-size: 13.5px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.55;
+  }
+  .resp-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+  .resp-col.bitatech ul li::before { background: var(--bt-acento); }
+  .resp-col.cliente ul li::before { background: var(--bt-azul); }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+  }
+  .cta-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+  .cta-contact {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+  }
+  .cta-contact a {
+    color: var(--bt-acento);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    border-top: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro);
+  }
+  .footer .brand {
+    font-weight: 700;
+    color: var(--bt-blanco);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .footer .brand span { color: var(--bt-acento); }
+  .footer .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .footer a { color: var(--bt-gris-texto); text-decoration: none; }
+  .footer a:hover { color: var(--bt-acento); }
+  .footer .disclaimer {
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--bt-gris-claro);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+  }
+
   @media print {
-    body { font-size: 11pt; }
-    .cover { min-height: auto; padding: 80px 40px; page-break-after: always; }
+    .cover { page-break-after: always; }
     .phase-card { page-break-inside: avoid; }
-    .section { padding: 40px 20px; }
-    .section h2 { font-size: 22pt; }
-    a { text-decoration: none; }
+    .module-card { page-break-inside: avoid; }
+    .info-box { page-break-inside: avoid; }
+    .summary-box { page-break-inside: avoid; }
+    .cta-section { display: none; }
+    body { font-size: 13px; }
+    .summary-grid { grid-template-columns: 1fr; }
   }
 
-  @media (max-width: 768px) {
-    .cover h1 { font-size: 32px; }
-    .stats-grid { grid-template-columns: 1fr; }
+  @media (max-width: 780px) {
+    .cover h1 { font-size: 34px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .module-grid { grid-template-columns: 1fr; }
-    .phase-columns { grid-template-columns: 1fr; }
+    .module-list { grid-template-columns: 1fr; }
+    .reasons-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .resp-grid { grid-template-columns: 1fr; }
     .summary-grid { grid-template-columns: 1fr; }
-    .cover-meta { flex-direction: column; gap: 12px; }
+    .phase-card { padding: 28px 22px; }
+    .section { padding: 60px 24px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════════════════════ -->
 <!-- COVER -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="cover">
-  <div class="cover-badge">Propuesta Preliminar</div>
-  <h1><span>Sistecomp</span></h1>
-  <p style="font-size: 22px; font-weight: 300; color: var(--bt-gris-texto); margin-bottom: 8px;">Transforme su operacion con Odoo</p>
-  <p class="subtitle">Inventario, ventas, contabilidad, POS, portal mayorista y WMS &mdash; todo integrado en una sola plataforma.</p>
+<section class="cover">
+  <span class="cover-badge">Propuesta Comercial</span>
+  <h1>Implementacion ERP <span>Odoo</span> para Nevada SA</h1>
+  <p class="subtitle">Inventario, ventas, contabilidad, POS offline, portal B2B y WMS en un solo sistema &mdash; integrado de punta a punta.</p>
   <div class="cover-meta">
-    <div><strong>Preparado para</strong><br>Sistecomp</div>
-    <div><strong>Preparado por</strong><br>Bitatech</div>
-    <div><strong>Fecha</strong><br>31 de marzo de 2026</div>
+    <div><strong>Preparado para:</strong> Nevada SA</div>
+    <div><strong>Preparado por:</strong> Bitatech</div>
+    <div><strong>Fecha:</strong> 15 de abril de 2026</div>
+    <div><strong>Valida hasta:</strong> 15 de mayo de 2026</div>
   </div>
   <div class="cover-logos">
-    <span class="logo-text">bita<span>tech</span></span>
-    <span class="muted" style="font-size: 18px;">&#215;</span>
-    <span style="font-size: 14px; color: var(--bt-gris-texto); font-weight: 500;">Sistemas Empresariales Inteligentes</span>
+    <div class="logo-text">BITA<span>TECH</span></div>
+    <div class="sep"></div>
+    <div>Sistemas Empresariales Inteligentes</div>
   </div>
-</div>
-
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 1: SOBRE BITATECH -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
-  <span class="section-label">01 &mdash; Quienes somos</span>
-  <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
-  <p>
-    Bitatech es una firma con sede en Panama especializada en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo, con mas de 12 millones de usuarios. No instalamos software y nos vamos &mdash; disenamos la arquitectura digital completa que su empresa necesita para operar con estructura, eliminar el caos operativo y crecer con control.
-  </p>
-  <p>
-    Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnostico de su operacion real, define flujos personalizados, y entrega un sistema que su equipo domina desde el primer dia. <strong>Desarrollamos codigo dentro de Odoo</strong> para adaptar el sistema a sus procesos exactos &mdash; no a los de otro negocio.
-  </p>
-
-  <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
-    <div class="stat-card">
-      <div class="number" style="font-size: 20px;">Odoo</div>
-      <div class="label">Plataforma principal</div>
-    </div>
-    <div class="stat-card">
-      <div class="number" style="font-size: 20px;">BSI&trade;</div>
-      <div class="label">Metodologia propia</div>
-    </div>
-    <div class="stat-card">
-      <div class="number" style="font-size: 20px;">Panama</div>
-      <div class="label">Sede local</div>
-    </div>
-    <div class="stat-card">
-      <div class="number" style="font-size: 20px;">100%</div>
-      <div class="label">Enfocados en resultado</div>
-    </div>
-  </div>
-
-  <div class="info-box accent">
-    <h4>Por que Odoo para distribucion y retail</h4>
-    <p>Odoo es la unica plataforma que cubre inventario, ventas, contabilidad, POS, portal B2B y WMS en un solo sistema nativo, sin integraciones costosas entre sistemas separados. Cada modulo comparte la misma base de datos &mdash; un movimiento en bodega se refleja instantaneamente en contabilidad y en el balance de inventario.</p>
-  </div>
-</div>
+</section>
 
 <hr class="section-divider">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 2: MODULOS -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
+<!-- 01 SU OPERACION HOY -->
+<section class="section">
+  <span class="section-label">01 &mdash; Su operacion hoy</span>
+  <h2>Lo que entendemos de Nevada SA</h2>
+  <p>Sr. Nevada, esta es la foto de la operacion de Nevada SA que sirve como base para el resto de la propuesta. Sobre esta foto se construyen las dos fases, el alcance y la inversion.</p>
+
+  <h3>Escala y trayectoria</h3>
+  <p>Nevada SA es una cadena panamena de productos de salud y belleza con mas de <strong>20 anos de operacion</strong>, <strong>13 tiendas</strong> activas en Panama y un catalogo de <strong>6,000+ SKUs</strong>. La marca "Nevada Salud &amp; Belleza" es una referencia consolidada en su segmento.</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">20+</div>
+      <div class="label">Anos de operacion</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">13</div>
+      <div class="label">Tiendas en Panama</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">6,000+</div>
+      <div class="label">SKUs en catalogo</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">15</div>
+      <div class="label">Usuarios del sistema</div>
+    </div>
+  </div>
+
+  <h3>Operacion actual a cubrir</h3>
+  <p>El sistema servira a <strong>15 usuarios</strong> distribuidos entre administracion central, contabilidad, compras, bodega, encargados de tienda y gerencia. La operacion incluye <strong>5 cajas POS</strong> activas en las tiendas y <strong>10 usuarios con PDT</strong> para operaciones de WMS y bodega.</p>
+
+  <h3>Necesidades declaradas</h3>
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon critical">1</div>
+      <div class="pain-content">
+        <h4>Inventario con control real de stock multi-bodega</h4>
+        <p>Visibilidad en tiempo real del stock por tienda y bodega central, con trazabilidad de movimientos y valoracion consistente.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon critical">2</div>
+      <div class="pain-content">
+        <h4>Ventas al detal y por mayor con listas de precios diferenciadas</h4>
+        <p>Un solo sistema que maneje el canal retail y el canal mayorista con politicas de precio, descuento y credito distintas por tipo de cliente.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">3</div>
+      <div class="pain-content">
+        <h4>Contabilidad integrada con ITBMS</h4>
+        <p>Asientos automaticos del ciclo operativo, manejo de ITBMS, conciliacion bancaria y estados financieros sin reescribir datos.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">4</div>
+      <div class="pain-content">
+        <h4>POS con funcionamiento offline</h4>
+        <p>Las cajas deben seguir operando cuando se cae el internet en una tienda y sincronizar automaticamente al reconectar.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">5</div>
+      <div class="pain-content">
+        <h4>Portal B2B para mayoristas</h4>
+        <p>Que los clientes mayoristas consulten catalogo, coloquen pedidos y den seguimiento a sus compras sin depender de llamadas ni correos.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">6</div>
+      <div class="pain-content">
+        <h4>WMS con recepciones validadas y rutas de picking</h4>
+        <p>Entrada de mercancia con validacion por barcode/PDT, manejo de ubicaciones por zona y rutas de picking eficientes dentro de la bodega.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Supuestos declarados</h3>
+  <p class="muted" style="font-size: 13.5px;">La propuesta se construye con la informacion disponible hoy. Los siguientes supuestos aplican al alcance base y se confirman en la primera reunion de diagnostico.</p>
+
+  <div class="supuestos-grid">
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 01</div>
+      <h4>Facturacion electronica DGI</h4>
+      <p>La propuesta base <strong>no incluye</strong> la integracion con PAC autorizado de DGI. Si Nevada SA requiere emision electronica fiscal desde Odoo, se cotiza como modulo adicional opcional (ver seccion de inversion &mdash; add-ons).</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 02</div>
+      <h4>POS offline</h4>
+      <p>La propuesta contempla Odoo POS con capacidad offline nativa que sincroniza al reconectar. Compatible con lectores de barcode e impresoras de recibo estandar. Si se requiere integracion con hardware fiscal especifico de Panama, se valida en la reunion de diagnostico.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 03</div>
+      <h4>Portal B2B sin pago en linea</h4>
+      <p>El portal B2B contempla que los clientes mayoristas consulten catalogo, coloquen pedidos y den seguimiento a sus compras. <strong>No incluye</strong> procesamiento de pagos en linea con tarjeta. Si Nevada SA requiere cobro online, se cotiza como integracion adicional (ver add-ons).</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 02 MODULOS -->
+<section class="section">
   <span class="section-label">02 &mdash; Modulos para su operacion</span>
   <h2>Seis modulos integrados para distribucion y retail</h2>
-  <p>Cada modulo resuelve un area especifica de su negocio. Al estar todos en Odoo, se comunican entre si en tiempo real, sin exportaciones ni copiar datos de un sistema a otro.</p>
+  <p>Cada modulo resuelve un area especifica de Nevada SA. Al estar todos dentro de Odoo, se comunican entre si en tiempo real: una venta en una caja POS descarga inventario, una recepcion en bodega actualiza stock de todas las tiendas, una factura genera asiento contable, y un pedido del portal B2B descarga inventario automaticamente &mdash; sin reescribir datos ni cambiar de sistema.</p>
 
   <div class="module-grid">
 
-    <!-- INVENTARIO -->
     <div class="module-card color-gold">
-      <div class="module-icon">&#128230;</div>
-      <h3>Inventario</h3>
-      <p class="module-tagline">Control de stock en tiempo real, multiples bodegas</p>
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Inventario multi-bodega</h3>
+      <p class="module-tagline">Stock en tiempo real a traves de tiendas y bodega central</p>
       <ul>
-        <li>Stock en tiempo real por producto y ubicacion</li>
-        <li>Multiple bodegas con transferencias internas</li>
-        <li>Alertas de reorden automaticas</li>
-        <li>Trazabilidad por lote y numero de serie</li>
-        <li>Valoracion de inventario (FIFO, promedio)</li>
-        <li>Lecturas con escaner de barcode / PDT</li>
+        <li>Stock en tiempo real por tienda y bodega</li>
+        <li>Trazabilidad por lote cuando aplique</li>
+        <li>Valoracion FIFO o promedio ponderado</li>
+        <li>Lecturas con barcode y PDT</li>
+        <li>Transferencias internas entre ubicaciones</li>
       </ul>
     </div>
 
-    <!-- VENTAS -->
     <div class="module-card color-blue">
-      <div class="module-icon">&#128200;</div>
+      <span class="phase-badge fase-1">Fase 1</span>
       <h3>Ventas al detal y por mayor</h3>
-      <p class="module-tagline">Flujos diferenciados segun tipo de cliente</p>
+      <p class="module-tagline">Retail y mayorista en un solo sistema</p>
       <ul>
-        <li>Listas de precios separadas: detal vs mayorista</li>
-        <li>Descuentos y condiciones por cliente o segmento</li>
-        <li>Ordenes de venta con aprobacion configurable</li>
-        <li>Facturacion interna integrada con contabilidad</li>
-        <li>Facturacion electronica legal (DGI) &mdash; ver nota abajo</li>
-        <li>Historial de compras por cliente</li>
-        <li>Credito y limite de credito por cliente</li>
+        <li>Listas de precios diferenciadas por canal</li>
+        <li>Descuentos por cliente y por volumen</li>
+        <li>Ordenes de venta con flujo de aprobacion</li>
+        <li>Facturacion interna integrada</li>
+        <li>Historial de compra por cliente</li>
+        <li>Limites de credito y estado de cuenta</li>
       </ul>
     </div>
 
-    <!-- CONTABILIDAD -->
     <div class="module-card color-green">
-      <div class="module-icon">&#128196;</div>
+      <span class="phase-badge fase-1">Fase 1</span>
       <h3>Contabilidad</h3>
-      <p class="module-tagline">Integrada con cada movimiento del negocio</p>
+      <p class="module-tagline">Ciclo contable integrado al ciclo operativo</p>
       <ul>
-        <li>Asientos contables automaticos en cada transaccion</li>
+        <li>Asientos automaticos por ventas, compras e inventario</li>
         <li>Conciliacion bancaria</li>
-        <li>Estado de resultados y balance general en tiempo real</li>
-        <li>Cuentas por cobrar y pagar</li>
-        <li>Gestion de impuestos (ITBMS)</li>
-        <li>Cierre de periodo y reportes fiscales</li>
+        <li>Estado de resultados en tiempo real</li>
+        <li>Cuentas por cobrar y por pagar</li>
+        <li>Manejo de ITBMS</li>
+        <li>Cierre de periodo</li>
       </ul>
     </div>
 
-    <!-- POS -->
     <div class="module-card color-orange">
-      <div class="module-icon">&#128179;</div>
+      <span class="phase-badge fase-1">Fase 1</span>
       <h3>Punto de Venta (POS)</h3>
-      <p class="module-tagline">5 cajas &mdash; con funcionamiento offline</p>
+      <p class="module-tagline">Cajas retail con modo offline nativo</p>
       <ul>
-        <li>Modo offline: opera sin internet, sincroniza al reconectar</li>
-        <li>Compatible con lector de barcode, impresora fiscal</li>
-        <li>Cierre de caja con cuadre automatico</li>
+        <li>Modo offline con sincronizacion al reconectar</li>
+        <li>Compatible con lectores de barcode e impresoras</li>
+        <li>Cierre de caja con cuadre</li>
         <li>Descuentos y promociones configurables</li>
-        <li>Vinculado al inventario en tiempo real</li>
-        <li>Reportes de venta por caja, turno y vendedor</li>
+        <li>Vinculado al inventario multi-bodega</li>
+        <li>Reportes por caja, turno y vendedor</li>
       </ul>
     </div>
 
-    <!-- B2B -->
     <div class="module-card color-purple">
-      <div class="module-icon">&#127760;</div>
+      <span class="phase-badge fase-2">Fase 2</span>
       <h3>Portal B2B</h3>
-      <p class="module-tagline">Sus clientes mayoristas hacen pedidos solos</p>
+      <p class="module-tagline">Autoservicio web para clientes mayoristas</p>
       <ul>
-        <li>Portal web privado por cliente con login propio</li>
-        <li>Catalogo personalizado segun lista de precios</li>
-        <li>El cliente coloca ordenes de compra directamente (sin pago online &mdash; solo pedidos)</li>
-        <li>Seguimiento de estado de pedidos en linea</li>
-        <li>Historial de compras accesible al cliente</li>
-        <li>Reduce llamadas y errores en toma de pedidos</li>
-        <li>Cobro online con tarjeta no incluido &mdash; cotizable como integracion adicional si se requiere</li>
+        <li>Portal web privado por cliente</li>
+        <li>Catalogo personalizado con precios del cliente</li>
+        <li>El cliente coloca sus ordenes directamente</li>
+        <li>Seguimiento online del pedido</li>
+        <li>Historial de compras disponible 24/7</li>
+        <li>Reduce llamadas y errores de transcripcion</li>
       </ul>
     </div>
 
-    <!-- WMS -->
     <div class="module-card color-red">
-      <div class="module-icon">&#127968;</div>
+      <span class="phase-badge fase-2">Fase 2</span>
       <h3>WMS &mdash; Gestion de Almacen</h3>
-      <p class="module-tagline">Su mayor interes &mdash; ver detalle en la seccion siguiente</p>
+      <p class="module-tagline">Recepciones, ubicaciones y rutas de picking</p>
       <ul>
-        <li>Recepciones con validacion por barcode / PDT</li>
-        <li>Multi-almacen, zonas y ubicaciones jerarquicas</li>
-        <li>Reglas de putaway (donde guardar cada producto)</li>
-        <li>Rutas configurables: pick &rarr; pack &rarr; ship</li>
+        <li>Recepciones con barcode / PDT</li>
+        <li>Multi-almacen con zonas y ubicaciones jerarquicas</li>
+        <li>Reglas de putaway por producto o categoria</li>
+        <li>Rutas pick &rarr; pack &rarr; ship configurables</li>
         <li>Wave picking y asignacion por zonas</li>
-        <li>Picking con PDT / handheld (10 usuarios)</li>
+        <li>Picking con PDT para los 10 operarios</li>
       </ul>
     </div>
 
   </div>
-</div>
 
-<hr class="section-divider">
-
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 3: WMS EN DETALLE -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
-  <span class="section-label">03 &mdash; WMS en detalle</span>
-  <h2>Que trae Odoo de fabrica vs. que desarrollamos a medida</h2>
-  <p>
-    Dado que el WMS es su mayor requerimiento, queremos ser transparentes sobre lo que Odoo incluye nativamente y lo que requiere desarrollo personalizado. Esta claridad le permite evaluar el alcance exacto y planificar la inversion sin sorpresas.
-  </p>
+  <h3 style="margin-top: 48px;">WMS en detalle &mdash; Nativo vs Desarrollo a medida</h3>
+  <p>Dado que el WMS es uno de los componentes mas sensibles del proyecto, queremos ser transparentes sobre lo que Odoo incluye nativamente y lo que requeriria desarrollo personalizado. Esta claridad permite evaluar el alcance exacto y planificar la inversion sin sorpresas.</p>
 
   <table class="wms-table">
     <thead>
       <tr>
-        <th style="width: 40%;">Funcionalidad</th>
-        <th style="width: 30%;">Disponibilidad</th>
-        <th style="width: 30%;">Detalle</th>
+        <th style="width: 38%;">Funcionalidad</th>
+        <th style="width: 22%;">Disponibilidad</th>
+        <th style="width: 40%;">Detalle</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Recepciones con validacion por barcode / PDT</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">Incluido en Odoo Inventory. El PDT escanea y valida unidades al recibir mercancia.</td>
       </tr>
       <tr>
         <td>Multi-almacen con zonas y ubicaciones jerarquicas</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">Odoo soporta multiples almacenes, areas (recepcion, almacenaje, despacho) y ubicaciones anidadas.</td>
       </tr>
       <tr>
         <td>Reglas de putaway (donde guardar cada producto)</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">Se configuran reglas por producto, categoria o peso para asignar ubicacion optima al recibir.</td>
       </tr>
       <tr>
         <td>Rutas configurables: pick &rarr; pack &rarr; ship</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">Flujos de 1, 2 o 3 pasos por almacen. Cada etapa se puede asignar a un operario distinto.</td>
       </tr>
       <tr>
         <td>Wave picking y asignacion por zonas</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">Agrupa ordenes por zona o pasillo para que el operario recorra el almacen una sola vez.</td>
       </tr>
       <tr>
         <td>Picking con PDT / handheld (10 operarios)</td>
-        <td class="col-native"><span class="badge-native">Nativo</span></td>
+        <td><span class="badge-native">Nativo</span></td>
         <td class="col-native">La app movil de Odoo permite gestionar operaciones de almacen desde dispositivos moviles.</td>
       </tr>
       <tr>
         <td>Optimizacion de ruta fisica dentro del almacen</td>
-        <td class="col-dev"><span class="badge-dev">Desarrollo a medida</span></td>
-        <td class="col-dev">Calcular el "mejor camino" dentro de la bodega segun la distribucion real de sus pasillos no viene de fabrica. Bitatech puede desarrollarlo como modulo personalizado.</td>
+        <td><span class="badge-dev">Desarrollo a medida</span></td>
+        <td class="col-dev">Calcular el "mejor camino" dentro de la bodega segun la distribucion real de los pasillos no viene de fabrica. Bitatech puede desarrollarlo como modulo personalizado.</td>
       </tr>
     </tbody>
   </table>
 
   <div class="info-box orange">
     <h4>Sobre la optimizacion de ruta fisica</h4>
-    <p>Este tipo de funcionalidad requiere mapear la disposicion real de su almacen (pasillos, columnas, sentidos de circulacion) y desarrollar un algoritmo de rutas que el sistema sugiera al operario antes de iniciar el picking. Es un desarrollo que Bitatech puede cotizar por separado una vez definida la distribucion del almacen. Para comenzar, las funcionalidades nativas de Odoo (wave picking + zonas) resuelven la mayoria de los casos de uso sin necesidad del modulo adicional.</p>
+    <p>Este tipo de funcionalidad requiere mapear la disposicion real del almacen (pasillos, columnas, sentidos de circulacion) y desarrollar un algoritmo de rutas que el sistema sugiera al operario antes de iniciar el picking. Es un desarrollo que Bitatech puede cotizar por separado una vez definida la distribucion del almacen. Para comenzar, las funcionalidades nativas de Odoo (wave picking + zonas) resuelven la mayoria de los casos de uso sin necesidad del modulo adicional.</p>
   </div>
 
   <div class="info-box green">
     <h4>Flujo WMS completo con Odoo nativo</h4>
-    <p>
-      <strong>Recepcion:</strong> El proveedor llega &rarr; el operario escanea con PDT &rarr; Odoo valida contra la orden de compra &rarr; el sistema sugiere ubicacion (putaway) &rarr; se registra en inventario automaticamente.<br><br>
-      <strong>Despacho:</strong> Sale una orden de venta &rarr; Odoo genera la orden de picking &rarr; se asigna por zona &rarr; el operario recibe instrucciones en el PDT &rarr; escanea y confirma cada unidad &rarr; se genera la guia de despacho y se descuenta del inventario.
-    </p>
+    <p><strong>Recepcion:</strong> el proveedor llega &rarr; el operario escanea con PDT &rarr; Odoo valida contra la orden de compra &rarr; el sistema sugiere ubicacion (putaway) &rarr; se registra en inventario automaticamente.<br><br>
+    <strong>Despacho:</strong> sale una orden de venta &rarr; Odoo genera la orden de picking &rarr; se asigna por zona &rarr; el operario recibe instrucciones en el PDT &rarr; escanea y confirma cada unidad &rarr; se genera la guia de despacho y se descuenta del inventario.</p>
   </div>
-</div>
+</section>
 
 <hr class="section-divider">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 4: INVERSION ESTIMADA -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
-  <span class="section-label">04 &mdash; Inversion estimada</span>
-  <h2>Inversion preliminar para su proyecto</h2>
-  <p>
-    Este precio esta basado en lo conversado hasta ahora (6 modulos, 25 usuarios). El monto final puede ajustarse tras completar el <strong>cuestionario de diagnostico</strong>, donde entendemos la complejidad exacta de sus flujos, personalizaciones necesarias y volumen de datos.
-  </p>
+<!-- 03 FASES -->
+<section class="section">
+  <span class="section-label">03 &mdash; Implementacion por fases</span>
+  <h2>Dos fases para implementar sin abrumar a la operacion</h2>
+  <p>Implementar los seis modulos al mismo tiempo genera ruido en cualquier operacion de 13 tiendas. Las dos fases permiten que cada area domine su bloque antes de avanzar al siguiente y que cada fase entregue valor inmediato. Cada fase se contrata por separado: al cerrar la Fase 1, Nevada SA decide si avanza a la Fase 2.</p>
+
+  <!-- FASE 1 -->
+  <div class="phase-card phase-1">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 1 &mdash; Nucleo operativo y retail</div>
+        <div class="phase-title">Nucleo operativo y retail</div>
+        <div class="phase-tagline">"Control de inventario, ventas, caja y contabilidad"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 10,000</div>
+        <span class="period">Pago unico de Fase 1</span>
+        <div class="payment-line">50% al firmar (USD 5,000) &middot; 50% al entregar Fase 1 (USD 5,000)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Configuramos el nucleo del sistema: inventario multi-bodega, ventas al detal y por mayor, contabilidad con ITBMS y las 5 cajas POS con modo offline. Al cierre de la Fase 1, las 13 tiendas de Nevada SA pueden operar completamente en Odoo: vender en caja, controlar stock, facturar y cerrar el ciclo contable integrado. Nevada SA decide entonces si avanza a Fase 2 o se queda con este alcance.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag">Inventario multi-bodega</span>
+      <span class="solves-tag">Ventas retail y mayorista</span>
+      <span class="solves-tag">POS offline</span>
+      <span class="solves-tag">Contabilidad con ITBMS</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Modulos incluidos</h4>
+    <ul class="module-list">
+      <li>Inventario multi-bodega</li>
+      <li>Ventas al detal y por mayor</li>
+      <li>Contabilidad integrada con ITBMS</li>
+      <li>POS (5 cajas, modo offline)</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">6 a 8 semanas desde firma</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Independencia funcional</span>
+        <span class="meta-value">Las 13 tiendas operan en Odoo al cierre</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Decision Fase 2</span>
+        <span class="meta-value">Se evalua al cerrar Fase 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="phase-card phase-2">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 2 &mdash; WMS avanzado y portal B2B</div>
+        <div class="phase-title">WMS avanzado y portal B2B</div>
+        <div class="phase-tagline">"Gestion de almacen y autoservicio para mayoristas"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 4,000</div>
+        <span class="period">Pago unico de Fase 2</span>
+        <div class="payment-line">50% al firmar (USD 2,000) &middot; 50% al entregar Fase 2 (USD 2,000)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Con el nucleo estabilizado, activamos el WMS completo (multi-almacen con zonas y ubicaciones, reglas de putaway, rutas pick&rarr;pack&rarr;ship, wave picking y picking con PDT para los 10 operarios) y el portal B2B para clientes mayoristas. El WMS se monta sobre el inventario configurado en Fase 1.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag blue">WMS completo</span>
+      <span class="solves-tag blue">Multi-almacen con zonas</span>
+      <span class="solves-tag blue">Wave picking con PDT</span>
+      <span class="solves-tag blue">Portal B2B mayoristas</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Modulos incluidos</h4>
+    <ul class="module-list">
+      <li>WMS multi-almacen con zonas y ubicaciones</li>
+      <li>Reglas de putaway y rutas configurables</li>
+      <li>Wave picking y asignacion por zonas</li>
+      <li>Picking con PDT (10 operarios)</li>
+      <li>Portal B2B para clientes mayoristas</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">4 a 6 semanas tras cierre de Fase 1</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Dependencia</span>
+        <span class="meta-value">Requiere Fase 1 instalada</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Cada fase se contrata por separado</h4>
+    <p>No es necesario comprometerse con las dos fases desde el inicio. Al finalizar la Fase 1, Bitatech y Nevada SA evaluan resultados y deciden juntos si avanzar a la Fase 2.</p>
+  </div>
+
+  <div class="info-box blue">
+    <h4>Rango total de inversion</h4>
+    <p>El monto total de la implementacion puede variar entre <strong>USD 10,000 y USD 14,000</strong> dependiendo del alcance final de los modulos y de las necesidades especificas que se expresen durante la primera reunion de diagnostico. El rango refleja flexibilidad para ajustar el alcance a la realidad operativa de Nevada SA.</p>
+  </div>
+
+</section>
+
+<hr class="section-divider">
+
+<!-- 04 INVERSION -->
+<section class="section">
+  <span class="section-label">04 &mdash; Inversion</span>
+  <h2>Resumen de inversion</h2>
 
   <h3>Implementacion Bitatech</h3>
   <table class="cost-table">
     <thead>
       <tr>
-        <th>Concepto</th>
+        <th>Fase</th>
         <th>Inversion</th>
         <th>Forma de pago</th>
       </tr>
@@ -1130,269 +1304,375 @@
     <tbody>
       <tr>
         <td>
-          <strong>Implementacion completa</strong><br>
-          <span class="muted" style="font-size: 12px;">Inventario + Ventas + Contabilidad + POS + B2B + WMS &mdash; 25 usuarios</span>
+          <strong>Fase 1: Nucleo operativo y retail</strong><br>
+          <span class="muted" style="font-size: 12px;">Inventario multi-bodega + Ventas retail/mayorista + Contabilidad con ITBMS + POS offline (5 cajas)</span>
         </td>
-        <td class="highlight">$12,000</td>
+        <td class="highlight">USD 10,000</td>
         <td>
-          <span class="muted" style="font-size: 12px;">50% al firmar contrato<br>50% al entregar el sistema</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <strong>Facturacion electronica legal (DGI)</strong> (opcional)<br>
-          <span class="muted" style="font-size: 12px;">Integracion con PAC (Proveedor Autorizado Certificado) + desarrollo para conectar Odoo con el sistema fiscal de Panama</span>
-        </td>
-        <td class="highlight">$3,000</td>
-        <td>
-          <span class="muted" style="font-size: 12px;">50% al firmar contrato<br>50% al entregar el desarrollo</span>
+          <span class="muted" style="font-size: 12px;">50% al firmar (USD 5,000)<br>50% al entregar Fase 1 (USD 5,000)</span>
         </td>
       </tr>
       <tr>
         <td>
-          <strong>Optimizacion continua</strong> (opcional)<br>
-          <span class="muted" style="font-size: 12px;">Auditoria mensual, ajustes, mejoras, soporte prioritario &mdash; 40 hrs/mes</span>
+          <strong>Fase 2: WMS avanzado y portal B2B</strong><br>
+          <span class="muted" style="font-size: 12px;">WMS multi-almacen + zonas + putaway + wave picking + PDT + Portal B2B mayoristas</span>
         </td>
-        <td class="highlight">$1,000/mes</td>
+        <td class="highlight">USD 4,000</td>
         <td>
-          <span class="muted" style="font-size: 12px;">Pago al inicio de cada mes<br>Minimo 3 meses</span>
+          <span class="muted" style="font-size: 12px;">50% al firmar (USD 2,000)<br>50% al entregar Fase 2 (USD 2,000)</span>
+        </td>
+      </tr>
+      <tr class="total-row">
+        <td>Total implementacion (2 fases)</td>
+        <td>USD 14,000</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementacion no incluyen ITBMS (7%). El monto total puede variar entre USD 10,000 y USD 14,000 segun decisiones de alcance tomadas en la primera reunion de diagnostico.</p>
+
+  <h3 style="margin-top: 40px;">Modulos opcionales (add-ons)</h3>
+  <p>Los siguientes modulos no estan incluidos en el precio base de las dos fases. Se cotizan por separado segun el alcance que Nevada SA decida activar.</p>
+
+  <table class="cost-table" style="margin-top: 16px;">
+    <thead>
+      <tr>
+        <th>Modulo opcional</th>
+        <th>Inversion</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Facturacion electronica DGI</strong><br>
+          <span class="muted" style="font-size: 12px;">Integracion con PAC autorizado de Panama para emision fiscal electronica conforme a normativa DGI. Incluye seleccion e integracion del PAC.</span>
+        </td>
+        <td class="highlight">USD 3,900</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Optimizacion de ruta de picking a medida</strong><br>
+          <span class="muted" style="font-size: 12px;">Desarrollo del algoritmo de "mejor ruta" dentro del almacen segun la distribucion fisica real de los pasillos y zonas. Requiere mapeo previo del almacen.</span>
+        </td>
+        <td class="highlight">USD 3,500 &ndash; 5,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Pasarela de pago en portal B2B</strong><br>
+          <span class="muted" style="font-size: 12px;">Integracion con proveedor de pagos en linea para que los clientes mayoristas puedan pagar sus pedidos con tarjeta desde el portal. Se cotiza segun el proveedor seleccionado.</span>
+        </td>
+        <td class="highlight">USD 2,500 &ndash; 3,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Migracion masiva de datos desde sistema anterior</strong><br>
+          <span class="muted" style="font-size: 12px;">Limpieza de datos, mapeo de campos, importacion de historicos desde el sistema actual. Se cotiza segun volumen de registros y estado de los datos.</span>
+        </td>
+        <td class="highlight">A cotizar</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Segun alcance</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Integraciones a medida</strong><br>
+          <span class="muted" style="font-size: 12px;">Conexion con sistemas externos especificos: bancos, ERP de clientes, dispositivos de planta, balanzas, impresoras fiscales, etc.</span>
+        </td>
+        <td class="highlight">A cotizar</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Segun alcance</span>
         </td>
       </tr>
     </tbody>
   </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de los modulos opcionales no incluyen ITBMS (7%).</p>
 
-  <h3>Licencia Odoo &mdash; Pago directo a Odoo</h3>
-  <p class="muted" style="font-size: 13px; margin-bottom: 16px;">Odoo es la plataforma sobre la que se construye el sistema. Este costo es independiente de la implementacion de Bitatech. Es el equivalente a la "renta" del software &mdash; su empresa contrata directamente con Odoo.</p>
+  <h3 style="margin-top: 40px;">Plataforma Odoo &mdash; Pago directo a Odoo</h3>
+  <p>Ademas de la implementacion, Nevada SA debe contratar la licencia de Odoo Enterprise directamente con Odoo. Este costo es independiente de Bitatech y se paga directamente al proveedor. Bitatech asesora en la seleccion del plan, contratacion y configuracion.</p>
+
+  <p class="muted" style="font-size: 13px; margin-top: 16px; margin-bottom: 12px;">Referencia: Odoo Enterprise Plan Standard &mdash; ~USD 25 por usuario por mes (precio referencial sujeto a condiciones vigentes de Odoo al momento de la contratacion).</p>
 
   <table class="cost-table">
     <thead>
       <tr>
-        <th>Concepto</th>
-        <th>Pago mensual (sin descuento)</th>
-        <th>Pago anual (20% descuento)</th>
+        <th>Escenario</th>
+        <th>Usuarios</th>
+        <th>Costo mensual</th>
+        <th>Costo anual</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>
-          Licencia Odoo &mdash; 25 usuarios<br>
-          <span class="muted" style="font-size: 12px;">~$165/usuario/ano en plan anual. Usuarios adicionales al mismo precio por usuario.</span>
-        </td>
-        <td>~$516/mes<br><span class="muted" style="font-size: 12px;">pago mensual, sin descuento</span></td>
-        <td>~$413/mes<br><span class="muted" style="font-size: 12px;">equivalente mensual, facturado anual</span></td>
+        <td><strong>Configuracion estandar</strong><br><span class="muted" style="font-size: 12px;">Cada usuario tiene su propia licencia individual</span></td>
+        <td>15</td>
+        <td>USD 375 / mes</td>
+        <td>USD 4,500 / ano</td>
+      </tr>
+      <tr>
+        <td><strong>Con usuarios compartidos en POS</strong><br><span class="muted" style="font-size: 12px;">10 administrativos + 2 usuarios compartidos para las 5 cajas POS</span></td>
+        <td>12</td>
+        <td>USD 300 / mes</td>
+        <td>USD 3,600 / ano</td>
       </tr>
       <tr class="total-row">
-        <td>Total anual estimado (plan anual)</td>
-        <td></td>
-        <td>~$4,950/ano</td>
+        <td>Ahorro anual con usuarios compartidos</td>
+        <td>&mdash;</td>
+        <td>USD 75 / mes</td>
+        <td>USD 900 / ano</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="info-box blue">
-    <h4>Sobre la licencia Odoo</h4>
-    <p>Los precios de licencia son referenciales y pueden variar segun el plan y las condiciones vigentes de Odoo al momento de la contratacion. Bitatech asesora en la seleccion del plan correcto. La licencia la contrata su empresa directamente con Odoo. El numero de usuarios puede ajustarse segun necesidad &mdash; puede empezar con menos y escalar.</p>
-  </div>
-
   <div class="info-box accent">
     <h4>Alternativa para reducir el costo de licencia: usuarios compartidos en POS</h4>
-    <p>No es obligatorio crear un usuario individual para cada persona que opera una caja POS. Puede crear uno o dos usuarios compartidos para las 5 cajas, lo que reduce dramaticamente el costo de licencia Odoo (de 25 usuarios a 12&ndash;15, por ejemplo).<br><br>
-    <strong>La ventaja:</strong> ahorro significativo en la licencia anual.<br>
-    <strong>La limitacion:</strong> pierde trazabilidad individual en POS &mdash; no sabra exactamente quien facturo, quien aplico un descuento o quien proceso una devolucion en caja. Tendria que deducirlo por turno o por otros medios.<br><br>
-    Si la trazabilidad individual en caja no es critica para su operacion, esta es una forma inteligente de optimizar costos desde el inicio.</p>
+    <p>No es obligatorio crear un usuario individual para cada persona que opera una caja POS. Nevada SA puede crear uno o dos usuarios compartidos para las 5 cajas, lo que reduce el costo anual de licencia Odoo (de 15 usuarios individuales a 12 con usuarios compartidos).<br><br>
+    <strong>La ventaja:</strong> ahorro directo en la licencia anual sin afectar la operacion comercial.<br>
+    <strong>La limitacion:</strong> se pierde trazabilidad individual en POS &mdash; no quedara registrado exactamente quien facturo, quien aplico un descuento o quien proceso una devolucion en caja. Esa trazabilidad tendria que deducirse por turno o por otros medios.<br><br>
+    Si la trazabilidad individual en caja no es critica para la operacion, es una forma inteligente de optimizar costos desde el inicio.</p>
+  </div>
+
+  <h3 style="margin-top: 40px;">Soporte continuo opcional</h3>
+
+  <div class="phase-card phase-1" style="margin-top: 16px;">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Plan Ejecutivo</div>
+        <div class="phase-title">Soporte y optimizacion continua</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 1,200<span style="font-size: 18px; color: var(--bt-gris-texto); font-weight: 500;">/mes</span></div>
+        <span class="period">Minimo 3 meses</span>
+        <div class="payment-line">Pago mensual al inicio de cada mes</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Una vez en operacion, Nevada SA puede contratar el plan de soporte y optimizacion continua de Bitatech para mantener Odoo afinado a medida que la operacion evoluciona.</p>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Incluye</h4>
+    <ul class="module-list">
+      <li>Auditoria operativa mensual del uso del sistema</li>
+      <li>Ajustes y mejoras menores incluidas</li>
+      <li>Soporte prioritario por canal directo</li>
+      <li>Reportes mensuales de operacion</li>
+      <li>Hasta 30 horas mensuales de trabajo dedicado</li>
+    </ul>
   </div>
 
   <!-- SUMMARY BOX -->
   <div class="summary-box">
-    <h3>Para arrancar el proyecto</h3>
+    <h3>Para arrancar la Fase 1</h3>
     <div class="summary-grid">
       <div class="summary-item">
-        <div class="s-label">Anticipo de implementacion</div>
-        <div class="s-value"><span>$6,000</span></div>
+        <div class="s-label">Anticipo de Fase 1</div>
+        <div class="s-value"><span>USD 5,000</span></div>
         <div class="s-detail">50% al firmar contrato</div>
       </div>
       <div class="summary-item">
-        <div class="s-label">Licencia Odoo (primer mes)</div>
-        <div class="s-value">~<span>$413</span>/mes</div>
-        <div class="s-detail">plan anual, 25 usuarios &mdash; pago a Odoo</div>
-      </div>
-      <div class="summary-item">
-        <div class="s-label">Resultado estimado</div>
-        <div class="s-value" style="font-size: 16px; line-height: 1.4; padding-top: 4px;">Sistema funcional en <span>8&ndash;12 semanas</span></div>
-        <div class="s-detail">segun complejidad de flujos &mdash; a definir en diagnostico</div>
+        <div class="s-label">Fase 1 lista en</div>
+        <div class="s-value"><span>6 &ndash; 8 semanas</span></div>
+        <div class="s-detail">Desde la sesion de arranque post firma</div>
       </div>
     </div>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversion inicial Nevada SA arranca el proyecto y comienza la configuracion del nucleo operativo de las 13 tiendas.</p>
+    <p style="margin-top: 12px; font-size: 12px; font-style: italic; opacity: 0.7; text-align: center;">Precio no incluye ITBMS (7%).</p>
   </div>
-
-  <div class="info-box accent" style="margin-top: 0;">
-    <h4>El precio final se confirma con el cuestionario de diagnostico</h4>
-    <p>Le enviamos un cuestionario detallado que su equipo completa internamente. Con esa informacion confirmamos o ajustamos el precio y le entregamos una propuesta formal con alcance cerrado y cronograma definitivo, sin compromisos de su parte.</p>
-  </div>
-</div>
+</section>
 
 <hr class="section-divider">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 5: COMO TRABAJAMOS -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
+<!-- 05 COMO TRABAJAMOS -->
+<section class="section">
   <span class="section-label">05 &mdash; Como trabajamos</span>
-  <h2>Proceso de implementacion en 4 pasos</h2>
-  <p>No instalamos software y nos vamos. Disenamos el sistema alrededor de como opera su empresa, capacitamos al equipo, y acompanamos hasta que funcione de forma autonoma.</p>
+  <h2>Proceso de implementacion por fase</h2>
+  <p>Cada fase sigue el mismo proceso. Bitatech no instala software y se va: disena los flujos alrededor de como opera Nevada SA, configura, capacita y acompana hasta que cada area domina su parte del sistema.</p>
 
   <div class="process-grid">
     <div class="process-step">
-      <div class="step-num">01</div>
-      <h4>Diagnostico y contrato</h4>
-      <p>Reunion para mapear sus flujos exactos. Propuesta formal con alcance y precio cerrado. Firma de contrato.</p>
+      <div class="step-num">1</div>
+      <h4>Sesion de arranque</h4>
+      <p>Primera sesion con el equipo de Nevada SA para mapear flujos reales de las 13 tiendas, confirmar alcance y definir cronograma.</p>
     </div>
     <div class="process-step">
-      <div class="step-num">02</div>
-      <h4>Configuracion</h4>
-      <p>Levantamiento de datos: productos, bodegas, ubicaciones, listas de precios, clientes. Configuracion base de Odoo.</p>
+      <div class="step-num">2</div>
+      <h4>Configuracion y datos maestros</h4>
+      <p>Levantamiento de productos, bodegas, ubicaciones, listas de precios, plan contable y usuarios.</p>
     </div>
     <div class="process-step">
-      <div class="step-num">03</div>
-      <h4>Desarrollo y pruebas</h4>
-      <p>Personalizaciones a medida (rutas WMS, flujos de venta detal/mayor, portal B2B). Pruebas con su equipo.</p>
+      <div class="step-num">3</div>
+      <h4>Desarrollo y personalizaciones</h4>
+      <p>Ajustes a medida sobre Odoo en Python, pruebas con el equipo y ajustes iterativos.</p>
     </div>
     <div class="process-step">
-      <div class="step-num">04</div>
-      <h4>Entrega y soporte</h4>
-      <p>Capacitacion completa, salida en vivo, acompanamiento post-implementacion. Su equipo opera con autonomia.</p>
+      <div class="step-num">4</div>
+      <h4>Capacitacion</h4>
+      <p>Sesiones por area (administracion, caja, bodega, ventas mayorista) con manuales de usuario.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <h4>Entrega asistida</h4>
+      <p>Salida en vivo con soporte intensivo de Bitatech durante las primeras semanas de operacion.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">6</div>
+      <h4>Soporte post-entrega</h4>
+      <p>30 dias de acompanamiento intensivo tras cada fase para asegurar autonomia operativa.</p>
     </div>
   </div>
-
-  <div class="info-box green">
-    <h4>Desarrollo propio dentro de Odoo</h4>
-    <p>Bitatech no solo configura Odoo &mdash; desarrolla modulos y personalizaciones en Python directamente sobre la plataforma. Esto significa que si su operacion requiere un flujo que Odoo no trae de fabrica (como la optimizacion de ruta de picking en su bodega especifica), podemos construirlo. El resultado es un sistema que se adapta a su empresa, no al reves.</p>
-  </div>
-</div>
+</section>
 
 <hr class="section-divider">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 6: CARGA DE DATOS -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
-  <span class="section-label">06 &mdash; Carga de datos</span>
-  <h2>Que incluye la implementacion y que es responsabilidad del cliente</h2>
-  <p>Para que el sistema arranque con informacion real desde el dia uno, es necesario cargar datos maestros (productos, clientes, proveedores, plan contable, etc.). Esta es la division de responsabilidades:</p>
+<!-- 06 CARGA DE DATOS -->
+<section class="section">
+  <span class="section-label">06 &mdash; Carga de datos y responsabilidades</span>
+  <h2>Que incluye Bitatech y que es responsabilidad de Nevada SA</h2>
+  <p>Para que el sistema arranque con informacion real desde el dia uno, hay responsabilidades claras de cada parte. Bitatech <strong>establece y configura la estructura del sistema</strong> y la explica mediante capacitacion al personal. La <strong>carga de la data real</strong> (creacion de productos, listas de precios, plan de cuentas, clientes, proveedores, saldos) es responsabilidad de Nevada SA &mdash; o se cotiza aparte si prefieren que Bitatech se encargue.</p>
 
-  <table class="wms-table">
-    <thead>
-      <tr>
-        <th style="width: 50%;">Concepto</th>
-        <th style="width: 25%;">Responsable</th>
-        <th style="width: 25%;">Detalle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Plan contable, reglas fiscales, configuracion de impuestos (ITBMS)</td>
-        <td class="col-native"><span class="badge-native">Bitatech</span></td>
-        <td class="col-native">Incluido en la implementacion</td>
-      </tr>
-      <tr>
-        <td>Estructura de categorias de productos</td>
-        <td class="col-native"><span class="badge-native">Bitatech</span></td>
-        <td class="col-native">Incluido en la implementacion</td>
-      </tr>
-      <tr>
-        <td>Configuracion de bodegas, ubicaciones y rutas WMS</td>
-        <td class="col-native"><span class="badge-native">Bitatech</span></td>
-        <td class="col-native">Incluido en la implementacion</td>
-      </tr>
-      <tr>
-        <td>Listas de precios (detal y mayorista)</td>
-        <td class="col-native"><span class="badge-native">Bitatech</span></td>
-        <td class="col-native">Incluido en la implementacion</td>
-      </tr>
-      <tr>
-        <td>Plantillas de importacion masiva + capacitacion para usarlas</td>
-        <td class="col-native"><span class="badge-native">Bitatech</span></td>
-        <td class="col-native">Incluido en la implementacion</td>
-      </tr>
-      <tr>
-        <td>Llenar plantillas con datos reales (productos, clientes, proveedores, saldos iniciales)</td>
-        <td class="col-dev"><span class="badge-dev">Cliente</span></td>
-        <td class="col-dev">Sistecomp completa las plantillas con su informacion</td>
-      </tr>
-      <tr>
-        <td>Migracion completa desde otro sistema (limpiar data, mapear campos, importar historicos)</td>
-        <td class="col-dev"><span class="badge-dev">Cotizable aparte</span></td>
-        <td class="col-dev">Depende del volumen y estado de los datos actuales</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="resp-grid">
+    <div class="resp-col bitatech">
+      <h4>Bitatech entrega</h4>
+      <ul>
+        <li>Configuracion completa del sistema Odoo por fase (instalacion, parametrizacion, reglas de flujo)</li>
+        <li>Diseno de flujos operativos por area (retail, mayorista, bodega, contabilidad)</li>
+        <li>Estructura base del plan contable con reglas fiscales de Panama (ITBMS)</li>
+        <li>Estructura de categorias de productos, bodegas, ubicaciones y listas de precios (vacias, listas para llenar)</li>
+        <li>Desarrollo de personalizaciones en Python cuando el alcance lo requiera</li>
+        <li>Plantillas de importacion masiva para que Nevada SA las llene con su data real</li>
+        <li>Capacitacion por area con sesiones dedicadas y manuales de usuario</li>
+        <li>Soporte intensivo durante 30 dias despues de cada entrega</li>
+      </ul>
+    </div>
+    <div class="resp-col cliente">
+      <h4>Nevada SA aporta</h4>
+      <ul>
+        <li>Creacion y carga de los 6,000+ SKUs del catalogo (codigo, descripcion, categoria, unidad, costo)</li>
+        <li>Llenado de listas de precios reales (detal y mayor)</li>
+        <li>Llenado del plan de cuentas real y saldos de apertura</li>
+        <li>Llenado de clientes y proveedores (datos fiscales, direcciones, condiciones)</li>
+        <li>Inventario inicial por tienda y bodega central</li>
+        <li>Acceso al personal clave de cada area para sesiones de mapeo y capacitacion</li>
+        <li>Decisiones de configuracion: politicas de credito, descuentos por cliente, jerarquias de aprobacion</li>
+        <li>Hardware de las cajas POS (lectores de barcode, impresoras de recibo) y dispositivos PDT para los operarios de bodega</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="info-box accent">
-    <h4>Por que funciona asi</h4>
-    <p>Bitatech configura toda la estructura del sistema y le entrega plantillas listas para que su equipo las llene con los datos reales del negocio (productos, clientes, proveedores). Esto asegura que la informacion sea precisa &mdash; nadie conoce sus datos mejor que usted. Si prefiere que Bitatech se encargue de toda la migracion, se cotiza por separado segun el volumen de registros y la complejidad de la fuente de datos.</p>
+    <h4>Importante: Bitatech no llena la data del sistema</h4>
+    <p>Bitatech <strong>configura la estructura</strong> del sistema, la desarrolla segun el alcance acordado y la explica mediante capacitacion al personal. La <strong>carga de la data real</strong> del negocio &mdash; creacion de productos, listas de precios, plan de cuentas, clientes, proveedores y saldos iniciales &mdash; <strong>no esta incluida en el precio base</strong>. Esta es responsabilidad del equipo de Nevada SA, que conoce sus datos mejor que nadie. Si Nevada SA prefiere que Bitatech se encargue de la carga completa, se cotiza aparte segun el volumen de registros, la calidad de los datos actuales y la complejidad de la fuente.</p>
   </div>
-</div>
+</section>
 
 <hr class="section-divider">
 
-<!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECTION 7: SIGUIENTE PASO -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="section">
-  <span class="section-label">07 &mdash; Siguiente paso</span>
-  <h2>Cuestionario de diagnostico + propuesta con precio exacto</h2>
-  <p>
-    Para entregarle una cotizacion precisa &mdash; sin rangos &mdash; necesitamos entender los detalles de su operacion. El proceso es simple:
-  </p>
+<!-- 07 QUIENES SOMOS -->
+<section class="section">
+  <span class="section-label">07 &mdash; Quienes somos</span>
+  <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
+  <p>Bitatech es una firma con sede en Panama especializada en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo. No instalamos software y nos vamos &mdash; disenamos la arquitectura digital completa que la empresa necesita para operar con estructura y crecer con control.</p>
+  <p>Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnostico de la operacion real, define flujos personalizados y entrega un sistema que el equipo domina desde el primer dia. <strong>Desarrollamos codigo dentro de Odoo</strong> para adaptar el sistema a los procesos exactos de Nevada SA.</p>
+
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <h4>Especializacion en Odoo</h4>
+      <p>Somos implementadores especializados en Odoo. No trabajamos con multiples plataformas ni repartimos atencion entre sistemas. Odoo es nuestra plataforma.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <h4>Experiencia en retail y distribucion</h4>
+      <p>Flujo multi-tienda, POS offline, WMS con rutas y portal B2B. Bitatech tiene experiencia en el ciclo bodega &rarr; tienda &rarr; cliente final y en la operacion mayorista paralela.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <h4>Desarrollamos codigo dentro de Odoo</h4>
+      <p>Desarrollamos modulos y personalizaciones en Python directamente sobre la plataforma. Si la operacion requiere un flujo que Odoo no trae de fabrica, podemos construirlo. El sistema se adapta a la empresa, no al reves.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <h4>Acompanamiento hasta la autonomia</h4>
+      <p>No instalamos y nos vamos. La capacitacion, los manuales y el soporte post-entrega estan disenados para que el equipo de Nevada SA opere el sistema de forma autonoma al final de cada fase.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 08 SIGUIENTE PASO -->
+<section class="section">
+  <span class="section-label">08 &mdash; Siguiente paso</span>
+  <h2>Listo para arrancar</h2>
+  <p>El proceso para iniciar es simple. Nevada SA puede arrancar solo con la Fase 1 o comprometerse a las dos fases desde el inicio.</p>
 
   <div class="pain-list">
     <div class="pain-item">
       <div class="pain-icon medium">1</div>
       <div class="pain-content">
-        <h4>Le enviamos un cuestionario de diagnostico</h4>
-        <p>Un formulario detallado que su equipo completa internamente, a su ritmo. Cubre inventario, ventas, contabilidad, POS, bodega y portal B2B. No requiere reunion &mdash; solo respuestas concretas sobre como opera hoy.</p>
+        <h4>Confirmacion de fases</h4>
+        <p>Nevada SA confirma las fases a contratar. Puede arrancar solo con Fase 1 o comprometerse a las dos desde el inicio.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">2</div>
       <div class="pain-content">
-        <h4>Bitatech analiza y cotiza</h4>
-        <p>Con sus respuestas, definimos el alcance exacto de personalizaciones, desarrollo y configuracion. Le entregamos una propuesta formal con precio cerrado, cronograma y entregables detallados.</p>
+        <h4>Firma de contrato y pago inicial</h4>
+        <p>Firma del contrato de Fase 1 y pago del 50% inicial (USD 5,000). Da inicio formal al proyecto.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">3</div>
       <div class="pain-content">
-        <h4>Demo personalizada de Odoo</h4>
-        <p>Una vez que tenga la propuesta en mano, coordinamos una sesion donde le mostramos Odoo funcionando con los modulos relevantes para Sistecomp: WMS, POS offline, portal B2B y flujos de venta detal/mayor.</p>
+        <h4>Sesion de arranque</h4>
+        <p>Primera sesion con el equipo de Nevada SA para mapear flujos criticos, confirmar alcance exacto y definir cronograma.</p>
       </div>
     </div>
   </div>
 
+  <div class="info-box blue" style="margin-top: 24px;">
+    <h4>Demostracion en vivo del sistema</h4>
+    <p>Antes de tomar una decision, con gusto coordinamos una <strong>demostracion en vivo del sistema</strong> ejecutando las mismas funciones que Nevada SA necesita en su operacion real: ingreso de mercancia a bodega, movimientos entre tiendas, venta al detal en caja POS, venta al por mayor, emision de factura, colocacion de un pedido B2B por un cliente mayorista y cierre contable del ciclo. El objetivo es que vean el sistema haciendo lo que ustedes hacen hoy, no una demo generica. La sesion puede ser virtual o presencial en sus oficinas, sin compromiso ni costo.</p>
+  </div>
+
   <div class="info-box accent">
-    <h4>Sin compromiso</h4>
-    <p>El cuestionario y la cotizacion no tienen costo ni compromiso. Puede tomar la propuesta y compararla con otras opciones. Si decide avanzar con Bitatech, el proceso inicia con la firma del contrato.</p>
+    <h4>Contacto directo</h4>
+    <p><strong>Carlos M. Larrauri &middot; Bitatech</strong><br>
+    +507 6898-5121 &nbsp;&middot;&nbsp; info@bitatech.ai &nbsp;&middot;&nbsp; www.bitatech.ai</p>
   </div>
-</div>
+</section>
 
-<!-- ════════════════════════════════════════════════════════════ -->
 <!-- CTA -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="cta-section">
-  <h2>Solicite el cuestionario de diagnostico</h2>
-  <p>Responda por WhatsApp y le enviamos el cuestionario para que su equipo lo complete a su ritmo. Con eso le entregamos una propuesta con precio exacto.</p>
-  <a class="cta-button" href="https://wa.me/50768985121?text=Hola%20Bitatech%2C%20soy%20Alfredo%20de%20Sistecomp%2C%20quiero%20el%20cuestionario%20de%20diagnostico" target="_blank">Solicitar cuestionario por WhatsApp</a>
+<section class="cta-section">
+  <h2>Sr. Nevada, quedamos atentos a sus comentarios.</h2>
+  <p>Para confirmar las fases, agendar una demostracion del sistema, coordinar una reunion virtual o presencial, o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
   <div class="cta-contact">
-    <strong>info@bitatech.ai</strong> &nbsp;|&nbsp; <a href="https://wa.me/50768985121">+507 6898-5121</a> &nbsp;|&nbsp; www.bitatech.ai
+    <a href="tel:+50768985121">+507 6898-5121</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a>
   </div>
-</div>
+</section>
 
-<!-- ════════════════════════════════════════════════════════════ -->
 <!-- FOOTER -->
-<!-- ════════════════════════════════════════════════════════════ -->
-<div class="footer">
-  <p>&copy; 2026 Bitatech &mdash; Sistemas Empresariales Inteligentes</p>
-  <p style="margin-top: 6px;">Propuesta preliminar preparada para Sistecomp. El precio final se confirma tras el cuestionario de diagnostico.</p>
-</div>
+<footer class="footer">
+  <div class="brand">BITA<span>TECH</span></div>
+  <div>Sistemas Empresariales Inteligentes</div>
+  <div class="contact-row">
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a>
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
+    <a href="tel:+50768985121">+507 6898-5121</a>
+  </div>
+  <p class="disclaimer">Propuesta comercial preparada para Nevada SA. Valida hasta el 15 de mayo de 2026. Precios no incluyen ITBMS (7%).</p>
+</footer>
 
 </body>
 </html>
