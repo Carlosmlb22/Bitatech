@@ -105,3 +105,27 @@ class ControladorPropuestas(http.Controller):
         except FileNotFoundError:
             _logger.error('Propuesta Granja Emita no encontrada: %s', file_path)
             return request.not_found()
+
+    @http.route(
+        '/propuesta/andrea-mps',
+        type='http',
+        auth='public',
+        website=False,
+        csrf=False,
+        sitemap=False,
+    )
+    def propuesta_andrea_mps(self, **kwargs):
+        module_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        file_path = os.path.join(
+            module_path, 'static', 'src', 'propuestas', 'andrea-mps.html'
+        )
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                html_content = f.read()
+            return request.make_response(
+                html_content,
+                headers=[('Content-Type', 'text/html; charset=utf-8')],
+            )
+        except FileNotFoundError:
+            _logger.error('Propuesta Andrea MPS no encontrada: %s', file_path)
+            return request.not_found()
