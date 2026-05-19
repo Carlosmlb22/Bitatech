@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Propuesta Comercial &mdash; Proyecto MPS Panama x Bitatech</title>
+<title>Propuesta Comercial &mdash; Proyecto MPS Panamá x Bitatech</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -204,6 +204,7 @@
   .info-box.blue { border-left: 3px solid var(--bt-azul); }
   .info-box.green { border-left: 3px solid var(--bt-verde); }
   .info-box.orange { border-left: 3px solid var(--bt-naranja); }
+  .info-box.red { border-left: 3px solid var(--bt-rojo); }
   .info-box h4 {
     font-size: 14px;
     font-weight: 700;
@@ -217,6 +218,7 @@
     margin: 0;
     line-height: 1.65;
   }
+  .info-box p + p { margin-top: 10px; }
 
   /* TABLES */
   .data-table {
@@ -248,6 +250,17 @@
     line-height: 1.55;
   }
   .data-table tr:last-child td { border-bottom: none; }
+  .data-table .ph {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .ph-1 { color: var(--bt-acento); }
+  .ph-2 { color: var(--bt-azul); }
+  .ph-3 { color: var(--bt-verde); }
+  .ph-4 { color: var(--bt-morado); }
 
   /* MODULE GRID */
   .module-grid {
@@ -577,6 +590,7 @@
   }
   .cost-table tr:last-child td { border-bottom: none; }
   .cost-table .highlight { color: var(--bt-acento); font-weight: 700; }
+  .cost-table .soft { color: var(--bt-gris-texto); font-weight: 600; font-style: italic; }
   .cost-table .total-row td {
     font-weight: 700;
     color: var(--bt-acento);
@@ -614,6 +628,41 @@
     margin-bottom: 8px;
   }
   .supuesto-card p {
+    font-size: 13.5px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* OPCION CARDS (convivencia contable) */
+  .opcion-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 16px 0;
+  }
+  .opcion-card.a { border-left: 3px solid var(--bt-naranja); }
+  .opcion-card.b { border-left: 3px solid var(--bt-azul); }
+  .opcion-card.c { border-left: 3px solid var(--bt-gris-texto); }
+  .opcion-card .opcion-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .opcion-card.a .opcion-tag { color: var(--bt-naranja); }
+  .opcion-card.b .opcion-tag { color: var(--bt-azul); }
+  .opcion-card.c .opcion-tag { color: var(--bt-gris-texto); }
+  .opcion-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+  .opcion-card p {
     font-size: 13.5px;
     color: var(--bt-gris-texto);
     margin: 0;
@@ -732,6 +781,59 @@
     line-height: 1.55;
   }
 
+  /* SOPORTE */
+  .soporte-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .soporte-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 14px;
+    padding: 28px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .soporte-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .soporte-card.fijo::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .soporte-card.proyecto::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .soporte-card .soporte-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .soporte-card.fijo .soporte-tag { color: var(--bt-acento); }
+  .soporte-card.proyecto .soporte-tag { color: var(--bt-azul); }
+  .soporte-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 10px;
+  }
+  .soporte-card p {
+    font-size: 13.5px;
+    color: var(--bt-gris-texto);
+    margin: 0 0 14px 0;
+    line-height: 1.65;
+  }
+  .soporte-card .pago {
+    font-size: 12.5px;
+    color: var(--bt-blanco-suave);
+    border-top: 1px solid var(--bt-gris-borde);
+    padding-top: 12px;
+  }
+  .soporte-card .pago strong { color: var(--bt-acento); }
+  .soporte-card.proyecto .pago strong { color: var(--bt-azul); }
+
   /* RESPONSABILIDAD */
   .resp-grid {
     display: grid;
@@ -847,6 +949,7 @@
     .phase-card { page-break-inside: avoid; }
     .module-card { page-break-inside: avoid; }
     .info-box { page-break-inside: avoid; }
+    .opcion-card { page-break-inside: avoid; }
     .summary-box { page-break-inside: avoid; }
     .cta-section { display: none; }
     body { font-size: 13px; }
@@ -860,6 +963,7 @@
     .module-list { grid-template-columns: 1fr; }
     .reasons-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .soporte-grid { grid-template-columns: 1fr; }
     .resp-grid { grid-template-columns: 1fr; }
     .summary-grid { grid-template-columns: 1fr; }
     .phase-card { padding: 28px 22px; }
@@ -871,14 +975,14 @@
 
 <!-- COVER -->
 <section class="cover">
-  <span class="cover-badge">Propuesta Comercial &middot; Fase 1</span>
-  <h1>Implementacion ERP <span>Odoo</span> para operacion MPS en Panama</h1>
-  <p class="subtitle">CRM, servicio tecnico en campo, control de 2,000 equipos y gestion de compras &mdash; en un solo sistema integrado.</p>
+  <span class="cover-badge">Propuesta Comercial &middot; Implementación por Fases</span>
+  <h1>Implementación ERP <span>Odoo</span> para la operación MPS en Panamá</h1>
+  <p class="subtitle">Once módulos integrados en un plan de cuatro fases, del CRM y el servicio técnico en campo hasta la facturación MPS, la contabilidad y el cumplimiento fiscal.</p>
   <div class="cover-meta">
-    <div><strong>Preparado para:</strong> Proyecto MPS Panama</div>
-    <div><strong>Via:</strong> Sra. Andrea &mdash; Consultoria</div>
-    <div><strong>Fecha:</strong> 23 de abril de 2026</div>
-    <div><strong>Valida hasta:</strong> 23 de mayo de 2026</div>
+    <div><strong>Preparado para:</strong> Proyecto MPS Panamá</div>
+    <div><strong>Vía:</strong> Sra. Andrea &mdash; Consultoría</div>
+    <div><strong>Fecha:</strong> 18 de mayo de 2026</div>
+    <div><strong>Válida hasta:</strong> 18 de junio de 2026</div>
   </div>
   <div class="cover-logos">
     <div class="logo-text">BITA<span>TECH</span></div>
@@ -889,72 +993,72 @@
 
 <hr class="section-divider">
 
-<!-- 01 SU OPERACION HOY -->
+<!-- 01 ENTENDIMIENTO -->
 <section class="section">
   <span class="section-label">01 &mdash; Entendimiento del proyecto</span>
-  <h2>Lo que entendemos de la operacion MPS</h2>
-  <p>Sra. Andrea, esta es la foto de la operacion que sirve como base para el resto de la propuesta. Sobre esta foto se construyen el alcance de Fase 1, los supuestos y la inversion. Si algun punto no refleja lo que el cliente espera, se ajusta sin mayor demora antes de enviarle el borrador de contrato.</p>
+  <h2>Lo que entendemos de la operación MPS</h2>
+  <p>Sra. Andrea, esta propuesta consolida el proyecto completo. Recoge el RFP, la matriz de Cumplimiento Funcional y los volúmenes operativos que el cliente nos compartió, y los ordena en un plan de cuatro fases. Sobre esta foto se construyen el alcance, los supuestos y la inversión. Si algún punto no refleja lo que el cliente espera, se ajusta antes de avanzar al borrador de contrato.</p>
 
   <h3>Perfil del cliente</h3>
-  <p>Empresa panamena especializada en <strong>Managed Print Services</strong>, con mas de una decada de trayectoria bajo el modelo de arrendamiento, mantenimiento y facturacion por contadores. Opera con Peachtree (Sage) para contabilidad y con Excel / correos para el resto de la gestion, con visible necesidad de centralizar procesos y habilitar control operativo en tiempo real.</p>
+  <p>Empresa panameña especializada en <strong>Managed Print Services</strong>, con más de una década de trayectoria. Su operación combina arrendamiento de equipos, mantenimiento, facturación por contadores y venta de equipos y consumibles. Hoy trabaja con <strong>Sage 50 (antes Peachtree)</strong> para la contabilidad y con Excel y correos para el resto de la gestión, con una clara necesidad de centralizar procesos y habilitar control operativo en tiempo real.</p>
 
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="number">12</div>
-      <div class="label">Clientes activos</div>
+      <div class="number">200&ndash;250</div>
+      <div class="label">Clientes recurrentes / mes</div>
     </div>
     <div class="stat-card">
       <div class="number">2,000</div>
-      <div class="label">Equipos instalados</div>
+      <div class="label">Equipos en arrendamiento</div>
     </div>
     <div class="stat-card">
-      <div class="number">25&ndash;50</div>
-      <div class="label">Facturas mensuales</div>
+      <div class="number">200&ndash;250</div>
+      <div class="label">Facturas emitidas / mes</div>
     </div>
     <div class="stat-card">
-      <div class="number">17</div>
-      <div class="label">Accesos al sistema</div>
+      <div class="number">~350</div>
+      <div class="label">Tickets de servicio / mes</div>
     </div>
   </div>
 
-  <h3>Usuarios de la operacion</h3>
-  <p>El sistema servira a <strong>5 usuarios internos</strong> (3 con acceso completo y 2 con acceso de consulta), mas <strong>12 tecnicos de cuadrilla</strong> con acceso movil de campo y dos accesos externos (auditor y consultoria). Los 14 perfiles no-internos se configuran como <strong>Usuarios Portal de Odoo sin costo de licenciamiento adicional</strong>, un ahorro significativo en la inversion total del proyecto.</p>
+  <h3>Usuarios de la operación</h3>
+  <p>El sistema servirá a <strong>5 usuarios internos</strong> (3 con acceso completo y 2 de consulta), más <strong>12 técnicos de cuadrilla</strong> que acceden al portal web desde el campo y dos accesos externos (auditor y consultoría). Los 14 perfiles no-internos se configuran como <strong>Usuarios Portal de Odoo, sin costo de licenciamiento</strong>, un ahorro recurrente significativo en la inversión total del proyecto.</p>
 
-  <h3>Desafios declarados que la Fase 1 resuelve</h3>
+  <h3>Desafíos declarados que el proyecto resuelve</h3>
   <div class="pain-list">
     <div class="pain-item">
       <div class="pain-icon critical">1</div>
       <div class="pain-content">
-        <h4>CRM con captura automatica de leads desde la web</h4>
-        <p>Cerrar el ciclo comercial desde el formulario de la web del cliente hasta la oportunidad asignada al vendedor, sin reescrituras ni dependencia del correo.</p>
+        <h4>Operación dispersa en Excel y correos</h4>
+        <p>La gestión comercial, el servicio técnico, el inventario y la prefacturación viven en hojas de cálculo y correos sin un sistema que los conecte ni trazabilidad real.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon critical">2</div>
       <div class="pain-content">
-        <h4>Servicio tecnico de campo con cuadrillas moviles</h4>
-        <p>Cola unica de incidencias, asignacion dinamica, SLA medido y reporte digital de la visita &mdash; todo accesible desde el movil del tecnico, con evidencia, observaciones y lectura de contadores.</p>
+        <h4>Facturación MPS manual por contadores</h4>
+        <p>Entre 200 y 250 facturas mensuales calculadas a mano a partir de contadores, incluidos y excedentes, un proceso lento y expuesto a errores.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon critical">3</div>
       <div class="pain-content">
-        <h4>Control multi-bodega de 2,000 equipos con trazabilidad por serial</h4>
-        <p>Estructura de bodegas (principal, tecnica, en cliente, en transito, en tecnico), historial por serial de cada equipo y alertas preventivas de consumibles criticos.</p>
+        <h4>Servicio técnico de campo sin sistema</h4>
+        <p>Cerca de 350 tickets mensuales entre fallas y entrega de suministros, recibidos por múltiples canales, sin cola única, sin SLA medido ni reporte digital de la visita.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon high">4</div>
       <div class="pain-content">
-        <h4>Equipos de reemplazo (backup) durante reparaciones</h4>
-        <p>Trazar el equipo temporal que se instala mientras el equipo contratado esta en taller, sin romper la relacion contrato&ndash;cliente&ndash;equipo del activo original.</p>
+        <h4>Control de 2,000 equipos sin trazabilidad</h4>
+        <p>Equipos instalados, en tránsito, en cliente y en taller sin un control multi-bodega por número de serie ni historial de partes y consumibles por impresora.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">5</div>
       <div class="pain-content">
-        <h4>Visibilidad operativa en tiempo real</h4>
-        <p>Tableros por area (ventas, servicio tecnico, inventario) y reportes exportables que soporten la prefacturacion y el cierre contable manual en PeachTree.</p>
+        <h4>Contabilidad separada del resto de la operación</h4>
+        <p>La contabilidad vive en Sage 50, aislada de la operación. Conectarla o integrarla a Odoo es una decisión que esta propuesta aborda con transparencia (sección 05).</p>
       </div>
     </div>
   </div>
@@ -962,110 +1066,198 @@
 
 <hr class="section-divider">
 
-<!-- 02 MODULOS -->
+<!-- 02 ALCANCE INTEGRAL -->
 <section class="section">
-  <span class="section-label">02 &mdash; Alcance de Fase 1</span>
-  <h2>Cuatro modulos integrados que resuelven los desafios de entrada</h2>
-  <p>La Fase 1 se enfoca en los procesos priorizados por el cliente: captacion comercial, servicio tecnico en campo, control de inventario y gestion de compras. Estos cuatro modulos son la base sobre la que se montan las fases posteriores (facturacion MPS, activos fijos y facturacion electronica). Al estar dentro de un mismo Odoo, se comunican en tiempo real: una venta cerrada en el CRM crea el cliente, una incidencia abre un ticket que consume partes del inventario, una orden de compra repone el stock, y cada movimiento queda trazado por serial y por cliente.</p>
+  <span class="section-label">02 &mdash; Alcance integral</span>
+  <h2>Once módulos integrados, organizados en cuatro fases</h2>
+  <p>El proyecto cubre los once módulos funcionales definidos en el RFP y en la matriz de Cumplimiento Funcional, más el componente de cumplimiento fiscal y gestión documental. Todos operan dentro de un mismo Odoo y se comunican en tiempo real: una venta cerrada en el CRM crea el cliente, un ticket consume partes del inventario, una orden de compra repone el stock, los contadores generan la factura MPS y cada movimiento queda reflejado en la contabilidad.</p>
+
+  <div class="info-box accent">
+    <h4>Respuesta a la matriz de Cumplimiento Funcional</h4>
+    <p>Analizamos los 114 requisitos funcionales del documento que el cliente preparó. <strong>Odoo cubre la totalidad de ellos:</strong> 53 con funcionalidad estándar, 46 con configuración y 15 con desarrollo a la medida. El detalle requisito por requisito, con la fase asignada a cada uno, se entrega en el archivo de la matriz completado.</p>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Módulo</th>
+        <th>Qué resuelve</th>
+        <th>Fase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Gestión de Clientes</strong></td>
+        <td>Registro único con datos fiscales validados, condiciones de crédito y apoderados.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>CRM Comercial</strong></td>
+        <td>Captación de prospectos desde la web, embudo comercial y cotizaciones.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mesa de Ayuda</strong></td>
+        <td>Recepción multicanal de tickets, SLA medido y asignación de técnicos.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Órdenes de Trabajo</strong></td>
+        <td>Servicio técnico en campo desde el portal web, con registro de visitas, evidencias y consumo de materiales.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Inventario Multi-bodega</strong></td>
+        <td>Control de 2,000 equipos por número de serie, partes y consumibles por impresora.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Compras</strong></td>
+        <td>Proveedores, órdenes de compra, recepciones y flujo de aprobación.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Facturación MPS</strong></td>
+        <td>Motor de contadores con incluidos y excedentes B&amp;N / Color y prefacturación masiva.</td>
+        <td><span class="ph ph-2">Fase 2</span></td>
+      </tr>
+      <tr>
+        <td><strong>Contratos y SLA</strong></td>
+        <td>Contrato marco, anexos vinculados, renovaciones automáticas y medición de SLA.</td>
+        <td><span class="ph ph-2">Fase 2</span></td>
+      </tr>
+      <tr>
+        <td><strong>Cuentas por Cobrar</strong></td>
+        <td>Estados de cuenta, antigüedad de saldos, cobranza y bloqueo por mora.</td>
+        <td><span class="ph ph-2">Fase 2</span></td>
+      </tr>
+      <tr>
+        <td><strong>Contabilidad</strong></td>
+        <td>Asientos automáticos, balances, conciliaciones y centros de costo.</td>
+        <td><span class="ph" style="color: var(--bt-gris-texto);">Opcional</span></td>
+      </tr>
+      <tr>
+        <td><strong>Activos Fijos</strong></td>
+        <td>Depreciación automática, ciclo de vida del activo y bajas con aprobación.</td>
+        <td><span class="ph ph-3">Fase 3</span></td>
+      </tr>
+      <tr>
+        <td><strong>Facturación Electrónica y Gestión Documental</strong></td>
+        <td>Emisión fiscal con la DGI de Panamá, firmas digitales y repositorio documental.</td>
+        <td><span class="ph ph-4">Fase 4</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12.5px; font-style: italic;">El orden de las fases minimiza el retrabajo: cada fase aprovecha lo configurado en las anteriores y entrega valor utilizable por sí misma.</p>
+</section>
+
+<hr class="section-divider">
+
+<!-- 03 FASE 1 -->
+<section class="section">
+  <span class="section-label">03 &mdash; Fase 1</span>
+  <h2>Fase 1: el núcleo comercial y operativo</h2>
+  <p>La Fase 1 pone en marcha los seis módulos de entrada del negocio: captación, atención, servicio en campo, control de equipos y abastecimiento. Es la base sobre la que se montan las fases posteriores y la primera del proyecto en ejecutarse.</p>
 
   <div class="module-grid">
 
     <div class="module-card color-gold">
       <span class="phase-badge fase-1">Fase 1</span>
-      <h3>CRM &mdash; Ventas</h3>
-      <p class="module-tagline">Captacion desde la web hasta el cierre</p>
+      <h3>Gestión de Clientes</h3>
+      <p class="module-tagline">Una sola base de clientes confiable</p>
       <ul>
-        <li>Captura automatica de leads desde el formulario web</li>
-        <li>Pipeline comercial configurado al ciclo del cliente</li>
-        <li>Equipos de ventas con asignacion automatica</li>
-        <li>Plantillas de cotizacion y seguimiento por correo</li>
-        <li>Reportes de embudo, conversion y desempeno</li>
+        <li>Registro único con validación de datos fiscales</li>
+        <li>Condiciones de crédito y términos de pago</li>
+        <li>Apoderados y contactos asociados</li>
+        <li>Detección y fusión de duplicados</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-gold">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>CRM &mdash; Comercial</h3>
+      <p class="module-tagline">De la captación al cierre</p>
+      <ul>
+        <li>Captura automática de prospectos desde la web</li>
+        <li>Embudo comercial configurado al ciclo del cliente</li>
+        <li>Cotizaciones y seguimiento por correo</li>
+        <li>Reportes de conversión y desempeño</li>
       </ul>
     </div>
 
     <div class="module-card color-blue">
       <span class="phase-badge fase-1">Fase 1</span>
-      <h3>Helpdesk &mdash; Cuadrillas en campo</h3>
-      <p class="module-tagline">Servicio tecnico con acceso movil</p>
+      <h3>Mesa de Ayuda</h3>
+      <p class="module-tagline">Una sola cola para ~350 tickets / mes</p>
       <ul>
-        <li>Cola de tickets con tipos, prioridades y SLA base</li>
-        <li>Asignacion dinamica por tecnico, zona y urgencia</li>
-        <li>Acceso movil para los 12 tecnicos de cuadrilla</li>
-        <li>Reporte de visita digital con evidencia y lecturas</li>
-        <li>Reportes por estado, tecnico, cliente y tiempo</li>
+        <li>Recepción multicanal: correo, WhatsApp, teléfono, portal</li>
+        <li>Colas diferenciadas por falla y por suministros</li>
+        <li>Asignación por prioridad, zona y SLA</li>
+        <li>SLA medido automáticamente</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Órdenes de Trabajo</h3>
+      <p class="module-tagline">Servicio técnico en campo desde el portal web</p>
+      <ul>
+        <li>Acceso de los 12 técnicos de cuadrilla por portal web</li>
+        <li>Registro de visita con evidencias y lecturas</li>
+        <li>Consumo de materiales y suministros</li>
+        <li>Firma digital del cliente e historial técnico</li>
       </ul>
     </div>
 
     <div class="module-card color-green">
       <span class="phase-badge fase-1">Fase 1</span>
-      <h3>Inventario multi-bodega</h3>
+      <h3>Inventario Multi-bodega</h3>
       <p class="module-tagline">2,000 equipos con trazabilidad total</p>
       <ul>
-        <li>Multi-bodega (principal, tecnica, cliente, transito, tecnico)</li>
+        <li>Bodegas: principal, técnica, cliente, tránsito, técnico</li>
         <li>Carga inicial de los 2,000 equipos por plantilla</li>
-        <li>Trazabilidad por numero de serie con historial</li>
-        <li>Flujo de instalacion, retiro y devolucion</li>
-        <li>Alertas de stock minimo para consumibles criticos</li>
+        <li>Trazabilidad por número de serie con historial</li>
+        <li>Partes y consumibles asociados a cada impresora</li>
       </ul>
     </div>
 
     <div class="module-card color-orange">
       <span class="phase-badge fase-1">Fase 1</span>
-      <h3>Compras &mdash; Gestion de proveedores</h3>
+      <h3>Compras</h3>
       <p class="module-tagline">Ciclo completo de abastecimiento</p>
       <ul>
         <li>Maestro de proveedores con condiciones y contactos</li>
-        <li>Solicitudes de cotizacion y ordenes de compra</li>
-        <li>Recepcion de mercancia integrada al inventario</li>
-        <li>Control de precios y tiempos de entrega</li>
-        <li>Flujo de aprobacion configurable por monto</li>
-      </ul>
-    </div>
-
-    <div class="module-card color-purple">
-      <span class="phase-badge fase-1">Fase 1</span>
-      <h3>Reportes y tableros</h3>
-      <p class="module-tagline">Visibilidad operativa en tiempo real</p>
-      <ul>
-        <li>Tableros nativos de Odoo por area</li>
-        <li>Reportes exportables para la prefacturacion</li>
-        <li>Historial de contadores por equipo (carga manual)</li>
-        <li>Base lista para BI avanzado en fases posteriores</li>
+        <li>Solicitudes y órdenes de compra</li>
+        <li>Recepciones integradas al inventario</li>
+        <li>Flujo de aprobación configurable por monto</li>
       </ul>
     </div>
 
   </div>
-</section>
 
-<hr class="section-divider">
+  <p class="muted" style="font-size: 13.5px;">La Fase 1 incluye además los tableros y reportes operativos nativos de Odoo por área, parametrizables por el propio usuario y exportables a Excel, que sirven de apoyo a la prefacturación mientras se implementa el motor MPS de la Fase 2.</p>
 
-<!-- 03 FASE 1 INVERSION -->
-<section class="section">
-  <span class="section-label">03 &mdash; Implementacion</span>
-  <h2>Fase 1: arranque del sistema operativo</h2>
-  <p>Con esta fase, el cliente arranca el sistema con cuatro modulos configurados al detalle de su operacion MPS. La Fase 1 deja operando el ciclo de entrada (prospeccion &rarr; servicio &rarr; control de equipos &rarr; abastecimiento) y establece la base tecnica para avanzar con confianza hacia las fases posteriores.</p>
-
-  <!-- FASE 1 -->
+  <!-- PHASE CARD 1 -->
   <div class="phase-card phase-1">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 1 &mdash; CRM, Helpdesk, Inventario y Compras</div>
-        <div class="phase-title">Nucleo comercial y operativo</div>
-        <div class="phase-tagline">"Captar, atender, controlar y abastecer desde el primer dia"</div>
+        <div class="phase-number">Fase 1 &mdash; Clientes, CRM, Mesa de Ayuda, Órdenes de Trabajo, Inventario y Compras</div>
+        <div class="phase-title">Núcleo comercial y operativo</div>
+        <div class="phase-tagline">"Captar, atender, controlar y abastecer desde el primer día"</div>
       </div>
       <div class="phase-price">
         <div class="amount">USD 9,500</div>
-        <span class="period">Pago unico de Fase 1</span>
+        <span class="period">Pago único de Fase 1</span>
         <div class="payment-line">50% al firmar (USD 4,750) &middot; 50% a la entrega (USD 4,750)</div>
-        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Configuramos CRM con integracion al formulario web del cliente, Helpdesk con flujo de cuadrillas moviles para los 12 tecnicos, Inventario multi-bodega con la carga inicial de los 2,000 equipos por plantilla, el modulo completo de Compras con proveedores y ordenes, y tableros operativos nativos en cada area. Incluye capacitacion, ambiente de pruebas y dos semanas de acompanamiento post-entrega.</p>
+    <p class="phase-desc">Configuramos los seis módulos al detalle de la operación MPS: CRM con integración al formulario web, Mesa de Ayuda con colas diferenciadas, Órdenes de Trabajo con acceso de los 12 técnicos por portal web, Inventario multi-bodega con la carga inicial de los 2,000 equipos, el módulo de Compras con su flujo de aprobación y la base de Clientes. Incluye la capacitación de los usuarios internos y de los técnicos de campo, el ambiente de pruebas y dos semanas de acompañamiento posterior a la entrega.</p>
 
     <div class="solves-tags">
       <span class="solves-tag">CRM con captura web</span>
-      <span class="solves-tag">Helpdesk cuadrillas moviles</span>
+      <span class="solves-tag">Servicio de campo por portal web</span>
       <span class="solves-tag">Inventario 2,000 equipos</span>
       <span class="solves-tag">Compras y proveedores</span>
       <span class="solves-tag">14 Usuarios Portal sin costo</span>
@@ -1073,60 +1265,69 @@
 
     <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Incluido en la Fase 1</h4>
     <ul class="module-list">
-      <li>CRM + integracion formulario web</li>
-      <li>Helpdesk con acceso movil a 12 tecnicos</li>
-      <li>Inventario multi-bodega configurado</li>
+      <li>Configuración de los seis módulos de Fase 1</li>
+      <li>Integración del formulario web al CRM</li>
+      <li>Colas de Mesa de Ayuda por falla y por suministros</li>
+      <li>Acceso al portal web para los 12 técnicos de campo</li>
       <li>Carga de los 2,000 equipos por plantilla</li>
-      <li>Compras con flujo de aprobacion</li>
-      <li>Tableros y reportes nativos</li>
-      <li>Capacitacion a los 5 usuarios internos</li>
-      <li>Ambiente de staging + 2 semanas de soporte</li>
+      <li>Compras con flujo de aprobación</li>
+      <li>Tableros y reportes nativos por área</li>
+      <li>Capacitación a los 5 usuarios internos y a los técnicos de campo</li>
+      <li>Paquete de manuales de los flujos de trabajo</li>
+      <li>Ambiente de pruebas + 2 semanas de soporte</li>
+      <li>Configuración de Usuarios Portal sin costo</li>
     </ul>
 
     <div class="phase-footer">
       <div class="phase-meta">
         <span class="meta-label">Tiempo estimado</span>
-        <span class="meta-value">6 a 8 semanas desde arranque</span>
+        <span class="meta-value">6 a 8 semanas desde el arranque</span>
       </div>
       <div class="phase-meta">
-        <span class="meta-label">Inicio propuesto</span>
-        <span class="meta-value">Segunda semana de mayo</span>
+        <span class="meta-label">Inicio</span>
+        <span class="meta-value">A coordinar tras la firma</span>
       </div>
       <div class="phase-meta">
-        <span class="meta-label">Independencia funcional</span>
-        <span class="meta-value">Sistema operativo en los cuatro modulos</span>
+        <span class="meta-label">Resultado</span>
+        <span class="meta-value">Sistema operativo en seis módulos</span>
       </div>
     </div>
   </div>
 
+  <div class="info-box green">
+    <h4>Tres requerimientos de la matriz funcional, incluidos sin costo adicional</h4>
+    <p>Al revisar la matriz de Cumplimiento Funcional identificamos tres requerimientos que no estaban contemplados en el alcance original de la Fase 1 y que, por su naturaleza, pertenecen a esta fase: la asociación de partes a cada impresora (ítem 42), la asociación de consumibles a cada impresora (ítem 43) y la trazabilidad de las compras de equipos destinados a un cliente (ítem 71).</p>
+    <p>Los tres son requerimientos nuevos que requieren desarrollo a la medida sobre Odoo. Aun así, <strong>Bitatech los absorbe como cortesía dentro de la Fase 1, sin incremento alguno sobre el precio cotizado de USD 9,500.</strong></p>
+  </div>
+
   <h3 style="margin-top: 48px;">Supuestos declarados de la Fase 1</h3>
-  <p class="muted" style="font-size: 13.5px;">Para avanzar con la propuesta sin demorar el cronograma, trabajamos con los siguientes supuestos sobre los puntos que quedaron abiertos. Cualquier ajuste se puede revisar antes de enviarle el borrador de contrato.</p>
+  <p class="muted" style="font-size: 13.5px;">Para avanzar, trabajamos con los siguientes supuestos. Cualquier ajuste se puede revisar antes de enviar el borrador de contrato.</p>
 
   <div class="supuestos-grid">
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 01</div>
-      <h4>Los 12 tecnicos de cuadrilla son Usuarios Portal (sin costo)</h4>
-      <p>Los tecnicos de campo consultan sus tickets asignados, registran la visita y suben evidencias desde la app movil de Odoo. No crean tickets desde cero ni manipulan registros de otros modulos. Si se requiere un rol ampliado, se reclasifica al usuario como interno con licencia adicional. Lo mismo aplica al auditor externo y a la consultoria, que acceden como Portal Users.</p>
+      <h4>Los técnicos y los accesos externos son Usuarios Portal (sin costo)</h4>
+      <p>Los 12 técnicos de cuadrilla, el auditor y la consultoría acceden a un portal web desde el navegador de cualquier dispositivo, computadora o teléfono, sin necesidad de instalar una aplicación. A través del portal, los técnicos consultan sus órdenes asignadas, crean y registran tickets y solicitudes, llenan formularios y cargan documentos, imágenes y datos de cada visita; el auditor y la consultoría acceden a consultas e informes. Ninguno de estos perfiles consume licencia. Si un perfil necesitara funciones de back-office, como modificar inventario o manipular registros contables, se reclasifica como usuario interno con licencia adicional.</p>
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 02</div>
-      <h4>Integracion al formulario web del cliente</h4>
-      <p>Se integra el formulario de contacto de la web actual hacia el CRM por medios estandar (formulario de Odoo embebido o conexion via API si la web lo soporta). Alternativamente, <strong>el formulario puede dirigir sus envios a una direccion de correo que Odoo procesa automaticamente y convierte en leads del CRM</strong>, sin necesidad de tocar la web actual. No se incluye rediseno de la web ni desarrollo de frontend adicional.</p>
+      <h4>Integración al formulario web del cliente</h4>
+      <p>Se integra el formulario de contacto de la web actual hacia el CRM por medios estándar (formulario de Odoo embebido o conexión por interfaz de programación si la web lo soporta). Alternativamente, el formulario puede dirigir sus envíos a una dirección de correo que Odoo procesa y convierte en prospectos. No se incluye rediseño de la web.</p>
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 03</div>
       <h4>Contadores con carga manual por plantilla</h4>
-      <p>En esta fase, los contadores mensuales de los equipos se cargan al sistema mediante plantilla Excel/CSV. El sistema guarda historial por equipo para consultas y reportes.</p>
+      <p>En la Fase 1 los contadores mensuales se cargan mediante plantilla Excel/CSV y el sistema guarda el historial por equipo. El motor automático de facturación MPS (incluidos, excedentes y generación automática de facturas) corresponde a la Fase 2.</p>
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 04</div>
-      <h4>Sin integracion a PeachTree en esta fase</h4>
-      <p>Segun lo solicitado por el cliente, los asientos contables se cargan manualmente en PeachTree. Odoo no emite asientos automaticos hacia el sistema contable, solo reportes exportables que sirven de apoyo a la prefacturacion y al cierre.</p>
+      <h4>La Fase 1 no incluye contabilidad</h4>
+      <p>La Fase 1 no implementa contabilidad ni integración con el sistema contable actual. La operación comercial y de servicio funciona en Odoo y la contabilidad continúa en Sage 50. La convivencia entre ambos se explica en detalle en la sección 05.</p>
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 05</div>
-      <h4>Sin facturacion electronica DGI en Fase 1</h4>
-      <p>La emision fiscal electronica con DGI Panama no esta incluida en esta fase. La facturacion se emite por los canales actuales del cliente y se aborda formalmente en una fase posterior.</p>
+      <h4>Facturación electrónica DGI fuera de la Fase 1</h4>
+      <p>La emisión fiscal electrónica con la DGI de Panamá no está incluida en esta fase. La facturación se emite por los canales actuales del cliente y se aborda formalmente en la Fase 4.</p>
     </div>
   </div>
 </section>
@@ -1135,31 +1336,42 @@
 
 <!-- 04 FASES SIGUIENTES -->
 <section class="section">
-  <span class="section-label">04 &mdash; Evolucion prevista</span>
-  <h2>Que viene despues de la Fase 1</h2>
-  <p>La Fase 1 deja el sistema operativo en los procesos de entrada del negocio. A partir de alli, la plataforma esta lista para absorber los procesos de mayor valor &mdash; donde esta el verdadero ahorro operativo del proyecto. Las siguientes fases se cotizan una vez validada la Fase 1, con el aprendizaje real de la operacion.</p>
+  <span class="section-label">04 &mdash; Evolución del proyecto</span>
+  <h2>Fases 2, 3 y 4: el núcleo MPS, los activos y el cumplimiento fiscal</h2>
+  <p>Las fases siguientes se describen aquí en su alcance completo y con su inversión cerrada, para dar visibilidad del panorama total del proyecto. Cada fase se contrata por separado y su alcance se confirma al iniciarla. Los componentes cuyo precio depende de información aún por definir se señalan como supuestos abiertos (ver sección 06).</p>
 
   <!-- FASE 2 -->
   <div class="phase-card phase-2">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 2 &mdash; Nucleo MPS</div>
-        <div class="phase-title">Facturacion MPS automatizada + Contratos y Anexos</div>
+        <div class="phase-number">Fase 2 &mdash; Núcleo MPS y administración financiera</div>
+        <div class="phase-title">Facturación MPS, Contratos y Cuentas por Cobrar</div>
         <div class="phase-tagline">"Donde se materializa el mayor ahorro operativo"</div>
       </div>
       <div class="phase-price">
-        <div class="amount-soft">A cotizar</div>
-        <span class="period">Tras validar Fase 1</span>
+        <div class="amount">USD 14,800</div>
+        <span class="period">Pago único de Fase 2</span>
+        <div class="payment-line">50% al firmar (USD 7,400) &middot; 50% a la entrega (USD 7,400)</div>
+        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Motor automatico de facturacion por contadores con incluidos y excedentes B&amp;N / Color, renovaciones automaticas configurables, bloqueo por mora y gestion completa del ciclo contractual con anexos vinculados al contrato marco. Acceso automatico a contadores desde el software CFM por API cuando aplique. Integracion con DGI Panama opcional en esta fase.</p>
+    <p class="phase-desc">Es el corazón del proyecto. Motor automático de facturación por contadores con incluidos y excedentes B&amp;N / Color, prefacturación masiva y soporte de equipos temporales. Gestión completa del ciclo contractual: contrato marco, anexos vinculados, renovaciones automáticas y medición de SLA. Administración de Cuentas por Cobrar con estados de cuenta, antigüedad de saldos y bloqueo por mora. Incluye también la base de facturación que el motor MPS necesita para emitir y registrar las facturas. La implementación del módulo de Contabilidad de Odoo no forma parte de esta fase: es un componente opcional que se explica en la sección 05.</p>
+
+    <ul class="module-list">
+      <li>Motor de facturación MPS por contadores</li>
+      <li>Incluidos y excedentes B&amp;N / Color automáticos</li>
+      <li>Contratos marco con anexos vinculados</li>
+      <li>Renovaciones automáticas y bloqueo por mora</li>
+      <li>Cuentas por Cobrar y gestión de cobranza</li>
+      <li>Base de facturación para el motor MPS</li>
+    </ul>
 
     <div class="solves-tags">
-      <span class="solves-tag blue">Facturacion MPS por contadores</span>
-      <span class="solves-tag blue">Incluidos y excedentes B&amp;N / Color</span>
-      <span class="solves-tag blue">Contratos con anexos vinculados</span>
-      <span class="solves-tag blue">Renovaciones automaticas</span>
+      <span class="solves-tag blue">Facturación MPS automatizada</span>
+      <span class="solves-tag blue">Contratos con anexos</span>
+      <span class="solves-tag blue">Cuentas por Cobrar</span>
+      <span class="solves-tag blue">Base de facturación MPS</span>
     </div>
   </div>
 
@@ -1167,23 +1379,25 @@
   <div class="phase-card phase-3">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 3 &mdash; Gestion de activos</div>
+        <div class="phase-number">Fase 3 &mdash; Gestión de activos</div>
         <div class="phase-title">Activos Fijos</div>
         <div class="phase-tagline">"Cerrar el ciclo financiero del activo"</div>
       </div>
       <div class="phase-price">
-        <div class="amount-soft">A cotizar</div>
-        <span class="period">Tras validar Fase 1</span>
+        <div class="amount">USD 4,800</div>
+        <span class="period">Pago único de Fase 3</span>
+        <div class="payment-line">50% al firmar (USD 2,400) &middot; 50% a la entrega (USD 2,400)</div>
+        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Registro automatizado de activos fijos desde inventario, depreciacion automatica mensual (linea recta, vida util, valor residual), control de estado del activo y bitacora completa del ciclo de vida. Flujo de aprobacion digital de bajas y generacion de reporte historico para auditorias.</p>
+    <p class="phase-desc">Registro automatizado de activos fijos desde el inventario, depreciación automática mensual (línea recta, vida útil, valor residual), control de estado y bitácora del ciclo de vida. Flujo de aprobación digital de bajas con su registro contable automático.</p>
 
     <div class="solves-tags">
-      <span class="solves-tag green">Depreciacion automatica</span>
+      <span class="solves-tag green">Depreciación automática</span>
       <span class="solves-tag green">Ciclo de vida del activo</span>
-      <span class="solves-tag green">Bajas con aprobacion digital</span>
-      <span class="solves-tag green">Bitacora de auditoria</span>
+      <span class="solves-tag green">Bajas con aprobación digital</span>
+      <span class="solves-tag green">Bitácora de auditoría</span>
     </div>
   </div>
 
@@ -1191,20 +1405,22 @@
   <div class="phase-card phase-4">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 4 &mdash; Cumplimiento fiscal y gestion documental</div>
-        <div class="phase-title">Facturacion electronica DGI + Gestion Documental</div>
+        <div class="phase-number">Fase 4 &mdash; Cumplimiento fiscal y gestión documental</div>
+        <div class="phase-title">Facturación electrónica DGI + Gestión Documental</div>
         <div class="phase-tagline">"Cumplimiento normativo y trazabilidad documental"</div>
       </div>
       <div class="phase-price">
-        <div class="amount-soft">A cotizar</div>
-        <span class="period">Tras validar Fase 1</span>
+        <div class="amount">USD 8,000</div>
+        <span class="period">Pago único de Fase 4</span>
+        <div class="payment-line">50% al firmar (USD 4,000) &middot; 50% a la entrega (USD 4,000)</div>
+        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Integracion con PAC autorizado de Panama para emision fiscal electronica directa desde Odoo, conforme a normativa DGI. Gestion documental centralizada, firmas digitales sobre contratos y anexos, y repositorio unificado con control de versiones por cliente y por contrato.</p>
+    <p class="phase-desc">Integración con un proveedor autorizado de Panamá para la emisión fiscal electrónica directa desde Odoo, conforme a la normativa de la DGI. Gestión documental centralizada, firmas digitales sobre contratos y anexos, y repositorio unificado con control de versiones por cliente y por contrato.</p>
 
     <div class="solves-tags">
-      <span class="solves-tag purple">Facturacion electronica DGI</span>
+      <span class="solves-tag purple">Facturación electrónica DGI</span>
       <span class="solves-tag purple">Firmas digitales</span>
       <span class="solves-tag purple">Repositorio documental</span>
     </div>
@@ -1212,69 +1428,134 @@
 
   <div class="info-box accent">
     <h4>Cada fase se contrata por separado</h4>
-    <p>No es necesario comprometerse con las cuatro fases desde el inicio. Al finalizar la Fase 1, evaluamos resultados en conjunto y decidimos si avanzar a la Fase 2. El orden propuesto minimiza retrabajo y acelera el valor percibido, porque cada fase aprovecha lo configurado en las anteriores.</p>
+    <p>No es necesario comprometerse con las cuatro fases desde el inicio. Al finalizar cada fase se evalúan resultados en conjunto y se decide si avanzar a la siguiente. El orden propuesto minimiza el retrabajo, porque cada fase aprovecha lo configurado en las anteriores.</p>
   </div>
 </section>
 
 <hr class="section-divider">
 
-<!-- 05 INVERSION -->
+<!-- 05 CONTABILIDAD Y SAGE 50 -->
 <section class="section">
-  <span class="section-label">05 &mdash; Inversion</span>
-  <h2>Resumen de inversion &mdash; Fase 1</h2>
+  <span class="section-label">05 &mdash; Contabilidad y convivencia con Sage 50</span>
+  <h2>Cómo conviven Odoo y la contabilidad actual</h2>
+  <p>El cliente realiza hoy su contabilidad en <strong>Sage 50 Premium Accounting 2016</strong> (antes Peachtree) y, por el momento, desea mantenerlo. A continuación exponemos, con total transparencia, la situación de un posible conector y los caminos para que Odoo y la contabilidad convivan.</p>
 
-  <h3>Implementacion Bitatech</h3>
+  <div class="info-box blue">
+    <h4>Sobre un conector entre Odoo y Sage 50</h4>
+    <p>En el mercado existen conectores ya desarrollados que comunican Odoo con Sage, y funcionan con las versiones <strong>en la nube</strong> de Sage (Sage Business Cloud Accounting / Sage Accounting), que cuentan con una interfaz de programación pública.</p>
+    <p>La versión que utiliza el cliente, Sage 50 Premium Accounting 2016, es una versión <strong>antigua y de escritorio</strong>: guarda los datos en la propia computadora donde está instalada, sin una interfaz de programación pública. Por esa razón, una conexión con Odoo requeriría software intermedio que reúna los datos desde esa instalación local para luego enlazarlos con Odoo. Es un escenario que exige un análisis técnico más profundo antes de poder cotizarse.</p>
+    <p><strong>Hemos realizado una consulta formal al proveedor de uno de estos conectores</strong> para confirmar si su solución puede aplicarse a la versión exacta que utiliza el cliente. Estamos a la espera de esa respuesta y la trasladaremos apenas la recibamos. Si la integración resulta viable, se cotizará como un componente adicional de la propuesta.</p>
+  </div>
+
+  <h3>Opciones de convivencia</h3>
+
+  <div class="opcion-card b">
+    <span class="opcion-tag">Opción A</span>
+    <h4>Transferencia de datos mediante reportes</h4>
+    <p>El resumen contable se traslada periódicamente entre los sistemas a partir de reportes. Es viable, pero conlleva una condición técnica: para que las cuentas contables se reconozcan entre ambos sistemas, <strong>se requiere de todas formas implementar el módulo de Contabilidad de Odoo</strong>. El resultado es un doble trabajo operativo permanente: pasar datos entre los dos sistemas de forma constante, cuando ya se contaría con la contabilidad de Odoo implementada y lista para usarse directamente.</p>
+  </div>
+
+  <div class="opcion-card c">
+    <span class="opcion-tag">Opción B</span>
+    <h4>Sistemas independientes</h4>
+    <p>Odoo opera la gestión comercial, de servicio e inventario; Sage 50 mantiene la contabilidad, sin enlace entre ambos. El equipo contable registra en Sage la información que necesite, apoyándose en los reportes exportables de Odoo. Es la opción de menor costo inmediato y la más sencilla si el cliente desea mantener Sage 50 sin construir integraciones.</p>
+  </div>
+
+  <div class="info-box green">
+    <h4>Nuestra recomendación</h4>
+    <p>Dado que la transferencia mediante reportes exige de todas formas implementar el módulo de Contabilidad de Odoo, la vía más eficiente y de menor costo total es <strong>implementar la Contabilidad directamente en Odoo</strong> y operar toda la empresa (comercial, servicio, facturación y contabilidad) sobre una sola plataforma integrada, sin doble trabajo.</p>
+    <p>Si el cliente prefiere mantener Sage 50 por ahora, mantener los sistemas independientes es lo más razonable mientras tanto, dejando la contabilidad de Odoo lista para activarse cuando la empresa lo decida. La decisión es del cliente; nuestro compromiso es que la tome con la información completa.</p>
+  </div>
+
+  <div class="info-box">
+    <h4>El módulo de Contabilidad es un componente opcional</h4>
+    <p>La implementación del módulo de Contabilidad de Odoo como sistema contable de la empresa no está incluida en la Fase 2 ni en ninguna otra fase. Dado que el cliente desea por ahora mantener Sage 50, queda como un componente opcional, con una inversión de USD 2,700, que se incorpora cuando el cliente decida llevar la contabilidad dentro de Odoo.</p>
+    <p>Esto no limita la operación: la Fase 2 incluye la base de facturación que el motor MPS necesita para emitir y registrar las facturas, y la Fase 4 cubre la facturación electrónica ante la DGI. El módulo de Contabilidad completo solo es necesario si la empresa decide llevar sus libros contables dentro de Odoo.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 06 INVERSION -->
+<section class="section">
+  <span class="section-label">06 &mdash; Inversión</span>
+  <h2>Resumen de inversión</h2>
+  <p>Las cuatro fases se presentan con precio cerrado, para que el cliente tenga el panorama completo de la inversión del proyecto. Cada fase se contrata por separado. Los componentes cuyo precio depende de información aún por definir se señalan como supuestos abiertos.</p>
+
   <table class="cost-table">
     <thead>
       <tr>
-        <th>Concepto</th>
-        <th>Inversion</th>
+        <th>Fase</th>
+        <th>Inversión</th>
         <th>Forma de pago</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-          <strong>Fase 1: Nucleo comercial y operativo</strong><br>
-          <span class="muted" style="font-size: 12px;">CRM + Helpdesk cuadrillas + Inventario multi-bodega + Carga de 2,000 equipos + Compras + Capacitacion</span>
+          <strong>Fase 1 &mdash; Núcleo comercial y operativo</strong><br>
+          <span class="muted" style="font-size: 12px;">Clientes + CRM + Mesa de Ayuda + Órdenes de Trabajo + Inventario + Compras</span>
         </td>
         <td class="highlight">USD 9,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 4,750)<br>50% a la entrega (USD 4,750)</span></td>
+      </tr>
+      <tr>
         <td>
-          <span class="muted" style="font-size: 12px;">50% al firmar (USD 4,750)<br>50% a la entrega (USD 4,750)</span>
+          <strong>Fase 2 &mdash; Núcleo MPS y administración financiera</strong><br>
+          <span class="muted" style="font-size: 12px;">Facturación MPS + Contratos + Cuentas por Cobrar + base de facturación</span>
         </td>
+        <td class="highlight">USD 14,800</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 7,400)<br>50% a la entrega (USD 7,400)</span></td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 3 &mdash; Activos Fijos</strong>
+        </td>
+        <td class="highlight">USD 4,800</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 2,400)<br>50% a la entrega (USD 2,400)</span></td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 4 &mdash; Facturación electrónica DGI + Gestión Documental</strong>
+        </td>
+        <td class="highlight">USD 8,000</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 4,000)<br>50% a la entrega (USD 4,000)</span></td>
       </tr>
       <tr class="total-row">
-        <td>Total Fase 1</td>
-        <td>USD 9,500</td>
+        <td>Total del proyecto &mdash; cuatro fases</td>
+        <td>USD 37,100</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementacion no incluyen ITBMS (7%).</p>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementación no incluyen ITBMS (7%).</p>
 
-  <h3 style="margin-top: 40px;">Que incluye la Fase 1</h3>
-  <ul class="module-list" style="grid-template-columns: 1fr 1fr;">
-    <li>Levantamiento, configuracion y puesta en marcha de los cuatro modulos</li>
-    <li>Integracion del formulario web del cliente al CRM</li>
-    <li>Configuracion del flujo de cuadrillas moviles para Helpdesk</li>
-    <li>Carga inicial de los 2,000 equipos por plantilla estructurada</li>
-    <li>Configuracion de Usuarios Portal para tecnicos, auditor y consultoria</li>
-    <li>Modulo de Compras con flujo de aprobacion</li>
-    <li>Tableros y reportes nativos de Odoo por modulo</li>
-    <li>Ambiente de staging para validacion</li>
-    <li>Capacitacion a los 5 usuarios internos</li>
-    <li>Dos semanas de acompanamiento post-entrega</li>
-  </ul>
+  <div class="info-box">
+    <h4>Componente opcional &mdash; Módulo de Contabilidad de Odoo</h4>
+    <p>La implementación del módulo de Contabilidad de Odoo como sistema contable de la empresa no está incluida en las cuatro fases. Queda disponible como componente opcional, con una inversión de <strong>USD 2,700</strong>, que el cliente puede incorporar según su decisión sobre la convivencia con Sage 50 (ver sección 05).</p>
+  </div>
 
-  <h3 style="margin-top: 40px;">Que NO incluye esta propuesta</h3>
-  <p>Los siguientes conceptos son parte del proyecto pero se contratan directamente con Odoo S.A. o con el proveedor de infraestructura que el cliente prefiera. Bitatech asesora en la seleccion y contratacion de ambos.</p>
+  <div class="info-box accent">
+    <h4>Flexibilidad en la forma de pago</h4>
+    <p>La forma de pago indicada para cada fase (50% al firmar y 50% a la entrega) es la modalidad estándar, pero es ajustable. Si el cliente prefiere abonos más pequeños ligados a resultados tangibles, los pagos se pueden fragmentar. Por ejemplo, en la Fase 1 el abono inicial podría ser del 25% (USD 2,375) para arrancar el proyecto, un segundo 25% al recibir la base de datos en funcionamiento, y el resto contra los avances posteriores. Estamos abiertos a definir la estructura de pagos que mejor se ajuste al cliente.</p>
+  </div>
+
+  <div class="info-box blue">
+    <h4>Precios cerrados y supuestos abiertos</h4>
+    <p>Los montos de las cuatro fases son precios cerrados, sujetos a la confirmación del alcance descrito en esta propuesta para cada fase. Dos componentes quedan con un supuesto abierto, porque su precio depende de información que aún está por definir; se cotizan por separado una vez disponible esa información y no están incluidos en los montos anteriores.</p>
+    <p><strong>Supuesto abierto 1 &mdash; Conector con Sage 50.</strong> Los conectores disponibles funcionan con las versiones en la nube de Sage. Hemos realizado una consulta formal al proveedor para confirmar si su solución aplica a la versión que utiliza el cliente y estamos a la espera de su respuesta (ver sección 05). Si la integración resulta viable, se cotizará como un componente adicional. La Fase 2 incluye la base de facturación necesaria para el motor MPS; el módulo de Contabilidad de Odoo es un componente opcional aparte (ver sección 05).</p>
+    <p><strong>Supuesto abierto 2 &mdash; Lectura automática del software de contadores (CFM).</strong> La Fase 2 incluye la carga de contadores por plantilla CSV. La lectura automática desde el software CFM depende del fabricante y de si dispone de una interfaz de programación; se confirma y cotiza por separado una vez identificado dicho software.</p>
+  </div>
+
+  <h3 style="margin-top: 40px;">Qué NO incluye esta propuesta</h3>
+  <p>Los siguientes conceptos son parte del proyecto pero se contratan directamente con Odoo S.A. Bitatech asesora en su selección y contratación.</p>
 
   <table class="cost-table" style="margin-top: 16px;">
     <thead>
       <tr>
         <th>Concepto</th>
         <th>Proveedor</th>
-        <th>Observacion</th>
+        <th>Observación</th>
       </tr>
     </thead>
     <tbody>
@@ -1284,134 +1565,156 @@
           <span class="muted" style="font-size: 12px;">Para los 5 usuarios internos. Los 14 Usuarios Portal son gratuitos.</span>
         </td>
         <td class="highlight">Odoo S.A.</td>
-        <td>
-          <span class="muted" style="font-size: 12px;">Referencia: ~USD 25 / usuario / mes<br>Estimado: ~USD 1,500 / ano (5 usuarios)</span>
-        </td>
+        <td><span class="muted" style="font-size: 12px;">Referencia: ~USD 25 / usuario / mes<br>Estimado: ~USD 1,500 / año (5 usuarios)</span></td>
       </tr>
       <tr>
         <td>
-          <strong>Hosting con alta disponibilidad y backups</strong><br>
-          <span class="muted" style="font-size: 12px;">Odoo.sh recomendado por el cliente solicitar HA y staging.</span>
+          <strong>Hosting en Odoo.sh con alta disponibilidad y respaldos</strong><br>
+          <span class="muted" style="font-size: 12px;">Plataforma oficial de Odoo. Plan base con el entorno de producción y un ambiente de pruebas (staging), el mínimo funcional para esta operación.</span>
         </td>
-        <td class="highlight">Odoo.sh u otro</td>
-        <td>
-          <span class="muted" style="font-size: 12px;">Segun plan seleccionado</span>
-        </td>
+        <td class="highlight">Odoo.sh</td>
+        <td><span class="muted" style="font-size: 12px;">Referencia: ~USD 72 / mes con facturación anual<br>Almacenamiento adicional por GB, de costo menor</span></td>
       </tr>
       <tr>
-        <td>
-          <strong>Dominio y certificado SSL</strong>
-        </td>
+        <td><strong>Dominio y certificado SSL</strong></td>
         <td class="highlight">Registrador / ACME</td>
-        <td>
-          <span class="muted" style="font-size: 12px;">Bajo costo, se configura con el hosting</span>
-        </td>
+        <td><span class="muted" style="font-size: 12px;">Bajo costo, se configura con el hosting</span></td>
       </tr>
     </tbody>
   </table>
 
   <div class="info-box accent">
-    <h4>Ahorro significativo con Usuarios Portal</h4>
-    <p>Los 12 tecnicos de cuadrilla, el auditor externo y la consultoria se configuran como <strong>Usuarios Portal de Odoo, que no pagan licencia mensual</strong>. Solo los 5 usuarios internos requieren licencia Enterprise. Esto reduce el costo anual recurrente en mas de USD 4,000 frente a un escenario donde todos los accesos fueran licencias completas.</p>
+    <h4>Ahorro recurrente con Usuarios Portal</h4>
+    <p>Los 12 técnicos de cuadrilla, el auditor externo y la consultoría se configuran como <strong>Usuarios Portal de Odoo, que no pagan licencia mensual</strong>. Solo los 5 usuarios internos requieren licencia Enterprise. Esto reduce el costo anual recurrente en más de USD 4,000 frente a un escenario donde todos los accesos fueran licencias completas.</p>
   </div>
 
-  <!-- SUMMARY BOX -->
   <div class="summary-box">
     <h3>Para arrancar la Fase 1</h3>
     <div class="summary-grid">
       <div class="summary-item">
         <div class="s-label">Anticipo de Fase 1</div>
         <div class="s-value"><span>USD 4,750</span></div>
-        <div class="s-detail">50% al firmar contrato</div>
+        <div class="s-detail">50% al firmar el contrato</div>
       </div>
       <div class="summary-item">
         <div class="s-label">Fase 1 lista en</div>
         <div class="s-value"><span>6 &ndash; 8 semanas</span></div>
-        <div class="s-detail">Desde la sesion de arranque post firma</div>
+        <div class="s-detail">Desde la sesión de arranque posterior a la firma</div>
       </div>
     </div>
-    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversion inicial se arranca el proyecto y comienza la configuracion del nucleo comercial y operativo del sistema.</p>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversión inicial arranca el proyecto y comienza la configuración del núcleo comercial y operativo del sistema.</p>
     <p style="margin-top: 12px; font-size: 12px; font-style: italic; opacity: 0.7; text-align: center;">Precio no incluye ITBMS (7%).</p>
   </div>
 </section>
 
 <hr class="section-divider">
 
-<!-- 06 COMO TRABAJAMOS -->
+<!-- 07 SOPORTE POSTERIOR -->
 <section class="section">
-  <span class="section-label">06 &mdash; Como trabajamos</span>
-  <h2>Proceso de implementacion de la Fase 1</h2>
-  <p>Bitatech no instala software y se va: disena los flujos alrededor de como opera el cliente, configura, capacita y acompana hasta que cada area domina su parte del sistema. La Fase 1 sigue seis pasos ordenados.</p>
+  <span class="section-label">07 &mdash; Soporte y evolución</span>
+  <h2>Cómo trabajamos el soporte posterior y los proyectos futuros</h2>
+  <p>Cada fase incluye dos semanas de acompañamiento posterior a la entrega. Este acompañamiento se brinda de forma remota (correo, WhatsApp y llamada, con acceso remoto al sistema cuando se requiera), en horario laboral, para resolver dudas de uso y realizar ajustes menores; de solicitarlo el cliente, se coordina alguna visita presencial puntual. Superado ese período, el cliente puede elegir cómo desea continuar el soporte y la evolución del sistema. Ofrecemos dos modalidades, que pueden combinarse o cambiarse en el tiempo según la necesidad real.</p>
+
+  <div class="soporte-grid">
+    <div class="soporte-card fijo">
+      <div class="soporte-tag">Modalidad 1</div>
+      <h4>Plan fijo &mdash; mejora continua</h4>
+      <p>Una cuota recurrente que cubre soporte, atención de incidencias, ajustes y la evolución continua del sistema. Es la opción indicada cuando el cliente quiere un acompañamiento permanente y mejoras periódicas sin tener que cotizar cada cambio por separado.</p>
+      <div class="pago"><strong>Forma de pago:</strong> cuota mensual fija, cobrada al inicio de cada período.</div>
+    </div>
+    <div class="soporte-card proyecto">
+      <div class="soporte-tag">Modalidad 2</div>
+      <h4>Por proyecto</h4>
+      <p>Cada nuevo requerimiento o mejora puntual se cotiza y se ejecuta como un proyecto independiente, con su propio alcance, precio y cronograma. Es la opción indicada cuando las necesidades de cambio son esporádicas y no justifican una cuota recurrente.</p>
+      <div class="pago"><strong>Forma de pago:</strong> 50% al firmar el proyecto / 50% a la entrega.</div>
+    </div>
+  </div>
+
+  <p class="muted" style="font-size: 13px;">La modalidad de soporte se define al cierre de la Fase 1, cuando el cliente ya conoce el ritmo real de uso del sistema. Las fases posteriores del proyecto (2, 3 y 4) se trabajan como proyectos formales, independientemente de la modalidad de soporte elegida.</p>
+</section>
+
+<hr class="section-divider">
+
+<!-- 08 COMO TRABAJAMOS -->
+<section class="section">
+  <span class="section-label">08 &mdash; Cómo trabajamos</span>
+  <h2>Proceso de implementación de la Fase 1</h2>
+  <p>Bitatech no instala software y se va: diseña los flujos alrededor de cómo opera el cliente, configura, capacita y acompaña hasta que cada área domina su parte del sistema. La Fase 1 sigue seis pasos ordenados.</p>
 
   <div class="process-grid">
     <div class="process-step">
       <div class="step-num">1</div>
-      <h4>Sesion de arranque</h4>
-      <p>Primera sesion para mapear flujos reales de ventas, servicio tecnico y bodega. Confirmacion de alcance y cronograma.</p>
+      <h4>Sesión de arranque</h4>
+      <p>Primera sesión para mapear los flujos reales de ventas, servicio técnico y bodega. Confirmación de alcance y cronograma.</p>
     </div>
     <div class="process-step">
       <div class="step-num">2</div>
-      <h4>Configuracion y datos maestros</h4>
-      <p>Levantamiento de estructura de bodegas, pipeline comercial, tipos de ticket, SLA y plantilla de equipos.</p>
+      <h4>Configuración y datos maestros</h4>
+      <p>Estructura de bodegas, embudo comercial, tipos de ticket, colas, SLA y plantilla de equipos.</p>
     </div>
     <div class="process-step">
       <div class="step-num">3</div>
-      <h4>Integracion y personalizacion</h4>
-      <p>Integracion del formulario web al CRM y ajustes sobre Odoo en Python cuando el alcance lo requiera.</p>
+      <h4>Integración y personalización</h4>
+      <p>Integración del formulario web al CRM y ajustes sobre Odoo en Python cuando el alcance lo requiera.</p>
     </div>
     <div class="process-step">
       <div class="step-num">4</div>
       <h4>Carga de los 2,000 equipos</h4>
-      <p>Importacion por plantilla Excel/CSV. Validacion de seriales, bodegas asignadas y vinculo con clientes existentes.</p>
+      <p>Importación por plantilla Excel/CSV. Validación de seriales, bodegas asignadas y vínculo con clientes.</p>
     </div>
     <div class="process-step">
       <div class="step-num">5</div>
-      <h4>Capacitacion y pruebas</h4>
-      <p>Sesiones por area con manuales de usuario. Validacion en el ambiente de staging con usuarios reales.</p>
+      <h4>Capacitación y pruebas</h4>
+      <p>Sesiones por área para los usuarios internos y una sesión para los técnicos en el uso del portal web, con manuales de usuario. Validación en el ambiente de pruebas.</p>
     </div>
     <div class="process-step">
       <div class="step-num">6</div>
-      <h4>Entrega y acompanamiento</h4>
-      <p>Puesta en produccion con soporte intensivo durante dos semanas para asegurar autonomia operativa.</p>
+      <h4>Entrega y acompañamiento</h4>
+      <p>Puesta en producción con soporte intensivo durante dos semanas para asegurar la autonomía operativa.</p>
     </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>En qué consiste la capacitación</h4>
+    <p>La capacitación combina sesiones prácticas sobre el sistema ya configurado con la entrega de un paquete de manuales de los flujos de trabajo, para que el equipo conserve una guía escrita de consulta permanente. Los 5 usuarios internos reciben sesiones por área, una por cada módulo que opera su rol. Los 12 técnicos de campo reciben una sesión enfocada en el uso del portal web para sus órdenes de trabajo. Las sesiones pueden realizarse de forma remota o presencial, según prefiera el cliente.</p>
   </div>
 </section>
 
 <hr class="section-divider">
 
-<!-- 07 RESPONSABILIDADES -->
+<!-- 09 RESPONSABILIDADES -->
 <section class="section">
-  <span class="section-label">07 &mdash; Carga de datos y responsabilidades</span>
-  <h2>Que entrega Bitatech y que aporta el cliente</h2>
-  <p>Para que el sistema arranque con informacion real desde el primer dia, hay responsabilidades claras de cada parte. Bitatech <strong>establece y configura la estructura del sistema</strong> y la explica mediante capacitacion. La <strong>carga de la data real</strong> (clientes, productos, listas de precios) es responsabilidad del cliente, salvo la carga de los 2,000 equipos que si esta incluida en la Fase 1.</p>
+  <span class="section-label">09 &mdash; Carga de datos y responsabilidades</span>
+  <h2>Qué entrega Bitatech y qué aporta el cliente</h2>
+  <p>Para que el sistema arranque con información real desde el primer día, hay responsabilidades claras de cada parte. Bitatech <strong>establece y configura la estructura del sistema</strong> y la explica mediante capacitación. La <strong>carga de la data real</strong> (clientes, productos, listas de precios) es responsabilidad del cliente, salvo la carga de los 2,000 equipos, que sí está incluida en la Fase 1.</p>
 
   <div class="resp-grid">
     <div class="resp-col bitatech">
       <h4>Bitatech entrega</h4>
       <ul>
-        <li>Configuracion completa de los cuatro modulos (CRM, Helpdesk, Inventario, Compras)</li>
-        <li>Integracion del formulario web al CRM (embebido, via API o via correo)</li>
-        <li>Configuracion del flujo de cuadrillas moviles con acceso Portal</li>
-        <li>Estructura de bodegas configurada (principal, tecnica, cliente, transito, tecnico)</li>
-        <li>Carga masiva de los 2,000 equipos por plantilla (incluida en la Fase 1)</li>
-        <li>Configuracion del modulo de Compras con flujo de aprobacion</li>
-        <li>Tableros y reportes nativos por area</li>
-        <li>Ambiente de staging configurado</li>
-        <li>Capacitacion por area con manuales de usuario</li>
-        <li>Acompanamiento intensivo las dos semanas posteriores a la entrega</li>
+        <li>Configuración completa de los seis módulos de la Fase 1</li>
+        <li>Integración del formulario web al CRM</li>
+        <li>Flujo de servicio de campo con acceso de los técnicos al portal web</li>
+        <li>Estructura de bodegas configurada (principal, técnica, cliente, tránsito, técnico)</li>
+        <li>Carga masiva de los 2,000 equipos por plantilla</li>
+        <li>Módulo de Compras con flujo de aprobación</li>
+        <li>Tableros y reportes nativos por área</li>
+        <li>Ambiente de pruebas configurado</li>
+        <li>Capacitación a los usuarios internos por área y a los técnicos de campo en el uso del portal web, con manuales de usuario</li>
+        <li>Acompañamiento intensivo las dos semanas posteriores a la entrega</li>
       </ul>
     </div>
     <div class="resp-col cliente">
       <h4>Cliente aporta</h4>
       <ul>
-        <li>Plantilla con los 2,000 equipos (serial, modelo, proveedor, cliente, bodega, estado) segun formato que Bitatech provee</li>
-        <li>Llenado y validacion de los 12 clientes activos y sus datos de contacto</li>
+        <li>Plantilla con los 2,000 equipos (serial, modelo, proveedor, cliente, bodega, estado) según el formato que Bitatech provee</li>
+        <li>Llenado y validación de los clientes activos y sus datos de contacto</li>
         <li>Maestro de proveedores con sus condiciones comerciales</li>
         <li>Definiciones de SLA por tipo de ticket y prioridad</li>
-        <li>Acceso al formulario web del cliente para su integracion</li>
-        <li>Acceso al personal clave para sesiones de mapeo y capacitacion</li>
-        <li>Decisiones de configuracion: politicas de precio, equipos de ventas, jerarquias de aprobacion de compras</li>
-        <li>Dispositivos moviles de los tecnicos con acceso a internet para el uso de la app</li>
+        <li>Acceso al formulario web para su integración</li>
+        <li>Acceso al personal clave para las sesiones de mapeo y capacitación</li>
+        <li>Decisiones de configuración: políticas de precio, equipos de ventas, jerarquías de aprobación de compras</li>
+        <li>Teléfonos o dispositivos de los técnicos con navegador web y acceso a internet</li>
       </ul>
     </div>
   </div>
@@ -1419,65 +1722,74 @@
 
 <hr class="section-divider">
 
-<!-- 08 QUIENES SOMOS -->
+<!-- 10 QUIENES SOMOS -->
 <section class="section">
-  <span class="section-label">08 &mdash; Quienes somos</span>
+  <span class="section-label">10 &mdash; Quiénes somos</span>
   <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
-  <p>Bitatech es una firma con sede en Panama especializada en <strong>Odoo</strong>, una de las plataformas ERP de codigo abierto mas utilizadas del mundo. No instalamos software y nos vamos &mdash; disenamos la arquitectura digital completa que la empresa necesita para operar con estructura y crecer con control.</p>
-  <p>Nuestra metodologia <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnostico de la operacion real, define flujos personalizados y entrega un sistema que el equipo domina desde el primer dia. <strong>Desarrollamos codigo dentro de Odoo</strong> para adaptar el sistema a los procesos exactos de cada cliente.</p>
+  <p>Bitatech es una firma con sede en Panamá especializada en <strong>Odoo</strong>, una de las plataformas ERP de código abierto más utilizadas del mundo. No instalamos software y nos vamos. Diseñamos la arquitectura digital completa que la empresa necesita para operar con estructura y crecer con control.</p>
+  <p>Nuestra metodología <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagnóstico de la operación real, define flujos personalizados y entrega un sistema que el equipo domina desde el primer día. <strong>Desarrollamos código dentro de Odoo</strong> para adaptar el sistema a los procesos exactos de cada cliente.</p>
 
   <div class="reasons-grid">
     <div class="reason-card">
       <div class="reason-num">01</div>
-      <h4>Especializacion en Odoo</h4>
-      <p>Somos implementadores especializados en Odoo. No trabajamos con multiples plataformas ni repartimos atencion entre sistemas. Odoo es nuestra plataforma.</p>
+      <h4>Especialización en Odoo</h4>
+      <p>Somos implementadores especializados en Odoo. No repartimos atención entre múltiples plataformas: Odoo es nuestra plataforma.</p>
     </div>
     <div class="reason-card">
       <div class="reason-num">02</div>
-      <h4>Experiencia en operacion de servicios</h4>
-      <p>Flujos de servicio tecnico con cuadrillas moviles, control de inventario por serial y CRM con integracion web. Bitatech conoce el ciclo prospecto &rarr; cliente &rarr; servicio &rarr; facturacion recurrente.</p>
+      <h4>Lectura a fondo del proyecto</h4>
+      <p>Analizamos el RFP y la matriz de Cumplimiento Funcional requisito por requisito. La propuesta responde a la operación real del cliente, no a un alcance genérico.</p>
     </div>
     <div class="reason-card">
       <div class="reason-num">03</div>
-      <h4>Desarrollamos codigo dentro de Odoo</h4>
-      <p>Modulos y personalizaciones en Python directamente sobre la plataforma. Si la operacion requiere un flujo que Odoo no trae de fabrica, podemos construirlo sin cambiar de proveedor.</p>
+      <h4>Desarrollamos código dentro de Odoo</h4>
+      <p>Módulos y personalizaciones en Python sobre la plataforma. Si la operación requiere un flujo que Odoo no trae de fábrica, como el motor de facturación MPS, lo construimos sin cambiar de proveedor.</p>
     </div>
     <div class="reason-card">
       <div class="reason-num">04</div>
-      <h4>Acompanamiento hasta la autonomia</h4>
-      <p>No instalamos y nos vamos. La capacitacion, los manuales y el soporte post-entrega estan disenados para que el equipo opere el sistema de forma autonoma al final de cada fase.</p>
+      <h4>Transparencia en las decisiones técnicas</h4>
+      <p>Exponemos las implicaciones reales de cada opción (costo, tiempo y riesgo) para que el cliente decida con la información completa, como en el análisis de convivencia con Sage 50.</p>
     </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Referencias y demostración del sistema</h4>
+    <p>La demostración del sistema se realiza sobre las bases de datos operativas de Bitatech y Reddecon, empresas de nuestro grupo, las cuales utilizan Odoo diariamente en procesos reales de ventas, compras, inventario, logística, proyectos, atención al cliente y automatizaciones internas.</p>
+    <p>Esto nos permite realizar demostraciones en vivo, con información y flujos reales de operación, mostrando no solo funcionalidades estándar de Odoo, sino también procesos, configuraciones y desarrollos implementados sobre una operación activa y en constante crecimiento.</p>
+    <p>Por políticas de confidencialidad y seguridad, no realizamos demostraciones sobre bases de datos de terceros ni compartimos accesos de otros clientes.</p>
+    <p>Actualmente, nuestra principal referencia operativa es la implementación y evolución continua realizada dentro de nuestras propias empresas, donde Odoo forma parte central de la operación diaria.</p>
+    <p>Si el cliente lo desea, también podemos coordinar reuniones presenciales en nuestras oficinas (Parque Lefevre, local Reddecon) para realizar demostraciones en vivo de distintos flujos operativos funcionando sobre una operación real.</p>
   </div>
 </section>
 
 <hr class="section-divider">
 
-<!-- 09 SIGUIENTE PASO -->
+<!-- 11 SIGUIENTE PASO -->
 <section class="section">
-  <span class="section-label">09 &mdash; Siguiente paso</span>
-  <h2>Listo para arrancar en la segunda semana de mayo</h2>
-  <p>El cronograma solicitado permite arranque en la segunda semana de mayo. Para respetarlo, el proceso de inicio es simple y directo.</p>
+  <span class="section-label">11 &mdash; Siguiente paso</span>
+  <h2>Cómo avanzamos</h2>
+  <p>El proceso para arrancar es simple y directo. La Fase 1 puede iniciar apenas se confirme el alcance y se firme el contrato.</p>
 
   <div class="pain-list">
     <div class="pain-item">
       <div class="pain-icon medium">1</div>
       <div class="pain-content">
-        <h4>Validacion de alcance y supuestos</h4>
-        <p>Confirmacion del alcance de Fase 1 descrito en esta propuesta y de los cinco supuestos declarados. Cualquier ajuste se define antes de enviarle el borrador de contrato.</p>
+        <h4>Validación de alcance y supuestos</h4>
+        <p>Confirmación del alcance de la Fase 1, de los cinco supuestos declarados y de la opción de convivencia con Sage 50. Cualquier ajuste se define antes del borrador de contrato.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">2</div>
       <div class="pain-content">
         <h4>Firma de contrato y pago inicial</h4>
-        <p>Firma del contrato de Fase 1 y pago del 50% inicial (USD 4,750). Da inicio formal al proyecto.</p>
+        <p>Firma del contrato de la Fase 1 y pago del 50% inicial (USD 4,750). Da inicio formal al proyecto.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">3</div>
       <div class="pain-content">
-        <h4>Sesion de arranque</h4>
-        <p>Primera sesion con el equipo del cliente para mapear flujos criticos, confirmar cronograma detallado y coordinar la entrega de la plantilla de equipos.</p>
+        <h4>Sesión de arranque</h4>
+        <p>Primera sesión con el equipo del cliente para mapear los flujos críticos, confirmar el cronograma detallado y coordinar la entrega de la plantilla de equipos.</p>
       </div>
     </div>
   </div>
@@ -1486,13 +1798,14 @@
     <h4>Contacto directo</h4>
     <p><strong>Carlos M. Larrauri &middot; Bitatech</strong><br>
     +507 6898-5121 &nbsp;&middot;&nbsp; info@bitatech.ai &nbsp;&middot;&nbsp; www.bitatech.ai</p>
+    <p>Si desean conversar la propuesta en persona, los recibimos con gusto en nuestra oficina o podemos visitarlos en las suyas, según les resulte más cómodo.</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <h2>Sra. Andrea, quedamos atentos a sus comentarios.</h2>
-  <p>Para confirmar el alcance, validar los supuestos, coordinar una llamada o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
+  <p>Para confirmar el alcance, validar los supuestos, definir la opción de convivencia con Sage 50 o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
   <div class="cta-contact">
     <a href="tel:+50768985121">+507 6898-5121</a> &nbsp;&middot;&nbsp;
     <a href="mailto:info@bitatech.ai">info@bitatech.ai</a> &nbsp;&middot;&nbsp;
@@ -1509,7 +1822,7 @@
     <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
     <a href="tel:+50768985121">+507 6898-5121</a>
   </div>
-  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panama a traves de la consultoria de la Sra. Andrea. Valida hasta el 23 de mayo de 2026. Precios no incluyen ITBMS (7%).</p>
+  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panamá a través de la consultoría de la Sra. Andrea. Válida hasta el 18 de junio de 2026. La inversión de las cuatro fases es cerrada y cada fase se contrata por separado; los supuestos abiertos se cotizan aparte. Precios no incluyen ITBMS (7%).</p>
 </footer>
 
 </body>
