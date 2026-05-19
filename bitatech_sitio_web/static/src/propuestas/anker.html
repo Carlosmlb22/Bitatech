@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial &mdash; Anker Log&iacute;stica x Bitatech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bt-negro: #0a0a0a;
+    --bt-negro-suave: #111111;
+    --bt-gris-oscuro: #1a1a1a;
+    --bt-gris-medio: #2a2a2a;
+    --bt-gris-claro: #3a3a3a;
+    --bt-gris-texto: #999999;
+    --bt-gris-borde: #333333;
+    --bt-blanco: #ffffff;
+    --bt-blanco-suave: #f0f0f0;
+    --bt-acento: #d4a843;
+    --bt-acento-hover: #e0b854;
+    --bt-acento-oscuro: #b8922f;
+    --bt-azul: #4a90d9;
+    --bt-naranja: #e8913a;
+    --bt-verde: #4caf50;
+    --bt-morado: #9b59b6;
+    --bt-rojo: #e74c3c;
+  }
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bt-negro);
+    color: var(--bt-blanco-suave);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(160deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 50%, var(--bt-negro) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid var(--bt-acento);
+    border-radius: 50px;
+    color: var(--bt-acento);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 780px;
+    position: relative;
+  }
+
+  .cover h1 span { color: var(--bt-acento); }
+
+  .cover .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--bt-gris-texto);
+    margin-bottom: 60px;
+    max-width: 620px;
+    position: relative;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .cover-meta strong { color: var(--bt-blanco-suave); font-weight: 600; }
+
+  .cover-logos {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    position: relative;
+  }
+
+  .cover-logos .logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--bt-blanco);
+    letter-spacing: 1px;
+  }
+
+  .cover-logos .logo-text span { color: var(--bt-acento); }
+
+  .cover-logos .sep {
+    width: 1px;
+    height: 26px;
+    background: var(--bt-gris-borde);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--bt-gris-borde);
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bt-acento);
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin: 32px 0 12px 0;
+  }
+
+  .section p {
+    margin-bottom: 16px;
+    color: var(--bt-blanco-suave);
+  }
+
+  .muted { color: var(--bt-gris-texto); }
+  .accent-text { color: var(--bt-acento); font-weight: 600; }
+
+  /* ── STAT CARDS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .stat-card .number {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-card .label {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+  }
+
+  /* ── INFO BOXES ── */
+  .info-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 20px 0;
+  }
+
+  .info-box.accent { border-left: 3px solid var(--bt-acento); }
+  .info-box.blue { border-left: 3px solid var(--bt-azul); }
+  .info-box.green { border-left: 3px solid var(--bt-verde); }
+  .info-box.orange { border-left: 3px solid var(--bt-naranja); }
+
+  .info-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+
+  .data-table td {
+    padding: 14px 18px;
+    font-size: 13.5px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td:first-child { color: var(--bt-acento); font-weight: 600; }
+  .data-table td.plain-first:first-child { color: var(--bt-blanco-suave); font-weight: 500; }
+
+  /* ── MODULE GRID (cards) ── */
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+  }
+
+  .module-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 14px;
+    padding: 26px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .module-card.color-gold::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .module-card.color-blue::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .module-card.color-green::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+  .module-card.color-purple::before { background: linear-gradient(90deg, var(--bt-morado), #b07cc6); }
+  .module-card.color-orange::before { background: linear-gradient(90deg, var(--bt-naranja), #f0a85a); }
+  .module-card.color-red::before { background: linear-gradient(90deg, #e74c3c, #f07066); }
+
+  .module-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin: 0 0 6px 0;
+    padding-right: 80px;
+  }
+
+  .module-card .phase-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .module-card .phase-badge.fase-1 {
+    color: var(--bt-acento);
+    border-color: var(--bt-acento);
+    background: rgba(212, 168, 67, 0.08);
+  }
+  .module-card .phase-badge.fase-2 {
+    color: var(--bt-azul);
+    border-color: var(--bt-azul);
+    background: rgba(74, 144, 217, 0.08);
+  }
+  .module-card .phase-badge.fase-ambas {
+    color: var(--bt-verde);
+    border-color: var(--bt-verde);
+    background: rgba(76, 175, 80, 0.08);
+  }
+
+  .module-card .module-tagline {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 14px;
+  }
+
+  .module-card ul { list-style: none; padding: 0; margin: 0; }
+
+  .module-card ul li {
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-card ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--bt-acento);
+    margin-top: 7px;
+  }
+
+  .module-card.color-blue ul li::before { background: var(--bt-azul); }
+  .module-card.color-green ul li::before { background: var(--bt-verde); }
+  .module-card.color-purple ul li::before { background: var(--bt-morado); }
+  .module-card.color-orange ul li::before { background: var(--bt-naranja); }
+  .module-card.color-red ul li::before { background: #e74c3c; }
+
+  /* ── PAIN LIST ── */
+  .pain-list { margin: 24px 0; }
+
+  .pain-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 22px;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .pain-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .pain-icon.critical { background: rgba(231, 76, 60, 0.15); color: var(--bt-rojo); }
+  .pain-icon.high { background: rgba(232, 145, 58, 0.15); color: var(--bt-naranja); }
+  .pain-icon.medium { background: rgba(212, 168, 67, 0.15); color: var(--bt-acento); }
+
+  .pain-content { flex: 1; }
+  .pain-content h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--bt-blanco);
+    margin-bottom: 4px;
+  }
+
+  .pain-content p { font-size: 13px; color: var(--bt-gris-texto); margin: 0; }
+
+  /* ── PHASE CARDS ── */
+  .phase-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .phase-card.phase-1::before { background: linear-gradient(90deg, var(--bt-acento), var(--bt-acento-hover)); }
+  .phase-card.phase-2::before { background: linear-gradient(90deg, var(--bt-azul), #6ba3e0); }
+  .phase-card.phase-3::before { background: linear-gradient(90deg, var(--bt-verde), #6bc76e); }
+
+  .phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .phase-number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .phase-1 .phase-number { color: var(--bt-acento); }
+  .phase-2 .phase-number { color: var(--bt-azul); }
+  .phase-3 .phase-number { color: var(--bt-verde); }
+
+  .phase-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    line-height: 1.25;
+  }
+
+  .phase-tagline {
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .phase-price { text-align: right; }
+
+  .phase-price .amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+    line-height: 1.1;
+  }
+
+  .phase-1 .phase-price .amount { color: var(--bt-acento); }
+  .phase-2 .phase-price .amount { color: var(--bt-azul); }
+  .phase-3 .phase-price .amount { color: var(--bt-verde); }
+
+  .phase-price .period {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .payment-line {
+    font-size: 12.5px;
+    color: var(--bt-gris-texto);
+    margin-top: 6px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  .phase-desc {
+    font-size: 14.5px;
+    color: var(--bt-gris-texto);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .module-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+
+  .module-list li {
+    padding: 6px 0;
+    font-size: 13.5px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--bt-acento);
+    margin-top: 8px;
+  }
+
+  .phase-2 .module-list li::before { background: var(--bt-azul); }
+  .phase-3 .module-list li::before { background: var(--bt-verde); }
+
+  .phase-footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bt-gris-borde);
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .phase-meta { font-size: 13px; }
+
+  .phase-meta .meta-label {
+    color: var(--bt-gris-texto);
+    font-weight: 500;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .phase-meta .meta-value {
+    color: var(--bt-blanco);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .solves-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 20px 0;
+  }
+
+  .solves-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--bt-acento);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+  }
+
+  .solves-tag.blue {
+    background: rgba(74, 144, 217, 0.1);
+    color: var(--bt-azul);
+    border-color: rgba(74, 144, 217, 0.2);
+  }
+
+  .solves-tag.green {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--bt-verde);
+    border-color: rgba(76, 175, 80, 0.2);
+  }
+
+  /* ── DECISION BOX ── */
+  .decision-box {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .decision-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--bt-naranja), #f0a85a);
+  }
+
+  .decision-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  .decision-box .decision-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bt-naranja);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .decision-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .decision-col {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+
+  .decision-col.recommended { border-color: var(--bt-verde); }
+
+  .decision-col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .decision-col h4 .badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .decision-col.recommended h4 .badge {
+    background: rgba(76, 175, 80, 0.15);
+    color: var(--bt-verde);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+  }
+
+  .decision-col ul { list-style: none; padding: 0; margin: 0; }
+
+  .decision-col ul li {
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .decision-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--bt-gris-texto);
+    margin-top: 7px;
+  }
+
+  .decision-col.recommended ul li::before { background: var(--bt-verde); }
+
+  /* ── COST TABLE ── */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .cost-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro-suave);
+  }
+
+  .cost-table td {
+    padding: 14px 18px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    color: var(--bt-blanco-suave);
+    vertical-align: top;
+  }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+  .cost-table .highlight { color: var(--bt-acento); font-weight: 700; }
+
+  .cost-table .total-row td {
+    font-weight: 700;
+    color: var(--bt-acento);
+    border-top: 2px solid var(--bt-gris-borde);
+    padding-top: 16px;
+    font-size: 15px;
+  }
+
+  /* ── SUPUESTOS ── */
+  .supuestos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .supuesto-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-left: 3px solid var(--bt-azul);
+    border-radius: 10px;
+    padding: 22px 26px;
+  }
+
+  .supuesto-card .supuesto-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-azul);
+    margin-bottom: 6px;
+  }
+
+  .supuesto-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .supuesto-card p {
+    font-size: 13.5px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── SUMMARY BOX ── */
+  .summary-box {
+    background: linear-gradient(135deg, var(--bt-gris-oscuro), var(--bt-gris-medio));
+    border: 1px solid var(--bt-acento);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .summary-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bt-acento);
+    margin-bottom: 24px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .summary-item .s-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bt-gris-texto);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .summary-item .s-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-blanco);
+  }
+
+  .summary-item .s-value span { color: var(--bt-acento); }
+
+  .summary-item .s-detail {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin-top: 6px;
+  }
+
+  /* ── WHY BITATECH ── */
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+  }
+
+  .reason-card {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+
+  .reason-card .reason-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--bt-acento);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .reason-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 8px;
+  }
+
+  .reason-card p {
+    font-size: 13px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ── PROCESS STEPS ── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .process-step {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .process-step .step-num {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.12);
+    border: 1px solid var(--bt-acento);
+    color: var(--bt-acento);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .process-step h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 6px;
+  }
+
+  .process-step p {
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ── RESPONSABILIDAD COLUMNS ── */
+  .resp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+
+  .resp-col {
+    background: var(--bt-gris-oscuro);
+    border: 1px solid var(--bt-gris-borde);
+    border-radius: 12px;
+    padding: 26px 28px;
+  }
+
+  .resp-col.bitatech { border-left: 3px solid var(--bt-acento); }
+  .resp-col.cliente { border-left: 3px solid var(--bt-azul); }
+
+  .resp-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bt-gris-texto);
+    margin-bottom: 14px;
+  }
+
+  .resp-col.bitatech h4 { color: var(--bt-acento); }
+  .resp-col.cliente h4 { color: var(--bt-azul); }
+
+  .resp-col ul { list-style: none; padding: 0; margin: 0; }
+
+  .resp-col ul li {
+    padding: 7px 0;
+    font-size: 13.5px;
+    color: var(--bt-blanco-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.55;
+  }
+
+  .resp-col ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  .resp-col.bitatech ul li::before { background: var(--bt-acento); }
+  .resp-col.cliente ul li::before { background: var(--bt-azul); }
+
+  /* ── CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(180deg, var(--bt-negro) 0%, var(--bt-gris-oscuro) 100%);
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--bt-blanco);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 15px;
+    color: var(--bt-gris-texto);
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+
+  .cta-contact {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--bt-gris-texto);
+  }
+
+  .cta-contact a {
+    color: var(--bt-acento);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--bt-gris-texto);
+    border-top: 1px solid var(--bt-gris-borde);
+    background: var(--bt-negro);
+  }
+
+  .footer .brand {
+    font-weight: 700;
+    color: var(--bt-blanco);
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .footer .brand span { color: var(--bt-acento); }
+
+  .footer .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer a { color: var(--bt-gris-texto); text-decoration: none; }
+  .footer a:hover { color: var(--bt-acento); }
+
+  .footer .disclaimer {
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--bt-gris-claro);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+  }
+
+  @media print {
+    .cover { page-break-after: always; }
+    .phase-card { page-break-inside: avoid; }
+    .module-card { page-break-inside: avoid; }
+    .info-box { page-break-inside: avoid; }
+    .summary-box { page-break-inside: avoid; }
+    .cta-section { display: none; }
+    body { font-size: 13px; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 780px) {
+    .cover h1 { font-size: 34px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .module-grid { grid-template-columns: 1fr; }
+    .module-list { grid-template-columns: 1fr; }
+    .reasons-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .resp-grid { grid-template-columns: 1fr; }
+    .summary-grid { grid-template-columns: 1fr; }
+    .decision-cols { grid-template-columns: 1fr; }
+    .phase-card { padding: 28px 22px; }
+    .section { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ──────────── COVER ──────────── -->
+<section class="cover">
+  <span class="cover-badge">Propuesta Comercial</span>
+  <h1>Implementacion ERP <span>Odoo</span> para Anker Log&iacute;stica y Carga SA</h1>
+  <p class="subtitle">Un solo sistema para facturar, controlar el inventario, manejar la n&oacute;mina y consolidar la operaci&oacute;n de Col&oacute;n y Ciudad.</p>
+  <div class="cover-meta">
+    <div><strong>Cliente:</strong> Anker Log&iacute;stica y Carga SA</div>
+    <div><strong>Fecha:</strong> 18 de mayo de 2026</div>
+    <div><strong>V&aacute;lida hasta:</strong> 17 de junio de 2026</div>
+  </div>
+  <div class="cover-logos">
+    <div class="logo-text">BITA<span>TECH</span></div>
+    <div class="sep"></div>
+    <div>Sistemas Empresariales Inteligentes</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 01 — SU OPERACION HOY ══════════ -->
+<section class="section">
+  <span class="section-label">01 &mdash; Su operacion hoy</span>
+  <h2>Lo que entendemos de Anker Log&iacute;stica</h2>
+  <p>Esta es la foto de la operacion de Anker Log&iacute;stica basada en la reunion de diagn&oacute;stico del 15 de mayo. Sobre esta foto se construye el resto de la propuesta.</p>
+
+  <h3>La empresa</h3>
+  <p>Anker Log&iacute;stica y Carga SA es una empresa panamen&ntilde;a de log&iacute;stica y carga con entre 16 y 50 colaboradores. Opera desde dos ubicaciones activas (la ciudad de Panam&aacute; y la Zona Libre de Col&oacute;n), cada una con su propio inventario y operaci&oacute;n. Anker busca mantener los resultados de cada ubicaci&oacute;n claramente separados; en la reuni&oacute;n se plante&oacute; lograrlo configurando Col&oacute;n y Ciudad como dos empresas distintas en el sistema. En la secci&oacute;n 02 explicamos por qu&eacute; esa misma separaci&oacute;n se obtiene de forma m&aacute;s simple, sin necesidad de operar dos compa&ntilde;&iacute;as.</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">16&ndash;50</div>
+      <div class="label">Colaboradores</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">2</div>
+      <div class="label">Ubicaciones activas</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">6</div>
+      <div class="label">M&oacute;dulos a implementar</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">2</div>
+      <div class="label">Fases de implementaci&oacute;n</div>
+    </div>
+  </div>
+
+  <h3>C&oacute;mo llegaron a esta propuesta</h3>
+  <p>El contacto inicial ped&iacute;a implementar la contabilidad en Odoo. La reuni&oacute;n de diagn&oacute;stico del 15 de mayo, con Rosy Aguila y Geneva Castillo (Sales Supervisor), revel&oacute; que la necesidad real es un <strong>ERP completo</strong>: contabilidad, facturaci&oacute;n fiscal integrada, gesti&oacute;n de inventario por ubicaci&oacute;n, gastos, n&oacute;mina y recursos humanos.</p>
+
+  <h3>Desaf&iacute;os declarados en la reuni&oacute;n</h3>
+  <div class="pain-list">
+    <div class="pain-item">
+      <div class="pain-icon critical">1</div>
+      <div class="pain-content">
+        <h4>Facturaci&oacute;n fiscal integrada (DGI)</h4>
+        <p>Necesitan emitir facturas electr&oacute;nicas ante la DGI (nacionales e internacionales) desde el mismo sistema que opera el negocio, sin reescribir datos en otro lugar.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon critical">2</div>
+      <div class="pain-content">
+        <h4>Separaci&oacute;n Col&oacute;n / Ciudad</h4>
+        <p>Inventario, movimientos y resultados separados por ubicaci&oacute;n. Ver los n&uacute;meros consolidados o por sitio seg&uacute;n lo necesite la direcci&oacute;n, sin armar reportes en Excel.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">3</div>
+      <div class="pain-content">
+        <h4>Contabilidad formal</h4>
+        <p>Ciclo contable completo con plan de cuentas configurado para Panam&aacute;, asientos autom&aacute;ticos generados por la operaci&oacute;n y cierre de libros mensual.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon high">4</div>
+      <div class="pain-content">
+        <h4>Control de gastos operativos</h4>
+        <p>Registro y aprobaci&oacute;n de gastos vinculados al ciclo contable, con visibilidad por &aacute;rea y por ubicaci&oacute;n.</p>
+      </div>
+    </div>
+    <div class="pain-item">
+      <div class="pain-icon medium">5</div>
+      <div class="pain-content">
+        <h4>N&oacute;mina y recursos humanos</h4>
+        <p>Gestionar el ciclo de n&oacute;mina panamen&ntilde;a (CSS, d&eacute;cimo tercer mes, prestaciones), ausencias y vacaciones desde el mismo sistema, sin herramientas separadas.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Supuestos declarados</h3>
+  <p class="muted" style="font-size: 13.5px;">La propuesta se construy&oacute; con la informaci&oacute;n de la reuni&oacute;n del 15 de mayo. Los siguientes supuestos aplican y deben ser confirmados antes del arranque.</p>
+
+  <div class="supuestos-grid">
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 01</div>
+      <h4>Cantidad de usuarios</h4>
+      <p>La reuni&oacute;n no defini&oacute; el n&uacute;mero de usuarios del sistema. La propuesta asume entre <strong>15 y 20 usuarios activos</strong>. El costo de licencia Odoo y el alcance de la capacitaci&oacute;n se ajustan al n&uacute;mero final que Anker confirme antes del arranque.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 02</div>
+      <h4>Migraci&oacute;n de datos</h4>
+      <p>La propuesta asume arranque con <strong>saldos de apertura</strong>, sin migraci&oacute;n de hist&oacute;rico transaccional. Si Anker requiere cargar historial de facturas, asientos o movimientos de inventario, se cotiza por separado tras revisar volumen y formato disponible.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 03</div>
+      <h4>Separaci&oacute;n Col&oacute;n / Ciudad</h4>
+      <p>La propuesta cotiza el <strong>esquema recomendado por Bitatech</strong>: una sola compa&ntilde;&iacute;a con dos bodegas/almacenes (Col&oacute;n / Ciudad) y contabilidad anal&iacute;tica por centro de costo. El esquema alternativo (dos compa&ntilde;&iacute;as legalmente separadas) se cotiza como add-on opcional. Ver secci&oacute;n de decisi&oacute;n t&eacute;cnica.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 04</div>
+      <h4>Facturaci&oacute;n internacional</h4>
+      <p>La propuesta asume facturaci&oacute;n de exportaci&oacute;n y servicios bajo una sola entidad fiscal panamen&ntilde;a. Si Anker opera entidades legales en otros pa&iacute;ses o requiere emitir documentos fiscales en otras jurisdicciones, debe revisarse el alcance antes de firmar.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Supuesto 05</div>
+      <h4>PAC para DGI</h4>
+      <p>La propuesta incluye la <strong>selecci&oacute;n e integraci&oacute;n con un Proveedor Autorizado de Certificaci&oacute;n (PAC) en Panam&aacute;</strong>. Si Anker ya tiene PAC definido, se integra directamente con el suyo sin costo adicional de selecci&oacute;n.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 02 — DECISION TECNICA ══════════ -->
+<section class="section">
+  <span class="section-label">02 &mdash; Decisi&oacute;n t&eacute;cnica clave</span>
+  <h2>Una compa&ntilde;&iacute;a o dos: la recomendaci&oacute;n de Bitatech</h2>
+  <p>En la reuni&oacute;n del 15 de mayo, Anker plante&oacute; manejar Col&oacute;n y Ciudad como empresas separadas en Odoo para mantener los movimientos de cada sede bien diferenciados. Es un objetivo correcto, pero <strong>no exige configurar dos empresas</strong>. Esa misma separaci&oacute;n se logra con un esquema m&aacute;s simple, y conviene entender lo que implica operar cada opci&oacute;n en el d&iacute;a a d&iacute;a antes de decidir.</p>
+
+  <div class="decision-box">
+    <span class="decision-label">Comparativa de esquemas</span>
+    <h3>Evaluaci&oacute;n: 1 compa&ntilde;&iacute;a + 2 bodegas vs. multi-compa&ntilde;&iacute;a</h3>
+    <div class="decision-cols">
+      <div class="decision-col recommended">
+        <h4>Una compa&ntilde;&iacute;a + 2 bodegas + anal&iacute;tica <span class="badge">Recomendado</span></h4>
+        <ul>
+          <li>Inventario separado por ubicaci&oacute;n: Col&oacute;n tiene su propio stock, Ciudad tiene el suyo</li>
+          <li>Reportes financieros por centro de costo (resultado Col&oacute;n vs. Ciudad)</li>
+          <li>Vista consolidada de la operaci&oacute;n completa con un solo usuario</li>
+          <li>Un solo cierre contable mensual, un solo plan de cuentas</li>
+          <li>Menor costo de licencias Odoo</li>
+          <li>Configuraci&oacute;n m&aacute;s r&aacute;pida, menor riesgo de errores operativos</li>
+        </ul>
+      </div>
+      <div class="decision-col">
+        <h4>Multi-compa&ntilde;&iacute;a (2 empresas separadas)</h4>
+        <ul>
+          <li>Adecuado solo si Col&oacute;n y Ciudad son entidades legales distintas con RUC propio</li>
+          <li>Requiere doble plan de cuentas y doble proceso de cierre mensual</li>
+          <li>Genera conciliaciones inter-compa&ntilde;&iacute;a permanentes</li>
+          <li>Los usuarios que operen en ambos sitios cuentan doble en licencias</li>
+          <li>Mayor costo de implementaci&oacute;n y mayor complejidad operativa permanente</li>
+          <li>Disponible como add-on si Anker decide separar legalmente las entidades</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Posici&oacute;n de Bitatech</h4>
+    <p>Recomendamos el esquema de <strong>una sola compa&ntilde;&iacute;a con dos bodegas y contabilidad anal&iacute;tica por centro de costo</strong>. Este dise&ntilde;o entrega la separaci&oacute;n operativa y financiera que Anker busca (resultados, inventario y movimientos diferenciados por sede) sin el peso de operar dos empresas independientes. Configurar dos compa&ntilde;&iacute;as solo es necesario si Col&oacute;n y Ciudad son entidades legales distintas, cada una con su RUC y sus declaraciones propias ante la DGI; si no lo son, dos empresas agregan trabajo de configuraci&oacute;n y de operaci&oacute;n diaria sin aportar separaci&oacute;n que las dos bodegas no entreguen ya. La propuesta cotiza el esquema recomendado. Si en el futuro Anker decide separar legalmente las entidades, el add-on de multi-compa&ntilde;&iacute;a permite hacer la transici&oacute;n sin reconstruir el sistema desde cero.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 03 — MODULOS ══════════ -->
+<section class="section">
+  <span class="section-label">03 &mdash; M&oacute;dulos para su operaci&oacute;n</span>
+  <h2>Capacidades integradas para la operaci&oacute;n log&iacute;stica</h2>
+  <p>Cada m&oacute;dulo resuelve un &aacute;rea espec&iacute;fica de Anker. Al estar todos en Odoo, se comunican entre s&iacute; en tiempo real: una factura emitida actualiza el libro mayor, un gasto aprobado genera su asiento autom&aacute;tico, y un movimiento de bodega en Col&oacute;n queda reflejado en los centros de costo, sin copiar datos ni cambiar de sistema.</p>
+
+  <div class="module-grid">
+
+    <div class="module-card color-gold">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Contabilidad</h3>
+      <p class="module-tagline">Ciclo contable completo configurado para Panam&aacute;</p>
+      <ul>
+        <li>Plan de cuentas configurado seg&uacute;n la operaci&oacute;n de Anker</li>
+        <li>Asientos autom&aacute;ticos generados por ventas, compras y gastos</li>
+        <li>Conciliaci&oacute;n bancaria integrada</li>
+        <li>Cierre mensual de libros y reportes del per&iacute;odo</li>
+        <li>Multi-moneda (USD operaciones internacionales)</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-orange">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>M&oacute;dulo de Gastos</h3>
+      <p class="module-tagline">Registro y aprobaci&oacute;n vinculado al ciclo contable</p>
+      <ul>
+        <li>Registro de gastos operativos por &aacute;rea y por ubicaci&oacute;n</li>
+        <li>Flujo de aprobaci&oacute;n configurable por monto o tipo de gasto</li>
+        <li>Asiento contable autom&aacute;tico al aprobar</li>
+        <li>Reportes de gasto por centro de costo</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Inventario: Bodegas Col&oacute;n y Ciudad</h3>
+      <p class="module-tagline">Stock separado por ubicaci&oacute;n + anal&iacute;tica por centro de costo</p>
+      <ul>
+        <li>Dos bodegas/almacenes independientes: Col&oacute;n y Ciudad</li>
+        <li>Movimientos de entrada, salida y transferencia entre bodegas</li>
+        <li>Inventario en tiempo real por ubicaci&oacute;n</li>
+        <li>Resultado financiero por centro de costo (Col&oacute;n vs. Ciudad)</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-purple">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Compras y Ventas</h3>
+      <p class="module-tagline">Flujo operativo que alimenta el ciclo contable</p>
+      <ul>
+        <li>&Oacute;rdenes de compra a proveedores con asiento contable autom&aacute;tico</li>
+        <li>Facturas de venta vinculadas al inventario y al libro mayor</li>
+        <li>Cuentas por cobrar y cuentas por pagar integradas</li>
+        <li>Seguimiento de estado de cobro y pago por cliente y proveedor</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-red">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Facturaci&oacute;n electr&oacute;nica DGI</h3>
+      <p class="module-tagline">Facturas nacionales e internacionales conforme a normativa panamena</p>
+      <ul>
+        <li>Emisi&oacute;n de facturas electr&oacute;nicas conforme a DGI Panam&aacute;</li>
+        <li>Integraci&oacute;n con PAC autorizado en Panam&aacute;</li>
+        <li>Factura nacional y factura de exportaci&oacute;n / servicios internacionales</li>
+        <li>Notas de cr&eacute;dito y d&eacute;bito automatizadas</li>
+        <li>Trazabilidad fiscal completa en el libro mayor</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-gold">
+      <span class="phase-badge fase-ambas">Fase 1 + 2</span>
+      <h3>Reportes y tableros financieros</h3>
+      <p class="module-tagline">Resultados en tiempo real, sin armar reportes a mano</p>
+      <ul>
+        <li>Tablero financiero: ingresos, gastos, margen por ubicaci&oacute;n</li>
+        <li>Estado de resultados por centro de costo (Col&oacute;n vs. Ciudad)</li>
+        <li>Indicadores en tiempo real: d&iacute;as de cobro, gasto por &aacute;rea, flujo de caja</li>
+        <li>Reportes exportables sin depender de Excel</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-green">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>N&oacute;mina panamen&ntilde;a</h3>
+      <p class="module-tagline">Ciclo completo de pago configurado para Panam&aacute;</p>
+      <ul>
+        <li>N&oacute;mina quincenal o mensual seg&uacute;n la estructura de Anker</li>
+        <li>CSS: c&aacute;lculo y registro de cuotas patronal y laboral</li>
+        <li>D&eacute;cimo tercer mes y prestaciones calculados autom&aacute;ticamente</li>
+        <li>Deducciones legales y beneficios configurados por tipo de contrato</li>
+        <li>Asiento contable autom&aacute;tico al procesar el pago</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-blue">
+      <span class="phase-badge fase-2">Fase 2</span>
+      <h3>Ausencias, Vacaciones y Expediente</h3>
+      <p class="module-tagline">Gesti&oacute;n del ciclo de personal</p>
+      <ul>
+        <li>Solicitudes de vacaciones y ausencias desde el portal del empleado</li>
+        <li>Acumulaci&oacute;n autom&aacute;tica de d&iacute;as de vacaciones</li>
+        <li>Expediente digital de cada colaborador: datos, contrato, historial</li>
+        <li>Reporter&iacute;a de RR.HH. por &aacute;rea y ubicaci&oacute;n</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 04 — FASES ══════════ -->
+<section class="section">
+  <span class="section-label">04 &mdash; Implementaci&oacute;n por fases</span>
+  <h2>Dos fases para resolver los desaf&iacute;os sin abrumar al equipo</h2>
+  <p>Implementar todos los m&oacute;dulos al mismo tiempo genera caos en cualquier operaci&oacute;n. Las dos fases permiten que cada &aacute;rea domine su bloque antes de avanzar al siguiente, y que cada fase entregue valor inmediato. <strong>Cada fase se contrata por separado</strong>: al cerrar la Fase 1, Anker decide si avanza a la Fase 2.</p>
+
+  <!-- ── FASE 1 ── -->
+  <div class="phase-card phase-1">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 1 &mdash; N&uacute;cleo financiero y operativo</div>
+        <div class="phase-title">N&uacute;cleo financiero y operativo</div>
+        <div class="phase-tagline">"Tenemos contabilidad, facturaci&oacute;n fiscal, inventario y gastos en un solo sistema"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 12,000</div>
+        <span class="period">Pago &uacute;nico de Fase 1</span>
+        <div class="payment-line">50% al firmar (USD 6,000) &middot; 50% al entregar Fase 1 (USD 6,000)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Configuramos el n&uacute;cleo financiero y operativo de Anker. La empresa sigue manejando la n&oacute;mina con sus m&eacute;todos actuales mientras Bitatech configura la Fase 1. Al cierre de la fase, Anker tiene ciclo contable completo, facturaci&oacute;n DGI integrada, inventario separado por ubicaci&oacute;n (Col&oacute;n / Ciudad) y control de gastos, todo corriendo en Odoo.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag">Contabilidad formal</span>
+      <span class="solves-tag">Facturaci&oacute;n DGI</span>
+      <span class="solves-tag">Separaci&oacute;n Col&oacute;n / Ciudad</span>
+      <span class="solves-tag">Control de gastos</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">M&oacute;dulos incluidos</h4>
+    <ul class="module-list">
+      <li>Contabilidad (plan de cuentas Panam&aacute;, asientos autom&aacute;ticos, conciliaci&oacute;n bancaria, cierre de libros)</li>
+      <li>M&oacute;dulo de Gastos</li>
+      <li>Inventario: 2 bodegas (Col&oacute;n y Ciudad) + contabilidad anal&iacute;tica por centro de costo</li>
+      <li>Compras y Ventas en el alcance necesario para alimentar el ciclo contable</li>
+      <li>Facturaci&oacute;n electr&oacute;nica DGI (nacional e internacional) con integraci&oacute;n PAC</li>
+      <li>Reportes y tableros financieros b&aacute;sicos</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">6 a 7 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Independencia funcional</span>
+        <span class="meta-value">Anker sigue procesando la n&oacute;mina con sus m&eacute;todos actuales</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Resuelve desaf&iacute;os</span>
+        <span class="meta-value">1, 2, 3, 4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FASE 2 ── -->
+  <div class="phase-card phase-2">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 2 &mdash; Recursos Humanos</div>
+        <div class="phase-title">Recursos Humanos</div>
+        <div class="phase-tagline">"N&oacute;mina, ausencias y expediente de empleados en el mismo sistema"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 7,500</div>
+        <span class="period">Pago &uacute;nico de Fase 2</span>
+        <div class="payment-line">50% al firmar (USD 3,750) &middot; 50% al entregar Fase 2 (USD 3,750)</div>
+        <div class="payment-line" style="font-style: italic; opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Con el n&uacute;cleo financiero estabilizado en la Fase 1, configuramos el m&oacute;dulo de Recursos Humanos para Panam&aacute;. Al cierre de la fase, Anker procesa la n&oacute;mina dentro de Odoo, controla ausencias y vacaciones, y lleva el expediente de cada colaborador en el mismo sistema que ya maneja la contabilidad y la facturaci&oacute;n.</p>
+
+    <div class="solves-tags">
+      <span class="solves-tag blue">N&oacute;mina panamen&ntilde;a</span>
+      <span class="solves-tag blue">Ausencias y vacaciones</span>
+      <span class="solves-tag blue">Expediente de empleados</span>
+      <span class="solves-tag blue">Reporter&iacute;a RR.HH.</span>
+    </div>
+
+    <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">M&oacute;dulos incluidos</h4>
+    <ul class="module-list">
+      <li>N&oacute;mina configurada para Panam&aacute;: CSS, d&eacute;cimo tercer mes, prestaciones</li>
+      <li>Ausencias y vacaciones con portal del empleado</li>
+      <li>Expediente de empleados</li>
+      <li>Reporter&iacute;a de RR.HH.</li>
+    </ul>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">4 a 5 semanas</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Dependencia</span>
+        <span class="meta-value">Requiere Fase 1 instalada</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Resuelve desaf&iacute;os</span>
+        <span class="meta-value">5</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Cada fase se contrata por separado</h4>
+    <p>No es necesario comprometerse con las dos fases desde el inicio. Cada fase tiene su propio contrato, alcance y precio. Al finalizar la Fase 1, Bitatech y Anker eval&uacute;an resultados y deciden juntos si avanzar a la Fase 2. Esto le da a la direcci&oacute;n control total sobre la inversi&oacute;n y permite ver resultados antes de comprometer m&aacute;s.</p>
+  </div>
+
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 05 — INVERSION ══════════ -->
+<section class="section">
+  <span class="section-label">05 &mdash; Inversi&oacute;n</span>
+  <h2>Resumen de inversi&oacute;n por fase</h2>
+
+  <h3>Implementaci&oacute;n Bitatech</h3>
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>Inversi&oacute;n</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Fase 1: N&uacute;cleo financiero y operativo</strong><br>
+          <span class="muted" style="font-size: 12px;">Contabilidad, Gastos, Inventario (Col&oacute;n/Ciudad + anal&iacute;tica), Compras y Ventas, Facturaci&oacute;n DGI con PAC, Reportes financieros</span>
+        </td>
+        <td class="highlight">USD 12,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato (USD 6,000)<br>50% al entregar Fase 1 (USD 6,000)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Fase 2: Recursos Humanos</strong><br>
+          <span class="muted" style="font-size: 12px;">N&oacute;mina panamen&ntilde;a (CSS, d&eacute;cimo, prestaciones), Ausencias y vacaciones, Expediente de empleados, Reporter&iacute;a RR.HH.</span>
+        </td>
+        <td class="highlight">USD 7,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar contrato (USD 3,750)<br>50% al entregar Fase 2 (USD 3,750)</span>
+        </td>
+      </tr>
+      <tr class="total-row">
+        <td>Total implementaci&oacute;n (2 fases)</td>
+        <td>USD 19,500</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementaci&oacute;n no incluyen ITBMS (7%). El impuesto se aplica al momento de facturar seg&uacute;n la normativa de la DGI de Panam&aacute;.</p>
+
+  <h3 style="margin-top: 40px;">M&oacute;dulos opcionales (add-ons)</h3>
+  <p>Los siguientes m&oacute;dulos <strong>no est&aacute;n incluidos</strong> en el precio de las dos fases. Se cotizan por separado seg&uacute;n el alcance que Anker decida activar, en cualquier momento durante o despu&eacute;s de la implementaci&oacute;n.</p>
+
+  <table class="cost-table" style="margin-top: 16px;">
+    <thead>
+      <tr>
+        <th>M&oacute;dulo opcional</th>
+        <th>Inversi&oacute;n</th>
+        <th>Forma de pago</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Multi-compa&ntilde;&iacute;a</strong><br>
+          <span class="muted" style="font-size: 12px;">Operar Col&oacute;n y Ciudad como empresas legalmente separadas, con RUC, plan de cuentas, cierres y declaraciones fiscales propias. Alternativa al esquema recomendado de 1 compa&ntilde;&iacute;a + 2 bodegas + anal&iacute;tica.</span>
+        </td>
+        <td class="highlight">USD 3,000 &ndash; 4,500</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>M&oacute;dulo de Flota</strong><br>
+          <span class="muted" style="font-size: 12px;">Control de veh&iacute;culos propios: combustible, mantenimiento preventivo y correctivo, asignaci&oacute;n de veh&iacute;culo por viaje, costo por ruta. Muy relevante para una operaci&oacute;n log&iacute;stica con flota propia.</span>
+        </td>
+        <td class="highlight">USD 2,500 &ndash; 4,000</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Bandeja unificada de WhatsApp empresarial</strong><br>
+          <span class="muted" style="font-size: 12px;">Panel donde el equipo recibe, distribuye y responde todos los mensajes de WhatsApp empresarial desde un solo lugar. Desde la misma conversaci&oacute;n se generan cotizaciones, se confirman servicios y se registran clientes nuevos sin salir del chat. Incluye las licencias perpetuas de los m&oacute;dulos especializados (USD 1,200) y su implementaci&oacute;n, configuraci&oacute;n e integraci&oacute;n con la operaci&oacute;n de Anker (USD 1,900).</span>
+        </td>
+        <td class="highlight">USD 3,100</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">50% al firmar &middot; 50% al entregar</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Conector WhatsApp (META)</strong><br>
+          <span class="muted" style="font-size: 12px;">Servicio de conexi&oacute;n entre META y Odoo para la bandeja unificada. Plan base cubre 5,400 mensajes de salida por mes (mensajes de entrada ilimitados). Escalable seg&uacute;n volumen real.</span>
+        </td>
+        <td class="highlight">Desde USD 54 / mes</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Pago mensual recurrente, escalable seg&uacute;n volumen</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Integraciones a medida</strong><br>
+          <span class="muted" style="font-size: 12px;">Conexi&oacute;n con sistemas externos: bancos panamen&ntilde;os, plataformas log&iacute;sticas, ERP de clientes corporativos, agentes aduanales u otros sistemas que Anker utilice o contrate.</span>
+        </td>
+        <td class="highlight">A cotizar</td>
+        <td>
+          <span class="muted" style="font-size: 12px;">Se cotiza por separado seg&uacute;n alcance espec&iacute;fico y horas estimadas</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de los m&oacute;dulos opcionales no incluyen ITBMS (7%).</p>
+
+  <h3 style="margin-top: 40px;">Plataforma Odoo &mdash; Pago directo a Odoo</h3>
+  <p>Adem&aacute;s de la implementaci&oacute;n, Anker debe contratar la licencia de Odoo Enterprise. Este costo es <strong>independiente de Bitatech</strong> y se paga directamente a Odoo. Bitatech asesora en la selecci&oacute;n del plan, contrataci&oacute;n y configuraci&oacute;n.</p>
+
+  <div class="info-box blue">
+    <h4>El costo de licencia depende del n&uacute;mero de usuarios activos</h4>
+    <p>Odoo se factura <strong>por usuario activo al mes</strong>. La cantidad definitiva de usuarios se confirma antes de iniciar el proyecto. La propuesta asume entre 15 y 20 usuarios; el n&uacute;mero final puede ajustarse para reflejar la operaci&oacute;n real sin sobredimensionar. Bitatech asesora en este proceso.</p>
+  </div>
+
+  <p class="muted" style="font-size: 13px; margin-top: 24px; margin-bottom: 12px;">Referencia: Odoo Enterprise Plan Standard, ~USD 25 por usuario por mes (precio referencial sujeto a condiciones vigentes de Odoo al momento de la contrataci&oacute;n).</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Escenario</th>
+        <th>Usuarios</th>
+        <th>Costo mensual</th>
+        <th>Costo anual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>L&iacute;mite inferior</strong><br><span class="muted" style="font-size: 12px;">15 usuarios activos confirmados</span></td>
+        <td>15</td>
+        <td>USD 375 / mes</td>
+        <td>USD 4,500 / a&ntilde;o</td>
+      </tr>
+      <tr>
+        <td><strong>L&iacute;mite superior</strong><br><span class="muted" style="font-size: 12px;">20 usuarios activos confirmados</span></td>
+        <td>20</td>
+        <td>USD 500 / mes</td>
+        <td>USD 6,000 / a&ntilde;o</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top: 40px;">Qu&eacute; edici&oacute;n de Odoo contratar &mdash; revisar antes de renovar</h3>
+  <p>Anker nos coment&oacute; que ya tiene el sistema cargado en una <strong>base de datos de prueba</strong> que est&aacute; por vencer, y que la renovar&aacute; pronto para no perder el trabajo ya realizado. Antes de renovar conviene revisar <strong>qu&eacute; edici&oacute;n de Odoo se contrata</strong>, porque esa decisi&oacute;n condiciona todo lo que el sistema podr&aacute; hacer despu&eacute;s. Odoo se ofrece en tres modalidades y no todas soportan lo que esta propuesta requiere.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Modalidad</th>
+        <th>Qu&eacute; permite</th>
+        <th>Limitaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Odoo Online (SaaS)</strong></td>
+        <td>Versi&oacute;n alojada por Odoo, lista para usar. Personalizaci&oacute;n ligera con Odoo Studio.</td>
+        <td><strong>No permite m&oacute;dulos a medida ni c&oacute;digo personalizado.</strong> No admite m&oacute;dulos de terceros que requieran desarrollo. Sin entorno de pruebas separado. Actualizaciones de versi&oacute;n autom&aacute;ticas, no controladas por el cliente.</td>
+      </tr>
+      <tr>
+        <td><strong>Odoo.sh</strong><br><span class="muted" style="font-size: 12px;">recomendada</span></td>
+        <td>Plataforma en la nube alojada por Odoo, con entorno de pruebas (staging), control de versiones, instalaci&oacute;n de m&oacute;dulos a medida y de terceros, y control sobre cu&aacute;ndo actualizar.</td>
+        <td>Costo algo mayor que Odoo Online; requiere acompa&ntilde;amiento t&eacute;cnico, que Bitatech provee.</td>
+      </tr>
+      <tr>
+        <td><strong>Servidor propio (on-premise)</strong></td>
+        <td>Control total, alojamiento bajo infraestructura de Anker.</td>
+        <td>Mayor carga de administraci&oacute;n de servidores e IT interno.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Por qu&eacute; esto importa para Anker:</strong> la facturaci&oacute;n electr&oacute;nica DGI se integra mediante un conector con el PAC, y la n&oacute;mina paname&ntilde;a (CSS, d&eacute;cimo, prestaciones) suele requerir m&oacute;dulos de localizaci&oacute;n espec&iacute;ficos. Ese tipo de componentes <strong>no se puede instalar en Odoo Online</strong>. A esto se suma que Anker planea seguir escalando (sumar departamentos y solicitar personalizaciones), lo que tambi&eacute;n queda fuera del alcance de Odoo Online.</p>
+
+  <div class="info-box accent">
+    <h4>Recomendaci&oacute;n de Bitatech: Odoo.sh</h4>
+    <p>Es la edici&oacute;n que soporta la integraci&oacute;n DGI, la n&oacute;mina paname&ntilde;a, los m&oacute;dulos a medida y el crecimiento del sistema. Adem&aacute;s ofrece un entorno de pruebas separado del de producci&oacute;n, clave para implementar y probar cambios sin interrumpir la operaci&oacute;n diaria.</p>
+  </div>
+
+  <div class="info-box orange">
+    <h4>Sobre la base de datos de prueba actual &mdash; antes de renovar</h4>
+    <p>El trabajo ya realizado no se pierde: una base de datos de Odoo se puede exportar e importar a Odoo.sh. Antes de renovar la base de prueba, recomendamos a Anker conversar con Bitatech para no renovar bajo una edici&oacute;n que despu&eacute;s haya que cambiar. Elegir la edici&oacute;n correcta de entrada evita re-trabajo y migraciones innecesarias.</p>
+  </div>
+
+  <!-- SUMMARY BOX -->
+  <div class="summary-box">
+    <h3>Para arrancar la Fase 1</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="s-label">Anticipo de Fase 1</div>
+        <div class="s-value"><span>USD 6,000</span></div>
+        <div class="s-detail">50% al firmar contrato</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Fase 1 lista en</div>
+        <div class="s-value"><span>6 &ndash; 7 semanas</span></div>
+        <div class="s-detail">Desde la sesi&oacute;n de arranque post firma</div>
+      </div>
+    </div>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversi&oacute;n inicial Anker arranca el proyecto y comienza la configuraci&oacute;n del n&uacute;cleo financiero y operativo.</p>
+    <p style="margin-top: 12px; font-size: 12px; font-style: italic; opacity: 0.7; text-align: center;">Precio no incluye ITBMS (7%).</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 06 — COMO TRABAJAMOS ══════════ -->
+<section class="section">
+  <span class="section-label">06 &mdash; C&oacute;mo trabajamos</span>
+  <h2>Proceso de implementaci&oacute;n por fase</h2>
+  <p>Cada fase sigue el mismo proceso. Bitatech no instala software y se va: dise&ntilde;a los flujos alrededor de c&oacute;mo opera Anker, configura, capacita y acompa&ntilde;a hasta que cada &aacute;rea domina su parte del sistema.</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <h4>Sesi&oacute;n de arranque</h4>
+      <p>Firma de contrato y reuni&oacute;n de arranque para alinear cronograma, alcance y responsables por &aacute;rea.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <h4>Mapeo</h4>
+      <p>Sesiones con el equipo financiero, operativo y de TI para mapear flujos reales y validar supuestos.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <h4>Configuraci&oacute;n</h4>
+      <p>Bitatech configura m&oacute;dulos, centros de costo, bodegas, flujos de aprobaci&oacute;n, integraci&oacute;n DGI y reportes.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <h4>Carga de datos</h4>
+      <p>Anker entrega plantillas con datos reales. Bitatech importa y verifica integridad antes de la entrega.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <h4>Capacitaci&oacute;n</h4>
+      <p>Sesiones por &aacute;rea con manuales de usuario. Cada equipo opera el sistema antes del arranque.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">6</div>
+      <h4>Entrega asistida</h4>
+      <p>Salida en vivo con soporte intensivo remoto durante las primeras semanas de operaci&oacute;n real.</p>
+    </div>
+  </div>
+
+  <div class="info-box green">
+    <h4>Soporte intensivo despu&eacute;s de la entrega</h4>
+    <p>Bitatech acompa&ntilde;a 30 d&iacute;as despu&eacute;s de la entrega de Fase 1 y otros 30 d&iacute;as despu&eacute;s de la entrega de Fase 2, acumulando hasta 60 d&iacute;as de soporte intensivo al cierre del proyecto. El objetivo es que cada &aacute;rea opere de forma aut&oacute;noma al final de cada fase.</p>
+    <p style="margin-top: 12px;">Concluido ese per&iacute;odo de soporte intensivo incluido, cualquier soporte o mejora posterior se cotiza por separado seg&uacute;n lo que Anker necesite en ese momento.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 07 — CARGA DE DATOS ══════════ -->
+<section class="section">
+  <span class="section-label">07 &mdash; Carga de datos y migraci&oacute;n</span>
+  <h2>Qu&eacute; incluye Bitatech y qu&eacute; es responsabilidad de Anker</h2>
+  <p>Para que el sistema arranque con informaci&oacute;n real desde el d&iacute;a uno, hay responsabilidades claras de cada parte:</p>
+
+  <div class="resp-grid">
+    <div class="resp-col bitatech">
+      <h4>Bitatech entrega</h4>
+      <ul>
+        <li>Configuraci&oacute;n completa de m&oacute;dulos por fase</li>
+        <li>Dise&ntilde;o de flujos operativos por &aacute;rea</li>
+        <li>Estructura de datos, cat&aacute;logos y centros de costo</li>
+        <li>Capacitaci&oacute;n por &aacute;rea con sesiones dedicadas</li>
+        <li>Manuales de usuario por m&oacute;dulo</li>
+        <li>Soporte intensivo despu&eacute;s de la entrega (30 d&iacute;as post Fase 1, 60 d&iacute;as acumulado al cierre de Fase 2)</li>
+        <li>Selecci&oacute;n e integraci&oacute;n con PAC para facturaci&oacute;n DGI</li>
+        <li>Verificaci&oacute;n de integridad de los datos cargados</li>
+      </ul>
+    </div>
+    <div class="resp-col cliente">
+      <h4>Anker aporta</h4>
+      <ul>
+        <li>Plan de cuentas actual o bases para configurarlo en Odoo</li>
+        <li>Cat&aacute;logo de clientes y proveedores</li>
+        <li>Cat&aacute;logo de productos y servicios</li>
+        <li>Saldos de apertura contables al inicio del sistema</li>
+        <li>Lista de empleados con datos para n&oacute;mina (desde Fase 2)</li>
+        <li>Acceso a personal clave de cada &aacute;rea para mapeo y capacitaci&oacute;n</li>
+        <li>Decisiones de configuraci&oacute;n: pol&iacute;ticas de cr&eacute;dito, plazos de cobro, jerarqu&iacute;as de aprobaci&oacute;n</li>
+        <li>Si ya tienen PAC: credenciales y datos de integraci&oacute;n</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box accent">
+    <h4>Bitatech facilita la carga</h4>
+    <p>Entregamos plantillas listas para que el equipo de Anker las llene con los datos reales. Nadie conoce la operaci&oacute;n mejor que ustedes. Bitatech configura la estructura, importa la informaci&oacute;n y verifica que todo est&eacute; correcto antes de la entrega.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 08 — QUIENES SOMOS ══════════ -->
+<section class="section">
+  <span class="section-label">08 &mdash; Qui&eacute;nes somos</span>
+  <h2>Bitatech: especialistas en sistemas empresariales con Odoo</h2>
+  <p>Bitatech es una firma con sede en Panam&aacute; especializada en <strong>Odoo</strong>, una de las plataformas ERP de c&oacute;digo abierto m&aacute;s utilizadas del mundo. No instalamos software y nos vamos. Dise&ntilde;amos la arquitectura digital completa que su empresa necesita para operar con estructura, eliminar el caos operativo y crecer con control.</p>
+  <p>Nuestra metodolog&iacute;a <strong>BSI&trade;</strong> (Business Systems Intelligence) parte del diagn&oacute;stico de su operaci&oacute;n real, define flujos personalizados, y entrega un sistema que su equipo domina desde el primer d&iacute;a.</p>
+  <p>Bitatech forma parte de un grupo familiar de empresas. Una de ellas es Reddecon, dedicada a la importaci&oacute;n de materiales. Esa cercan&iacute;a nos da algo poco com&uacute;n en un proveedor de software: conocemos la operaci&oacute;n log&iacute;stica desde el lado del cliente. Sabemos lo que implica coordinar contenedores, aranceles, forwarders y la facturaci&oacute;n ante la DGI, porque es parte de nuestra propia operaci&oacute;n diaria.</p>
+
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <h4>Especializaci&oacute;n en Odoo</h4>
+      <p>Somos implementadores especializados en Odoo. No trabajamos con m&uacute;ltiples plataformas ni repartimos atenci&oacute;n entre sistemas. Odoo es nuestra plataforma.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <h4>Facturaci&oacute;n DGI en Panam&aacute;</h4>
+      <p>Hemos implementado la integraci&oacute;n con la DGI en operaciones panamen&ntilde;as con facturaci&oacute;n nacional e internacional. Conocemos los requerimientos del PAC y el proceso de habilitaci&oacute;n fiscal.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <h4>No instalamos y nos vamos</h4>
+      <p>El objetivo es que el equipo de Anker opere de forma aut&oacute;noma al final de la implementaci&oacute;n. La capacitaci&oacute;n, los manuales y el soporte post-entrega est&aacute;n dise&ntilde;ados para eso.</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <h4>KPIs desde el d&iacute;a uno</h4>
+      <p>Al terminar, Anker tendr&aacute; tableros con indicadores reales: resultado por ubicaci&oacute;n (Col&oacute;n vs. Ciudad), gasto por &aacute;rea, d&iacute;as de cobro, saldo por cliente, estado de n&oacute;mina. Datos reales, no de muestra.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 40px;">Resultado directo sobre los desaf&iacute;os declarados</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Desaf&iacute;o declarado</th>
+        <th>C&oacute;mo lo resuelve Odoo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Facturaci&oacute;n fiscal integrada (DGI)</td>
+        <td>Facturas nacionales e internacionales emitidas desde Odoo, enviadas al PAC y registradas autom&aacute;ticamente en el libro mayor, sin reescribir datos.</td>
+      </tr>
+      <tr>
+        <td>Separaci&oacute;n Col&oacute;n / Ciudad</td>
+        <td>Dos bodegas independientes + contabilidad anal&iacute;tica por centro de costo. Reportes separados o consolidados con un clic, sin armar Excel.</td>
+      </tr>
+      <tr>
+        <td>Contabilidad formal</td>
+        <td>Plan de cuentas configurado, asientos autom&aacute;ticos del ciclo operativo, cierre mensual asistido y reportes del per&iacute;odo integrados.</td>
+      </tr>
+      <tr>
+        <td>Control de gastos operativos</td>
+        <td>Registro y aprobaci&oacute;n de gastos vinculados al ciclo contable, con reportes por &aacute;rea y por ubicaci&oacute;n en tiempo real.</td>
+      </tr>
+      <tr>
+        <td>N&oacute;mina y recursos humanos</td>
+        <td>N&oacute;mina configurada para Panam&aacute; (CSS, d&eacute;cimo, prestaciones), ausencias y expediente de empleados en el mismo sistema que ya maneja la contabilidad.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════ 09 — SIGUIENTE PASO ══════════ -->
+<section class="section">
+  <span class="section-label">09 &mdash; Siguiente paso</span>
+  <h2>C&oacute;mo avanzar</h2>
+
+  <p>Para avanzar, le pedimos confirmar los siguientes puntos antes del arranque:</p>
+
+  <div class="supuestos-grid">
+    <div class="supuesto-card">
+      <div class="supuesto-num">Confirmar 01</div>
+      <h4>Cantidad de usuarios activos</h4>
+      <p>Cu&aacute;ntas personas usar&aacute;n el sistema activamente. Este dato determina el costo de licencia Odoo y el alcance de la capacitaci&oacute;n.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Confirmar 02</div>
+      <h4>Sistema contable actual y necesidad de migraci&oacute;n</h4>
+      <p>Qu&eacute; software o m&eacute;todo usan hoy, y si se necesita migrar saldos de apertura o historial de transacciones.</p>
+    </div>
+    <div class="supuesto-card">
+      <div class="supuesto-num">Confirmar 03</div>
+      <h4>Entidades legales</h4>
+      <p>Si Anker opera entidades legales en otros pa&iacute;ses adem&aacute;s de Panam&aacute;. Relevante para definir el alcance de la facturaci&oacute;n internacional.</p>
+    </div>
+  </div>
+
+  <div class="info-box orange">
+    <h4>Decisor de presupuesto</h4>
+    <p>Si la persona que aprueba el presupuesto no particip&oacute; de la reuni&oacute;n del 15 de mayo, agradecemos que nos compartan su correo para que reciba esta propuesta directamente.</p>
+  </div>
+
+  <div class="info-box green">
+    <h4>&iquest;Quieren ver Odoo en acci&oacute;n antes de decidir?</h4>
+    <p>Con gusto coordinamos una <strong>demostraci&oacute;n en vivo de Odoo sin costo</strong>. Recorren el sistema con datos de una operaci&oacute;n log&iacute;stica real: facturaci&oacute;n DGI, separaci&oacute;n por bodega, contabilidad y n&oacute;mina panamen&ntilde;a. Sin compromiso y sin costo.</p>
+  </div>
+
+  <p style="margin-top: 32px;">Para confirmar las fases, agendar la demostraci&oacute;n, o hacer cualquier consulta sobre esta propuesta, pueden responder directamente a este correo o contactar a Carlos M. Larrauri al +507 6898-5121.</p>
+
+  <p style="font-size: 16px; font-weight: 600; color: var(--bt-blanco); margin-top: 24px;">Quedamos atentos a sus comentarios.</p>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<div class="cta-section">
+  <h2>&iquest;Listos para arrancar?</h2>
+  <p>Confirmen la cantidad de usuarios, firman el contrato de Fase 1 y en 6 a 7 semanas Anker Log&iacute;stica opera con contabilidad, facturaci&oacute;n DGI e inventario Col&oacute;n/Ciudad integrados en Odoo.</p>
+  <div class="cta-contact">
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a> &nbsp;&middot;&nbsp;
+    <a href="tel:+50768985121">+507 6898-5121</a>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="brand">BITA<span>TECH</span></div>
+  <div>Sistemas Empresariales Inteligentes</div>
+  <div class="contact-row">
+    <a href="https://www.bitatech.ai">www.bitatech.ai</a>
+    <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
+    <a href="tel:+50768985121">+507 6898-5121</a>
+  </div>
+  <p class="disclaimer">Esta propuesta es confidencial y est&aacute; preparada exclusivamente para Anker Log&iacute;stica y Carga SA. V&aacute;lida hasta el 17 de junio de 2026. Los precios de implementaci&oacute;n no incluyen ITBMS (7%). El costo de licencia Odoo es independiente de Bitatech y se paga directamente a Odoo.</p>
+</footer>
+
+</body>
+</html>

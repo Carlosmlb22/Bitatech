@@ -129,3 +129,27 @@ class ControladorPropuestas(http.Controller):
         except FileNotFoundError:
             _logger.error('Propuesta Andrea MPS no encontrada: %s', file_path)
             return request.not_found()
+
+    @http.route(
+        '/propuesta/anker',
+        type='http',
+        auth='public',
+        website=False,
+        csrf=False,
+        sitemap=False,
+    )
+    def propuesta_anker(self, **kwargs):
+        module_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        file_path = os.path.join(
+            module_path, 'static', 'src', 'propuestas', 'anker.html'
+        )
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                html_content = f.read()
+            return request.make_response(
+                html_content,
+                headers=[('Content-Type', 'text/html; charset=utf-8')],
+            )
+        except FileNotFoundError:
+            _logger.error('Propuesta Anker no encontrada: %s', file_path)
+            return request.not_found()
