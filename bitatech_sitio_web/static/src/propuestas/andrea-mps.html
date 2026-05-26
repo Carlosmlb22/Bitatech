@@ -1058,7 +1058,7 @@
       <div class="pain-icon medium">5</div>
       <div class="pain-content">
         <h4>Contabilidad separada del resto de la operación</h4>
-        <p>La contabilidad vive en Sage 50, aislada de la operación. Conectarla o integrarla a Odoo es una decisión que esta propuesta aborda con transparencia (sección 05).</p>
+        <p>La contabilidad vive hoy en Sage 50, aislada de la operación. El proyecto consolida la contabilidad dentro de Odoo desde la Fase 1, junto con la facturación electrónica de la DGI, para que el cliente opere sobre una sola plataforma desde el primer día (ver sección 05).</p>
       </div>
     </div>
   </div>
@@ -1069,8 +1069,8 @@
 <!-- 02 ALCANCE INTEGRAL -->
 <section class="section">
   <span class="section-label">02 &mdash; Alcance integral</span>
-  <h2>Once módulos integrados, organizados en cuatro fases</h2>
-  <p>El proyecto cubre los once módulos funcionales definidos en el RFP y en la matriz de Cumplimiento Funcional, más el componente de cumplimiento fiscal y gestión documental. Todos operan dentro de un mismo Odoo y se comunican en tiempo real: una venta cerrada en el CRM crea el cliente, un ticket consume partes del inventario, una orden de compra repone el stock, los contadores generan la factura MPS y cada movimiento queda reflejado en la contabilidad.</p>
+  <h2>Doce módulos integrados, organizados en cuatro fases</h2>
+  <p>El proyecto cubre los once módulos funcionales definidos en el RFP y en la matriz de Cumplimiento Funcional, más el componente de cumplimiento fiscal y gestión documental. Todos operan dentro de un mismo Odoo y se comunican en tiempo real: una venta cerrada en el CRM crea el cliente, un ticket consume partes del inventario, una orden de compra repone el stock, los contadores generan la factura MPS, la facturación se timbra ante la DGI y cada movimiento queda reflejado en la contabilidad.</p>
 
   <div class="info-box accent">
     <h4>Respuesta a la matriz de Cumplimiento Funcional</h4>
@@ -1134,7 +1134,12 @@
       <tr>
         <td><strong>Contabilidad</strong></td>
         <td>Asientos automáticos, balances, conciliaciones y centros de costo.</td>
-        <td><span class="ph" style="color: var(--bt-gris-texto);">Opcional</span></td>
+        <td><span class="ph ph-1">Fase 1</span></td>
+      </tr>
+      <tr>
+        <td><strong>Facturación Electrónica DGI</strong></td>
+        <td>Emisión fiscal electrónica directa desde Odoo con la DGI de Panamá.</td>
+        <td><span class="ph ph-1">Fase 1</span></td>
       </tr>
       <tr>
         <td><strong>Activos Fijos</strong></td>
@@ -1142,8 +1147,8 @@
         <td><span class="ph ph-3">Fase 3</span></td>
       </tr>
       <tr>
-        <td><strong>Facturación Electrónica y Gestión Documental</strong></td>
-        <td>Emisión fiscal con la DGI de Panamá, firmas digitales y repositorio documental.</td>
+        <td><strong>Gestión Documental</strong></td>
+        <td>Repositorio documental centralizado, firmas digitales y control de versiones.</td>
         <td><span class="ph ph-4">Fase 4</span></td>
       </tr>
     </tbody>
@@ -1156,8 +1161,8 @@
 <!-- 03 FASE 1 -->
 <section class="section">
   <span class="section-label">03 &mdash; Fase 1</span>
-  <h2>Fase 1: el núcleo comercial y operativo</h2>
-  <p>La Fase 1 pone en marcha los seis módulos de entrada del negocio: captación, atención, servicio en campo, control de equipos y abastecimiento. Es la base sobre la que se montan las fases posteriores y la primera del proyecto en ejecutarse.</p>
+  <h2>Fase 1: núcleo comercial, operativo, contable y fiscal</h2>
+  <p>La Fase 1 pone en marcha los siete módulos que permiten al cliente operar completamente en Odoo desde el primer día: captación, atención, servicio en campo, control de equipos, contabilidad y facturación electrónica con la DGI de Panamá. Es la base sobre la que se montan las fases posteriores y la primera del proyecto en ejecutarse.</p>
 
   <div class="module-grid">
 
@@ -1223,13 +1228,25 @@
 
     <div class="module-card color-orange">
       <span class="phase-badge fase-1">Fase 1</span>
-      <h3>Compras</h3>
-      <p class="module-tagline">Ciclo completo de abastecimiento</p>
+      <h3>Contabilidad</h3>
+      <p class="module-tagline">Operación y libros contables en un solo sistema</p>
       <ul>
-        <li>Maestro de proveedores con condiciones y contactos</li>
-        <li>Solicitudes y órdenes de compra</li>
-        <li>Recepciones integradas al inventario</li>
-        <li>Flujo de aprobación configurable por monto</li>
+        <li>Asientos contables automáticos desde la operación</li>
+        <li>Balances, estados de resultados y reportes fiscales</li>
+        <li>Conciliaciones bancarias automáticas</li>
+        <li>Centros de costo y trazabilidad completa</li>
+      </ul>
+    </div>
+
+    <div class="module-card color-purple">
+      <span class="phase-badge fase-1">Fase 1</span>
+      <h3>Facturación Electrónica DGI</h3>
+      <p class="module-tagline">Cumplimiento fiscal directo desde Odoo</p>
+      <ul>
+        <li>Emisión fiscal electrónica con la DGI de Panamá</li>
+        <li>Integración con proveedor autorizado (PAC)</li>
+        <li>Timbrado de facturas, notas de crédito y débito</li>
+        <li>Acuse de recibo y trazabilidad fiscal</li>
       </ul>
     </div>
 
@@ -1241,36 +1258,38 @@
   <div class="phase-card phase-1">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 1 &mdash; Clientes, CRM, Mesa de Ayuda, Órdenes de Trabajo, Inventario y Compras</div>
-        <div class="phase-title">Núcleo comercial y operativo</div>
-        <div class="phase-tagline">"Captar, atender, controlar y abastecer desde el primer día"</div>
+        <div class="phase-number">Fase 1 &mdash; Clientes, CRM, Mesa de Ayuda, Órdenes de Trabajo, Inventario, Contabilidad y Facturación Electrónica DGI</div>
+        <div class="phase-title">Núcleo comercial, operativo, contable y fiscal</div>
+        <div class="phase-tagline">"Operar al 100% en Odoo desde el primer día, contabilidad y facturación fiscal incluidas"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 9,500</div>
+        <div class="amount">USD 13,500</div>
         <span class="period">Pago único de Fase 1</span>
-        <div class="payment-line">50% al firmar (USD 4,750) &middot; 50% a la entrega (USD 4,750)</div>
+        <div class="payment-line">50% al firmar (USD 6,750) &middot; 50% a la entrega (USD 6,750)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Configuramos los seis módulos al detalle de la operación MPS: CRM con integración al formulario web, Mesa de Ayuda con colas diferenciadas, Órdenes de Trabajo con acceso de los 12 técnicos por portal web, Inventario multi-bodega con la carga inicial de los 2,000 equipos, el módulo de Compras con su flujo de aprobación y la base de Clientes. Incluye la capacitación de los usuarios internos y de los técnicos de campo, el ambiente de pruebas y dos semanas de acompañamiento posterior a la entrega.</p>
+    <p class="phase-desc">Configuramos los siete módulos al detalle de la operación MPS: CRM con integración al formulario web, Mesa de Ayuda con colas diferenciadas, Órdenes de Trabajo con acceso de los 12 técnicos por portal web, Inventario multi-bodega con la carga inicial de los 2,000 equipos, la base de Clientes, la Contabilidad completa con asientos automáticos, balances y centros de costo, y la Facturación Electrónica DGI integrada con un proveedor autorizado. Incluye la capacitación de los usuarios internos y de los técnicos de campo, el ambiente de pruebas y dos semanas de acompañamiento posterior a la entrega.</p>
 
     <div class="solves-tags">
       <span class="solves-tag">CRM con captura web</span>
       <span class="solves-tag">Servicio de campo por portal web</span>
       <span class="solves-tag">Inventario 2,000 equipos</span>
-      <span class="solves-tag">Compras y proveedores</span>
+      <span class="solves-tag">Contabilidad en Odoo</span>
+      <span class="solves-tag">Facturación fiscal DGI</span>
       <span class="solves-tag">14 Usuarios Portal sin costo</span>
     </div>
 
     <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--bt-gris-texto); margin-bottom: 8px;">Incluido en la Fase 1</h4>
     <ul class="module-list">
-      <li>Configuración de los seis módulos de Fase 1</li>
+      <li>Configuración de los siete módulos de Fase 1</li>
       <li>Integración del formulario web al CRM</li>
       <li>Colas de Mesa de Ayuda por falla y por suministros</li>
       <li>Acceso al portal web para los 12 técnicos de campo</li>
       <li>Carga de los 2,000 equipos por plantilla</li>
-      <li>Compras con flujo de aprobación</li>
+      <li>Contabilidad completa: asientos automáticos, balances, conciliaciones bancarias, centros de costo y reportes fiscales</li>
+      <li>Facturación electrónica DGI integrada con proveedor autorizado (PAC)</li>
       <li>Tableros y reportes nativos por área</li>
       <li>Capacitación a los 5 usuarios internos y a los técnicos de campo</li>
       <li>Paquete de manuales de los flujos de trabajo</li>
@@ -1281,7 +1300,7 @@
     <div class="phase-footer">
       <div class="phase-meta">
         <span class="meta-label">Tiempo estimado</span>
-        <span class="meta-value">6 a 8 semanas desde el arranque</span>
+        <span class="meta-value">10 a 12 semanas desde el arranque</span>
       </div>
       <div class="phase-meta">
         <span class="meta-label">Inicio</span>
@@ -1289,15 +1308,15 @@
       </div>
       <div class="phase-meta">
         <span class="meta-label">Resultado</span>
-        <span class="meta-value">Sistema operativo en seis módulos</span>
+        <span class="meta-value">Operación, contabilidad y facturación fiscal corriendo 100% en Odoo</span>
       </div>
     </div>
   </div>
 
   <div class="info-box green">
-    <h4>Tres requerimientos de la matriz funcional, incluidos sin costo adicional</h4>
-    <p>Al revisar la matriz de Cumplimiento Funcional identificamos tres requerimientos que no estaban contemplados en el alcance original de la Fase 1 y que, por su naturaleza, pertenecen a esta fase: la asociación de partes a cada impresora (ítem 42), la asociación de consumibles a cada impresora (ítem 43) y la trazabilidad de las compras de equipos destinados a un cliente (ítem 71).</p>
-    <p>Los tres son requerimientos nuevos que requieren desarrollo a la medida sobre Odoo. Aun así, <strong>Bitatech los absorbe como cortesía dentro de la Fase 1, sin incremento alguno sobre el precio cotizado de USD 9,500.</strong></p>
+    <h4>Dos requerimientos de la matriz funcional, incluidos sin costo adicional</h4>
+    <p>Al revisar la matriz de Cumplimiento Funcional identificamos dos requerimientos que no estaban contemplados en el alcance original de la Fase 1 y que, por su naturaleza, pertenecen a esta fase: la asociación de partes a cada impresora (ítem 42) y la asociación de consumibles a cada impresora (ítem 43). El tercer ítem que originalmente estaba absorbido como cortesía (ítem 71, trazabilidad de compras a cliente) viaja ahora con el módulo de Compras a la Fase 3.</p>
+    <p>Los dos requerimientos absorbidos requieren desarrollo a la medida sobre Odoo. <strong>Bitatech los entrega como cortesía dentro de la Fase 1, sin incremento sobre el precio cotizado.</strong></p>
   </div>
 
   <h3 style="margin-top: 48px;">Supuestos declarados de la Fase 1</h3>
@@ -1321,13 +1340,13 @@
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 04</div>
-      <h4>La Fase 1 no incluye contabilidad</h4>
-      <p>La Fase 1 no implementa contabilidad ni integración con el sistema contable actual. La operación comercial y de servicio funciona en Odoo y la contabilidad continúa en Sage 50. La convivencia entre ambos se explica en detalle en la sección 05.</p>
+      <h4>Facturación masiva del módulo MPS: emisión interna, no fiscal</h4>
+      <p>La matriz de Cumplimiento Funcional indica que el sistema generará prefacturación masiva por cliente (ítem 31) y permitirá revisión antes de la emisión final (ítem 32), sin especificar si esa emisión final es interna o fiscal. Asumimos que el desarrollo entregado cubre la <strong>emisión masiva de facturas internas de sistema</strong> (no fiscales). Las facturas fiscales electrónicas se timbran posteriormente accionando los botones correspondientes del módulo de Facturación Electrónica DGI, una por una. Si el cliente requiere adicionalmente el timbrado fiscal masivo (emisión electrónica DGI en lote), corresponde a un desarrollo a la medida que se cotiza por separado y no está incluido en el alcance de esta propuesta.</p>
     </div>
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 05</div>
-      <h4>Facturación electrónica DGI fuera de la Fase 1</h4>
-      <p>La emisión fiscal electrónica con la DGI de Panamá no está incluida en esta fase. La facturación se emite por los canales actuales del cliente y se aborda formalmente en la Fase 4.</p>
+      <h4>Manejo de cobros parciales en proyectos largos: tema bajo definición</h4>
+      <p>El cliente nos compartió la necesidad de mantener facturas internas abiertas en proyectos con cobro por abonos, sin emitir el documento fiscal hasta el cierre del proyecto. Existen varias rutas técnicas para resolverlo y la elección depende del flujo exacto que utilizan hoy. <strong>Estamos a la espera de un video del cliente</strong> que detalle el proceso actual; una vez recibido, presentaremos la opción más conveniente y su cotización específica, que se incorporará como adenda a esta propuesta o a la Fase 1.</p>
     </div>
   </div>
 </section>
@@ -1337,47 +1356,47 @@
 <!-- 04 FASES SIGUIENTES -->
 <section class="section">
   <span class="section-label">04 &mdash; Evolución del proyecto</span>
-  <h2>Fases 2, 3 y 4: el núcleo MPS, los activos y el cumplimiento fiscal</h2>
+  <h2>Fases 2, 3 y 4: el motor MPS, la gestión avanzada y el cierre documental</h2>
   <p>Las fases siguientes se describen aquí en su alcance completo y con su inversión cerrada, para dar visibilidad del panorama total del proyecto. Cada fase se contrata por separado y su alcance se confirma al iniciarla. Los componentes cuyo precio depende de información aún por definir se señalan como supuestos abiertos (ver sección 06).</p>
 
   <!-- FASE 2 -->
   <div class="phase-card phase-2">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 2 &mdash; Núcleo MPS y administración financiera</div>
-        <div class="phase-title">Facturación MPS, Contratos y Cuentas por Cobrar</div>
+        <div class="phase-number">Fase 2 &mdash; Núcleo MPS automatizado</div>
+        <div class="phase-title">Motor de facturación MPS por contadores</div>
         <div class="phase-tagline">"Donde se materializa el mayor ahorro operativo"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 14,800</div>
+        <div class="amount">USD 12,500</div>
         <span class="period">Pago único de Fase 2</span>
-        <div class="payment-line">50% al firmar (USD 7,400) &middot; 50% a la entrega (USD 7,400)</div>
+        <div class="payment-line">50% al firmar (USD 6,250) &middot; 50% a la entrega (USD 6,250)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Es el corazón del proyecto. Motor automático de facturación por contadores con incluidos y excedentes B&amp;N / Color, prefacturación masiva y soporte de equipos temporales. Gestión completa del ciclo contractual: contrato marco, anexos vinculados, renovaciones automáticas y medición de SLA. Administración de Cuentas por Cobrar con estados de cuenta, antigüedad de saldos y bloqueo por mora. Incluye también la base de facturación que el motor MPS necesita para emitir y registrar las facturas. La implementación del módulo de Contabilidad de Odoo no forma parte de esta fase: es un componente opcional que se explica en la sección 05.</p>
+    <p class="phase-desc">Es el corazón del proyecto. Motor automático de facturación por contadores con incluidos y excedentes B&amp;N / Color, prefacturación masiva y soporte de equipos temporales. Estructura base de contratos con número único, vigencia y parámetros financieros, suficiente para que el motor MPS opere de extremo a extremo. La gestión contractual avanzada (anexos formales, renovaciones automáticas, SLA y cobranza avanzada) se trabaja en la Fase 3.</p>
 
     <ul class="module-list">
       <li>Motor de facturación MPS por contadores</li>
       <li>Incluidos y excedentes B&amp;N / Color automáticos</li>
-      <li>Contratos marco con anexos vinculados</li>
-      <li>Renovaciones automáticas y bloqueo por mora</li>
-      <li>Cuentas por Cobrar y gestión de cobranza</li>
-      <li>Base de facturación para el motor MPS</li>
+      <li>Prefacturación masiva por cliente (emisión interna)</li>
+      <li>Soporte de equipos temporales por CSV</li>
+      <li>Estructura base de contratos con vigencia y parámetros financieros</li>
+      <li>Asientos contables automáticos sobre la Contabilidad de Fase 1</li>
     </ul>
 
     <div class="solves-tags">
       <span class="solves-tag blue">Facturación MPS automatizada</span>
-      <span class="solves-tag blue">Contratos con anexos</span>
-      <span class="solves-tag blue">Cuentas por Cobrar</span>
-      <span class="solves-tag blue">Base de facturación MPS</span>
+      <span class="solves-tag blue">Cálculo de excedentes</span>
+      <span class="solves-tag blue">Prefacturación masiva</span>
+      <span class="solves-tag blue">Equipos temporales</span>
     </div>
 
     <div class="phase-footer">
       <div class="phase-meta">
         <span class="meta-label">Tiempo estimado</span>
-        <span class="meta-value">8 a 10 semanas desde el arranque</span>
+        <span class="meta-value">7 a 9 semanas desde el arranque</span>
       </div>
       <div class="phase-meta">
         <span class="meta-label">Inicio</span>
@@ -1385,7 +1404,7 @@
       </div>
       <div class="phase-meta">
         <span class="meta-label">Resultado</span>
-        <span class="meta-value">Núcleo MPS y administración financiera operativos</span>
+        <span class="meta-value">Motor MPS automatizado en operación</span>
       </div>
     </div>
   </div>
@@ -1394,25 +1413,81 @@
   <div class="phase-card phase-3">
     <div class="phase-header">
       <div>
-        <div class="phase-number">Fase 3 &mdash; Gestión de activos</div>
-        <div class="phase-title">Activos Fijos</div>
-        <div class="phase-tagline">"Cerrar el ciclo financiero del activo"</div>
+        <div class="phase-number">Fase 3 &mdash; Gestión avanzada del ciclo contractual y de abastecimiento</div>
+        <div class="phase-title">Activos Fijos, Contratos y SLA, Compras y Cobranza avanzada</div>
+        <div class="phase-tagline">"Cerrar el ciclo contractual, los activos y el abastecimiento"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 4,800</div>
+        <div class="amount">USD 7,500</div>
         <span class="period">Pago único de Fase 3</span>
-        <div class="payment-line">50% al firmar (USD 2,400) &middot; 50% a la entrega (USD 2,400)</div>
+        <div class="payment-line">50% al firmar (USD 3,750) &middot; 50% a la entrega (USD 3,750)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
 
-    <p class="phase-desc">Registro automatizado de activos fijos desde el inventario, depreciación automática mensual (línea recta, vida útil, valor residual), control de estado y bitácora del ciclo de vida. Flujo de aprobación digital de bajas con su registro contable automático.</p>
+    <p class="phase-desc">Registro automatizado de activos fijos desde el inventario, depreciación automática mensual y flujo digital de bajas. Gestión contractual completa: anexos vinculados al contrato principal, renovaciones automáticas, medición de SLA por cliente o contrato, alertas de vencimiento y registro de incumplimientos. Cuentas por Cobrar avanzada con acuerdos de pago, excepciones autorizadas de crédito y reportes de cartera vencida. Ciclo completo de Compras: maestro de proveedores, solicitudes y órdenes con flujo de aprobación, recepciones, evaluación de proveedores y trazabilidad de las compras destinadas a un cliente específico.</p>
+
+    <ul class="module-list">
+      <li>Activos Fijos: depreciación automática, ciclo de vida y bajas con aprobación digital</li>
+      <li>Contratos con anexos vinculados, renovaciones automáticas y bloqueo por mora</li>
+      <li>Módulo de SLA: parametrización, medición y reportes de cumplimiento</li>
+      <li>Cuentas por Cobrar avanzada: acuerdos de pago, excepciones, reportes de cartera</li>
+      <li>Módulo de Compras completo (movido desde la Fase 1)</li>
+    </ul>
 
     <div class="solves-tags">
       <span class="solves-tag green">Depreciación automática</span>
-      <span class="solves-tag green">Ciclo de vida del activo</span>
-      <span class="solves-tag green">Bajas con aprobación digital</span>
-      <span class="solves-tag green">Bitácora de auditoría</span>
+      <span class="solves-tag green">Contratos y anexos</span>
+      <span class="solves-tag green">SLA medido</span>
+      <span class="solves-tag green">Cobranza avanzada</span>
+      <span class="solves-tag green">Compras y proveedores</span>
+    </div>
+
+    <div class="phase-footer">
+      <div class="phase-meta">
+        <span class="meta-label">Tiempo estimado</span>
+        <span class="meta-value">5 a 7 semanas desde el arranque</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Inicio</span>
+        <span class="meta-value">A coordinar al contratar la fase</span>
+      </div>
+      <div class="phase-meta">
+        <span class="meta-label">Resultado</span>
+        <span class="meta-value">Ciclo contractual, activos y abastecimiento operativos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 4 -->
+  <div class="phase-card phase-4">
+    <div class="phase-header">
+      <div>
+        <div class="phase-number">Fase 4 &mdash; Gestión Documental</div>
+        <div class="phase-title">Repositorio documental y firmas digitales</div>
+        <div class="phase-tagline">"Trazabilidad documental centralizada"</div>
+      </div>
+      <div class="phase-price">
+        <div class="amount">USD 5,500</div>
+        <span class="period">Pago único de Fase 4</span>
+        <div class="payment-line">50% al firmar (USD 2,750) &middot; 50% a la entrega (USD 2,750)</div>
+        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
+      </div>
+    </div>
+
+    <p class="phase-desc">Gestión documental centralizada en Odoo: repositorio unificado con control de versiones por cliente, por contrato y por activo; firmas digitales sobre contratos, anexos y actas; y reglas de retención y archivado. La facturación electrónica con la DGI ya está operativa desde la Fase 1; esta fase cierra el ciclo documental del proyecto.</p>
+
+    <ul class="module-list">
+      <li>Repositorio documental centralizado con control de versiones</li>
+      <li>Asociación de documentos a clientes, contratos, anexos y activos</li>
+      <li>Firmas digitales sobre contratos, anexos y actas</li>
+      <li>Reglas de retención, archivado y permisos por carpeta</li>
+    </ul>
+
+    <div class="solves-tags">
+      <span class="solves-tag purple">Repositorio centralizado</span>
+      <span class="solves-tag purple">Firmas digitales</span>
+      <span class="solves-tag purple">Control de versiones</span>
     </div>
 
     <div class="phase-footer">
@@ -1426,47 +1501,7 @@
       </div>
       <div class="phase-meta">
         <span class="meta-label">Resultado</span>
-        <span class="meta-value">Gestión de activos fijos en marcha</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- FASE 4 -->
-  <div class="phase-card phase-4">
-    <div class="phase-header">
-      <div>
-        <div class="phase-number">Fase 4 &mdash; Cumplimiento fiscal y gestión documental</div>
-        <div class="phase-title">Facturación electrónica DGI + Gestión Documental</div>
-        <div class="phase-tagline">"Cumplimiento normativo y trazabilidad documental"</div>
-      </div>
-      <div class="phase-price">
-        <div class="amount">USD 8,000</div>
-        <span class="period">Pago único de Fase 4</span>
-        <div class="payment-line">50% al firmar (USD 4,000) &middot; 50% a la entrega (USD 4,000)</div>
-        <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
-      </div>
-    </div>
-
-    <p class="phase-desc">Integración con un proveedor autorizado de Panamá para la emisión fiscal electrónica directa desde Odoo, conforme a la normativa de la DGI. Gestión documental centralizada, firmas digitales sobre contratos y anexos, y repositorio unificado con control de versiones por cliente y por contrato.</p>
-
-    <div class="solves-tags">
-      <span class="solves-tag purple">Facturación electrónica DGI</span>
-      <span class="solves-tag purple">Firmas digitales</span>
-      <span class="solves-tag purple">Repositorio documental</span>
-    </div>
-
-    <div class="phase-footer">
-      <div class="phase-meta">
-        <span class="meta-label">Tiempo estimado</span>
-        <span class="meta-value">4 a 6 semanas desde el arranque</span>
-      </div>
-      <div class="phase-meta">
-        <span class="meta-label">Inicio</span>
-        <span class="meta-value">A coordinar al contratar la fase</span>
-      </div>
-      <div class="phase-meta">
-        <span class="meta-label">Resultado</span>
-        <span class="meta-value">Cumplimiento fiscal y gestión documental activos</span>
+        <span class="meta-value">Gestión documental centralizada activa</span>
       </div>
     </div>
   </div>
@@ -1481,44 +1516,19 @@
 
 <hr class="section-divider">
 
-<!-- 05 CONTABILIDAD Y SAGE 50 -->
+<!-- 05 DECISION SOBRE EL SISTEMA CONTABLE -->
 <section class="section">
-  <span class="section-label">05 &mdash; Contabilidad y convivencia con Sage 50</span>
-  <h2>Cómo conviven Odoo y la contabilidad actual</h2>
-  <p>El cliente realiza hoy su contabilidad en <strong>Sage 50 Premium Accounting 2016</strong> (antes Peachtree) y, por el momento, desea mantenerlo. A continuación exponemos, con total transparencia, la situación de un posible conector y los caminos para que Odoo y la contabilidad convivan.</p>
-
-  <div class="info-box blue">
-    <h4>Sobre un conector entre Odoo y Sage 50</h4>
-    <p>En el mercado existen conectores ya desarrollados que comunican Odoo con Sage, y funcionan con las versiones <strong>en la nube</strong> de Sage (Sage Business Cloud Accounting / Sage Accounting), que cuentan con una interfaz de programación pública.</p>
-    <p>La versión que utiliza el cliente, Sage 50 Premium Accounting 2016, es una versión <strong>antigua y de escritorio</strong>: guarda los datos en la propia computadora donde está instalada, sin una interfaz de programación pública. Por esa razón, una conexión con Odoo requeriría software intermedio que reúna los datos desde esa instalación local para luego enlazarlos con Odoo. Es un escenario que exige un análisis técnico más profundo antes de poder cotizarse.</p>
-    <p><strong>Hemos realizado una consulta formal al proveedor de uno de estos conectores</strong> para confirmar si su solución puede aplicarse a la versión exacta que utiliza el cliente. Estamos a la espera de esa respuesta y la trasladaremos apenas la recibamos. Si la integración resulta viable, se cotizará como un componente adicional de la propuesta.</p>
-  </div>
-
-  <h3>Opciones de convivencia</h3>
-
-  <div class="opcion-card b">
-    <span class="opcion-tag">Opción A</span>
-    <h4>Transferencia de datos mediante reportes</h4>
-    <p>El resumen contable se traslada periódicamente entre los sistemas a partir de reportes. Es viable, pero conlleva una condición técnica: para que las cuentas contables se reconozcan entre ambos sistemas, <strong>se requiere de todas formas implementar el módulo de Contabilidad de Odoo</strong>. El resultado es un doble trabajo operativo permanente: pasar datos entre los dos sistemas de forma constante, cuando ya se contaría con la contabilidad de Odoo implementada y lista para usarse directamente.</p>
-  </div>
-
-  <div class="opcion-card c">
-    <span class="opcion-tag">Opción B</span>
-    <h4>Sistemas independientes</h4>
-    <p>Odoo opera la gestión comercial, de servicio e inventario; Sage 50 mantiene la contabilidad, sin enlace entre ambos. El equipo contable registra en Sage la información que necesite, apoyándose en los reportes exportables de Odoo. Es la opción de menor costo inmediato y la más sencilla si el cliente desea mantener Sage 50 sin construir integraciones.</p>
-  </div>
+  <span class="section-label">05 &mdash; Decisión sobre el sistema contable</span>
+  <h2>Consolidar la contabilidad dentro de Odoo desde la Fase 1</h2>
+  <p>El cliente realiza hoy su contabilidad en <strong>Sage 50 Premium Accounting 2016</strong> (antes Peachtree). En el análisis del proyecto se evaluaron tres caminos posibles de convivencia con Sage 50: un conector dedicado, la transferencia periódica de datos mediante reportes y la operación de ambos sistemas de forma independiente. Cada uno tenía implicaciones distintas de costo, esfuerzo operativo y riesgo técnico, asociadas principalmente a que la versión actual de Sage 50 es una aplicación de escritorio sin interfaz de programación pública.</p>
 
   <div class="info-box green">
-    <h4>Nuestra recomendación</h4>
-    <p>Dado que la transferencia mediante reportes exige de todas formas implementar el módulo de Contabilidad de Odoo, la vía más eficiente y de menor costo total es <strong>implementar la Contabilidad directamente en Odoo</strong> y operar toda la empresa (comercial, servicio, facturación y contabilidad) sobre una sola plataforma integrada, sin doble trabajo.</p>
-    <p>Si el cliente prefiere mantener Sage 50 por ahora, mantener los sistemas independientes es lo más razonable mientras tanto, dejando la contabilidad de Odoo lista para activarse cuando la empresa lo decida. La decisión es del cliente; nuestro compromiso es que la tome con la información completa.</p>
+    <h4>Decisión tomada con el cliente</h4>
+    <p>Tras revisar las implicaciones reales de cada camino, el cliente optó por <strong>consolidar la contabilidad dentro de Odoo desde el primer momento</strong>. Esta propuesta canaliza esa decisión: el módulo de Contabilidad de Odoo se integra al alcance de la <strong>Fase 1</strong>, junto con la Facturación Electrónica DGI, para que la operación, la facturación fiscal y los libros contables vivan en una sola plataforma desde el primer día.</p>
+    <p>Sage 50 se retira de la operación una vez completada la entrega de la Fase 1. El cliente conserva el archivo histórico de Sage 50 para consultas y auditorías, sin que dependa de él la operación diaria.</p>
   </div>
 
-  <div class="info-box">
-    <h4>El módulo de Contabilidad es un componente opcional</h4>
-    <p>La implementación del módulo de Contabilidad de Odoo como sistema contable de la empresa no está incluida en la Fase 2 ni en ninguna otra fase. Dado que el cliente desea por ahora mantener Sage 50, queda como un componente opcional, con una inversión de USD 2,700, que se incorpora cuando el cliente decida llevar la contabilidad dentro de Odoo.</p>
-    <p>Esto no limita la operación: la Fase 2 incluye la base de facturación que el motor MPS necesita para emitir y registrar las facturas, y la Fase 4 cubre la facturación electrónica ante la DGI. El módulo de Contabilidad completo solo es necesario si la empresa decide llevar sus libros contables dentro de Odoo.</p>
-  </div>
+  <p class="muted" style="font-size: 13px;">Esta decisión simplifica el proyecto, elimina la necesidad de construir integraciones entre dos sistemas contables paralelos y entrega al cliente una sola fuente de verdad financiera desde la primera fase del proyecto.</p>
 </section>
 
 <hr class="section-divider">
@@ -1540,47 +1550,57 @@
     <tbody>
       <tr>
         <td>
-          <strong>Fase 1 &mdash; Núcleo comercial y operativo</strong><br>
-          <span class="muted" style="font-size: 12px;">Clientes + CRM + Mesa de Ayuda + Órdenes de Trabajo + Inventario + Compras</span>
+          <strong>Fase 1 &mdash; Núcleo comercial, operativo, contable y fiscal</strong><br>
+          <span class="muted" style="font-size: 12px;">Clientes + CRM + Mesa de Ayuda + Órdenes de Trabajo + Inventario + Contabilidad + Facturación Electrónica DGI</span>
         </td>
-        <td class="highlight">USD 9,500</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 4,750)<br>50% a la entrega (USD 4,750)</span></td>
+        <td class="highlight">USD 13,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 6,750)<br>50% a la entrega (USD 6,750)</span></td>
       </tr>
       <tr>
         <td>
-          <strong>Fase 2 &mdash; Núcleo MPS y administración financiera</strong><br>
-          <span class="muted" style="font-size: 12px;">Facturación MPS + Contratos + Cuentas por Cobrar + base de facturación</span>
+          <strong>Fase 2 &mdash; Núcleo MPS automatizado</strong><br>
+          <span class="muted" style="font-size: 12px;">Motor de facturación por contadores, excedentes, prefacturación masiva y base contractual</span>
         </td>
-        <td class="highlight">USD 14,800</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 7,400)<br>50% a la entrega (USD 7,400)</span></td>
+        <td class="highlight">USD 12,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 6,250)<br>50% a la entrega (USD 6,250)</span></td>
       </tr>
       <tr>
         <td>
-          <strong>Fase 3 &mdash; Activos Fijos</strong>
+          <strong>Fase 3 &mdash; Gestión avanzada del ciclo contractual y de abastecimiento</strong><br>
+          <span class="muted" style="font-size: 12px;">Activos Fijos + Contratos y SLA + Cuentas por Cobrar avanzada + Compras</span>
         </td>
-        <td class="highlight">USD 4,800</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 2,400)<br>50% a la entrega (USD 2,400)</span></td>
+        <td class="highlight">USD 7,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 3,750)<br>50% a la entrega (USD 3,750)</span></td>
       </tr>
       <tr>
         <td>
-          <strong>Fase 4 &mdash; Facturación electrónica DGI + Gestión Documental</strong>
+          <strong>Fase 4 &mdash; Gestión Documental</strong><br>
+          <span class="muted" style="font-size: 12px;">Repositorio centralizado, firmas digitales y control de versiones</span>
         </td>
-        <td class="highlight">USD 8,000</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 4,000)<br>50% a la entrega (USD 4,000)</span></td>
+        <td class="highlight">USD 5,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 2,750)<br>50% a la entrega (USD 2,750)</span></td>
+      </tr>
+      <tr>
+        <td>Subtotal del proyecto &mdash; cuatro fases</td>
+        <td class="highlight">USD 39,000</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Ajuste de cortesía Bitatech</strong><br>
+          <span class="muted" style="font-size: 12px;">Aplicado sobre la Fase 1 y la Fase 2 para acercar el primer tramo al techo presupuestario del cliente</span>
+        </td>
+        <td class="highlight" style="color: #2a8a3e;">&minus; USD 7,000</td>
+        <td></td>
       </tr>
       <tr class="total-row">
-        <td>Total del proyecto &mdash; cuatro fases</td>
-        <td>USD 37,100</td>
+        <td>Total del proyecto &mdash; cuatro fases, con ajuste de cortesía</td>
+        <td>USD 32,000</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementación no incluyen ITBMS (7%).</p>
-
-  <div class="info-box">
-    <h4>Componente opcional &mdash; Módulo de Contabilidad de Odoo</h4>
-    <p>La implementación del módulo de Contabilidad de Odoo como sistema contable de la empresa no está incluida en las cuatro fases. Queda disponible como componente opcional, con una inversión de <strong>USD 2,700</strong>, que el cliente puede incorporar según su decisión sobre la convivencia con Sage 50 (ver sección 05).</p>
-  </div>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementación no incluyen ITBMS (7%). El ajuste de cortesía se aplica de forma consolidada sobre el primer tramo del proyecto (Fase 1 + Fase 2), llevando ese tramo a USD 19,000 efectivos.</p>
 
   <div class="info-box accent">
     <h4>Flexibilidad en la forma de pago</h4>
@@ -1590,7 +1610,7 @@
   <div class="info-box blue">
     <h4>Precios cerrados y supuestos abiertos</h4>
     <p>Los montos de las cuatro fases son precios cerrados, sujetos a la confirmación del alcance descrito en esta propuesta para cada fase. Dos componentes quedan con un supuesto abierto, porque su precio depende de información que aún está por definir; se cotizan por separado una vez disponible esa información y no están incluidos en los montos anteriores.</p>
-    <p><strong>Supuesto abierto 1 &mdash; Conector con Sage 50.</strong> Los conectores disponibles funcionan con las versiones en la nube de Sage. Hemos realizado una consulta formal al proveedor para confirmar si su solución aplica a la versión que utiliza el cliente y estamos a la espera de su respuesta (ver sección 05). Si la integración resulta viable, se cotizará como un componente adicional. La Fase 2 incluye la base de facturación necesaria para el motor MPS; el módulo de Contabilidad de Odoo es un componente opcional aparte (ver sección 05).</p>
+    <p><strong>Supuesto abierto 1 &mdash; Manejo de cobros parciales en proyectos largos.</strong> El cliente nos compartió la necesidad de mantener facturas internas abiertas en proyectos con cobro por abonos, sin emitir el documento fiscal hasta el cierre del proyecto. Existen varias rutas técnicas para resolverlo y la elección depende del flujo exacto que utilizan hoy. Estamos a la espera de un video del cliente que detalle el proceso actual; una vez recibido, presentaremos la opción más conveniente y su cotización específica, que se incorporará como adenda a esta propuesta o a la Fase 1.</p>
     <p><strong>Supuesto abierto 2 &mdash; Lectura automática del software de contadores (CFM).</strong> La Fase 2 incluye la carga de contadores por plantilla CSV. La lectura automática desde el software CFM depende del fabricante y de si dispone de una interfaz de programación; se confirma y cotiza por separado una vez identificado dicho software.</p>
   </div>
 
@@ -1640,16 +1660,16 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="s-label">Anticipo de Fase 1</div>
-        <div class="s-value"><span>USD 4,750</span></div>
+        <div class="s-value"><span>USD 6,750</span></div>
         <div class="s-detail">50% al firmar el contrato</div>
       </div>
       <div class="summary-item">
         <div class="s-label">Fase 1 lista en</div>
-        <div class="s-value"><span>6 &ndash; 8 semanas</span></div>
+        <div class="s-value"><span>10 &ndash; 12 semanas</span></div>
         <div class="s-detail">Desde la sesión de arranque posterior a la firma</div>
       </div>
     </div>
-    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversión inicial arranca el proyecto y comienza la configuración del núcleo comercial y operativo del sistema.</p>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--bt-blanco-suave); text-align: center;">Con esta inversión inicial arranca el proyecto y comienza la configuración del núcleo comercial, operativo, contable y fiscal del sistema.</p>
     <p style="margin-top: 12px; font-size: 12px; font-style: italic; opacity: 0.7; text-align: center;">Precio no incluye ITBMS (7%).</p>
   </div>
 </section>
@@ -1706,8 +1726,8 @@
     </div>
     <div class="process-step">
       <div class="step-num">4</div>
-      <h4>Carga de los 2,000 equipos</h4>
-      <p>Importación por plantilla Excel/CSV. Validación de seriales, bodegas asignadas y vínculo con clientes.</p>
+      <h4>Carga de equipos y datos contables</h4>
+      <p>Importación de los 2,000 equipos por plantilla Excel/CSV (seriales, bodegas, clientes), plan de cuentas configurado y carga de saldos contables iniciales según el corte definido con el cliente.</p>
     </div>
     <div class="process-step">
       <div class="step-num">5</div>
@@ -1739,12 +1759,13 @@
     <div class="resp-col bitatech">
       <h4>Bitatech entrega</h4>
       <ul>
-        <li>Configuración completa de los seis módulos de la Fase 1</li>
+        <li>Configuración completa de los siete módulos de la Fase 1</li>
         <li>Integración del formulario web al CRM</li>
         <li>Flujo de servicio de campo con acceso de los técnicos al portal web</li>
         <li>Estructura de bodegas configurada (principal, técnica, cliente, tránsito, técnico)</li>
         <li>Carga masiva de los 2,000 equipos por plantilla</li>
-        <li>Módulo de Compras con flujo de aprobación</li>
+        <li>Plan de cuentas contable configurado, ajustado a la operación del cliente</li>
+        <li>Integración con proveedor autorizado de Facturación Electrónica DGI</li>
         <li>Tableros y reportes nativos por área</li>
         <li>Ambiente de pruebas configurado</li>
         <li>Capacitación a los usuarios internos por área y a los técnicos de campo en el uso del portal web, con manuales de usuario</li>
@@ -1756,11 +1777,13 @@
       <ul>
         <li>Plantilla con los 2,000 equipos (serial, modelo, proveedor, cliente, bodega, estado) según el formato que Bitatech provee</li>
         <li>Llenado y validación de los clientes activos y sus datos de contacto</li>
-        <li>Maestro de proveedores con sus condiciones comerciales</li>
+        <li>Plan de cuentas vigente o decisiones contables (catálogo, centros de costo, ejercicio fiscal) para la configuración inicial</li>
+        <li>Saldos iniciales contables de apertura, según el corte que el cliente defina</li>
+        <li>Suscripción y credenciales con el proveedor autorizado de Facturación Electrónica DGI</li>
         <li>Definiciones de SLA por tipo de ticket y prioridad</li>
         <li>Acceso al formulario web para su integración</li>
         <li>Acceso al personal clave para las sesiones de mapeo y capacitación</li>
-        <li>Decisiones de configuración: políticas de precio, equipos de ventas, jerarquías de aprobación de compras</li>
+        <li>Decisiones de configuración: políticas de precio, equipos de ventas, jerarquías de aprobación</li>
         <li>Teléfonos o dispositivos de los técnicos con navegador web y acceso a internet</li>
       </ul>
     </div>
@@ -1795,7 +1818,7 @@
     <div class="reason-card">
       <div class="reason-num">04</div>
       <h4>Transparencia en las decisiones técnicas</h4>
-      <p>Exponemos las implicaciones reales de cada opción (costo, tiempo y riesgo) para que el cliente decida con la información completa, como en el análisis de convivencia con Sage 50.</p>
+      <p>Exponemos las implicaciones reales de cada opción (costo, tiempo y riesgo) para que el cliente decida con la información completa, como en la decisión de consolidar la contabilidad dentro de Odoo desde la Fase 1.</p>
     </div>
   </div>
 
@@ -1822,14 +1845,14 @@
       <div class="pain-icon medium">1</div>
       <div class="pain-content">
         <h4>Validación de alcance y supuestos</h4>
-        <p>Confirmación del alcance de la Fase 1, de los cinco supuestos declarados y de la opción de convivencia con Sage 50. Cualquier ajuste se define antes del borrador de contrato.</p>
+        <p>Confirmación del alcance de la Fase 1 y de los cinco supuestos declarados. Cualquier ajuste se define antes del borrador de contrato.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">2</div>
       <div class="pain-content">
         <h4>Firma de contrato y pago inicial</h4>
-        <p>Firma del contrato de la Fase 1 y pago del 50% inicial (USD 4,750). Da inicio formal al proyecto.</p>
+        <p>Firma del contrato de la Fase 1 y pago del 50% inicial (USD 6,750). Da inicio formal al proyecto.</p>
       </div>
     </div>
     <div class="pain-item">
@@ -1852,7 +1875,7 @@
 <!-- CTA -->
 <section class="cta-section">
   <h2>Sra. Andrea, quedamos atentos a sus comentarios.</h2>
-  <p>Para confirmar el alcance, validar los supuestos, definir la opción de convivencia con Sage 50 o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
+  <p>Para confirmar el alcance, validar los supuestos o hacer cualquier consulta sobre esta propuesta, puede responder directamente al correo o contactar a Carlos M. Larrauri.</p>
   <div class="cta-contact">
     <a href="tel:+50768985121">+507 6898-5121</a> &nbsp;&middot;&nbsp;
     <a href="mailto:info@bitatech.ai">info@bitatech.ai</a> &nbsp;&middot;&nbsp;
@@ -1869,7 +1892,7 @@
     <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
     <a href="tel:+50768985121">+507 6898-5121</a>
   </div>
-  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panamá a través de la consultoría de la Sra. Andrea. Válida hasta el 18 de junio de 2026. La inversión de las cuatro fases es cerrada y cada fase se contrata por separado; los supuestos abiertos se cotizan aparte. Precios no incluyen ITBMS (7%).</p>
+  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panamá a través de la consultoría de la Sra. Andrea. Versión actualizada al 25 de mayo de 2026; válida hasta el 30 de junio de 2026. La inversión de las cuatro fases es cerrada y cada fase se contrata por separado; los supuestos abiertos se cotizan aparte. El ajuste de cortesía indicado se aplica al conjunto del proyecto, sobre el primer tramo (Fase 1 + Fase 2). Precios no incluyen ITBMS (7%).</p>
 </footer>
 
 </body>
