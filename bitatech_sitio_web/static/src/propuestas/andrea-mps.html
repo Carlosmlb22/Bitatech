@@ -981,8 +981,8 @@
   <div class="cover-meta">
     <div><strong>Preparado para:</strong> Proyecto MPS Panamá</div>
     <div><strong>Vía:</strong> Sra. Andrea &mdash; Consultoría</div>
-    <div><strong>Fecha:</strong> 18 de mayo de 2026</div>
-    <div><strong>Válida hasta:</strong> 18 de junio de 2026</div>
+    <div><strong>Fecha:</strong> 27 de mayo de 2026</div>
+    <div><strong>Válida hasta:</strong> 30 de junio de 2026</div>
   </div>
   <div class="cover-logos">
     <div class="logo-text">BITA<span>TECH</span></div>
@@ -1114,7 +1114,7 @@
       <tr>
         <td><strong>Compras</strong></td>
         <td>Proveedores, órdenes de compra, recepciones y flujo de aprobación.</td>
-        <td><span class="ph ph-1">Fase 1</span></td>
+        <td><span class="ph ph-3">Fase 3</span></td>
       </tr>
       <tr>
         <td><strong>Facturación MPS</strong></td>
@@ -1263,9 +1263,9 @@
         <div class="phase-tagline">"Operar al 100% en Odoo desde el primer día, contabilidad y facturación fiscal incluidas"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 13,500</div>
+        <div class="amount">USD 10,500</div>
         <span class="period">Pago único de Fase 1</span>
-        <div class="payment-line">50% al firmar (USD 6,750) &middot; 50% a la entrega (USD 6,750)</div>
+        <div class="payment-line">50% al firmar (USD 5,250) &middot; 50% a la entrega (USD 5,250)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
@@ -1313,12 +1313,6 @@
     </div>
   </div>
 
-  <div class="info-box green">
-    <h4>Dos requerimientos de la matriz funcional, incluidos sin costo adicional</h4>
-    <p>Al revisar la matriz de Cumplimiento Funcional identificamos dos requerimientos que no estaban contemplados en el alcance original de la Fase 1 y que, por su naturaleza, pertenecen a esta fase: la asociación de partes a cada impresora (ítem 42) y la asociación de consumibles a cada impresora (ítem 43). El tercer ítem que originalmente estaba absorbido como cortesía (ítem 71, trazabilidad de compras a cliente) viaja ahora con el módulo de Compras a la Fase 3.</p>
-    <p>Los dos requerimientos absorbidos requieren desarrollo a la medida sobre Odoo. <strong>Bitatech los entrega como cortesía dentro de la Fase 1, sin incremento sobre el precio cotizado.</strong></p>
-  </div>
-
   <h3 style="margin-top: 48px;">Supuestos declarados de la Fase 1</h3>
   <p class="muted" style="font-size: 13.5px;">Para avanzar, trabajamos con los siguientes supuestos. Cualquier ajuste se puede revisar antes de enviar el borrador de contrato.</p>
 
@@ -1341,13 +1335,19 @@
     <div class="supuesto-card">
       <div class="supuesto-num">Supuesto 04</div>
       <h4>Facturación masiva del módulo MPS: emisión interna, no fiscal</h4>
-      <p>La matriz de Cumplimiento Funcional indica que el sistema generará prefacturación masiva por cliente (ítem 31) y permitirá revisión antes de la emisión final (ítem 32), sin especificar si esa emisión final es interna o fiscal. Asumimos que el desarrollo entregado cubre la <strong>emisión masiva de facturas internas de sistema</strong> (no fiscales). Las facturas fiscales electrónicas se timbran posteriormente accionando los botones correspondientes del módulo de Facturación Electrónica DGI, una por una. Si el cliente requiere adicionalmente el timbrado fiscal masivo (emisión electrónica DGI en lote), corresponde a un desarrollo a la medida que se cotiza por separado y no está incluido en el alcance de esta propuesta.</p>
+      <p>La matriz de Cumplimiento Funcional indica que el sistema generará prefacturación masiva por cliente (ítem 31) y permitirá revisión antes de la emisión final (ítem 32), sin especificar si esa emisión final es interna o fiscal. Asumimos que el desarrollo entregado cubre la <strong>emisión masiva de facturas internas de sistema</strong> (no fiscales). Las facturas fiscales electrónicas se timbran posteriormente accionando los botones correspondientes del módulo de Facturación Electrónica DGI, una por una.</p>
     </div>
-    <div class="supuesto-card">
-      <div class="supuesto-num">Supuesto 05</div>
-      <h4>Manejo de cobros parciales en proyectos largos: tema bajo definición</h4>
-      <p>El cliente nos compartió la necesidad de mantener facturas internas abiertas en proyectos con cobro por abonos, sin emitir el documento fiscal hasta el cierre del proyecto. Existen varias rutas técnicas para resolverlo y la elección depende del flujo exacto que utilizan hoy. <strong>Estamos a la espera de un video del cliente</strong> que detalle el proceso actual; una vez recibido, presentaremos la opción más conveniente y su cotización específica, que se incorporará como adenda a esta propuesta o a la Fase 1.</p>
-    </div>
+  </div>
+
+  <div class="info-box green" style="margin-top: 28px;">
+    <h4>Manejo de cobros parciales en proyectos largos &mdash; incluido en Fase 1</h4>
+    <p>El cliente nos compartió la necesidad de mantener facturas internas abiertas en proyectos con cobro por abonos, sin emitir el documento fiscal hasta el cierre del proyecto, flujo que hoy resuelve con un dispositivo de un proveedor externo. Tras revisar el caso confirmamos que esa necesidad <strong>se cubre íntegramente dentro de Odoo</strong>, sin requerir hardware adicional ni software de terceros.</p>
+    <p>Como parte de la Fase 1, Bitatech entrega una <strong>modificación a la medida sobre el módulo de Facturación Electrónica DGI</strong> con tres comportamientos:</p>
+    <p>1. La factura interna del sistema se emite cuando el cliente lo necesita, sin emitir simultáneamente la factura fiscal de la DGI.<br>
+    2. La factura fiscal se emite posteriormente en cualquier momento, accionando un botón directamente desde la factura interna, sin importar cuánto tiempo haya pasado entre una y otra.<br>
+    3. Al accionar el botón de emisión fiscal, el sistema <strong>actualiza automáticamente la fecha de la factura interna</strong> para que coincida con la del timbrado ante la DGI. De esta forma la operación cumple con el plazo máximo de emisión que la DGI exige para timbrar facturas fiscales, sin importar cuánto tiempo haya pasado entre la emisión interna original y el momento del timbrado.<br>
+    4. Ambos documentos quedan enlazados automáticamente por sus códigos y numeraciones, sin necesidad de marcar manualmente "FE" ni hacer ningún cotejo posterior.</p>
+    <p>Con esto el cliente conserva la operativa actual de "factura interna primero, fiscal cuando corresponda" y reemplaza el dispositivo externo sin pérdida de funcionalidad.</p>
   </div>
 </section>
 
@@ -1357,7 +1357,7 @@
 <section class="section">
   <span class="section-label">04 &mdash; Evolución del proyecto</span>
   <h2>Fases 2, 3 y 4: el motor MPS, la gestión avanzada y el cierre documental</h2>
-  <p>Las fases siguientes se describen aquí en su alcance completo y con su inversión cerrada, para dar visibilidad del panorama total del proyecto. Cada fase se contrata por separado y su alcance se confirma al iniciarla. Los componentes cuyo precio depende de información aún por definir se señalan como supuestos abiertos (ver sección 06).</p>
+  <p>Las fases siguientes se describen aquí en su alcance completo y con su inversión cerrada, para dar visibilidad del panorama total del proyecto. Cada fase se contrata por separado y su alcance se confirma al iniciarla.</p>
 
   <!-- FASE 2 -->
   <div class="phase-card phase-2">
@@ -1368,9 +1368,9 @@
         <div class="phase-tagline">"Donde se materializa el mayor ahorro operativo"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 12,500</div>
+        <div class="amount">USD 6,400</div>
         <span class="period">Pago único de Fase 2</span>
-        <div class="payment-line">50% al firmar (USD 6,250) &middot; 50% a la entrega (USD 6,250)</div>
+        <div class="payment-line">50% al firmar (USD 3,200) &middot; 50% a la entrega (USD 3,200)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
@@ -1407,6 +1407,12 @@
         <span class="meta-value">Motor MPS automatizado en operación</span>
       </div>
     </div>
+
+    <div class="supuesto-card" style="margin-top: 24px;">
+      <div class="supuesto-num">Supuesto declarado de la Fase 2</div>
+      <h4>Carga de contadores por plantilla CSV, sin integración directa con CFM</h4>
+      <p>La Fase 2 cotiza la carga de contadores mediante plantilla CSV: el sistema importa los valores periódicos por equipo y los pasa al motor de facturación. <strong>No se incluyen integraciones directas para la lectura automática desde el software CFM</strong> ni desde ninguna otra herramienta del fabricante. Una eventual integración automática depende de que el software del fabricante exponga una interfaz de programación pública y se cotiza por separado al confirmarse el software involucrado.</p>
+    </div>
   </div>
 
   <!-- FASE 3 -->
@@ -1418,9 +1424,9 @@
         <div class="phase-tagline">"Cerrar el ciclo contractual, los activos y el abastecimiento"</div>
       </div>
       <div class="phase-price">
-        <div class="amount">USD 7,500</div>
+        <div class="amount">USD 6,500</div>
         <span class="period">Pago único de Fase 3</span>
-        <div class="payment-line">50% al firmar (USD 3,750) &middot; 50% a la entrega (USD 3,750)</div>
+        <div class="payment-line">50% al firmar (USD 3,250) &middot; 50% a la entrega (USD 3,250)</div>
         <div class="payment-line" style="opacity: 0.75;">Precio no incluye ITBMS (7%)</div>
       </div>
     </div>
@@ -1537,7 +1543,7 @@
 <section class="section">
   <span class="section-label">06 &mdash; Inversión</span>
   <h2>Resumen de inversión</h2>
-  <p>Las cuatro fases se presentan con precio cerrado, para que el cliente tenga el panorama completo de la inversión del proyecto. Cada fase se contrata por separado. Los componentes cuyo precio depende de información aún por definir se señalan como supuestos abiertos.</p>
+  <p>Las cuatro fases se presentan con precio cerrado, para que el cliente tenga el panorama completo de la inversión del proyecto. Cada fase se contrata por separado.</p>
 
   <table class="cost-table">
     <thead>
@@ -1553,24 +1559,24 @@
           <strong>Fase 1 &mdash; Núcleo comercial, operativo, contable y fiscal</strong><br>
           <span class="muted" style="font-size: 12px;">Clientes + CRM + Mesa de Ayuda + Órdenes de Trabajo + Inventario + Contabilidad + Facturación Electrónica DGI</span>
         </td>
-        <td class="highlight">USD 13,500</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 6,750)<br>50% a la entrega (USD 6,750)</span></td>
+        <td class="highlight">USD 10,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 5,250)<br>50% a la entrega (USD 5,250)</span></td>
       </tr>
       <tr>
         <td>
           <strong>Fase 2 &mdash; Núcleo MPS automatizado</strong><br>
           <span class="muted" style="font-size: 12px;">Motor de facturación por contadores, excedentes, prefacturación masiva y base contractual</span>
         </td>
-        <td class="highlight">USD 12,500</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 6,250)<br>50% a la entrega (USD 6,250)</span></td>
+        <td class="highlight">USD 6,400</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 3,200)<br>50% a la entrega (USD 3,200)</span></td>
       </tr>
       <tr>
         <td>
           <strong>Fase 3 &mdash; Gestión avanzada del ciclo contractual y de abastecimiento</strong><br>
           <span class="muted" style="font-size: 12px;">Activos Fijos + Contratos y SLA + Cuentas por Cobrar avanzada + Compras</span>
         </td>
-        <td class="highlight">USD 7,500</td>
-        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 3,750)<br>50% a la entrega (USD 3,750)</span></td>
+        <td class="highlight">USD 6,500</td>
+        <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 3,250)<br>50% a la entrega (USD 3,250)</span></td>
       </tr>
       <tr>
         <td>
@@ -1580,38 +1586,23 @@
         <td class="highlight">USD 5,500</td>
         <td><span class="muted" style="font-size: 12px;">50% al firmar (USD 2,750)<br>50% a la entrega (USD 2,750)</span></td>
       </tr>
-      <tr>
-        <td>Subtotal del proyecto &mdash; cuatro fases</td>
-        <td class="highlight">USD 39,000</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <strong>Ajuste de cortesía Bitatech</strong><br>
-          <span class="muted" style="font-size: 12px;">Aplicado sobre la Fase 1 y la Fase 2 para acercar el primer tramo al techo presupuestario del cliente</span>
-        </td>
-        <td class="highlight" style="color: #2a8a3e;">&minus; USD 7,000</td>
-        <td></td>
-      </tr>
       <tr class="total-row">
-        <td>Total del proyecto &mdash; cuatro fases, con ajuste de cortesía</td>
-        <td>USD 32,000</td>
+        <td>Total del proyecto &mdash; cuatro fases</td>
+        <td>USD 28,900</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementación no incluyen ITBMS (7%). El ajuste de cortesía se aplica de forma consolidada sobre el primer tramo del proyecto (Fase 1 + Fase 2), llevando ese tramo a USD 19,000 efectivos.</p>
+  <p class="muted" style="font-size: 12px; font-style: italic; margin-top: 8px;">Los precios de implementación no incluyen ITBMS (7%). Cada fase se contrata por separado en su momento; el total se presenta a título informativo del panorama completo del proyecto.</p>
 
   <div class="info-box accent">
     <h4>Flexibilidad en la forma de pago</h4>
-    <p>La forma de pago indicada para cada fase (50% al firmar y 50% a la entrega) es la modalidad estándar, pero es ajustable. Si el cliente prefiere abonos más pequeños ligados a resultados tangibles, los pagos se pueden fragmentar. Por ejemplo, en la Fase 1 el abono inicial podría ser del 25% (USD 2,375) para arrancar el proyecto, un segundo 25% al recibir la base de datos en funcionamiento, y el resto contra los avances posteriores. Estamos abiertos a definir la estructura de pagos que mejor se ajuste al cliente.</p>
+    <p>La forma de pago indicada para cada fase (50% al firmar y 50% a la entrega) es la modalidad estándar, pero es ajustable. Si el cliente prefiere abonos más pequeños ligados a resultados tangibles, los pagos se pueden fragmentar. Por ejemplo, en la Fase 1 el abono inicial podría ser del 25% (USD 2,625) para arrancar el proyecto; un segundo 25% al disponer de la base de datos activa en ambiente de pruebas, donde los responsables y dueños del proyecto pueden ingresar con su usuario para empezar a conocer el sistema (sin estar todavía en producción); y el resto contra los avances posteriores. Si el cliente opta por la modalidad fraccionada, los puntos exactos del proyecto donde corresponde cada abono se especifican dentro del contrato del proyecto, para evitar suspensiones por mora. Estamos abiertos a definir la estructura de pagos que mejor se ajuste al cliente.</p>
   </div>
 
   <div class="info-box blue">
-    <h4>Precios cerrados y supuestos abiertos</h4>
-    <p>Los montos de las cuatro fases son precios cerrados, sujetos a la confirmación del alcance descrito en esta propuesta para cada fase. Dos componentes quedan con un supuesto abierto, porque su precio depende de información que aún está por definir; se cotizan por separado una vez disponible esa información y no están incluidos en los montos anteriores.</p>
-    <p><strong>Supuesto abierto 1 &mdash; Manejo de cobros parciales en proyectos largos.</strong> El cliente nos compartió la necesidad de mantener facturas internas abiertas en proyectos con cobro por abonos, sin emitir el documento fiscal hasta el cierre del proyecto. Existen varias rutas técnicas para resolverlo y la elección depende del flujo exacto que utilizan hoy. Estamos a la espera de un video del cliente que detalle el proceso actual; una vez recibido, presentaremos la opción más conveniente y su cotización específica, que se incorporará como adenda a esta propuesta o a la Fase 1.</p>
-    <p><strong>Supuesto abierto 2 &mdash; Lectura automática del software de contadores (CFM).</strong> La Fase 2 incluye la carga de contadores por plantilla CSV. La lectura automática desde el software CFM depende del fabricante y de si dispone de una interfaz de programación; se confirma y cotiza por separado una vez identificado dicho software.</p>
+    <h4>Precios cerrados por fase</h4>
+    <p>Los montos de las cuatro fases son precios cerrados, sujetos a la confirmación del alcance descrito en esta propuesta para cada fase. Los supuestos declarados de Fase 1 y de Fase 2 forman parte del alcance entregado a esos precios; cualquier ítem que quede fuera (como una eventual integración directa con el software CFM) se cotiza por separado al confirmarse su requerimiento.</p>
   </div>
 
   <h3 style="margin-top: 40px;">Qué NO incluye esta propuesta</h3>
@@ -1660,7 +1651,7 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="s-label">Anticipo de Fase 1</div>
-        <div class="s-value"><span>USD 6,750</span></div>
+        <div class="s-value"><span>USD 5,250</span></div>
         <div class="s-detail">50% al firmar el contrato</div>
       </div>
       <div class="summary-item">
@@ -1680,7 +1671,13 @@
 <section class="section">
   <span class="section-label">07 &mdash; Soporte y evolución</span>
   <h2>Cómo trabajamos el soporte posterior y los proyectos futuros</h2>
-  <p>Cada fase incluye dos semanas de acompañamiento posterior a la entrega. Este acompañamiento se brinda de forma remota (correo, WhatsApp y llamada, con acceso remoto al sistema cuando se requiera), en horario laboral, para resolver dudas de uso y realizar ajustes menores; de solicitarlo el cliente, se coordina alguna visita presencial puntual. Superado ese período, el cliente puede elegir cómo desea continuar el soporte y la evolución del sistema. Ofrecemos dos modalidades, que pueden combinarse o cambiarse en el tiempo según la necesidad real.</p>
+  <p>Cada fase incluye dos componentes de soporte posteriores a la entrega, que conviven y se complementan:</p>
+
+  <p><strong>Acompañamiento intensivo de dos semanas.</strong> Período de estabilización tras la entrega, brindado de forma remota a través de los canales oficiales del proyecto (sistema de tickets de soporte de Bitatech y correo electrónico a info@bitatech.ai, con acceso remoto al sistema cuando la consulta lo requiera) en horario laboral, orientado a resolver dudas de uso, atender el aprendizaje del equipo y realizar ajustes menores de configuración. De solicitarlo el cliente, se coordina alguna visita presencial puntual.</p>
+
+  <p><strong>Garantía contractual de treinta (30) días.</strong> Contados desde la firma del acta de recepción de cada fase. Durante este período Bitatech corrige sin costo adicional cualquier error funcional o defecto de configuración atribuible a la implementación. La garantía cubre la corrección de defectos del entregable; el acompañamiento intensivo cubre el uso y la operación temprana del sistema. Ambos plazos corren en paralelo desde la entrega.</p>
+
+  <p>Superados ambos períodos, el cliente puede elegir cómo continuar el soporte y la evolución del sistema. Ofrecemos dos modalidades, que pueden combinarse o cambiarse en el tiempo según la necesidad real.</p>
 
   <div class="soporte-grid">
     <div class="soporte-card fijo">
@@ -1845,14 +1842,14 @@
       <div class="pain-icon medium">1</div>
       <div class="pain-content">
         <h4>Validación de alcance y supuestos</h4>
-        <p>Confirmación del alcance de la Fase 1 y de los cinco supuestos declarados. Cualquier ajuste se define antes del borrador de contrato.</p>
+        <p>Confirmación del alcance de la Fase 1 y de los cuatro supuestos declarados. Cualquier ajuste se define antes del borrador de contrato.</p>
       </div>
     </div>
     <div class="pain-item">
       <div class="pain-icon medium">2</div>
       <div class="pain-content">
         <h4>Firma de contrato y pago inicial</h4>
-        <p>Firma del contrato de la Fase 1 y pago del 50% inicial (USD 6,750). Da inicio formal al proyecto.</p>
+        <p>Firma del contrato de la Fase 1 y pago del 50% inicial (USD 5,250). Da inicio formal al proyecto.</p>
       </div>
     </div>
     <div class="pain-item">
@@ -1892,7 +1889,7 @@
     <a href="mailto:info@bitatech.ai">info@bitatech.ai</a>
     <a href="tel:+50768985121">+507 6898-5121</a>
   </div>
-  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panamá a través de la consultoría de la Sra. Andrea. Versión actualizada al 25 de mayo de 2026; válida hasta el 30 de junio de 2026. La inversión de las cuatro fases es cerrada y cada fase se contrata por separado; los supuestos abiertos se cotizan aparte. El ajuste de cortesía indicado se aplica al conjunto del proyecto, sobre el primer tramo (Fase 1 + Fase 2). Precios no incluyen ITBMS (7%).</p>
+  <p class="disclaimer">Propuesta comercial preparada para el proyecto MPS Panamá a través de la consultoría de la Sra. Andrea. Versión actualizada al 27 de mayo de 2026; válida hasta el 30 de junio de 2026. La inversión de las cuatro fases es cerrada y cada fase se contrata por separado. Precios no incluyen ITBMS (7%).</p>
 </footer>
 
 </body>
