@@ -475,26 +475,30 @@
     transform: translateY(-2px);
 }
 
-.bitatech-btn-primario {
+.bitatech-btn-primario,
+.bitatech-btn-primario:link,
+.bitatech-btn-primario:visited {
     background-color: var(--bt-acento);
-    color: var(--bt-negro);
+    color: var(--bt-negro) !important;
 }
 
 .bitatech-btn-primario:hover {
     background-color: var(--bt-acento-hover);
-    color: var(--bt-negro);
+    color: var(--bt-negro) !important;
     box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
 }
 
-.bitatech-btn-secundario {
+.bitatech-btn-secundario,
+.bitatech-btn-secundario:link,
+.bitatech-btn-secundario:visited {
     background-color: transparent;
-    color: var(--bt-blanco-suave);
+    color: var(--bt-blanco-suave) !important;
     border: 1px solid var(--bt-gris-borde);
 }
 
 .bitatech-btn-secundario:hover {
     border-color: var(--bt-acento);
-    color: var(--bt-acento);
+    color: var(--bt-acento) !important;
 }
 
 .bitatech-btn-grande {
