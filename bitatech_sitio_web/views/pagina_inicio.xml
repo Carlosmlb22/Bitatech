@@ -49,6 +49,21 @@
                     </div>
                 </section>
 
+                <!-- ===== INSIGNIA ODOO OFFICIAL PARTNER ===== -->
+                <section class="bitatech-seccion bitatech-partner-banda">
+                    <div class="bitatech-seccion-interior bitatech-animar">
+                        <div class="bitatech-partner-banda-tarjeta">
+                            <img src="/bitatech_sitio_web/static/src/img/odoo-partner-oficial.jpg"
+                                 alt="Odoo Official Partner"/>
+                            <p class="bitatech-partner-banda-texto">
+                                Somos <strong>Odoo Official Partner</strong>. Implementamos,
+                                configuramos y personalizamos Odoo con respaldo y metodologia
+                                oficial para garantizar proyectos a tiempo y en presupuesto.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- ===== SERVICIOS RESUMEN ===== -->
                 <section class="bitatech-seccion bitatech-seccion-oscura" id="servicios-resumen">
                     <div class="bitatech-seccion-interior">

@@ -64,6 +64,26 @@
                     </div>
                 </section>
 
+                <!-- ===== INSIGNIA ODOO OFFICIAL PARTNER ===== -->
+                <section class="bitatech-seccion bitatech-partner-banda">
+                    <div class="bitatech-seccion-interior bitatech-animar">
+                        <div class="bitatech-seccion-encabezado">
+                            <span class="bitatech-etiqueta-seccion">Respaldo oficial</span>
+                            <h2 class="bitatech-titulo-seccion">Odoo Official Partner</h2>
+                        </div>
+                        <div class="bitatech-partner-banda-tarjeta">
+                            <img src="/bitatech_sitio_web/static/src/img/odoo-partner-oficial.jpg"
+                                 alt="Odoo Official Partner"/>
+                            <p class="bitatech-partner-banda-texto">
+                                Bitatech es <strong>Partner Oficial de Odoo</strong>. Esto significa
+                                acceso directo a certificaciones, soporte y metodologia oficial
+                                de la plataforma, que aplicamos en cada implementacion para
+                                entregar proyectos a tiempo y en presupuesto.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- ===== VALORES ===== -->
                 <section class="bitatech-seccion bitatech-seccion-gradiente">
                     <div class="bitatech-seccion-interior">

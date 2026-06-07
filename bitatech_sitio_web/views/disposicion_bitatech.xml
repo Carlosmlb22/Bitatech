@@ -47,6 +47,12 @@
                                     Arquitectura digital para empresas
                                     que necesitan estructura, control y escalabilidad.
                                 </p>
+                                <div class="bitatech-footer-partner">
+                                    <a href="/bitatech/nosotros" class="bitatech-partner-insignia" title="Odoo Official Partner">
+                                        <img src="/bitatech_sitio_web/static/src/img/odoo-partner-oficial.jpg"
+                                             alt="Odoo Official Partner"/>
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Columna 2: Enlaces rapidos -->
