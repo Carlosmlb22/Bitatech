@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Bitatech - Sitio Web',
-    'version': '19.0.1.1.1',
+    'version': '19.0.1.3.0',
     'summary': 'Sitio web corporativo de Bitatech - Sistemas Empresariales Inteligentes',
     'description': """
         Modulo completo del sitio web de Bitatech.

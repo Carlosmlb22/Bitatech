@@ -1,0 +1,1426 @@
+# Translation of Bitatech - Sitio Web (bitatech_sitio_web) into English (US).
+# Source language of the module is Spanish.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bitatech_sitio_web 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Bitatech <info@bitatech.co>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ============================================================
+# DISPOSICION GLOBAL (header / footer) - disposicion_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid "Sistemas Empresariales Inteligentes"
+msgstr "Intelligent Business Systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Inicio"
+msgstr "Home"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Servicios"
+msgstr "Services"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Planes"
+msgstr "Plans"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Nosotros"
+msgstr "About Us"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Contacto"
+msgstr "Contact"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid ""
+"Sistemas Empresariales Inteligentes. Arquitectura digital para empresas que "
+"necesitan estructura, control y escalabilidad."
+msgstr ""
+"Intelligent Business Systems. Digital architecture for companies that need "
+"structure, control and scalability."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid "Enlaces"
+msgstr "Links"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid "Diagnostico Gratuito"
+msgstr "Free Assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Implementacion ERP"
+msgstr "ERP Implementation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Automatizacion"
+msgstr "Automation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Sistemas de Chat"
+msgstr "Chat Systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid "Optimizacion"
+msgstr "Optimization"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Desarrollo a Medida"
+msgstr "Custom Development"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Panama, Panama"
+msgstr "Panama City, Panama"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.disposicion_bitatech
+msgid "&copy; 2026 Bitatech. Todos los derechos reservados."
+msgstr "&copy; 2026 Bitatech. All rights reserved."
+
+# ============================================================
+# PAGINA INICIO - vista_pagina_inicio_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Metodo BSI™"
+msgstr "BSI Method™"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Sistemas Empresariales<br/> <span class=\"bitatech-acento\">Inteligentes</span>"
+msgstr ""
+"Intelligent Business<br/> <span class=\"bitatech-acento\">Systems</span>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Diseñamos la arquitectura digital que tu empresa necesita para operar con "
+"estructura, eliminar el caos operativo y crecer sin depender del dueño."
+msgstr ""
+"We design the digital architecture your company needs to operate with "
+"structure, eliminate operational chaos and grow without depending on the owner."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Solicitar Diagnostico Gratuito"
+msgstr "Request a Free Assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Ver Servicios"
+msgstr "View Services"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Somos <strong>Odoo Official Partner</strong>. Implementamos, configuramos y "
+"personalizamos Odoo con respaldo y metodologia oficial para garantizar "
+"proyectos a tiempo y en presupuesto."
+msgstr ""
+"We are an <strong>Odoo Official Partner</strong>. We implement, configure and "
+"customize Odoo with official backing and methodology to deliver projects on "
+"time and on budget."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Lo que hacemos"
+msgstr "What we do"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Cinco Lineas de Servicio"
+msgstr "Five Service Lines"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Cada linea resuelve un problema operativo concreto. Sin teoria. Sin humo. "
+"Resultados medibles."
+msgstr ""
+"Each line solves a concrete operational problem. No theory. No fluff. "
+"Measurable results."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Implementacion desde cero, reestructuracion, migraciones y diseño de flujos "
+"operativos con trazabilidad real."
+msgstr ""
+"Implementation from scratch, restructuring, migrations and operational "
+"workflow design with real traceability."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Conocer mas <i class=\"fa fa-arrow-right\"/>"
+msgstr "Learn more <i class=\"fa fa-arrow-right\"/>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Automatizacion Avanzada"
+msgstr "Advanced Automation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Bots, wizards inteligentes, dashboards ejecutivos, alertas internas y "
+"automatizacion de tareas conectados al ERP."
+msgstr ""
+"Bots, smart wizards, executive dashboards, internal alerts and task "
+"automation connected to the ERP."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Flujos conversacionales, bots con estado, sistemas hibridos bot + humano, "
+"metricas de conversion y anti-abandono."
+msgstr ""
+"Conversational flows, stateful bots, hybrid bot + human systems, conversion "
+"metrics and anti-abandonment."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Optimizacion Operativa"
+msgstr "Operational Optimization"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Auditoria de procesos, KPIs personalizados, reorganizacion de roles y "
+"automatizacion de tareas repetitivas."
+msgstr ""
+"Process auditing, custom KPIs, role reorganization and automation of "
+"repetitive tasks."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Modulos personalizados, integraciones API, sincronizacion logistica y "
+"sistemas hibridos fisicos-digitales."
+msgstr ""
+"Custom modules, API integrations, logistics synchronization and hybrid "
+"physical-digital systems."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Diferenciadores"
+msgstr "Differentiators"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "¿Por que Bitatech?"
+msgstr "Why Bitatech?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Arquitectura, no improvisacion"
+msgstr "Architecture, not improvisation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"No instalamos software y nos vamos. Diseñamos la estructura digital completa "
+"de tu empresa con el Metodo BSI™."
+msgstr ""
+"We don't just install software and leave. We design your company's complete "
+"digital structure with the BSI Method™."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Resultados medibles"
+msgstr "Measurable results"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Cada proyecto tiene KPIs claros desde el dia uno. Sabes exactamente que vas a "
+"obtener y como se va a medir."
+msgstr ""
+"Every project has clear KPIs from day one. You know exactly what you will get "
+"and how it will be measured."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Experiencia operativa real"
+msgstr "Real operational experience"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"Hemos diseñado sistemas para empresas con operaciones complejas: ventas, "
+"inventario, logistica, caja y proyectos integrados."
+msgstr ""
+"We have designed systems for companies with complex operations: sales, "
+"inventory, logistics, cash and integrated projects."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "Tu empresa deja de depender de ti"
+msgstr "Your company stops depending on you"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid ""
+"El objetivo final es que la operacion funcione con estructura, no con el "
+"dueño resolviendo todo manualmente."
+msgstr ""
+"The ultimate goal is for operations to run on structure, not on the owner "
+"solving everything manually."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿Listo para estructurar tu empresa?"
+msgstr "Ready to structure your company?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Solicita un diagnostico gratuito y descubre que tan lejos esta tu operacion "
+"de funcionar sin depender de ti."
+msgstr ""
+"Request a free assessment and discover how far your operation is from running "
+"without depending on you."
+
+# ============================================================
+# PAGINA SERVICIOS - vista_pagina_servicios_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "Nuestros Servicios"
+msgstr "Our Services"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "Cinco Lineas de Servicio Especializadas"
+msgstr "Five Specialized Service Lines"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Cada linea de servicio resuelve un problema operativo concreto. No vendemos "
+"licencias ni horas de soporte generico. Diseñamos sistemas que funcionan."
+msgstr ""
+"Each service line solves a concrete operational problem. We don't sell "
+"licenses or generic support hours. We design systems that work."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Implementamos, reestructuramos y migramos sistemas ERP con enfoque en "
+"operaciones reales. No se trata de instalar software: se trata de diseñar la "
+"estructura digital completa de tu empresa para que funcione sin fricciones."
+msgstr ""
+"We implement, restructure and migrate ERP systems with a focus on real "
+"operations. It's not about installing software: it's about designing your "
+"company's complete digital structure so it runs without friction."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "Lo que incluye:"
+msgstr "What it includes:"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Implementacion desde cero con diseño de flujos completos"
+msgstr "<i class=\"fa fa-check\"/> Implementation from scratch with complete workflow design"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Reestructuracion de sistemas existentes"
+msgstr "<i class=\"fa fa-check\"/> Restructuring of existing systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Migraciones entre versiones o plataformas"
+msgstr "<i class=\"fa fa-check\"/> Migrations between versions or platforms"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Separacion de departamentos con permisos y roles"
+msgstr "<i class=\"fa fa-check\"/> Department separation with permissions and roles"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Diseño de flujos: ventas, proyectos, inventario, caja"
+msgstr "<i class=\"fa fa-check\"/> Workflow design: sales, projects, inventory, cash"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Control de entregas y recepciones con trazabilidad"
+msgstr "<i class=\"fa fa-check\"/> Delivery and receipt control with traceability"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Cierres de caja con trazabilidad real"
+msgstr "<i class=\"fa fa-check\"/> Cash closings with real traceability"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizacion de tareas operativas recurrentes"
+msgstr "<i class=\"fa fa-check\"/> Automation of recurring operational tasks"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Conectamos la inteligencia operativa con la automatizacion. Bots "
+"conversacionales, wizards inteligentes, dashboards ejecutivos y alertas "
+"internas que trabajan por ti mientras tu equipo se enfoca en lo que importa."
+msgstr ""
+"We connect operational intelligence with automation. Conversational bots, "
+"smart wizards, executive dashboards and internal alerts that work for you "
+"while your team focuses on what matters."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Bots conversacionales integrados al ERP"
+msgstr "<i class=\"fa fa-check\"/> Conversational bots integrated with the ERP"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizacion de cotizaciones y propuestas"
+msgstr "<i class=\"fa fa-check\"/> Automation of quotes and proposals"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Wizards inteligentes para procesos complejos"
+msgstr "<i class=\"fa fa-check\"/> Smart wizards for complex processes"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizacion de proyectos desde ventas"
+msgstr "<i class=\"fa fa-check\"/> Project automation from sales"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Alertas internas y notificaciones automaticas"
+msgstr "<i class=\"fa fa-check\"/> Internal alerts and automatic notifications"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Control automatico de SLA"
+msgstr "<i class=\"fa fa-check\"/> Automatic SLA control"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Dashboards ejecutivos y SQL views personalizadas"
+msgstr "<i class=\"fa fa-check\"/> Executive dashboards and custom SQL views"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Integracion con Power BI y seguimiento de metricas"
+msgstr "<i class=\"fa fa-check\"/> Power BI integration and metrics tracking"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Sistemas de Chat y Conversion"
+msgstr "Chat and Conversion Systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"WhatsApp e Instagram convertidos en canales de venta estructurados. Flujos "
+"conversacionales, menus inteligentes, bots con estado y metricas de "
+"conversion reales integradas directamente al CRM."
+msgstr ""
+"WhatsApp and Instagram turned into structured sales channels. Conversational "
+"flows, smart menus, stateful bots and real conversion metrics integrated "
+"directly into the CRM."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Flujos conversacionales estructurados"
+msgstr "<i class=\"fa fa-check\"/> Structured conversational flows"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Menus inteligentes y enrutadores"
+msgstr "<i class=\"fa fa-check\"/> Smart menus and routers"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Bots con estado y memoria de contexto"
+msgstr "<i class=\"fa fa-check\"/> Stateful bots with context memory"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Sistemas hibridos: bot + atencion humana"
+msgstr "<i class=\"fa fa-check\"/> Hybrid systems: bot + human support"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Metricas tipo PFV / CV1 / TRT"
+msgstr "<i class=\"fa fa-check\"/> Metrics such as PFV / CV1 / TRT"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Sistema anti-abandono de conversaciones"
+msgstr "<i class=\"fa fa-check\"/> Conversation anti-abandonment system"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Plantillas estructuradas de mensajes"
+msgstr "<i class=\"fa fa-check\"/> Structured message templates"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Integracion completa con CRM"
+msgstr "<i class=\"fa fa-check\"/> Full CRM integration"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Auditamos tu operacion, identificamos cuellos de botella y rediseñamos "
+"procesos para que funcionen de forma autonoma. KPIs reales, roles claros y "
+"estructura organizacional digital que se sostiene sin el dueño."
+msgstr ""
+"We audit your operation, identify bottlenecks and redesign processes so they "
+"run autonomously. Real KPIs, clear roles and a digital organizational "
+"structure that stands without the owner."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Auditoria de procesos, inventario y ventas"
+msgstr "<i class=\"fa fa-check\"/> Auditing of processes, inventory and sales"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Estructura organizacional digital"
+msgstr "<i class=\"fa fa-check\"/> Digital organizational structure"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> KPIs personalizados por departamento"
+msgstr "<i class=\"fa fa-check\"/> Custom KPIs per department"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Reorganizacion de roles y permisos"
+msgstr "<i class=\"fa fa-check\"/> Reorganization of roles and permissions"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_inicio_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizacion de tareas repetitivas"
+msgstr "<i class=\"fa fa-check\"/> Automation of repetitive tasks"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Manuales de proceso operativo"
+msgstr "<i class=\"fa fa-check\"/> Operational process manuals"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Cuando el estandar no alcanza, construimos. Modulos personalizados, "
+"integraciones con sistemas externos, APIs, sincronizacion logistica y "
+"soluciones hibridas fisico-digitales diseñadas especificamente para tu "
+"operacion."
+msgstr ""
+"When standard isn't enough, we build. Custom modules, integrations with "
+"external systems, APIs, logistics synchronization and hybrid physical-digital "
+"solutions designed specifically for your operation."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Modulos personalizados para tu operacion"
+msgstr "<i class=\"fa fa-check\"/> Custom modules for your operation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizaciones complejas multi-proceso"
+msgstr "<i class=\"fa fa-check\"/> Complex multi-process automations"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Integraciones externas y APIs"
+msgstr "<i class=\"fa fa-check\"/> External integrations and APIs"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Sincronizacion con sistemas logisticos"
+msgstr "<i class=\"fa fa-check\"/> Synchronization with logistics systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Sistemas hibridos fisicos-digitales"
+msgstr "<i class=\"fa fa-check\"/> Hybrid physical-digital systems"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "<i class=\"fa fa-check\"/> Reportes y vistas SQL personalizadas"
+msgstr "<i class=\"fa fa-check\"/> Custom reports and SQL views"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid "¿No sabes por donde empezar?"
+msgstr "Not sure where to start?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_servicios_bitatech
+msgid ""
+"Solicita un diagnostico gratuito. Evaluamos tu operacion y te decimos "
+"exactamente que necesitas, sin compromiso."
+msgstr ""
+"Request a free assessment. We evaluate your operation and tell you exactly "
+"what you need, no commitment."
+
+# ============================================================
+# PAGINA PLANES - vista_pagina_planes_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Planes y Precios"
+msgstr "Plans and Pricing"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Soluciones escalables para cada etapa de tu empresa"
+msgstr "Scalable solutions for every stage of your company"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Orden Operativo"
+msgstr "Operational Order"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Implementacion unica"
+msgstr "One-time implementation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Para empresas que necesitan estructura desde cero"
+msgstr "For companies that need structure from scratch"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Diagnostico estrategico inicial"
+msgstr "<i class=\"fa fa-check\"/> Initial strategic assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Implementacion ERP completa"
+msgstr "<i class=\"fa fa-check\"/> Complete ERP implementation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Diseño de flujos operativos"
+msgstr "<i class=\"fa fa-check\"/> Operational workflow design"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Separacion de departamentos"
+msgstr "<i class=\"fa fa-check\"/> Department separation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Capacitacion del equipo"
+msgstr "<i class=\"fa fa-check\"/> Team training"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Soporte post-implementacion (30 dias)"
+msgstr "<i class=\"fa fa-check\"/> Post-implementation support (30 days)"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Solicitar Diagnostico"
+msgstr "Request Assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Mas solicitado"
+msgstr "Most requested"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Automatizacion Inteligente"
+msgstr "Intelligent Automation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Para empresas que quieren eliminar tareas manuales y escalar"
+msgstr "For companies that want to eliminate manual tasks and scale"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-arrow-up\"/> Todo lo de Orden Operativo"
+msgstr "<i class=\"fa fa-arrow-up\"/> Everything in Operational Order"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Automatizacion de procesos clave"
+msgstr "<i class=\"fa fa-check\"/> Automation of key processes"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Bots conversacionales (WhatsApp/Instagram)"
+msgstr "<i class=\"fa fa-check\"/> Conversational bots (WhatsApp/Instagram)"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Dashboards ejecutivos"
+msgstr "<i class=\"fa fa-check\"/> Executive dashboards"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Alertas y control de SLA"
+msgstr "<i class=\"fa fa-check\"/> Alerts and SLA control"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Integracion con herramientas externas"
+msgstr "<i class=\"fa fa-check\"/> Integration with external tools"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Wizards inteligentes"
+msgstr "<i class=\"fa fa-check\"/> Smart wizards"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Soporte post-implementacion (60 dias)"
+msgstr "<i class=\"fa fa-check\"/> Post-implementation support (60 days)"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Control Ejecutivo"
+msgstr "Executive Control"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "1,000<span class=\"bitatech-plan-periodo\">/mes</span>"
+msgstr "1,000<span class=\"bitatech-plan-periodo\">/mo</span>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Minimo 3 meses"
+msgstr "Minimum 3 months"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Para empresas que necesitan optimizacion continua y soporte dedicado"
+msgstr "For companies that need continuous optimization and dedicated support"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Auditoria operativa mensual"
+msgstr "<i class=\"fa fa-check\"/> Monthly operational audit"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> KPIs personalizados"
+msgstr "<i class=\"fa fa-check\"/> Custom KPIs"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Optimizacion continua de procesos"
+msgstr "<i class=\"fa fa-check\"/> Continuous process optimization"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Soporte prioritario"
+msgstr "<i class=\"fa fa-check\"/> Priority support"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Reportes ejecutivos mensuales"
+msgstr "<i class=\"fa fa-check\"/> Monthly executive reports"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "<i class=\"fa fa-check\"/> Ajustes y mejoras incluidas"
+msgstr "<i class=\"fa fa-check\"/> Adjustments and improvements included"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"<i class=\"fa fa-info-circle\"/> Incluye hasta 40 horas mensuales. Horas "
+"adicionales se facturan por separado."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/> Includes up to 40 hours per month. Additional "
+"hours are billed separately."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Agendar Reunion"
+msgstr "Schedule a Meeting"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿No sabes cual elegir?"
+msgstr "Not sure which to choose?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Cada empresa es diferente. Agenda un diagnostico gratuito BSI™ donde "
+"evaluamos tu operacion actual, identificamos los puntos criticos y te "
+"recomendamos el plan que realmente necesitas. Sin compromiso."
+msgstr ""
+"Every company is different. Schedule a free BSI™ assessment where we evaluate "
+"your current operation, identify critical points and recommend the plan you "
+"really need. No commitment."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Agendar Diagnostico Gratuito BSI™"
+msgstr "Schedule a Free BSI™ Assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "Preguntas Frecuentes"
+msgstr "Frequently Asked Questions"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿Que incluye el diagnostico?"
+msgstr "What does the assessment include?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Una sesion estrategica donde analizamos tu operacion actual, identificamos "
+"cuellos de botella y diseñamos una hoja de ruta personalizada."
+msgstr ""
+"A strategic session where we analyze your current operation, identify "
+"bottlenecks and design a personalized roadmap."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿Puedo combinar planes?"
+msgstr "Can I combine plans?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Si. Muchos clientes inician con Orden Operativo o Automatizacion Inteligente "
+"y luego pasan a Control Ejecutivo para mantener la mejora continua."
+msgstr ""
+"Yes. Many clients start with Operational Order or Intelligent Automation and "
+"then move to Executive Control to sustain continuous improvement."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿Trabajan solo con una plataforma?"
+msgstr "Do you work with only one platform?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Nos especializamos en ecosistemas empresariales integrados. Trabajamos con "
+"plataformas ERP lider, pero integramos con WhatsApp, Power BI y otras "
+"herramientas segun la necesidad."
+msgstr ""
+"We specialize in integrated business ecosystems. We work with leading ERP "
+"platforms, but we integrate with WhatsApp, Power BI and other tools as needed."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid "¿Atienden fuera de Panama?"
+msgstr "Do you serve clients outside Panama?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_planes_bitatech
+msgid ""
+"Si. Trabajamos con empresas en toda Latinoamerica de forma remota, con opcion "
+"presencial en Panama."
+msgstr ""
+"Yes. We work remotely with companies throughout Latin America, with an "
+"on-site option in Panama."
+
+# ============================================================
+# PAGINA NOSOTROS - vista_pagina_nosotros_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Sobre Nosotros"
+msgstr "About Us"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Sistemas que funcionan. Empresas que escalan."
+msgstr "Systems that work. Companies that scale."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Bitatech nace de una premisa simple: las empresas no necesitan mas software. "
+"Necesitan estructura digital que funcione."
+msgstr ""
+"Bitatech was born from a simple premise: companies don't need more software. "
+"They need digital structure that works."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Mision"
+msgstr "Mission"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Diseñar e implementar sistemas empresariales inteligentes que eliminen el "
+"caos operativo, establezcan estructura medible y permitan que las empresas "
+"crezcan sin depender exclusivamente de sus fundadores."
+msgstr ""
+"Design and implement intelligent business systems that eliminate operational "
+"chaos, establish measurable structure and allow companies to grow without "
+"depending exclusively on their founders."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Vision"
+msgstr "Vision"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Ser la firma de referencia en arquitectura de sistemas empresariales "
+"inteligentes en America Latina. Reconocida por resultados concretos, no por "
+"promesas de PowerPoint."
+msgstr ""
+"To be the benchmark firm for intelligent business systems architecture in "
+"Latin America. Recognized for concrete results, not PowerPoint promises."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Respaldo oficial"
+msgstr "Official backing"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Bitatech es <strong>Partner Oficial de Odoo</strong>. Esto significa acceso "
+"directo a certificaciones, soporte y metodologia oficial de la plataforma, "
+"que aplicamos en cada implementacion para entregar proyectos a tiempo y en "
+"presupuesto."
+msgstr ""
+"Bitatech is an <strong>Odoo Official Partner</strong>. This means direct "
+"access to the platform's certifications, support and official methodology, "
+"which we apply in every implementation to deliver projects on time and on "
+"budget."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Principios"
+msgstr "Principles"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Cuatro Valores que Definen Nuestro Trabajo"
+msgstr "Four Values That Define Our Work"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Estructura sobre improvisacion"
+msgstr "Structure over improvisation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Cada sistema que diseñamos tiene arquitectura definida, flujos documentados y "
+"metricas de validacion. No dejamos nada al azar."
+msgstr ""
+"Every system we design has defined architecture, documented workflows and "
+"validation metrics. We leave nothing to chance."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"No hablamos de \"mejoras\". Definimos KPIs desde el inicio y los medimos al "
+"final. Si no se puede medir, no sirve."
+msgstr ""
+"We don't talk about \"improvements\". We define KPIs from the start and "
+"measure them at the end. If it can't be measured, it's worthless."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Honestidad operativa"
+msgstr "Operational honesty"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Si algo no es viable, lo decimos. Si un proyecto necesita mas tiempo, lo "
+"comunicamos. Sin sorpresas, sin letra pequeña."
+msgstr ""
+"If something isn't feasible, we say so. If a project needs more time, we "
+"communicate it. No surprises, no fine print."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Independencia operativa"
+msgstr "Operational independence"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"El exito de un proyecto es que tu empresa funcione sin nosotros. Diseñamos "
+"para la autonomia, no para la dependencia."
+msgstr ""
+"A project's success is your company running without us. We design for "
+"autonomy, not dependence."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Comparativa"
+msgstr "Comparison"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Otros vs Bitatech"
+msgstr "Others vs Bitatech"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"La diferencia entre contratar un proveedor generico y un equipo de "
+"arquitectura empresarial."
+msgstr ""
+"The difference between hiring a generic vendor and a business architecture "
+"team."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Aspecto"
+msgstr "Aspect"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Otros proveedores"
+msgstr "Other vendors"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Enfoque"
+msgstr "Approach"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Instalan software"
+msgstr "They install software"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Diseñan arquitectura empresarial"
+msgstr "They design business architecture"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Metodologia"
+msgstr "Methodology"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Plantillas genericas"
+msgstr "Generic templates"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Metodo BSI™ personalizado"
+msgstr "Custom BSI Method™"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Resultado"
+msgstr "Result"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Sistema subutilizado"
+msgstr "Underused system"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Operacion autonoma con metricas"
+msgstr "Autonomous operation with metrics"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Metricas"
+msgstr "Metrics"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Reportes estandar"
+msgstr "Standard reports"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "KPIs personalizados por area"
+msgstr "Custom KPIs per area"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Soporte"
+msgstr "Support"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Tickets y esperas"
+msgstr "Tickets and waiting"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Acompañamiento estructurado"
+msgstr "Structured support"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Dependencia"
+msgstr "Dependence"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Necesitas al proveedor siempre"
+msgstr "You always need the vendor"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Tu equipo opera de forma autonoma"
+msgstr "Your team operates autonomously"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Basica o inexistente"
+msgstr "Basic or nonexistent"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Bots, wizards, alertas, dashboards"
+msgstr "Bots, wizards, alerts, dashboards"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "Filosofia"
+msgstr "Philosophy"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "No vendemos software. Diseñamos sistemas."
+msgstr "We don't sell software. We design systems."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Un sistema empresarial inteligente no es un programa que instalas y usas. Es "
+"una estructura digital que conecta ventas, operaciones, inventario, proyectos "
+"y finanzas en un flujo coherente y medible."
+msgstr ""
+"An intelligent business system is not a program you install and use. It's a "
+"digital structure that connects sales, operations, inventory, projects and "
+"finance into a coherent, measurable flow."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Nuestro trabajo es diseñar esa estructura para que tu empresa funcione con "
+"proceso, no con heroismo. Para que los numeros hablen, los equipos sepan que "
+"hacer y tu puedas tomar decisiones basadas en datos reales."
+msgstr ""
+"Our job is to design that structure so your company runs on process, not "
+"heroics. So the numbers speak, teams know what to do and you can make "
+"decisions based on real data."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid "¿Quieres saber como aplicamos esto a tu empresa?"
+msgstr "Want to know how we apply this to your company?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_nosotros_bitatech
+msgid ""
+"Solicita un diagnostico gratuito y te mostramos exactamente que necesita tu "
+"operacion."
+msgstr ""
+"Request a free assessment and we'll show you exactly what your operation "
+"needs."
+
+# ============================================================
+# PAGINA CONTACTO - vista_pagina_contacto_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Hablemos de tu operacion"
+msgstr "Let's talk about your operation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid ""
+"Completa el formulario y nuestro equipo se pondra en contacto contigo en "
+"menos de 24 horas habiles."
+msgstr ""
+"Fill out the form and our team will contact you within 24 business hours."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Solicita informacion"
+msgstr "Request information"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Nombre completo <span class=\"bitatech-requerido\">*</span>"
+msgstr "Full name <span class=\"bitatech-requerido\">*</span>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Tu nombre completo"
+msgstr "Your full name"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Correo electronico <span class=\"bitatech-requerido\">*</span>"
+msgstr "Email <span class=\"bitatech-requerido\">*</span>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Telefono"
+msgstr "Phone"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Empresa"
+msgstr "Company"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Nombre de tu empresa"
+msgstr "Your company name"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Servicio de interes"
+msgstr "Service of interest"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Seleccionar servicio"
+msgstr "Select a service"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Otro / No estoy seguro"
+msgstr "Other / Not sure"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Cantidad de empleados"
+msgstr "Number of employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Seleccionar rango"
+msgstr "Select a range"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "1 a 5 empleados"
+msgstr "1 to 5 employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "6 a 15 empleados"
+msgstr "6 to 15 employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "16 a 50 empleados"
+msgstr "16 to 50 employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "51 a 200 empleados"
+msgstr "51 to 200 employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Mas de 200 empleados"
+msgstr "More than 200 employees"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "¿En que podemos ayudarte?"
+msgstr "How can we help you?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Describe brevemente tu situacion actual y que necesitas resolver..."
+msgstr "Briefly describe your current situation and what you need to solve..."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Enviar Solicitud"
+msgstr "Send Request"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Informacion de contacto"
+msgstr "Contact information"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Correo"
+msgstr "Email"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Ubicacion"
+msgstr "Location"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Horario"
+msgstr "Business hours"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Lunes a Viernes, 9:00 AM - 6:00 PM"
+msgstr "Monday to Friday, 9:00 AM - 6:00 PM"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "¿Como funciona?"
+msgstr "How does it work?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Envias tu solicitud"
+msgstr "You send your request"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Completa el formulario con tu informacion basica."
+msgstr "Fill out the form with your basic information."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Diagnostico inicial"
+msgstr "Initial assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Agendamos una llamada para entender tu operacion."
+msgstr "We schedule a call to understand your operation."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Propuesta estructurada"
+msgstr "Structured proposal"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_contacto_bitatech
+msgid "Recibes un plan claro con alcance, tiempos y costos."
+msgstr "You receive a clear plan with scope, timelines and costs."
+
+# ============================================================
+# PAGINA GRACIAS - vista_pagina_gracias_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Solicitud Recibida"
+msgstr "Request Received"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid ""
+"Hemos recibido tu informacion correctamente. Nuestro equipo revisara tu "
+"solicitud y se pondra en contacto contigo en menos de 24 horas habiles."
+msgstr ""
+"We have received your information successfully. Our team will review your "
+"request and contact you within 24 business hours."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "¿Que sigue?"
+msgstr "What's next?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Revision de tu solicitud"
+msgstr "Review of your request"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Nuestro equipo analiza la informacion que nos enviaste."
+msgstr "Our team analyzes the information you sent us."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Contacto inicial"
+msgstr "Initial contact"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Te contactamos para agendar el diagnostico."
+msgstr "We contact you to schedule the assessment."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Diagnostico gratuito"
+msgstr "Free assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Llamada de 30 minutos para entender tu operacion."
+msgstr "A 30-minute call to understand your operation."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Volver al Inicio"
+msgstr "Back to Home"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_gracias_bitatech
+msgid "Ver Nuestros Servicios"
+msgstr "View Our Services"
+
+# ============================================================
+# LANDING DIAGNOSTICO - vista_pagina_landing_campana_bitatech
+# ============================================================
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"¿Tu empresa depende<br/> <span class=\"bitatech-acento\">de ti para "
+"todo?</span>"
+msgstr ""
+"Does your company depend<br/> <span class=\"bitatech-acento\">on you for "
+"everything?</span>"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Si eres el cuello de botella de tu propia operacion, es momento de construir "
+"estructura. Solicita un diagnostico gratuito y descubre que tan lejos estas "
+"de una operacion autonoma."
+msgstr ""
+"If you are the bottleneck of your own operation, it's time to build "
+"structure. Request a free assessment and discover how far you are from an "
+"autonomous operation."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "<i class=\"fa fa-check-circle\"/> Sin costo, sin compromiso"
+msgstr "<i class=\"fa fa-check-circle\"/> No cost, no commitment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "<i class=\"fa fa-check-circle\"/> Llamada de 30 minutos"
+msgstr "<i class=\"fa fa-check-circle\"/> 30-minute call"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "<i class=\"fa fa-check-circle\"/> Recomendaciones concretas"
+msgstr "<i class=\"fa fa-check-circle\"/> Concrete recommendations"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Solicita tu diagnostico"
+msgstr "Request your assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Nombre completo *"
+msgstr "Full name *"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Correo electronico *"
+msgstr "Email *"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Telefono / WhatsApp"
+msgstr "Phone / WhatsApp"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "1 a 5"
+msgstr "1 to 5"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "6 a 15"
+msgstr "6 to 15"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "16 a 50"
+msgstr "16 to 50"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "51 a 200"
+msgstr "51 to 200"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Mas de 200"
+msgstr "More than 200"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "¿Cual es tu mayor dolor operativo ahora mismo?"
+msgstr "What is your biggest operational pain right now?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "¿Te suena familiar?"
+msgstr "Sound familiar?"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Problemas que Resolvemos"
+msgstr "Problems We Solve"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"Apago incendios todo el dia\""
+msgstr "\"I put out fires all day\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Tu equipo depende de ti para resolver cualquier situacion porque no hay "
+"procesos definidos."
+msgstr ""
+"Your team depends on you to solve any situation because there are no defined "
+"processes."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"No se cuanto vendimos realmente\""
+msgstr "\"I don't know how much we really sold\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Los numeros estan en Excel, en WhatsApp, en la cabeza de alguien. No hay una "
+"fuente de verdad unica."
+msgstr ""
+"The numbers are in Excel, in WhatsApp, in someone's head. There is no single "
+"source of truth."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"Cada departamento es una isla\""
+msgstr "\"Each department is an island\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Ventas no sabe lo que hace operaciones. Inventario no cuadra con caja. No hay "
+"flujo conectado."
+msgstr ""
+"Sales doesn't know what operations is doing. Inventory doesn't match cash. "
+"There is no connected flow."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"Pierdo clientes por lentitud\""
+msgstr "\"I lose clients due to slowness\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Las cotizaciones tardan dias. Los seguimientos se pierden. No hay sistema que "
+"controle los tiempos de respuesta."
+msgstr ""
+"Quotes take days. Follow-ups get lost. There is no system controlling "
+"response times."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"Mi equipo no usa el sistema\""
+msgstr "\"My team doesn't use the system\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Compraste un sistema que nadie usa porque fue mal implementado o no refleja "
+"la operacion real."
+msgstr ""
+"You bought a system no one uses because it was poorly implemented or doesn't "
+"reflect real operations."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "\"No puedo crecer asi\""
+msgstr "\"I can't grow like this\""
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Sabes que necesitas estructura para escalar pero no sabes por donde empezar "
+"ni a quien contratar."
+msgstr ""
+"You know you need structure to scale but you don't know where to start or "
+"whom to hire."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Como Trabajamos"
+msgstr "How We Work"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Tres fases claras. Sin improvisacion. Con entregables concretos."
+msgstr "Three clear phases. No improvisation. With concrete deliverables."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Diagnostico"
+msgstr "Assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Analizamos tu operacion actual: procesos, sistemas, flujos, roles y metricas. "
+"Identificamos brechas, cuellos de botella y oportunidades de mejora."
+msgstr ""
+"We analyze your current operation: processes, systems, workflows, roles and "
+"metrics. We identify gaps, bottlenecks and improvement opportunities."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "1-2 semanas"
+msgstr "1-2 weeks"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Arquitectura"
+msgstr "Architecture"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Diseñamos la estructura digital completa: flujos de trabajo, automatizaciones, "
+"roles, permisos, KPIs y plan de implementacion."
+msgstr ""
+"We design the complete digital structure: workflows, automations, roles, "
+"permissions, KPIs and an implementation plan."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "2-4 semanas"
+msgstr "2-4 weeks"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Implementacion"
+msgstr "Implementation"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"Ejecutamos el plan con entregables semanales, validacion continua y "
+"capacitacion al equipo. Tu operacion migra sin parar."
+msgstr ""
+"We execute the plan with weekly deliverables, continuous validation and team "
+"training. Your operation migrates without stopping."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "4-8 semanas"
+msgstr "4-8 weeks"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "El primer paso es un diagnostico"
+msgstr "The first step is an assessment"
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid ""
+"30 minutos. Sin costo. Sin compromiso. Te decimos exactamente donde esta el "
+"problema y como resolverlo."
+msgstr ""
+"30 minutes. No cost. No commitment. We tell you exactly where the problem is "
+"and how to solve it."
+
+#: model_terms:ir.ui.view,arch_db:bitatech_sitio_web.vista_pagina_landing_campana_bitatech
+msgid "Completar el Formulario Arriba"
+msgstr "Complete the Form Above"
